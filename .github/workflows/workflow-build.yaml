@@ -5,7 +5,7 @@ on:
 
 env:
   PROJECT_NAME: "mps-alfi-samples"
-  LANGUAGE_NAME: "AlfiSampleLanguage"
+  HAMSTER_LANGUAGE_NAME: "HamsterSimulatorLanguage"
 
 jobs:
   build:
@@ -47,4 +47,4 @@ jobs:
         with:
           name: build-artifacts
           path: |
-            build/artifacts/${{ env.PROJECT_NAME }}/${{ env.LANGUAGE_NAME }}.zip
+            build/artifacts/${{ env.PROJECT_NAME }}/${{ env.HAMSTER_LANGUAGE_NAME }}.zip
