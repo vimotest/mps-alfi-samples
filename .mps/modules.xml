@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/HamsterSimulatorLanguage.sandbox/HamsterSimulatorLanguage.sandbox.msd" folder="hamstersimulator" />
+      <modulePath path="$PROJECT_DIR$/languages/HamsterSimulatorLanguage/HamsterSimulatorLanguage.mpl" folder="hamstersimulator" />
+      <modulePath path="$PROJECT_DIR$/solutions/mps-alfi-samples.build/mps-alfi-samples.build.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
