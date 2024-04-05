@@ -1,21 +1,24 @@
+.DS_Store
+.idea
+
+
+# -----------------------------------------------------------
+# build
+# -----------------------------------------------------------
 .gradle
-**/build/
-!src/**/build/
+artifacts
+build
+tmp
 
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
-.gradletasknamecache
-
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+# -----------------------------------------------------------
+# MPS
+# -----------------------------------------------------------
+classes_gen
+source_gen
+source_gen.caches
+test_gen
+test_gen.caches
+*.iws
+build.properties
+.mps/workspace.xml
+.mps-caches

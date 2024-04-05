@@ -1,0 +1,39 @@
+ext.mpsVersion = "2023.3"
+ext.languageName = "AlfiSampleLanguage"
+
+ext.mpsPlugins = [  ]
+
+ext.customMpsPlugins = [
+]
+
+apply from: 'gradle/init-gradle-scripts.gradle'
+
+task prepareMps {
+    group 'mps'
+    dependsOn 'buildOsSpecificBundle'
+}
+
+task mpsBuild {
+    group 'mps'
+    dependsOn 'mpsAntGenerate', 'mpsAntBuild'
+}
+
+task mpsClean {
+    group 'mps'
+    dependsOn 'mpsAntClean', 'mpsAntCleanSources'
+}
+
+task mpsTest {
+    group 'mps'
+    dependsOn 'mpsAntCheck', 'parseTestReportAfterAntCheck'
+}
+
+task openProjectInMps {
+    group 'mps'
+    dependsOn 'mpsOpenProjectInMpsForCurrentOs'
+}
+
+task buildAndOpenProjectInMps {
+    group 'mps'
+    dependsOn mpsBuild, openProjectInMps
+}
