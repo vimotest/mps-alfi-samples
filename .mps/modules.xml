@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/HamsterSimulatorLanguage.sandbox/HamsterSimulatorLanguage.sandbox.msd" folder="hamstersimulator" />
       <modulePath path="$PROJECT_DIR$/languages/HamsterSimulatorLanguage/HamsterSimulatorLanguage.mpl" folder="hamstersimulator" />
+      <modulePath path="$PROJECT_DIR$/solutions/HamsterSimulatorLanguage.runtime/HamsterSimulatorLanguage.runtime.msd" folder="hamstersimulator" />
       <modulePath path="$PROJECT_DIR$/solutions/mps-alfi-samples.build/mps-alfi-samples.build.msd" folder="build" />
     </projectModules>
   </component>
