@@ -25,6 +25,7 @@
         <child id="8164141882417526102" name="body" index="GbAUv" />
       </concept>
       <concept id="3492897886877920834" name="alfi.structure.EmptyLineNamespaceMember" flags="ng" index="8qQDt" />
+      <concept id="6254876434755085380" name="alfi.structure.SequenceFlag" flags="ng" index="hh2MY" />
       <concept id="1820071129312107522" name="alfi.structure.PredefinedStereotypeName" flags="ng" index="2hPqOe">
         <property id="1820071129312120005" name="stereotype" index="2hPvR9" />
       </concept>
@@ -35,6 +36,12 @@
       </concept>
       <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
         <child id="2674824929519927759" name="name" index="_uYbl" />
+      </concept>
+      <concept id="2674824929519838362" name="alfi.structure.PositionalTuple" flags="ng" index="_vku0">
+        <child id="2674824929519838363" name="expression" index="_vku1" />
+      </concept>
+      <concept id="2674824929519838360" name="alfi.structure.InvocationExpression" flags="ng" index="_vku2">
+        <child id="2674824929519882447" name="tuple" index="_uFfl" />
       </concept>
       <concept id="2674824929519835217" name="alfi.structure.QualifiedName" flags="ng" index="_vnHb">
         <child id="2674824929519835218" name="names" index="_vnH8" />
@@ -64,12 +71,32 @@
       <concept id="7144803224899245663" name="alfi.structure.Assignment_FeatureLeftHandSide" flags="ng" index="3122rM">
         <child id="7144803224899245664" name="feature" index="3122rd" />
       </concept>
+      <concept id="7144803224897346670" name="alfi.structure.InstanceCreationExpression" flags="ng" index="31diN3">
+        <child id="7144803224897346671" name="constructor" index="31diN2" />
+      </concept>
       <concept id="7144803224901733272" name="alfi.structure.BinaryExpression" flags="ng" index="31szGP">
         <child id="7144803224901733273" name="operand1" index="31szGO" />
         <child id="7144803224901733275" name="operand2" index="31szGQ" />
       </concept>
       <concept id="7144803224901733332" name="alfi.structure.ArithmeticExpression" flags="ng" index="31szHT">
         <property id="7144803224901733359" name="operator" index="31szH2" />
+      </concept>
+      <concept id="7144803224902061774" name="alfi.structure.RelationalExpression" flags="ng" index="31vjTz">
+        <property id="7144803224902061775" name="operator" index="31vjTy" />
+      </concept>
+      <concept id="7144803224883052070" name="alfi.structure.LocalNameDeclarationStatement" flags="ng" index="327OUb">
+        <child id="7144803224883131093" name="typeName" index="327w9S" />
+        <child id="7144803224883131091" name="expression" index="327w9Y" />
+      </concept>
+      <concept id="7144803224883808437" name="alfi.structure.ConcurrentClause" flags="ng" index="32pbwo">
+        <child id="7144803224883808438" name="clauses" index="32pbwr" />
+      </concept>
+      <concept id="7144803224883743949" name="alfi.structure.NonFinalClause" flags="ng" index="32prLw">
+        <child id="7144803224883743950" name="condition" index="32prLz" />
+        <child id="7144803224883743956" name="body" index="32prLT" />
+      </concept>
+      <concept id="7144803224883743948" name="alfi.structure.IfStatement" flags="ng" index="32prLx">
+        <child id="7144803224883864292" name="nonFinalClauses" index="32oX99" />
       </concept>
       <concept id="7144803224889925323" name="alfi.structure.ForStatement" flags="ng" index="32xATA">
         <child id="7144803224890013772" name="variableDefinitions" index="32xgzx" />
@@ -106,6 +133,7 @@
         <child id="2021446509811585019" name="upperBound" index="3xM54o" />
       </concept>
       <concept id="2021446509811517476" name="alfi.structure.TypedElementDefinition" flags="ng" index="3xMlr7">
+        <child id="6254876434755083966" name="_orderingAndUniqueness" index="hh1p4" />
         <child id="2021446509811779615" name="_multiplicityRange" index="3xLlrW" />
         <child id="2021446509811517477" name="typeName" index="3xMlr6" />
       </concept>
@@ -114,6 +142,10 @@
       </concept>
       <concept id="2021446509812382885" name="alfi.structure.FormalParameter" flags="ng" index="3xR696">
         <property id="2021446509812382886" name="direction" index="3xR695" />
+      </concept>
+      <concept id="7439839726096719140" name="alfi.structure.SequenceOperationExpression" flags="ng" index="1WUwfO">
+        <child id="7439839726096719276" name="primary" index="1WUwdW" />
+        <child id="7439839726096719142" name="operation" index="1WUwfQ" />
       </concept>
     </language>
   </registry>
@@ -367,12 +399,145 @@
               </node>
             </node>
             <node concept="PCHzy" id="2HakVwV1UUa" role="32xgzz">
-              <node concept="_jtW9" id="31Th1WSfMyO" role="PCHzz">
-                <node concept="32M0$0" id="31Th1WSfMyS" role="_jtWe">
-                  <node concept="32Pqhl" id="31Th1WSfMyT" role="32PqmZ">
-                    <node concept="_iR_j" id="31Th1WSfMyM" role="32Men7" />
-                    <node concept="_vnHe" id="31Th1WSfMz4" role="32Men1">
-                      <ref role="3acloq" node="31Th1WS4x2_" resolve="cells" />
+              <node concept="327OUb" id="4D6i1lASK6u" role="PCHzz">
+                <property role="TrG5h" value="newCell" />
+                <node concept="31diN3" id="4D6i1lASK7X" role="327w9Y">
+                  <node concept="_vnHb" id="4D6i1lASK7Z" role="31diN2">
+                    <node concept="2RqM1Q" id="4D6i1lASK81" role="_vnH8">
+                      <ref role="2RqM1R" node="31Th1WS1uwa" resolve="Cell" />
+                    </node>
+                  </node>
+                  <node concept="_vku0" id="4D6i1lASK83" role="_uFfl" />
+                </node>
+                <node concept="3xHE8C" id="4D6i1lASK7B" role="327w9S">
+                  <node concept="2RqM1Q" id="4D6i1lASK7_" role="_vnH8">
+                    <ref role="2RqM1R" node="31Th1WS1uwa" resolve="Cell" />
+                  </node>
+                </node>
+              </node>
+              <node concept="32prLx" id="4D6i1lASKsz" role="PCHzz">
+                <node concept="32pbwo" id="4D6i1lASKs_" role="32oX99">
+                  <node concept="32prLw" id="4D6i1lASKsB" role="32pbwr">
+                    <node concept="PCHzy" id="4D6i1lASKsF" role="32prLT">
+                      <node concept="_jtW9" id="4D6i1lASKjV" role="PCHzz">
+                        <node concept="3122gz" id="4D6i1lASK_j" role="_jtWe">
+                          <node concept="3122rM" id="4D6i1lASK_Q" role="315$Eb">
+                            <node concept="32Pqhl" id="4D6i1lASKjQ" role="3122rd">
+                              <node concept="_uYbk" id="4D6i1lASKlj" role="32Men7">
+                                <node concept="_vnHb" id="4D6i1lASKll" role="_uYbl">
+                                  <node concept="2RqM1Q" id="4D6i1lASKln" role="_vnH8">
+                                    <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_vnHe" id="4D6i1lASKjT" role="32Men1">
+                                <ref role="3acloq" node="31Th1WS4xhk" resolve="west" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="1WUwfO" id="4D6i1lASKDn" role="315$E5">
+                            <node concept="32M0$0" id="4D6i1lASKDo" role="1WUwdW">
+                              <node concept="32Pqhl" id="4D6i1lASKDp" role="32PqmZ">
+                                <node concept="_iR_j" id="4D6i1lASKDq" role="32Men7" />
+                                <node concept="_vnHe" id="4D6i1lASKDr" role="32Men1">
+                                  <ref role="3acloq" node="31Th1WS4x2_" resolve="cells" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="_vku0" id="4D6i1lASKDs" role="_uFfl">
+                              <node concept="31szHT" id="4D6i1lASKP5" role="_vku1">
+                                <property role="31szH2" value="6cBsaQylkJD/MinusOperator" />
+                                <node concept="_uYbk" id="4D6i1lASKPo" role="31szGO">
+                                  <node concept="_vnHb" id="4D6i1lASKPq" role="_uYbl">
+                                    <node concept="2RqM1Q" id="4D6i1lASKPs" role="_vnH8">
+                                      <ref role="2RqM1R" node="2HakVwV1UU7" resolve="i" />
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="32T38h" id="4D6i1lASKQ6" role="31szGQ">
+                                  <property role="32T38g" value="1" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3xHE8C" id="4D6i1lASKDw" role="1WUwfQ">
+                              <node concept="2RqM1Q" id="4D6i1lASKDx" role="_vnH8">
+                                <ref role="2RqM1R" to="gkn4:2SV$eY8zGv4" resolve="at" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="_jtW9" id="4D6i1lASOMR" role="PCHzz">
+                        <node concept="3122gz" id="4D6i1lASOQd" role="_jtWe">
+                          <node concept="3122rM" id="4D6i1lASOQZ" role="315$Eb">
+                            <node concept="32Pqhl" id="4D6i1lASOMM" role="3122rd">
+                              <node concept="32M0$0" id="4D6i1lASOPk" role="32Men7">
+                                <node concept="32Pqhl" id="4D6i1lASOPm" role="32PqmZ">
+                                  <node concept="_uYbk" id="4D6i1lASOPz" role="32Men7">
+                                    <node concept="_vnHb" id="4D6i1lASOP_" role="_uYbl">
+                                      <node concept="2RqM1Q" id="4D6i1lASOPB" role="_vnH8">
+                                        <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="_vnHe" id="4D6i1lASOPp" role="32Men1">
+                                    <ref role="3acloq" node="31Th1WS4xhk" resolve="west" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_vnHe" id="4D6i1lASOMP" role="32Men1">
+                                <ref role="3acloq" node="31Th1WS4xdC" resolve="east" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="_uYbk" id="4D6i1lASOTA" role="315$E5">
+                            <node concept="_vnHb" id="4D6i1lASOTB" role="_uYbl">
+                              <node concept="2RqM1Q" id="4D6i1lASOTC" role="_vnH8">
+                                <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="31vjTz" id="4D6i1lASKur" role="32prLz">
+                      <property role="31vjTy" value="6cBsaQymy$s/GreaterThen" />
+                      <node concept="_uYbk" id="4D6i1lASKu$" role="31szGO">
+                        <node concept="_vnHb" id="4D6i1lASKuA" role="_uYbl">
+                          <node concept="2RqM1Q" id="4D6i1lASKuC" role="_vnH8">
+                            <ref role="2RqM1R" node="2HakVwV1UU7" resolve="i" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="32T38h" id="4D6i1lASKvq" role="31szGQ">
+                        <property role="32T38g" value="0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="_jtW9" id="4D6i1lA$_34" role="PCHzz">
+                <node concept="1WUwfO" id="4D6i1lA$_2Z" role="_jtWe">
+                  <node concept="32M0$0" id="4D6i1lA$_7I" role="1WUwdW">
+                    <node concept="32Pqhl" id="4D6i1lA$_7J" role="32PqmZ">
+                      <node concept="_iR_j" id="4D6i1lA$_7r" role="32Men7" />
+                      <node concept="_vnHe" id="4D6i1lA$_7U" role="32Men1">
+                        <ref role="3acloq" node="31Th1WS4x2_" resolve="cells" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="_vku0" id="4D6i1lA$_32" role="_uFfl">
+                    <node concept="_uYbk" id="4D6i1lASKa5" role="_vku1">
+                      <node concept="_vnHb" id="4D6i1lASKa7" role="_uYbl">
+                        <node concept="2RqM1Q" id="4D6i1lASKa9" role="_vnH8">
+                          <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3xHE8C" id="4D6i1lASJVa" role="1WUwfQ">
+                    <node concept="2RqM1Q" id="4D6i1lASJV9" role="_vnH8">
+                      <ref role="2RqM1R" to="gkn4:2SV$eY8$yfx" resolve="add" />
                     </node>
                   </node>
                 </node>
@@ -397,6 +562,7 @@
         <node concept="3xMmcA" id="31Th1WS4x4H" role="3xLlrW">
           <node concept="32L9hf" id="31Th1WS4x57" role="3xM9QG" />
         </node>
+        <node concept="hh2MY" id="4D6i1lA$_b6" role="hh1p4" />
       </node>
     </node>
     <node concept="3mGtyY" id="31Th1WS1uwx" role="3mGtxR">
