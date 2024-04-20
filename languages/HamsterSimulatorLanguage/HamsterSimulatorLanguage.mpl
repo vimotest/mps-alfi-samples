@@ -27,6 +27,7 @@
       <dependencies>
         <dependency reexport="false">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
         <dependency reexport="false">bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)</dependency>
+        <dependency reexport="true">bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" version="0" />
