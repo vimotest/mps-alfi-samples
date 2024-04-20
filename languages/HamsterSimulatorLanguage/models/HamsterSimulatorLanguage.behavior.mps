@@ -337,7 +337,7 @@
               <ref role="3cqZAo" node="2HeY20GWTPP" resolve="hamsterState" />
             </node>
             <node concept="3TrcHB" id="2HeY20GWXNK" role="2OqNvi">
-              <ref role="3TsBF5" to="fyu6:2HeY20GWW4B" resolve="direction" />
+              <ref role="3TsBF5" to="fyu6:74z8RZkswCm" resolve="direction" />
             </node>
           </node>
         </node>

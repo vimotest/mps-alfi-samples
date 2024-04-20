@@ -7,7 +7,7 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="fyu6" ref="r:c36debd2-15a2-4671-9b5c-580b136067b6(HamsterSimulatorLanguage.structure)" implicit="true" />
+    <import index="fyu6" ref="r:c36debd2-15a2-4671-9b5c-580b136067b6(HamsterSimulatorLanguage.structure)" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
     <import index="cj4x" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor(MPS.Editor/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
@@ -1701,7 +1701,7 @@
         </node>
       </node>
       <node concept="3F0A7n" id="5ZmQMJIi0xS" role="3EZMnx">
-        <ref role="1NtTu8" to="fyu6:5ZmQMJIi0ww" resolve="direction" />
+        <ref role="1NtTu8" to="fyu6:74z8RZkswCm" resolve="direction" />
       </node>
       <node concept="2iRfu4" id="2RDssu5ViL8" role="2iSdaV" />
     </node>
@@ -3475,6 +3475,7 @@
       </node>
       <node concept="3F0ifn" id="2HeY20GQZ$C" role="3EZMnx">
         <property role="3F0ifm" value="at" />
+        <ref role="1k5W1q" node="gcRXCL$K0g" resolve="KeyWord" />
       </node>
       <node concept="3F0ifn" id="2HeY20GVPLP" role="3EZMnx">
         <property role="3F0ifm" value="(" />
@@ -3510,6 +3511,7 @@
       </node>
       <node concept="3F0ifn" id="2HeY20GQZA0" role="3EZMnx">
         <property role="3F0ifm" value="with" />
+        <ref role="1k5W1q" node="gcRXCL$K0g" resolve="KeyWord" />
         <node concept="pVoyu" id="2HeY20GQZAs" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -3523,6 +3525,23 @@
       </node>
       <node concept="3F0A7n" id="2HeY20GQZAH" role="3EZMnx">
         <ref role="1NtTu8" to="fyu6:2HeY20GQZ_G" resolve="grainsInMouth" />
+      </node>
+      <node concept="3F0ifn" id="74z8RZkykEl" role="3EZMnx">
+        <property role="3F0ifm" value="and" />
+        <ref role="1k5W1q" node="gcRXCL$K0g" resolve="KeyWord" />
+        <node concept="pVoyu" id="74z8RZkykFi" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="74z8RZkykFk" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="74z8RZkykEX" role="3EZMnx">
+        <property role="3F0ifm" value="looking:" />
+        <ref role="1k5W1q" node="gcRXCL$K19" resolve="Field" />
+      </node>
+      <node concept="3F0A7n" id="74z8RZkykFI" role="3EZMnx">
+        <ref role="1NtTu8" to="fyu6:74z8RZkswCm" resolve="direction" />
       </node>
       <node concept="l2Vlx" id="2HeY20GQZ_K" role="2iSdaV" />
     </node>

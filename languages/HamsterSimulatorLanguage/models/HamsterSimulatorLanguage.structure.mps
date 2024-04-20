@@ -2,6 +2,7 @@
 <model ref="r:c36debd2-15a2-4671-9b5c-580b136067b6(HamsterSimulatorLanguage.structure)">
   <persistence version="9" />
   <languages>
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
@@ -116,10 +117,8 @@
     <property role="34LRSv" value="isDirection" />
     <property role="EcuMT" value="3308300503039683649" />
     <ref role="1TJDcQ" node="2RDssu5V9Z1" resolve="AbstractLogicalExpression" />
-    <node concept="1TJgyi" id="5ZmQMJIi0ww" role="1TKVEl">
-      <property role="IQ2nx" value="6905948060347009056" />
-      <property role="TrG5h" value="direction" />
-      <ref role="AX2Wp" node="3Ftr4R6BFMM" resolve="Direction" />
+    <node concept="PrWs8" id="74z8RZku5x$" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkswBE" resolve="IHasDirection" />
     </node>
   </node>
   <node concept="1TIwiD" id="JFO1DNuYKo">
@@ -598,10 +597,8 @@
       <property role="TrG5h" value="grainsInMouth" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="2HeY20GWW4B" role="1TKVEl">
-      <property role="IQ2nx" value="3120704408891146535" />
-      <property role="TrG5h" value="direction" />
-      <ref role="AX2Wp" node="3Ftr4R6BFMM" resolve="Direction" />
+    <node concept="PrWs8" id="74z8RZku5xJ" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkswBE" resolve="IHasDirection" />
     </node>
   </node>
   <node concept="PlHQZ" id="74z8RZkrLlz">
