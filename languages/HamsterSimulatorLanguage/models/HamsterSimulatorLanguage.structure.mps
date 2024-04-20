@@ -45,6 +45,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -104,6 +105,9 @@
     </node>
     <node concept="PrWs8" id="5ZmQMJIfzba" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="74z8RZkrLqi" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkrLlz" resolve="ITopLevelCommandListDefinition" />
     </node>
   </node>
   <node concept="1TIwiD" id="2RDssu5ViL1">
@@ -327,6 +331,9 @@
     </node>
     <node concept="PrWs8" id="2RDssu5VmXX" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="74z8RZkrLpr" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkrLlz" resolve="ITopLevelCommandListDefinition" />
     </node>
     <node concept="1TJgyi" id="5ZmQMJIk0vy" role="1TKVEl">
       <property role="IQ2nx" value="6905948060347533282" />
@@ -593,6 +600,21 @@
     </node>
     <node concept="1TJgyi" id="2HeY20GWW4B" role="1TKVEl">
       <property role="IQ2nx" value="3120704408891146535" />
+      <property role="TrG5h" value="direction" />
+      <ref role="AX2Wp" node="3Ftr4R6BFMM" resolve="Direction" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="74z8RZkrLlz">
+    <property role="EcuMT" value="8152398782402598243" />
+    <property role="3GE5qa" value="command" />
+    <property role="TrG5h" value="ITopLevelCommandListDefinition" />
+  </node>
+  <node concept="PlHQZ" id="74z8RZkswBE">
+    <property role="EcuMT" value="8152398782402791914" />
+    <property role="3GE5qa" value="command.general" />
+    <property role="TrG5h" value="IHasDirection" />
+    <node concept="1TJgyi" id="74z8RZkswCm" role="1TKVEl">
+      <property role="IQ2nx" value="8152398782402791958" />
       <property role="TrG5h" value="direction" />
       <ref role="AX2Wp" node="3Ftr4R6BFMM" resolve="Direction" />
     </node>
