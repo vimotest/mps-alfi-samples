@@ -7,6 +7,8 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="gkn4" ref="r:fae4a196-11c4-4868-9ebd-1379c8e56907(alfStandardModelLibrary)" />
+    <import index="mk2q" ref="r:394bda66-ac7c-48d2-8b30-5ebcc56c2d2a(alfi.build)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -91,6 +93,9 @@
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
         <child id="3570488090019868128" name="packagingType" index="pUk7w" />
       </concept>
+      <concept id="6592112598314499036" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginModule" flags="ng" index="m$_yB">
+        <reference id="6592112598314499037" name="target" index="m$_yA" />
+      </concept>
       <concept id="6592112598314499027" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginDependency" flags="ng" index="m$_yC">
         <reference id="6592112598314499066" name="target" index="m$_y1" />
       </concept>
@@ -117,8 +122,12 @@
         <property id="2889113830911481881" name="deployFolderName" index="3ZfqAx" />
         <child id="8137134783396676835" name="location" index="1HemKq" />
       </concept>
+      <concept id="3189788309731981027" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleSolutionRuntime" flags="ng" index="1E0d5M">
+        <reference id="3189788309731981028" name="solution" index="1E0d5P" />
+      </concept>
       <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
       <concept id="3189788309731840248" name="jetbrains.mps.build.mps.structure.BuildMps_Language" flags="ng" index="1E1JtD">
+        <child id="3189788309731917348" name="runtime" index="1E1XAP" />
         <child id="9200313594498201639" name="generator" index="1TViLv" />
       </concept>
       <concept id="322010710375871467" name="jetbrains.mps.build.mps.structure.BuildMps_AbstractModule" flags="ng" index="3LEN3z">
@@ -165,6 +174,9 @@
         <ref role="398BVh" node="5MJEPZbjS7T" resolve="mps_home" />
       </node>
     </node>
+    <node concept="2sgV4H" id="74z8RZkvEOA" role="1l3spa">
+      <ref role="1l3spb" to="mk2q:kgFCN7YrOM" resolve="alfi" />
+    </node>
     <node concept="1l3spV" id="5ZmQMJIlskB" role="1l3spN">
       <node concept="3981dG" id="5ZmQMJIlskC" role="39821P">
         <node concept="3_J27D" id="5ZmQMJIlskD" role="Nbhlr">
@@ -192,6 +204,9 @@
       </node>
       <node concept="m$f5U" id="5ZmQMJIlskv" role="m$_yh">
         <ref role="m$f5T" node="5ZmQMJIlskp" resolve="mps-alfi-samples" />
+      </node>
+      <node concept="m$_yB" id="74z8RZkvESe" role="m$_yh">
+        <ref role="m$_yA" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
       </node>
       <node concept="m$_yC" id="5ZmQMJIlskw" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
@@ -283,10 +298,70 @@
               </node>
             </node>
           </node>
+          <node concept="1SiIV0" id="74z8RZkvEOL" role="3bR37C">
+            <node concept="3bR9La" id="74z8RZkvEOM" role="1SiIV1">
+              <ref role="3bR37D" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
+            </node>
+          </node>
+          <node concept="1SiIV0" id="74z8RZkvEON" role="3bR37C">
+            <node concept="3bR9La" id="74z8RZkvEOO" role="1SiIV1">
+              <ref role="3bR37D" to="mk2q:kgFCN7YrOX" resolve="alfi" />
+            </node>
+          </node>
         </node>
-        <node concept="1SiIV0" id="5ZmQMJIlC2H" role="3bR37C">
-          <node concept="Rbm2T" id="5ZmQMJIlC2I" role="1SiIV1">
-            <ref role="1E1Vl2" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+        <node concept="1SiIV0" id="74z8RZkvE2O" role="3bR37C">
+          <node concept="3bR9La" id="74z8RZkvE2P" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="74z8RZkvEOJ" role="3bR37C">
+          <node concept="Rbm2T" id="74z8RZkvEOK" role="1SiIV1">
+            <ref role="1E1Vl2" to="mk2q:kgFCN7YrOX" resolve="alfi" />
+          </node>
+        </node>
+        <node concept="1E0d5M" id="74z8RZkvERF" role="1E1XAP">
+          <ref role="1E0d5P" node="74z8RZkvEPV" resolve="HamsterSimulatorLanguage.runtime" />
+        </node>
+      </node>
+      <node concept="1E1JtA" id="74z8RZkvEPV" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="HamsterSimulatorLanguage.runtime" />
+        <property role="3LESm3" value="bbe92973-a4d0-4851-93ef-b76e4564b102" />
+        <node concept="55IIr" id="74z8RZkvEPY" role="3LF7KH">
+          <node concept="2Ry0Ak" id="74z8RZkvEQL" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="74z8RZkvEQQ" role="2Ry0An">
+              <property role="2Ry0Am" value="HamsterSimulatorLanguage.runtime" />
+              <node concept="2Ry0Ak" id="74z8RZkvEQV" role="2Ry0An">
+                <property role="2Ry0Am" value="HamsterSimulatorLanguage.runtime.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="74z8RZkvER6" role="3bR37C">
+          <node concept="3bR9La" id="74z8RZkvER7" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="74z8RZkvERc" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="74z8RZkvERd" role="1HemKq">
+            <node concept="55IIr" id="74z8RZkvER8" role="3LXTmr">
+              <node concept="2Ry0Ak" id="74z8RZkvER9" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="74z8RZkvERa" role="2Ry0An">
+                  <property role="2Ry0Am" value="HamsterSimulatorLanguage.runtime" />
+                  <node concept="2Ry0Ak" id="74z8RZkvERb" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="74z8RZkvERe" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
           </node>
         </node>
       </node>
