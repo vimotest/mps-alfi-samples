@@ -4,7 +4,10 @@
   <languages>
     <use id="86004c6e-6a16-41a3-a8a8-cf6cc294dfee" name="HamsterSimulatorLanguage" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="lodc" ref="e9b40a72-6930-481d-bdce-a0a866bf715e/java:alf.library.primitivebehaviors(alfi.StandardModelLibrary/)" />
+    <import index="zrzc" ref="e9b40a72-6930-481d-bdce-a0a866bf715e/java:alf.library(alfi.StandardModelLibrary/)" />
+  </imports>
   <registry>
     <language id="86004c6e-6a16-41a3-a8a8-cf6cc294dfee" name="HamsterSimulatorLanguage">
       <concept id="3210697320273763054" name="HamsterSimulatorLanguage.structure.WriteCommand" flags="nn" index="24IuFt">

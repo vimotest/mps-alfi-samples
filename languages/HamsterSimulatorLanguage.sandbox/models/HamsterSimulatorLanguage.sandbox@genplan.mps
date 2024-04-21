@@ -9,6 +9,7 @@
   <registry>
     <language id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan">
       <concept id="1152961914448136207" name="jetbrains.mps.lang.generator.plan.structure.LanguageEntry" flags="ng" index="2Qf6Nf">
+        <property id="1152961914448142318" name="kind" index="2Qf7GI" />
         <child id="1152961914448136208" name="language" index="2Qf6Ng" />
       </concept>
       <concept id="1820634577908471803" name="jetbrains.mps.lang.generator.plan.structure.Plan" flags="ng" index="2VgMpV">
@@ -48,6 +49,22 @@
         <node concept="2V$Bhx" id="74z8RZkPvDN" role="2Qf6Ng">
           <property role="2V$B1T" value="d0e1230a-72e3-4b6b-88f2-98d924f7de11" />
           <property role="2V$B1Q" value="alfi.toBaseLanguage" />
+        </node>
+      </node>
+    </node>
+    <node concept="2VgMA2" id="1z1MMtqDlGJ" role="2VgMA7">
+      <property role="1s431M" value="true" />
+      <node concept="2Qf6Nf" id="3zQOmAClpkt" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="3zQOmAClpkz" role="2Qf6Ng">
+          <property role="2V$B1T" value="f3061a53-9226-4cc5-a443-f952ceaf5816" />
+          <property role="2V$B1Q" value="jetbrains.mps.baseLanguage" />
+        </node>
+      </node>
+      <node concept="2Qf6Nf" id="3OZQpz75VJ" role="2Qf7GQ">
+        <property role="2Qf7GI" value="1009c2Af4wn/Extend" />
+        <node concept="2V$Bhx" id="3OZQpz75X2" role="2Qf6Ng">
+          <property role="2V$B1T" value="f3061a53-9226-4cc5-a443-f952ceaf5816" />
+          <property role="2V$B1Q" value="jetbrains.mps.baseLanguage" />
         </node>
       </node>
     </node>

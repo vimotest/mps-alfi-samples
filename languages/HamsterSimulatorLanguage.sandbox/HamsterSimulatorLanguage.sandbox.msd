@@ -11,6 +11,9 @@
     </facet>
     <facet type="generator" planModel="r:6905caa5-f714-41f3-bc6b-cad1870de186(HamsterSimulatorLanguage.sandbox@genplan)" />
   </facets>
+  <dependencies>
+    <dependency reexport="true">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
+  </dependencies>
   <languageVersions>
     <language slang="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
@@ -18,6 +21,8 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="28b05bc5-0f5e-4372-9f1c-df8ff09a66b6(HamsterSimulatorLanguage.sandbox)" version="0" />
+    <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
+    <module reference="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" version="0" />
   </dependencyVersions>
 </solution>
 
