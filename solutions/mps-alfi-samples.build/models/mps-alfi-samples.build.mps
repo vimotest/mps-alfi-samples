@@ -62,6 +62,9 @@
       <concept id="4701820937132344003" name="jetbrains.mps.build.structure.BuildLayout_Container" flags="ngI" index="1y1bJS">
         <child id="7389400916848037006" name="children" index="39821P" />
       </concept>
+      <concept id="841011766565753074" name="jetbrains.mps.build.structure.BuildLayout_Import" flags="ng" index="3_I8Xc">
+        <reference id="841011766565753076" name="target" index="3_I8Xa" />
+      </concept>
       <concept id="841011766566059607" name="jetbrains.mps.build.structure.BuildStringNotEmpty" flags="ng" index="3_J27D" />
       <concept id="5248329904287794596" name="jetbrains.mps.build.structure.BuildInputFiles" flags="ng" index="3LXTmp">
         <child id="5248329904287794598" name="dir" index="3LXTmr" />
@@ -113,6 +116,7 @@
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
+        <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
       <concept id="5507251971038816436" name="jetbrains.mps.build.mps.structure.BuildMps_Generator" flags="ng" index="1yeLz9" />
@@ -187,6 +191,9 @@
         <node concept="m$_wl" id="5ZmQMJIlskF" role="39821P">
           <ref role="m_rDy" node="5ZmQMJIlskq" resolve="mps-alfi-samples" />
           <node concept="pUk6x" id="5ZmQMJIlskG" role="pUk7w" />
+          <node concept="3_I8Xc" id="1z1MMtqEH_z" role="39821P">
+            <ref role="3_I8Xa" to="mk2q:6KJ02DGnSqw" />
+          </node>
         </node>
       </node>
     </node>
@@ -308,10 +315,15 @@
               <ref role="3bR37D" to="mk2q:kgFCN7YrOX" resolve="alfi" />
             </node>
           </node>
-        </node>
-        <node concept="1SiIV0" id="74z8RZkvE2O" role="3bR37C">
-          <node concept="3bR9La" id="74z8RZkvE2P" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+          <node concept="1SiIV0" id="1z1MMtqEvga" role="3bR37C">
+            <node concept="3bR9La" id="1z1MMtqEvgb" role="1SiIV1">
+              <ref role="3bR37D" node="74z8RZkvEPV" resolve="HamsterSimulatorLanguage.runtime" />
+            </node>
+          </node>
+          <node concept="1SiIV0" id="1z1MMtqEvgc" role="3bR37C">
+            <node concept="3bR9La" id="1z1MMtqEvgd" role="1SiIV1">
+              <ref role="3bR37D" to="ffeo:rD7wKO6k$" resolve="MPS.Generator" />
+            </node>
           </node>
         </node>
         <node concept="1SiIV0" id="74z8RZkvEOJ" role="3bR37C">
@@ -398,6 +410,54 @@
               </node>
             </node>
             <node concept="3qWCbU" id="5ZmQMJIlsl7" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1z1MMtqEvgn" role="3bR37C">
+          <node concept="3bR9La" id="1z1MMtqEvgo" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1z1MMtqEvj1" role="3bR37C">
+          <node concept="3bR9La" id="1z1MMtqEvj2" role="1SiIV1">
+            <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="1z1MMtqEvgH" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="AlfiSamples.genplan" />
+        <property role="3LESm3" value="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf" />
+        <node concept="55IIr" id="1z1MMtqEvgI" role="3LF7KH">
+          <node concept="2Ry0Ak" id="1z1MMtqEvgK" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="1z1MMtqEvic" role="2Ry0An">
+              <property role="2Ry0Am" value="AlfiSamples.genplan" />
+              <node concept="2Ry0Ak" id="1z1MMtqEvig" role="2Ry0An">
+                <property role="2Ry0Am" value="AlfiSamples.genplan.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="1z1MMtqEvgM" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="1z1MMtqEviB" role="1HemKq">
+            <node concept="55IIr" id="1z1MMtqEviz" role="3LXTmr">
+              <node concept="2Ry0Ak" id="1z1MMtqEvi$" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="1z1MMtqEvi_" role="2Ry0An">
+                  <property role="2Ry0Am" value="AlfiSamples.genplan" />
+                  <node concept="2Ry0Ak" id="1z1MMtqEviA" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="1z1MMtqEviC" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
           </node>

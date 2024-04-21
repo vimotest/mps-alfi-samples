@@ -9,17 +9,18 @@
     <facet type="java" compile="off" classes="off" ext="no">
       <classes generated="true" />
     </facet>
-    <facet type="generator" planModel="r:6905caa5-f714-41f3-bc6b-cad1870de186(HamsterSimulatorLanguage.sandbox@genplan)" />
+    <facet type="generator" planModel="r:75caa73f-e0c5-471b-ac24-6a78e8dcbea7(AlfiSamples.genplan)" />
   </facets>
   <dependencies>
     <dependency reexport="true">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
+    <dependency reexport="false">96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
-    <language slang="l:7ab1a6fa-0a11-4b95-9e48-75f363d6cb00:jetbrains.mps.lang.generator.plan" version="2" />
   </languageVersions>
   <dependencyVersions>
+    <module reference="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" version="0" />
     <module reference="28b05bc5-0f5e-4372-9f1c-df8ff09a66b6(HamsterSimulatorLanguage.sandbox)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" version="0" />

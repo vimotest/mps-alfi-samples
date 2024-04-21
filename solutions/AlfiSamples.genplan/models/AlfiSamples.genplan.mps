@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:6905caa5-f714-41f3-bc6b-cad1870de186(HamsterSimulatorLanguage.sandbox@genplan)">
+<model ref="r:75caa73f-e0c5-471b-ac24-6a78e8dcbea7(AlfiSamples.genplan)">
   <persistence version="9" />
-  <attribute name="doNotGenerate" value="true" />
   <languages>
     <use id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan" version="2" />
   </languages>
