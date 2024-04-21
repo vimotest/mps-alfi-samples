@@ -7,12 +7,14 @@
   </languages>
   <imports>
     <import index="zqge" ref="r:59e90602-6655-4552-86eb-441a42a9a0e4(jetbrains.mps.lang.text.structure)" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
       <concept id="2756621024541681841" name="jetbrains.mps.lang.resources.structure.Primitive" flags="ng" index="1irPi6">
         <child id="1860120738943552529" name="fillColor" index="3PKjn_" />
+        <child id="1860120738943552531" name="borderColor" index="3PKjnB" />
       </concept>
       <concept id="2756621024541681849" name="jetbrains.mps.lang.resources.structure.Text" flags="ng" index="1irPie">
         <property id="2756621024541681854" name="text" index="1irPi9" />
@@ -22,6 +24,7 @@
         <property id="1358878980655415353" name="iconId" index="2$rrk2" />
         <child id="2756621024541675110" name="layers" index="1irR9h" />
       </concept>
+      <concept id="2756621024541675105" name="jetbrains.mps.lang.resources.structure.Rect" flags="ng" index="1irR9m" />
       <concept id="2756621024541675104" name="jetbrains.mps.lang.resources.structure.Circle" flags="ng" index="1irR9n" />
       <concept id="1860120738943552477" name="jetbrains.mps.lang.resources.structure.ColorLiteral" flags="ng" index="3PKj8D">
         <property id="1860120738943552481" name="val" index="3PKj8l" />
@@ -82,7 +85,7 @@
     <property role="EcuMT" value="6905948060346342833" />
     <property role="TrG5h" value="HamsterProgram" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5X3Rsv9kAFL" role="1TKVEi">
       <property role="IQ2ns" value="6864574107188620017" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -109,6 +112,26 @@
     </node>
     <node concept="PrWs8" id="74z8RZkrLqi" role="PzmwI">
       <ref role="PrY4T" node="74z8RZkrLlz" resolve="ITopLevelCommandListDefinition" />
+    </node>
+    <node concept="PrWs8" id="1z1MMtqG1r4" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
+    <node concept="1irR5M" id="1z1MMtqI4bS" role="rwd14">
+      <property role="2$rrk2" value="2" />
+      <node concept="1irR9m" id="7XjY3bkmRp" role="1irR9h">
+        <node concept="3PKj8D" id="7XjY3bkmRu" role="3PKjn_">
+          <property role="3PKj8l" value="FA1111" />
+        </node>
+        <node concept="3PKj8D" id="7XjY3bkmRW" role="3PKjnB">
+          <property role="3PKj8l" value="101010" />
+        </node>
+      </node>
+      <node concept="1irPie" id="7XjY3bkmSu" role="1irR9h">
+        <property role="1irPi9" value="H" />
+        <node concept="3PKj8D" id="7XjY3bkmT1" role="3PKjny">
+          <property role="3PKj8l" value="0A1A3F" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="1TIwiD" id="2RDssu5ViL1">

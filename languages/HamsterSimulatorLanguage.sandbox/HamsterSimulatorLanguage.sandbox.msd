@@ -6,8 +6,8 @@
     </modelRoot>
   </models>
   <facets>
-    <facet type="java" compile="off" classes="off" ext="no">
-      <classes generated="true" />
+    <facet type="java" compile="mps" classes="mps" ext="no" languageLevel="JAVA_10">
+      <classes generated="true" path="${module}/classes_gen" />
     </facet>
     <facet type="generator" planModel="r:75caa73f-e0c5-471b-ac24-6a78e8dcbea7(AlfiSamples.genplan)" />
   </facets>
@@ -17,6 +17,7 @@
   </dependencies>
   <languageVersions>
     <language slang="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" version="0" />
+    <language slang="l:4caf0310-491e-41f5-8a9b-2006b3a94898:jetbrains.mps.execution.util" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
   </languageVersions>
   <dependencyVersions>
