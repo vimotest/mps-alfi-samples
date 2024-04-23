@@ -449,6 +449,9 @@
         </node>
       </node>
     </node>
+    <node concept="PrWs8" id="37zNn5LTf5g" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5X3Rsv9iaOU">
     <property role="EcuMT" value="6864574107187981626" />
