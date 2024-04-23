@@ -13,7 +13,7 @@
       <classes generated="true" path="${module}/classes_gen" />
       <library location="${module}/../../build/mps-bundle/mps/lib/idea_rt.jar" />
     </facet>
-    <facet type="generator" planModel="r:75caa73f-e0c5-471b-ac24-6a78e8dcbea7(AlfiSamples.genplan)" />
+    <facet type="generator" planModel="r:f7aff45d-10c8-40bc-9edb-f306b1fca829(toJava@genplan)" />
   </facets>
   <dependencies>
     <dependency reexport="true">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>

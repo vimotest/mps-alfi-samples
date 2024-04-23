@@ -1277,11 +1277,16 @@
           <node concept="3zFVjK" id="74z8RZkfQH4" role="3zH0cK">
             <node concept="3clFbS" id="74z8RZkfQH5" role="2VODD2">
               <node concept="3clFbF" id="74z8RZkfQHb" role="3cqZAp">
-                <node concept="2OqwBi" id="74z8RZkfQH6" role="3clFbG">
-                  <node concept="3TrcHB" id="74z8RZkfQH9" role="2OqNvi">
-                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                <node concept="3cpWs3" id="37zNn5MzTpK" role="3clFbG">
+                  <node concept="Xl_RD" id="37zNn5MzTpL" role="3uHU7w">
+                    <property role="Xl_RC" value="HamsterProgram" />
                   </node>
-                  <node concept="30H73N" id="74z8RZkfQHa" role="2Oq$k0" />
+                  <node concept="2OqwBi" id="37zNn5MzTpM" role="3uHU7B">
+                    <node concept="3TrcHB" id="37zNn5MzTpN" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                    <node concept="30H73N" id="37zNn5MzTpO" role="2Oq$k0" />
+                  </node>
                 </node>
               </node>
             </node>
