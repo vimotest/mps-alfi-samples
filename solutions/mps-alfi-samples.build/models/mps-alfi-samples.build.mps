@@ -230,6 +230,17 @@
               </node>
             </node>
           </node>
+          <node concept="28jJK3" id="7hCFpLRnkwZ" role="39821P">
+            <node concept="398BVA" id="7hCFpLRnkxj" role="28jJRO">
+              <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
+              <node concept="2Ry0Ak" id="7hCFpLRnkx$" role="iGT6I">
+                <property role="2Ry0Am" value="alfi" />
+                <node concept="2Ry0Ak" id="7hCFpLRnkxD" role="2Ry0An">
+                  <property role="2Ry0Am" value="StandardModelLibrary.jar" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>
@@ -521,6 +532,16 @@
         <node concept="1SiIV0" id="7hCFpLRmQ70" role="3bR37C">
           <node concept="3bR9La" id="7hCFpLRmQ71" role="1SiIV1">
             <ref role="3bR37D" to="mk2q:3ACy2tA8HzZ" resolve="alfi.PrimitiveMapping" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7hCFpLRnequ" role="3bR37C">
+          <node concept="3bR9La" id="7hCFpLRneqv" role="1SiIV1">
+            <ref role="3bR37D" node="74z8RZkvEPV" resolve="HamsterSimulatorLanguage.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7hCFpLRoj4v" role="3bR37C">
+          <node concept="3bR9La" id="7hCFpLRoj4w" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1ULLXZL0gZG" resolve="org.junit.junit5" />
           </node>
         </node>
       </node>
