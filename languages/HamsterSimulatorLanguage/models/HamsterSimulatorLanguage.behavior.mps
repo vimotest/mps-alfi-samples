@@ -501,7 +501,7 @@
         </node>
         <node concept="3clFbF" id="1z1MMtqIrJW" role="3cqZAp">
           <node concept="37vLTw" id="1z1MMtqJFE8" role="3clFbG">
-            <ref role="3cqZAo" node="1z1MMtqJFDY" resolve="string" />
+            <ref role="3cqZAo" node="1z1MMtqJFDY" resolve="qualifiedName" />
           </node>
         </node>
       </node>

@@ -241,13 +241,13 @@
                 <node concept="2OqwBi" id="2HeY20H1Hfz" role="2Oq$k0">
                   <node concept="2Sf5sV" id="2HeY20H1Hf$" role="2Oq$k0" />
                   <node concept="3Tsc0h" id="2HeY20H1Hf_" role="2OqNvi">
-                    <ref role="3TtcxE" to="fyu6:4mY4lcAqJY1" />
+                    <ref role="3TtcxE" to="fyu6:4mY4lcAqJY1" resolve="rows" />
                   </node>
                 </node>
                 <node concept="1uHKPH" id="2HeY20H1HfA" role="2OqNvi" />
               </node>
               <node concept="3Tsc0h" id="2HeY20H1HfB" role="2OqNvi">
-                <ref role="3TtcxE" to="fyu6:4mY4lcApESV" />
+                <ref role="3TtcxE" to="fyu6:4mY4lcApESV" resolve="grainCells" />
               </node>
             </node>
             <node concept="2es0OD" id="2HeY20H1Yoe" role="2OqNvi">
@@ -372,12 +372,12 @@
                           <node concept="2OqwBi" id="2HeY20H1iLm" role="1y566C">
                             <node concept="2Sf5sV" id="2HeY20H1iLn" role="2Oq$k0" />
                             <node concept="3Tsc0h" id="2HeY20H1iLo" role="2OqNvi">
-                              <ref role="3TtcxE" to="fyu6:4mY4lcAqJY1" />
+                              <ref role="3TtcxE" to="fyu6:4mY4lcAqJY1" resolve="rows" />
                             </node>
                           </node>
                         </node>
                         <node concept="3Tsc0h" id="2HeY20H1iLp" role="2OqNvi">
-                          <ref role="3TtcxE" to="fyu6:4mY4lcApESV" />
+                          <ref role="3TtcxE" to="fyu6:4mY4lcApESV" resolve="grainCells" />
                         </node>
                       </node>
                       <node concept="1yVyf7" id="2HeY20H1ond" role="2OqNvi" />

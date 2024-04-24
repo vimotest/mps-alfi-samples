@@ -173,7 +173,7 @@
     <node concept="10PD9b" id="5ZmQMJIlsk7" role="10PD9s" />
     <node concept="3b7kt6" id="5ZmQMJIlsk8" role="10PD9s" />
     <node concept="2sgV4H" id="5ZmQMJIlska" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" />
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="5ZmQMJIlskb" role="2JcizS">
         <ref role="398BVh" node="5MJEPZbjS7T" resolve="mps_home" />
       </node>
@@ -189,7 +189,7 @@
           </node>
         </node>
         <node concept="m$_wl" id="5ZmQMJIlskF" role="39821P">
-          <ref role="m_rDy" node="5ZmQMJIlskq" resolve="mps-alfi-samples" />
+          <ref role="m_rDy" node="5ZmQMJIlskq" resolve="alfiSamples" />
           <node concept="pUk6x" id="5ZmQMJIlskG" role="pUk7w" />
           <node concept="3_I8Xc" id="1z1MMtqEH_z" role="39821P">
             <ref role="3_I8Xa" to="mk2q:6KJ02DGnSqw" />
@@ -216,7 +216,7 @@
         <ref role="m$_yA" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
       </node>
       <node concept="m$_yC" id="5ZmQMJIlskw" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="3_J27D" id="5ZmQMJIlskx" role="m_cZH">
         <node concept="3Mxwew" id="5ZmQMJIlsky" role="3MwsjC">

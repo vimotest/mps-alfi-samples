@@ -2017,7 +2017,7 @@
                               <node concept="_uYbk" id="4D6i1lASKlj" role="32Men7">
                                 <node concept="_vnHb" id="4D6i1lASKll" role="_uYbl">
                                   <node concept="2RqM1Q" id="4D6i1lASKln" role="_vnH8">
-                                    <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                                    <ref role="2RqM1R" node="4D6i1lASK6u" resolve="cell" />
                                   </node>
                                 </node>
                               </node>
@@ -2054,7 +2054,7 @@
                           <node concept="_uYbk" id="4D6i1lASOTA" role="315$E5">
                             <node concept="_vnHb" id="4D6i1lASOTB" role="_uYbl">
                               <node concept="2RqM1Q" id="4D6i1lASOTC" role="_vnH8">
-                                <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                                <ref role="2RqM1R" node="4D6i1lASK6u" resolve="cell" />
                               </node>
                             </node>
                           </node>
@@ -2066,7 +2066,7 @@
                       <node concept="_uYbk" id="4D6i1lASKu$" role="31szGO">
                         <node concept="_vnHb" id="4D6i1lASKuA" role="_uYbl">
                           <node concept="2RqM1Q" id="4D6i1lASKuC" role="_vnH8">
-                            <ref role="2RqM1R" node="2HakVwV1UU7" resolve="i" />
+                            <ref role="2RqM1R" node="2HakVwV1UU7" resolve="columnIndex" />
                           </node>
                         </node>
                       </node>
@@ -2091,7 +2091,7 @@
                     <node concept="_uYbk" id="4D6i1lASKa5" role="_vku1">
                       <node concept="_vnHb" id="4D6i1lASKa7" role="_uYbl">
                         <node concept="2RqM1Q" id="4D6i1lASKa9" role="_vnH8">
-                          <ref role="2RqM1R" node="4D6i1lASK6u" resolve="newCell" />
+                          <ref role="2RqM1R" node="4D6i1lASK6u" resolve="cell" />
                         </node>
                       </node>
                     </node>

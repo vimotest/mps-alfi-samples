@@ -335,7 +335,7 @@
       <property role="20kJfa" value="definition" />
       <property role="20lbJX" value="fLJekj4/1" />
       <property role="IQ2ns" value="3308300503039730636" />
-      <ref role="20lvS9" node="2RDssu5VmXT" />
+      <ref role="20lvS9" node="2RDssu5VmXT" resolve="RoutineDefinition" />
     </node>
   </node>
   <node concept="1TIwiD" id="2RDssu5VmXT">
@@ -427,7 +427,7 @@
     <property role="34LRSv" value="Hamster Tests" />
     <property role="3GE5qa" value="tests" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5X3Rsv9iaQ9" role="1TKVEi">
       <property role="IQ2ns" value="6864574107187981705" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -458,7 +458,7 @@
     <property role="TrG5h" value="HamsterProgramTestCase" />
     <property role="34LRSv" value="test case" />
     <property role="3GE5qa" value="tests" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5X3Rsv9iaOV" role="1TKVEi">
       <property role="IQ2ns" value="6864574107187981627" />
       <property role="20kJfa" value="hamsterProgram" />
@@ -511,7 +511,7 @@
     <property role="3GE5qa" value="tests.assertions" />
     <property role="TrG5h" value="HamsterTestCaseAssertion" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="5X3Rsv9j9tH">
     <property role="EcuMT" value="6864574107188238189" />
@@ -532,7 +532,7 @@
     <property role="TrG5h" value="TerritorySetup" />
     <property role="34LRSv" value="territory" />
     <property role="3GE5qa" value="territory" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2HeY20GQZ__" role="1TKVEi">
       <property role="IQ2ns" value="3120704408889588069" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -607,7 +607,7 @@
     <property role="EcuMT" value="3120704408889587987" />
     <property role="3GE5qa" value="territory" />
     <property role="TrG5h" value="HamsterState" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2HeY20GQZ$k" role="1TKVEl">
       <property role="IQ2nx" value="3120704408889587988" />
       <property role="TrG5h" value="x" />
