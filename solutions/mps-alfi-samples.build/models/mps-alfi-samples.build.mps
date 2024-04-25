@@ -264,10 +264,10 @@
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="m$_yC" id="1f7pBu6NbWs" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:ymnOULATpW" />
+        <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
       <node concept="m$_yC" id="7hCFpLRlydO" role="m$_yJ">
-        <ref role="m$_y1" to="mk2q:kgFCN7YrP6" />
+        <ref role="m$_y1" to="mk2q:kgFCN7YrP6" resolve="alfi" />
       </node>
       <node concept="3_J27D" id="5ZmQMJIlskx" role="m_cZH">
         <node concept="3Mxwew" id="5ZmQMJIlsky" role="3MwsjC">
