@@ -6,9 +6,9 @@
     <use id="d0e1230a-72e3-4b6b-88f2-98d924f7de11" name="alfi.toBaseLanguage" version="0" />
   </languages>
   <imports>
-    <import index="lodc" ref="e9b40a72-6930-481d-bdce-a0a866bf715e/java:alf.library.primitivebehaviors(alfi.StandardModelLibrary/)" />
-    <import index="zrzc" ref="e9b40a72-6930-481d-bdce-a0a866bf715e/java:alf.library(alfi.StandardModelLibrary/)" />
     <import index="u132" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:junit.framework(JUnit/)" />
+    <import index="lodc" ref="f13dd4ca-a567-47d7-98bc-31b72d168722/java:alf.library.primitivebehaviors(alfi.StandardModelLibraryStubs/)" />
+    <import index="zrzc" ref="f13dd4ca-a567-47d7-98bc-31b72d168722/java:alf.library(alfi.StandardModelLibraryStubs/)" />
   </imports>
   <registry>
     <language id="86004c6e-6a16-41a3-a8a8-cf6cc294dfee" name="HamsterSimulatorLanguage">
