@@ -4,14 +4,10 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot path="${module}/models" />
     </modelRoot>
-    <modelRoot contentPath="${module}/../../build/mps-bundle/mps/lib" type="java_classes">
-      <sourceRoot location="idea_rt.jar" />
-    </modelRoot>
   </models>
   <facets>
     <facet type="java" compile="mps" classes="mps" ext="no" languageLevel="JAVA_10">
       <classes generated="true" path="${module}/classes_gen" />
-      <library location="${module}/../../build/mps-bundle/mps/lib/idea_rt.jar" />
     </facet>
     <facet type="generator" planModel="r:f7aff45d-10c8-40bc-9edb-f306b1fca829(toJava@genplan)" />
   </facets>
@@ -29,11 +25,8 @@
   <languageVersions>
     <language slang="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" version="0" />
     <language slang="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toBaseLanguage" version="0" />
-    <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="12" />
-    <language slang="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" version="2" />
     <language slang="l:4caf0310-491e-41f5-8a9b-2006b3a94898:jetbrains.mps.execution.util" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
-    <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
   </languageVersions>
   <dependencyVersions>
     <module reference="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" version="0" />
