@@ -14,9 +14,21 @@ task prepareMps {
     dependsOn 'buildOsSpecificBundle'
 }
 
+task fixCopyStandardModelLibraryStubs {
+    group 'other'
+    description 'Workaround for wrong lookup of StandardModelLibraryStubs.jar'
+    doLast {
+        delete "$buildDir/mps-bundle/dependencies/dependencies/alfi/lib/"
+        copy {
+            from "$buildDir/mps-bundle/dependencies/alfi/lib/"
+            into "$buildDir/mps-bundle/dependencies/dependencies/alfi/lib/"
+        }
+    }
+}
+
 task mpsBuild {
     group 'mps'
-    dependsOn 'mpsAntGenerate', 'mpsAntBuild'
+    dependsOn 'mpsAntGenerate', 'mpsAntBuild', fixCopyStandardModelLibraryStubs
 }
 
 task mpsClean {

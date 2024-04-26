@@ -113,7 +113,6 @@
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
-        <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
       <concept id="763829979718664966" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleResources" flags="ng" index="3rtmxn">
@@ -125,6 +124,9 @@
         <property id="8137134783396676838" name="extracted" index="1HemKv" />
         <property id="2889113830911481881" name="deployFolderName" index="3ZfqAx" />
         <child id="8137134783396676835" name="location" index="1HemKq" />
+      </concept>
+      <concept id="4278635856200826393" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyJar" flags="ng" index="1BurEX">
+        <child id="4278635856200826394" name="path" index="1BurEY" />
       </concept>
       <concept id="4278635856200794926" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyExtendLanguage" flags="ng" index="1Busua">
         <reference id="4278635856200794928" name="language" index="1Busuk" />
@@ -166,7 +168,6 @@
     </node>
     <node concept="398rNT" id="kgFCN7YrQ7" role="1l3spd">
       <property role="TrG5h" value="project_home" />
-      <node concept="55IIr" id="7hCFpLROLyq" role="398pKh" />
     </node>
     <node concept="398rNT" id="5MJEPZbjS9E" role="1l3spd">
       <property role="TrG5h" value="dependencies_home" />
@@ -208,7 +209,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="74z8RZkvEOA" role="1l3spa">
-      <ref role="1l3spb" to="mk2q:kgFCN7YrOM" resolve="alfi" />
+      <ref role="1l3spb" to="mk2q:5tK9548cmXy" resolve="alfi-build" />
       <node concept="398BVA" id="7hCFpLRks2T" role="2JcizS">
         <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
       </node>
@@ -231,13 +232,16 @@
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="7hCFpLRnkwZ" role="39821P">
-            <node concept="398BVA" id="7hCFpLRnkxj" role="28jJRO">
+          <node concept="28jJK3" id="5tK9548$X3K" role="39821P">
+            <node concept="398BVA" id="5tK9548$X3T" role="28jJRO">
               <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
-              <node concept="2Ry0Ak" id="7hCFpLRnkx$" role="iGT6I">
+              <node concept="2Ry0Ak" id="5tK9548$X3Z" role="iGT6I">
                 <property role="2Ry0Am" value="alfi" />
-                <node concept="2Ry0Ak" id="3miMVN6aNL5" role="2Ry0An">
-                  <property role="2Ry0Am" value="StandardModelLibraryStubs.jar" />
+                <node concept="2Ry0Ak" id="5tK9548$X44" role="2Ry0An">
+                  <property role="2Ry0Am" value="lib" />
+                  <node concept="2Ry0Ak" id="5tK9548$X49" role="2Ry0An">
+                    <property role="2Ry0Am" value="StandardModelLibraryStubs.jar" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -267,7 +271,7 @@
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
       <node concept="m$_yC" id="7hCFpLRlydO" role="m$_yJ">
-        <ref role="m$_y1" to="mk2q:kgFCN7YrP6" resolve="alfi" />
+        <ref role="m$_y1" to="mk2q:5tK9548cRhB" />
       </node>
       <node concept="3_J27D" id="5ZmQMJIlskx" role="m_cZH">
         <node concept="3Mxwew" id="5ZmQMJIlsky" role="3MwsjC">
@@ -312,20 +316,19 @@
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="7hCFpLROT0G" role="1HemKq">
-            <node concept="398BVA" id="7hCFpLROT0$" role="3LXTmr">
-              <ref role="398BVh" node="kgFCN7YrQ7" resolve="project_home" />
-              <node concept="2Ry0Ak" id="7hCFpLROT0_" role="iGT6I">
+          <node concept="3LXTmp" id="3miMVN6mBeU" role="1HemKq">
+            <node concept="55IIr" id="3miMVN6mBeQ" role="3LXTmr">
+              <node concept="2Ry0Ak" id="3miMVN6mBeR" role="iGT6I">
                 <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="7hCFpLROT0A" role="2Ry0An">
+                <node concept="2Ry0Ak" id="3miMVN6mBeS" role="2Ry0An">
                   <property role="2Ry0Am" value="HamsterSimulatorLanguage" />
-                  <node concept="2Ry0Ak" id="7hCFpLROT0B" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="3miMVN6mBeT" role="2Ry0An">
                     <property role="2Ry0Am" value="models" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="7hCFpLROT0H" role="3LXTna">
+            <node concept="3qWCbU" id="3miMVN6mBeV" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
           </node>
@@ -337,35 +340,24 @@
             <property role="3ZfqAx" value="generator/templates" />
             <property role="1Hdu6h" value="true" />
             <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="7hCFpLROT0S" role="1HemKq">
-              <node concept="398BVA" id="7hCFpLROT0I" role="3LXTmr">
-                <ref role="398BVh" node="kgFCN7YrQ7" resolve="project_home" />
-                <node concept="2Ry0Ak" id="7hCFpLROT0J" role="iGT6I">
+            <node concept="3LXTmp" id="3miMVN6mBf1" role="1HemKq">
+              <node concept="55IIr" id="3miMVN6mBeW" role="3LXTmr">
+                <node concept="2Ry0Ak" id="3miMVN6mBeX" role="iGT6I">
                   <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="7hCFpLROT0K" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="3miMVN6mBeY" role="2Ry0An">
                     <property role="2Ry0Am" value="HamsterSimulatorLanguage" />
-                    <node concept="2Ry0Ak" id="7hCFpLROT0L" role="2Ry0An">
+                    <node concept="2Ry0Ak" id="3miMVN6mBeZ" role="2Ry0An">
                       <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="7hCFpLROT0M" role="2Ry0An">
+                      <node concept="2Ry0Ak" id="3miMVN6mBf0" role="2Ry0An">
                         <property role="2Ry0Am" value="templates" />
                       </node>
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3qWCbU" id="7hCFpLROT0T" role="3LXTna">
+              <node concept="3qWCbU" id="3miMVN6mBf2" role="3LXTna">
                 <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
               </node>
-            </node>
-          </node>
-          <node concept="1SiIV0" id="74z8RZkvEOL" role="3bR37C">
-            <node concept="3bR9La" id="74z8RZkvEOM" role="1SiIV1">
-              <ref role="3bR37D" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
-            </node>
-          </node>
-          <node concept="1SiIV0" id="74z8RZkvEON" role="3bR37C">
-            <node concept="3bR9La" id="74z8RZkvEOO" role="1SiIV1">
-              <ref role="3bR37D" to="mk2q:kgFCN7YrOX" resolve="alfi" />
             </node>
           </node>
           <node concept="1SiIV0" id="1z1MMtqEvga" role="3bR37C">
@@ -383,10 +375,15 @@
               <ref role="3bR37D" to="ffeo:3HV74$ebibC" resolve="jetbrains.mps.lang.text" />
             </node>
           </node>
-        </node>
-        <node concept="1SiIV0" id="74z8RZkvEOJ" role="3bR37C">
-          <node concept="Rbm2T" id="74z8RZkvEOK" role="1SiIV1">
-            <ref role="1E1Vl2" to="mk2q:kgFCN7YrOX" resolve="alfi" />
+          <node concept="1SiIV0" id="5tK9548gI7Y" role="3bR37C">
+            <node concept="3bR9La" id="5tK9548gI7Z" role="1SiIV1">
+              <ref role="3bR37D" to="mk2q:5tK9548cRt6" resolve="alfi.StandardModelLibrary" />
+            </node>
+          </node>
+          <node concept="1SiIV0" id="5tK9548gI80" role="3bR37C">
+            <node concept="3bR9La" id="5tK9548gI81" role="1SiIV1">
+              <ref role="3bR37D" to="mk2q:5tK9548cRi8" resolve="alfi" />
+            </node>
           </node>
         </node>
         <node concept="1E0d5M" id="74z8RZkvERF" role="1E1XAP">
@@ -400,6 +397,11 @@
         <node concept="1SiIV0" id="1f7pBu6Modb" role="3bR37C">
           <node concept="1Busua" id="1f7pBu6Modc" role="1SiIV1">
             <ref role="1Busuk" to="ffeo:sx8XDLCp97" resolve="jetbrains.mps.execution.util" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5tK9548gI7W" role="3bR37C">
+          <node concept="Rbm2T" id="5tK9548gI7X" role="1SiIV1">
+            <ref role="1E1Vl2" to="mk2q:5tK9548cRi8" resolve="alfi" />
           </node>
         </node>
       </node>
@@ -418,36 +420,35 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="74z8RZkvER6" role="3bR37C">
-          <node concept="3bR9La" id="74z8RZkvER7" role="1SiIV1">
-            <ref role="3bR37D" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
-          </node>
-        </node>
         <node concept="1BupzO" id="74z8RZkvERc" role="3bR31x">
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="7hCFpLROT12" role="1HemKq">
-            <node concept="398BVA" id="7hCFpLROT0U" role="3LXTmr">
-              <ref role="398BVh" node="kgFCN7YrQ7" resolve="project_home" />
-              <node concept="2Ry0Ak" id="7hCFpLROT0V" role="iGT6I">
+          <node concept="3LXTmp" id="3miMVN6mBf7" role="1HemKq">
+            <node concept="55IIr" id="3miMVN6mBf3" role="3LXTmr">
+              <node concept="2Ry0Ak" id="3miMVN6mBf4" role="iGT6I">
                 <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="7hCFpLROT0W" role="2Ry0An">
+                <node concept="2Ry0Ak" id="3miMVN6mBf5" role="2Ry0An">
                   <property role="2Ry0Am" value="HamsterSimulatorLanguage.runtime" />
-                  <node concept="2Ry0Ak" id="7hCFpLROT0X" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="3miMVN6mBf6" role="2Ry0An">
                     <property role="2Ry0Am" value="models" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="7hCFpLROT13" role="3LXTna">
+            <node concept="3qWCbU" id="3miMVN6mBf8" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="7hCFpLREIbp" role="3bR37C">
-          <node concept="3bR9La" id="7hCFpLREIbq" role="1SiIV1">
-            <ref role="3bR37D" to="mk2q:7hCFpLRvV8W" resolve="alfi.StandardModelLibraryStubs" />
+        <node concept="1SiIV0" id="5tK9548gI87" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI88" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRyB" resolve="alfi.StandardModelLibraryStubs" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5tK9548gI89" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI8a" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRt6" resolve="alfi.StandardModelLibrary" />
           </node>
         </node>
       </node>
@@ -470,43 +471,26 @@
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="7hCFpLROT1c" role="1HemKq">
-            <node concept="398BVA" id="7hCFpLROT14" role="3LXTmr">
-              <ref role="398BVh" node="kgFCN7YrQ7" resolve="project_home" />
-              <node concept="2Ry0Ak" id="7hCFpLROT15" role="iGT6I">
+          <node concept="3LXTmp" id="3miMVN6mBfd" role="1HemKq">
+            <node concept="55IIr" id="3miMVN6mBf9" role="3LXTmr">
+              <node concept="2Ry0Ak" id="3miMVN6mBfa" role="iGT6I">
                 <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="7hCFpLROT16" role="2Ry0An">
+                <node concept="2Ry0Ak" id="3miMVN6mBfb" role="2Ry0An">
                   <property role="2Ry0Am" value="HamsterSimulatorLanguage.sandbox" />
-                  <node concept="2Ry0Ak" id="7hCFpLROT17" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="3miMVN6mBfc" role="2Ry0An">
                     <property role="2Ry0Am" value="models" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="7hCFpLROT1d" role="3LXTna">
+            <node concept="3qWCbU" id="3miMVN6mBfe" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1z1MMtqEvgn" role="3bR37C">
-          <node concept="3bR9La" id="1z1MMtqEvgo" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="mk2q:kyG04cVZep" resolve="alfi.StandardModelLibrary" />
           </node>
         </node>
         <node concept="1SiIV0" id="1z1MMtqEvj1" role="3bR37C">
           <node concept="3bR9La" id="1z1MMtqEvj2" role="1SiIV1">
             <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1f7pBu6Modo" role="3bR37C">
-          <node concept="3bR9La" id="1f7pBu6Modp" role="1SiIV1">
-            <ref role="3bR37D" to="mk2q:6KJ02DGnBbz" resolve="alfi.toBaseLanguage" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1f7pBu6Modq" role="3bR37C">
-          <node concept="3bR9La" id="1f7pBu6Modr" role="1SiIV1">
-            <ref role="3bR37D" to="mk2q:kgFCN7YrOX" resolve="alfi" />
           </node>
         </node>
         <node concept="1SiIV0" id="1f7pBu6Mods" role="3bR37C">
@@ -529,11 +513,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="7hCFpLRmQ70" role="3bR37C">
-          <node concept="3bR9La" id="7hCFpLRmQ71" role="1SiIV1">
-            <ref role="3bR37D" to="mk2q:3ACy2tA8HzZ" resolve="alfi.PrimitiveMapping" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="7hCFpLRnequ" role="3bR37C">
           <node concept="3bR9La" id="7hCFpLRneqv" role="1SiIV1">
             <ref role="3bR37D" node="74z8RZkvEPV" resolve="HamsterSimulatorLanguage.runtime" />
@@ -544,10 +523,43 @@
             <ref role="3bR37D" to="ffeo:1ULLXZL0gZG" resolve="org.junit.junit5" />
           </node>
         </node>
-        <node concept="1SiIV0" id="7hCFpLREIbv" role="3bR37C">
-          <node concept="3bR9La" id="7hCFpLREIbw" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="mk2q:7hCFpLRvV8W" resolve="alfi.StandardModelLibraryStubs" />
+        <node concept="1SiIV0" id="5tK9548gI8f" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI8g" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRmP" resolve="alfi.PrimitiveMapping" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5tK9548gI8h" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI8i" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRt6" resolve="alfi.StandardModelLibrary" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5tK9548gI8j" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI8k" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRyB" resolve="alfi.StandardModelLibraryStubs" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5tK9548gI8l" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI8m" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRl1" resolve="alfi.toBaseLanguage" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5tK9548gI8n" role="3bR37C">
+          <node concept="3bR9La" id="5tK9548gI8o" role="1SiIV1">
+            <ref role="3bR37D" to="mk2q:5tK9548cRi8" resolve="alfi" />
+          </node>
+        </node>
+        <node concept="1BurEX" id="5tK9548yAGu" role="3bR37C">
+          <node concept="398BVA" id="5tK9548yAGT" role="1BurEY">
+            <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
+            <node concept="2Ry0Ak" id="5tK9548yAGZ" role="iGT6I">
+              <property role="2Ry0Am" value="alfi" />
+              <node concept="2Ry0Ak" id="5tK9548$YFF" role="2Ry0An">
+                <property role="2Ry0Am" value="lib" />
+                <node concept="2Ry0Ak" id="5tK9548$YFK" role="2Ry0An">
+                  <property role="2Ry0Am" value="StandardModelLibraryStubs.jar" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -570,20 +582,19 @@
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="7hCFpLROT1m" role="1HemKq">
-            <node concept="398BVA" id="7hCFpLROT1e" role="3LXTmr">
-              <ref role="398BVh" node="kgFCN7YrQ7" resolve="project_home" />
-              <node concept="2Ry0Ak" id="7hCFpLROT1f" role="iGT6I">
+          <node concept="3LXTmp" id="3miMVN6mBfj" role="1HemKq">
+            <node concept="55IIr" id="3miMVN6mBff" role="3LXTmr">
+              <node concept="2Ry0Ak" id="3miMVN6mBfg" role="iGT6I">
                 <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="7hCFpLROT1g" role="2Ry0An">
+                <node concept="2Ry0Ak" id="3miMVN6mBfh" role="2Ry0An">
                   <property role="2Ry0Am" value="AlfiSamples.genplan" />
-                  <node concept="2Ry0Ak" id="7hCFpLROT1h" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="3miMVN6mBfi" role="2Ry0An">
                     <property role="2Ry0Am" value="models" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="7hCFpLROT1n" role="3LXTna">
+            <node concept="3qWCbU" id="3miMVN6mBfk" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
           </node>

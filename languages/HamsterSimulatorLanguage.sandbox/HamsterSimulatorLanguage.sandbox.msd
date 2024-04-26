@@ -12,7 +12,7 @@
     <facet type="generator" planModel="r:f7aff45d-10c8-40bc-9edb-f306b1fca829(toJava@genplan)" />
   </facets>
   <dependencies>
-    <dependency reexport="true">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
+    <dependency reexport="false">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
     <dependency reexport="false">96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</dependency>
     <dependency reexport="false">d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toBaseLanguage)</dependency>
     <dependency reexport="false">bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)</dependency>
@@ -20,7 +20,7 @@
     <dependency reexport="false">05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3(alfi.PrimitiveMapping)</dependency>
     <dependency reexport="false">bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)</dependency>
     <dependency reexport="false">63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)</dependency>
-    <dependency reexport="true">f13dd4ca-a567-47d7-98bc-31b72d168722(alfi.StandardModelLibraryStubs)</dependency>
+    <dependency reexport="false">f13dd4ca-a567-47d7-98bc-31b72d168722(alfi.StandardModelLibraryStubs)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" version="0" />

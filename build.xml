@@ -4,11 +4,11 @@
   <property name="build.tmp" location="${build.dir}/tmp/mps-alfi-samples" />
   <property name="build.layout" location="${build.dir}/artifacts/mps-alfi-samples" />
   <property name="mps_home" location="${basedir}/build/mps-bundle/mps" />
-  <property name="project_home" location="${basedir}" />
+  <property name="project_home" location="" />
   <property name="dependencies_home" location="${basedir}/build/mps-bundle/dependencies" />
   <property name="platform_lib" location="${basedir}/build/mps-bundle/mps/lib" />
   <property name="artifacts.mps" location="${mps_home}" />
-  <property name="artifacts.alfi" location="${dependencies_home}" />
+  <property name="artifacts.alfi-build" location="${dependencies_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
   <property name="mps.date" value="${import.mps.mps.date}" />
@@ -173,7 +173,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage" />
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.jar" />
     </jar>
     <mkdir dir="${build.tmp}/default/HamsterSimulatorLanguage-generator.jar" />
@@ -224,23 +224,23 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage.generator" />
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage-generator.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-HamsterSimulatorLanguage-models">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-HamsterSimulatorLanguage-generator-templates">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage-src.jar" duplicate="preserve">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/generator/source_gen">
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/source_gen">
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -269,14 +269,14 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
-      <fileset dir="${project_home}/solutions/HamsterSimulatorLanguage.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.runtime.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-HamsterSimulatorLanguage.runtime-models">
-      <fileset dir="${project_home}/solutions/HamsterSimulatorLanguage.runtime/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+      <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.runtime-src.jar" duplicate="preserve">
-      <fileset dir="${project_home}/solutions/HamsterSimulatorLanguage.runtime/source_gen">
+      <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -306,6 +306,7 @@
           <language id="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" />
           <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toBaseLanguage" />
         </uses>
+        <library jar="../../StandardModelLibraryStubs.jar" />
         <classpath>
           <entry path="." />
         </classpath>
@@ -315,14 +316,14 @@
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage.sandbox" />
       <fileset dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox" includes="icons/**" />
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage.sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.sandbox.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-HamsterSimulatorLanguage.sandbox-models">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage.sandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.sandbox-src.jar" duplicate="preserve">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage.sandbox/source_gen">
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -358,14 +359,14 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
-      <fileset dir="${project_home}/solutions/AlfiSamples.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models">
-      <fileset dir="${project_home}/solutions/AlfiSamples.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/mps-alfi-samples/AlfiSamples.genplan-src.jar" duplicate="preserve">
-      <fileset dir="${project_home}/solutions/AlfiSamples.genplan/source_gen">
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -376,7 +377,7 @@
     </jar>
     <zip destfile="${build.layout}/mps-alfi-samples.zip">
       <zipfileset file="${platform_lib}/idea_rt.jar" prefix="mps-alfi-samples" />
-      <zipfileset file="${dependencies_home}/alfi/StandardModelLibraryStubs.jar" prefix="mps-alfi-samples" />
+      <zipfileset file="${dependencies_home}/alfi/lib/StandardModelLibraryStubs.jar" prefix="mps-alfi-samples" />
       <fileset dir="${build.tmp}/default/mps-alfi-samples.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
@@ -407,7 +408,7 @@
     <echo message="generating" />
     <generate fork="true" logLevel="${mps.ant.log}">      
       <settings refid="m2m-defaults" />
-      <plugin path="${artifacts.alfi}/alfi" id="alfi" />
+      <plugin path="${artifacts.alfi-build}/alfi" id="alfi" />
       <plugin path="${artifacts.mps}/plugins/mps-build" id="jetbrains.mps.build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" id="jetbrains.mps.core" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" id="jetbrains.mps.testing" />
@@ -556,12 +557,12 @@
   <target name="makeDependents" />
   
   <target name="java.compile.HamsterSimulatorLanguage" depends="java.compile.HamsterSimulatorLanguage.runtime, fetchDependencies">
-    <mkdir dir="${project_home}/languages/HamsterSimulatorLanguage/source_gen" />
+    <mkdir dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" />
     <mkdir dir="${build.tmp}/java/out/HamsterSimulatorLanguage" />
     <javac destdir="${build.tmp}/java/out/HamsterSimulatorLanguage" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/languages/HamsterSimulatorLanguage/source_gen" />
+        <path location="${basedir}/languages/HamsterSimulatorLanguage/source_gen" />
       </src>
       <classpath>
         <pathelement path="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
@@ -603,9 +604,9 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
@@ -615,21 +616,21 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
-        <fileset file="${artifacts.alfi}/alfi/StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
   <target name="java.compile.HamsterSimulatorLanguage.generator" depends="java.compile.HamsterSimulatorLanguage, java.compile.HamsterSimulatorLanguage.runtime, fetchDependencies">
-    <mkdir dir="${project_home}/languages/HamsterSimulatorLanguage/generator/source_gen" />
+    <mkdir dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/HamsterSimulatorLanguage.generator" />
     <javac destdir="${build.tmp}/java/out/HamsterSimulatorLanguage.generator" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/languages/HamsterSimulatorLanguage/generator/source_gen" />
+        <path location="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
@@ -672,47 +673,47 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
-        <fileset file="${artifacts.alfi}/alfi/StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage.generator">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage/generator/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
   <target name="java.compile.HamsterSimulatorLanguage.runtime">
-    <mkdir dir="${project_home}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
+    <mkdir dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
     <javac destdir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
+        <path location="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
       </src>
       <classpath>
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
-        <fileset file="${artifacts.alfi}/alfi/StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime">
-      <fileset dir="${project_home}/solutions/HamsterSimulatorLanguage.runtime/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
   <target name="java.compile.HamsterSimulatorLanguage.sandbox" depends="java.compile.AlfiSamples.genplan, java.compile.HamsterSimulatorLanguage.runtime, fetchDependencies">
-    <mkdir dir="${project_home}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
+    <mkdir dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
     <mkdir dir="${build.tmp}/java/out/HamsterSimulatorLanguage.sandbox" />
     <javac destdir="${build.tmp}/java/out/HamsterSimulatorLanguage.sandbox" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
+        <path location="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
@@ -730,17 +731,18 @@
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/AlfiSamples.genplan" />
         <pathelement path="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
+        <fileset file="${dependencies_home}/alfi/lib/StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/lib/junit4.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/util-8.jar" />
         <fileset file="${artifacts.mps}/lib/util_rt.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.PrimitiveMapping.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
-        <fileset file="${artifacts.alfi}/alfi/languages/alfi-modules/alfi.toBaseLanguage.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.PrimitiveMapping.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.toBaseLanguage.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
-        <fileset file="${artifacts.alfi}/alfi/StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="apiguardian-api-1.1.2.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="opentest4j-1.2.0.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-api-5.9.3.jar" />
@@ -755,17 +757,17 @@
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage.sandbox">
-      <fileset dir="${project_home}/languages/HamsterSimulatorLanguage.sandbox/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
   <target name="java.compile.AlfiSamples.genplan" depends="fetchDependencies">
-    <mkdir dir="${project_home}/solutions/AlfiSamples.genplan/source_gen" />
+    <mkdir dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
     <mkdir dir="${build.tmp}/java/out/AlfiSamples.genplan" />
     <javac destdir="${build.tmp}/java/out/AlfiSamples.genplan" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/solutions/AlfiSamples.genplan/source_gen" />
+        <path location="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
@@ -787,15 +789,15 @@
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/AlfiSamples.genplan">
-      <fileset dir="${project_home}/solutions/AlfiSamples.genplan/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
   <target name="cleanSources">
-    <delete dir="${project_home}/solutions/AlfiSamples.genplan/source_gen" />
-    <delete dir="${project_home}/languages/HamsterSimulatorLanguage/source_gen" />
-    <delete dir="${project_home}/languages/HamsterSimulatorLanguage/generator/source_gen" />
-    <delete dir="${project_home}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
-    <delete dir="${project_home}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
+    <delete dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
+    <delete dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" />
+    <delete dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" />
+    <delete dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
+    <delete dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
   </target>
 </project>
