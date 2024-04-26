@@ -45,6 +45,7 @@
       <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
         <child id="4380385936562148502" name="containerName" index="Nbhlr" />
       </concept>
+      <concept id="7389400916848036984" name="jetbrains.mps.build.structure.BuildLayout_Folder" flags="ng" index="398223" />
       <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT">
         <child id="7389400916848144618" name="defaultPath" index="398pKh" />
       </concept>
@@ -215,6 +216,39 @@
       </node>
     </node>
     <node concept="1l3spV" id="5ZmQMJIlskB" role="1l3spN">
+      <node concept="m$_wl" id="5tK9548_kmd" role="39821P">
+        <ref role="m_rDy" node="5ZmQMJIlskq" />
+        <node concept="398223" id="5tK9548_kmX" role="39821P">
+          <node concept="3_J27D" id="5tK9548_kmZ" role="Nbhlr">
+            <node concept="3Mxwew" id="5tK9548_knb" role="3MwsjC">
+              <property role="3MwjfP" value="lib" />
+            </node>
+          </node>
+          <node concept="28jJK3" id="5tK9548_kmz" role="39821P">
+            <node concept="398BVA" id="5tK9548_km$" role="28jJRO">
+              <ref role="398BVh" node="37zNn5LMY95" resolve="platform_lib" />
+              <node concept="2Ry0Ak" id="5tK9548_km_" role="iGT6I">
+                <property role="2Ry0Am" value="idea_rt.jar" />
+              </node>
+            </node>
+          </node>
+          <node concept="28jJK3" id="5tK9548_kmA" role="39821P">
+            <node concept="398BVA" id="5tK9548_kmB" role="28jJRO">
+              <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
+              <node concept="2Ry0Ak" id="5tK9548_kmC" role="iGT6I">
+                <property role="2Ry0Am" value="alfi" />
+                <node concept="2Ry0Ak" id="5tK9548_kmD" role="2Ry0An">
+                  <property role="2Ry0Am" value="lib" />
+                  <node concept="2Ry0Ak" id="5tK9548_kmE" role="2Ry0An">
+                    <property role="2Ry0Am" value="StandardModelLibraryStubs.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="pUk6x" id="5tK9548_kmw" role="pUk7w" />
+      </node>
       <node concept="3981dG" id="5ZmQMJIlskC" role="39821P">
         <node concept="3_J27D" id="5ZmQMJIlskD" role="Nbhlr">
           <node concept="3Mxwew" id="5ZmQMJIlskE" role="3MwsjC">
@@ -224,23 +258,30 @@
         <node concept="m$_wl" id="5ZmQMJIlskF" role="39821P">
           <ref role="m_rDy" node="5ZmQMJIlskq" resolve="alfiSamples" />
           <node concept="pUk6x" id="5ZmQMJIlskG" role="pUk7w" />
-          <node concept="28jJK3" id="37zNn5LNbRw" role="39821P">
-            <node concept="398BVA" id="37zNn5LNbTK" role="28jJRO">
-              <ref role="398BVh" node="37zNn5LMY95" resolve="platform_lib" />
-              <node concept="2Ry0Ak" id="1f7pBu6NCYd" role="iGT6I">
-                <property role="2Ry0Am" value="idea_rt.jar" />
+          <node concept="398223" id="5tK9548_knE" role="39821P">
+            <node concept="3_J27D" id="5tK9548_knG" role="Nbhlr">
+              <node concept="3Mxwew" id="5tK9548_knS" role="3MwsjC">
+                <property role="3MwjfP" value="lib" />
               </node>
             </node>
-          </node>
-          <node concept="28jJK3" id="5tK9548$X3K" role="39821P">
-            <node concept="398BVA" id="5tK9548$X3T" role="28jJRO">
-              <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
-              <node concept="2Ry0Ak" id="5tK9548$X3Z" role="iGT6I">
-                <property role="2Ry0Am" value="alfi" />
-                <node concept="2Ry0Ak" id="5tK9548$X44" role="2Ry0An">
-                  <property role="2Ry0Am" value="lib" />
-                  <node concept="2Ry0Ak" id="5tK9548$X49" role="2Ry0An">
-                    <property role="2Ry0Am" value="StandardModelLibraryStubs.jar" />
+            <node concept="28jJK3" id="37zNn5LNbRw" role="39821P">
+              <node concept="398BVA" id="37zNn5LNbTK" role="28jJRO">
+                <ref role="398BVh" node="37zNn5LMY95" resolve="platform_lib" />
+                <node concept="2Ry0Ak" id="1f7pBu6NCYd" role="iGT6I">
+                  <property role="2Ry0Am" value="idea_rt.jar" />
+                </node>
+              </node>
+            </node>
+            <node concept="28jJK3" id="5tK9548$X3K" role="39821P">
+              <node concept="398BVA" id="5tK9548$X3T" role="28jJRO">
+                <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
+                <node concept="2Ry0Ak" id="5tK9548$X3Z" role="iGT6I">
+                  <property role="2Ry0Am" value="alfi" />
+                  <node concept="2Ry0Ak" id="5tK9548$X44" role="2Ry0An">
+                    <property role="2Ry0Am" value="lib" />
+                    <node concept="2Ry0Ak" id="5tK9548$X49" role="2Ry0An">
+                      <property role="2Ry0Am" value="StandardModelLibraryStubs.jar" />
+                    </node>
                   </node>
                 </node>
               </node>

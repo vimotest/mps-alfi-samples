@@ -37,6 +37,14 @@ jobs:
         env:
           DISPLAY: :1
 
+      # Run Java Generations
+      - name: Test Java Hamster Program
+        run: sh ./gradlew executeJavaHamsterTests
+
+      # Run ALF Generations
+      - name: Test ALF Hamster Program
+        run: sh ./gradlew executeAlfHamsterTests
+
       # Stop Xvfb
       - name: Tear down xvfb
         run: killall Xvfb

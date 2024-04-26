@@ -179,7 +179,6 @@
         <child id="982871510068000158" name="sourceNodeQuery" index="1sPUBK" />
       </concept>
       <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
-      <concept id="1167756221419" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_templatePropertyValue" flags="nn" index="3zGtF$" />
       <concept id="1167770111131" name="jetbrains.mps.lang.generator.structure.ReferenceMacro_GetReferent" flags="in" index="3$xsQk" />
       <concept id="1167945743726" name="jetbrains.mps.lang.generator.structure.IfMacro_Condition" flags="in" index="3IZrLx" />
       <concept id="1167951910403" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodesQuery" flags="in" index="3JmXsc" />
@@ -2877,22 +2876,6 @@
     <node concept="6nSm2" id="37zNn5LNJ2c" role="3mGtxP">
       <property role="PCHHn" value="6OepWIVA92I/package" />
       <property role="TrG5h" value="HamsterTestSuite" />
-      <node concept="17Uvod" id="37zNn5LNJ5b" role="lGtFl">
-        <property role="2qtEX9" value="name" />
-        <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-        <node concept="3zFVjK" id="37zNn5LNJ5c" role="3zH0cK">
-          <node concept="3clFbS" id="37zNn5LNJ5d" role="2VODD2">
-            <node concept="3clFbF" id="37zNn5LNJV3" role="3cqZAp">
-              <node concept="2OqwBi" id="37zNn5LNK5_" role="3clFbG">
-                <node concept="1iwH7S" id="37zNn5LNJV2" role="2Oq$k0" />
-                <node concept="2piZGk" id="37zNn5LNKbH" role="2OqNvi">
-                  <node concept="3zGtF$" id="37zNn5LNKfm" role="2piZGb" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
       <node concept="3wUxaT" id="37zNn5LNL21" role="3wUx9_">
         <node concept="113yj2" id="37zNn5LNL$p" role="2hPqOu">
           <ref role="113tg7" to="hsxa:37zNn5KYY1p" resolve="TestSuite" />

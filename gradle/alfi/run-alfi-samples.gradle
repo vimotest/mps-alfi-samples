@@ -1,0 +1,64 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+apply from: 'gradle/alfi/download-install-alf.gradle'
+apply from: 'gradle/alfi/setup-alf-workspace.gradle'
+
+def alfiSamplesArtifactsDir = "$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples"
+def mpsArtifactsDir = "$buildDir/mps-bundle/mps"
+
+def hamsterRuntimeLibraryDir = "$alfiSamplesArtifactsDir/lib"
+def mpsTestingRuntimeLibraryDir = "$buildDir/mps-bundle/mps/plugins/mps-testing/languages/junit5/lib"
+
+def hamsterSandboxJar = "$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.sandbox.jar"
+def junit4Jar = "$mpsArtifactsDir/lib/junit4.jar"
+
+def runtimeLibraryJars = fileTree(hamsterRuntimeLibraryDir).include('*.jar')
+def mpsTestingRuntimeLibraryJars = fileTree(mpsTestingRuntimeLibraryDir).include('*.jar')
+
+task executeJavaHamsterTests(type: JavaExec) {
+    group 'alfi-samples'
+    description 'Execute Java Hamster tests'
+    classpath = files(hamsterSandboxJar, junit4Jar) + runtimeLibraryJars + mpsTestingRuntimeLibraryJars
+    mainClass = 'HamsterSimulatorLanguage.sandbox.HamsterTestSuite'
+    standardOutput = new ByteArrayOutputStream()
+
+    doLast {
+        def output = standardOutput.toString()
+        println output
+
+        if (!output.contains("0 tests skipped") ||
+            !output.contains("0 tests aborted") ||
+            !output.contains("0 tests failed")) {
+            throw new GradleException("hamster tests failed")
+        } else {
+            println "hamster tests passed"
+        }
+    }
+}
+
+task executeAlfHamsterTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Execute ALF Hamster tests'
+    dependsOn installAlf/*, setupAlfWorkspace*/
+
+    def alfInstallDir = "$buildDir/alf"
+    def hamsterAlfScriptsDir = "$buildDir/alf-workspace".replace('\\', '/')
+
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        commandLine 'cmd', '/c', "$alfInstallDir/alf.bat", "-m", hamsterAlfScriptsDir, "HamsterTestSuiteActivity"
+    } else {
+        commandLine "./$alfInstallDir/alf", "-m", hamsterAlfScriptsDir, "HamsterTestSuiteActivity"
+    }
+    workingDir = alfInstallDir
+    standardOutput = new ByteArrayOutputStream()
+
+    doLast {
+        def output = standardOutput.toString()
+        println output
+
+        if (!output.contains("FINISHED") || output.contains("FAILED")) {
+            throw new GradleException("alf tests failed")
+        }
+    }
+}
+

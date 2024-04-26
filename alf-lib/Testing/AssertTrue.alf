@@ -1,0 +1,7 @@
+namespace Testing;
+
+activity AssertTrue(in condition: Boolean[0..1]) {
+	if (condition != true) {
+    	WriteLine("FAILED: condition is not true");
+    }
+}

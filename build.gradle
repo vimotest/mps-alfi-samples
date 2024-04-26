@@ -8,6 +8,7 @@ ext.customMpsPlugins = [
 ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'
+apply from: 'gradle/alfi/run-alfi-samples.gradle'
 
 task prepareMps {
     group 'mps'

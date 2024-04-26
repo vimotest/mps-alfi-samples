@@ -1,0 +1,17 @@
+ext.alfVersion = "1.1.0k"
+
+apply from: 'gradle/alfi/install-alf.gradle'
+
+task downloadInstallAlfScript {
+    group 'alfi-samples'
+
+    doLast {
+        def gradleScriptFile = file("$projectDir/gradle/alfi/install-alf.gradle")
+        def url = new URL("https://github.com/vimotest/mps-alfi/raw/main/gradle/install-alf.gradle")
+        url.withInputStream {
+            inputStream -> gradleScriptFile.withOutputStream { outputStream -> outputStream << inputStream }
+        }
+        gradleScriptFile.text = "/* This file is downloaded from $url */\n\n${gradleScriptFile.text}"
+        gradleScriptFile.text = gradleScriptFile.text.replaceAll("\r\n", "\n")
+    }
+}
