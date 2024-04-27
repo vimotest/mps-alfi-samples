@@ -1,7 +1,0 @@
-namespace Testing;
-
-activity AssertFalse(in condition: Boolean[0..1]) {
-	if (condition != false) {
-    	WriteLine("FAILED: condition is not false");
-    }
-}

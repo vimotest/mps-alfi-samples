@@ -7,11 +7,6 @@ task setupAlfWorkspace {
         file(targetDirectory).deleteDir()
         file(targetDirectory).mkdir()
 
-        copy {
-            from file("$projectDir/alf-lib")
-            into file("$targetDirectory")
-        }
-
         def jarWithAlfFiles = file("$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.sandbox-src.jar")
         copy {
             from(zipTree(jarWithAlfFiles)){

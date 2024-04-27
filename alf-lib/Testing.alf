@@ -1,5 +1,0 @@
-package Testing {
-    public activity AssertEqual(in value1: any[0..1], in value2: any[0..1]);
-    public activity AssertFalse(in condition: Boolean[0..1]);
-    public activity AssertTrue(in condition: Boolean[0..1]);
-}
