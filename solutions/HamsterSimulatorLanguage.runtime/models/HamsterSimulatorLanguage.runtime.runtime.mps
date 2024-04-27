@@ -181,7 +181,7 @@
   </registry>
   <node concept="3mGtxK" id="2HeY20H4keE">
     <node concept="2qCqA3" id="2CGYajy$AIW" role="3mGtxP">
-      <property role="TrG5h" value="hamster" />
+      <property role="TrG5h" value="HamsterLibrary" />
       <property role="PCHHn" value="6OepWIVA92I/package" />
       <node concept="6nSm2" id="2CGYajy$AIZ" role="PCHHv">
         <property role="TrG5h" value="Hamster" />
@@ -207,7 +207,7 @@
     </node>
   </node>
   <node concept="3mGtxK" id="2CGYajy$AJt">
-    <property role="3GE5qa" value="hamster" />
+    <property role="3GE5qa" value="HamsterLibrary" />
     <node concept="6nSm2" id="2CGYajy$AJs" role="3mGtxP">
       <property role="TrG5h" value="Hamster" />
       <property role="PCHHn" value="6OepWIVA92I/package" />
@@ -1365,7 +1365,7 @@
     </node>
   </node>
   <node concept="3mGtxK" id="2CGYajy_ibq">
-    <property role="3GE5qa" value="hamster" />
+    <property role="3GE5qa" value="HamsterLibrary" />
     <node concept="6nSm2" id="2CGYajy_ibp" role="3mGtxP">
       <property role="TrG5h" value="Territory" />
       <property role="PCHHn" value="6OepWIVA92I/package" />
@@ -1822,7 +1822,7 @@
     </node>
   </node>
   <node concept="3mGtxK" id="31Th1WS1uwb">
-    <property role="3GE5qa" value="hamster" />
+    <property role="3GE5qa" value="HamsterLibrary" />
     <node concept="6nSm2" id="31Th1WS1uwa" role="3mGtxP">
       <property role="TrG5h" value="Cell" />
       <property role="PCHHn" value="6OepWIVA92I/package" />
@@ -1921,7 +1921,7 @@
     </node>
   </node>
   <node concept="3mGtxK" id="31Th1WS1uwv">
-    <property role="3GE5qa" value="hamster" />
+    <property role="3GE5qa" value="HamsterLibrary" />
     <node concept="6nSm2" id="31Th1WS1uww" role="3mGtxP">
       <property role="TrG5h" value="Row" />
       <property role="PCHHn" value="6OepWIVA92I/package" />
@@ -2135,7 +2135,7 @@
     </node>
   </node>
   <node concept="3mGtxK" id="74z8RZkfIzM">
-    <property role="3GE5qa" value="hamster" />
+    <property role="3GE5qa" value="HamsterLibrary" />
     <node concept="6nSm2" id="74z8RZkfIzL" role="3mGtxP">
       <property role="TrG5h" value="HamsterProgramBase" />
       <property role="PCHHn" value="6OepWIVA92I/package" />

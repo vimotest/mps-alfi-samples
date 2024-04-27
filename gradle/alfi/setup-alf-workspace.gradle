@@ -28,6 +28,7 @@ task setupAlfWorkspace {
             activity HamsterTestSuiteActivity() {
                 new HamsterTestSuite().HelloPaule();
                 new HamsterTestSuite().Demo();
+                WriteLine("FINISHED");
             }
             """
         }

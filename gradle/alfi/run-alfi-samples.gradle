@@ -39,7 +39,7 @@ task executeJavaHamsterTests(type: JavaExec) {
 task executeAlfHamsterTests(type: Exec) {
     group 'alfi-samples'
     description 'Execute ALF Hamster tests'
-    dependsOn installAlf/*, setupAlfWorkspace*/
+    dependsOn installAlf, setupAlfWorkspace
 
     def alfInstallDir = "$buildDir/alf"
     def hamsterAlfScriptsDir = "$buildDir/alf-workspace".replace('\\', '/')
