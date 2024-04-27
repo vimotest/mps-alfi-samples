@@ -47,7 +47,7 @@ task executeAlfHamsterTests(type: Exec) {
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         commandLine 'cmd', '/c', "$alfInstallDir/alf.bat", "-m", hamsterAlfScriptsDir, "HamsterTestSuiteActivity"
     } else {
-        commandLine "./$alfInstallDir/alf", "-m", hamsterAlfScriptsDir, "HamsterTestSuiteActivity"
+        commandLine "$alfInstallDir/alf", "-m", hamsterAlfScriptsDir, "HamsterTestSuiteActivity"
     }
     workingDir = alfInstallDir
     standardOutput = new ByteArrayOutputStream()
