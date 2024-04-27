@@ -513,6 +513,11 @@
       <ref role="2rTdP9" to="fyu6:5X3Rsv9iaOU" resolve="HamsterProgramTestCase" />
       <ref role="2rZz_L" to="28lk:6cBsaQxe3SA" resolve="LocalNameDeclarationStatement" />
     </node>
+    <node concept="2rT7sh" id="5tK9548NylX" role="2rTMjI">
+      <property role="TrG5h" value="program_executeOperation" />
+      <ref role="2rTdP9" to="fyu6:5ZmQMJIftQL" resolve="HamsterProgram" />
+      <ref role="2rZz_L" to="28lk:2HeY20H4nQA" resolve="OperationDefinition" />
+    </node>
     <node concept="3aamgX" id="74z8RZkh9jE" role="3acgRq">
       <ref role="30HIoZ" to="fyu6:4mY4lcAplCb" resolve="CellState" />
       <node concept="j$656" id="74z8RZkh9jK" role="1lVwrX">
@@ -761,6 +766,23 @@
               </node>
               <node concept="_vnHe" id="74z8RZkESYk" role="32Men1">
                 <ref role="3acloq" node="74z8RZkoYxs" resolve="execute" />
+                <node concept="1ZhdrF" id="5tK9548NAqP" role="lGtFl">
+                  <property role="2qtEX8" value="nameRef" />
+                  <property role="P3scX" value="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703/2674824929519835220/3855977438835276054" />
+                  <node concept="3$xsQk" id="5tK9548NAqQ" role="3$ytzL">
+                    <node concept="3clFbS" id="5tK9548NAqR" role="2VODD2">
+                      <node concept="3clFbF" id="5tK9548NATS" role="3cqZAp">
+                        <node concept="2OqwBi" id="5tK9548NB89" role="3clFbG">
+                          <node concept="1iwH7S" id="5tK9548NATR" role="2Oq$k0" />
+                          <node concept="1iwH70" id="5tK9548NBe1" role="2OqNvi">
+                            <ref role="1iwH77" node="5tK9548NylX" resolve="program_executeOperation" />
+                            <node concept="30H73N" id="5tK9548NBfK" role="1iwH7V" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -1338,6 +1360,9 @@
               </node>
             </node>
           </node>
+        </node>
+        <node concept="2ZBi8u" id="5tK9548Nz2K" role="lGtFl">
+          <ref role="2rW$FS" node="5tK9548NylX" resolve="program_executeOperation" />
         </node>
       </node>
       <node concept="6nSm6" id="74z8RZkp7uY" role="PCHHv">
