@@ -67,20 +67,7 @@
     <property role="TrG5h" value="SoftwareComponent" />
     <property role="3GE5qa" value="component" />
     <property role="34LRSv" value="component" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="PrWs8" id="2Cg1yFhsbue" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="PrWs8" id="2Cg1yFhsF4P" role="PzmwI">
-      <ref role="PrY4T" node="2Cg1yFhsbuj" resolve="IPackageContent" />
-    </node>
-    <node concept="1TJgyj" id="2Cg1yFhscUZ" role="1TKVEi">
-      <property role="IQ2ns" value="3030929330192567999" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="contents" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="2Cg1yFhsbuk" resolve="IComponentContent" />
-    </node>
+    <ref role="1TJDcQ" node="2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
     <node concept="1irR5M" id="2Cg1yFhsoyV" role="rwd14">
       <property role="2$rrk2" value="2" />
       <node concept="1irR9n" id="2Cg1yFhsoze" role="1irR9h">
@@ -140,10 +127,10 @@
   </node>
   <node concept="1TIwiD" id="2Cg1yFhsbul">
     <property role="EcuMT" value="3030929330192562069" />
-    <property role="3GE5qa" value="component" />
-    <property role="TrG5h" value="ComponentComposite" />
+    <property role="3GE5qa" value="component.composite" />
+    <property role="TrG5h" value="SoftwareComponentComposite" />
     <property role="34LRSv" value="composite" />
-    <ref role="1TJDcQ" node="2Cg1yFhs69O" resolve="SoftwareComponent" />
+    <ref role="1TJDcQ" node="2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
     <node concept="1irR5M" id="2Cg1yFhsozy" role="rwd14">
       <property role="2$rrk2" value="3" />
       <node concept="1irR9n" id="2Cg1yFhsN5g" role="1irR9h">
@@ -201,6 +188,78 @@
     </node>
     <node concept="PrWs8" id="2Cg1yFhsSEb" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2Cg1yFhtyaz">
+    <property role="EcuMT" value="3030929330192917155" />
+    <property role="3GE5qa" value="component.composite" />
+    <property role="TrG5h" value="InterfaceConnection" />
+    <property role="34LRSv" value="connection" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2Cg1yFhtynQ" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330192918006" />
+      <property role="20kJfa" value="required" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsSE6" resolve="RequiredInterface" />
+    </node>
+    <node concept="1TJgyj" id="2Cg1yFhtynO" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330192918004" />
+      <property role="20kJfa" value="provided" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsQPy" resolve="ProvidedInterface" />
+    </node>
+    <node concept="PrWs8" id="2Cg1yFhu2ku" role="PzmwI">
+      <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2Cg1yFhu2ke">
+    <property role="EcuMT" value="3030929330193048846" />
+    <property role="TrG5h" value="SoftwareComponentBase" />
+    <property role="3GE5qa" value="component" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="2Cg1yFhu2kf" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="2Cg1yFhu2kg" role="PzmwI">
+      <ref role="PrY4T" node="2Cg1yFhsbuj" resolve="IPackageContent" />
+    </node>
+    <node concept="1TJgyj" id="2Cg1yFhu2ki" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330193048850" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="contents" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2Cg1yFhsbuk" resolve="IComponentContent" />
+    </node>
+    <node concept="1irR5M" id="2Cg1yFhu2kj" role="rwd14">
+      <property role="2$rrk2" value="6" />
+      <node concept="1irR9n" id="2Cg1yFhu2kk" role="1irR9h">
+        <node concept="3PKj8D" id="2Cg1yFhu2kl" role="3PKjn_">
+          <property role="3PKj8l" value="dd6800" />
+        </node>
+      </node>
+      <node concept="1irPie" id="2Cg1yFhu2km" role="1irR9h">
+        <property role="1irPi9" value="C" />
+        <node concept="3PKj8D" id="2Cg1yFhu2kn" role="3PKjny">
+          <property role="3PKj8l" value="ffffff" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2Cg1yFhu3z_">
+    <property role="EcuMT" value="3030929330193053925" />
+    <property role="3GE5qa" value="component.composite" />
+    <property role="TrG5h" value="ComponentReference" />
+    <property role="34LRSv" value="component ref" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2Cg1yFhu3zA" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330193053926" />
+      <property role="20kJfa" value="componentRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+    </node>
+    <node concept="PrWs8" id="2Cg1yFhuCEX" role="PzmwI">
+      <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
     </node>
   </node>
 </model>
