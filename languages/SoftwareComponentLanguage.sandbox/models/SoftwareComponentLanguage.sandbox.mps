@@ -19,6 +19,10 @@
       </concept>
       <concept id="3030929330192562069" name="SoftwareComponentLanguage.structure.SoftwareComponentComposite" flags="ng" index="3Vob6Z" />
       <concept id="3030929330192739682" name="SoftwareComponentLanguage.structure.ProvidedInterface" flags="ng" index="3VoQH8" />
+      <concept id="3030929330192747144" name="SoftwareComponentLanguage.structure.ComponentInterfaceBase" flags="ng" index="3VoSMy">
+        <child id="3030929330195430146" name="parameters" index="3Vz7OC" />
+        <child id="3030929330195479625" name="returns" index="3VzjDz" />
+      </concept>
       <concept id="3030929330192747142" name="SoftwareComponentLanguage.structure.RequiredInterface" flags="ng" index="3VoSMG" />
       <concept id="3030929330192917155" name="SoftwareComponentLanguage.structure.InterfaceConnection" flags="ng" index="3Vpyi9">
         <reference id="3030929330192918006" name="required" index="3Vpyfs" />
@@ -30,6 +34,9 @@
       <concept id="3030929330193053925" name="SoftwareComponentLanguage.structure.ComponentReference" flags="ng" index="3Vq3Vf">
         <reference id="3030929330193053926" name="componentRef" index="3Vq3Vc" />
       </concept>
+      <concept id="3030929330195430070" name="SoftwareComponentLanguage.structure.Parameter" flags="ng" index="3Vz7Ms">
+        <property id="3030929330195430088" name="type" index="3Vz7Ny" />
+      </concept>
     </language>
   </registry>
   <node concept="3Vob6U" id="2Cg1yFhsolx">
@@ -38,9 +45,26 @@
       <property role="TrG5h" value="MyComponent" />
       <node concept="3VoQH8" id="2Cg1yFhuCE0" role="3Vq2cS">
         <property role="TrG5h" value="SupportInteger" />
+        <node concept="3Vz7Ms" id="2Cg1yFhCDTM" role="3VzjDz">
+          <property role="TrG5h" value="Integer" />
+        </node>
       </node>
       <node concept="3VoSMG" id="2Cg1yFhuCE5" role="3Vq2cS">
         <property role="TrG5h" value="GetRandomNumber" />
+        <node concept="3Vz7Ms" id="2Cg1yFhCDTK" role="3VzjDz">
+          <property role="TrG5h" value="RandomNumber" />
+        </node>
+      </node>
+      <node concept="3VoQH8" id="2Cg1yFhCDTW" role="3Vq2cS">
+        <property role="TrG5h" value="GetRandomeName" />
+        <node concept="3Vz7Ms" id="2Cg1yFhCDU3" role="3Vz7OC">
+          <property role="TrG5h" value="baseName" />
+          <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
+        </node>
+        <node concept="3Vz7Ms" id="2Cg1yFhCDU5" role="3VzjDz">
+          <property role="TrG5h" value="Name" />
+          <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
+        </node>
       </node>
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCE9" role="3Vob6q" />
@@ -48,6 +72,9 @@
       <property role="TrG5h" value="RandomNumberComponent" />
       <node concept="3VoQH8" id="2Cg1yFhuCEr" role="3Vq2cS">
         <property role="TrG5h" value="ProvideRandomNumber" />
+        <node concept="3Vz7Ms" id="2Cg1yFhBvMI" role="3VzjDz">
+          <property role="TrG5h" value="RandomNumber" />
+        </node>
       </node>
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCEt" role="3Vob6q" />
