@@ -2,16 +2,19 @@
 <model ref="r:c36debd2-15a2-4671-9b5c-580b136067b6(HamsterSimulatorLanguage.structure)">
   <persistence version="9" />
   <languages>
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="zqge" ref="r:59e90602-6655-4552-86eb-441a42a9a0e4(jetbrains.mps.lang.text.structure)" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
       <concept id="2756621024541681841" name="jetbrains.mps.lang.resources.structure.Primitive" flags="ng" index="1irPi6">
         <child id="1860120738943552529" name="fillColor" index="3PKjn_" />
+        <child id="1860120738943552531" name="borderColor" index="3PKjnB" />
       </concept>
       <concept id="2756621024541681849" name="jetbrains.mps.lang.resources.structure.Text" flags="ng" index="1irPie">
         <property id="2756621024541681854" name="text" index="1irPi9" />
@@ -21,6 +24,7 @@
         <property id="1358878980655415353" name="iconId" index="2$rrk2" />
         <child id="2756621024541675110" name="layers" index="1irR9h" />
       </concept>
+      <concept id="2756621024541675105" name="jetbrains.mps.lang.resources.structure.Rect" flags="ng" index="1irR9m" />
       <concept id="2756621024541675104" name="jetbrains.mps.lang.resources.structure.Circle" flags="ng" index="1irR9n" />
       <concept id="1860120738943552477" name="jetbrains.mps.lang.resources.structure.ColorLiteral" flags="ng" index="3PKj8D">
         <property id="1860120738943552481" name="val" index="3PKj8l" />
@@ -45,6 +49,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -80,7 +85,7 @@
     <property role="EcuMT" value="6905948060346342833" />
     <property role="TrG5h" value="HamsterProgram" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5X3Rsv9kAFL" role="1TKVEi">
       <property role="IQ2ns" value="6864574107188620017" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -105,6 +110,29 @@
     <node concept="PrWs8" id="5ZmQMJIfzba" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="74z8RZkrLqi" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkrLlz" resolve="ITopLevelCommandListDefinition" />
+    </node>
+    <node concept="PrWs8" id="1z1MMtqG1r4" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
+    <node concept="1irR5M" id="1z1MMtqI4bS" role="rwd14">
+      <property role="2$rrk2" value="2" />
+      <node concept="1irR9m" id="7XjY3bkmRp" role="1irR9h">
+        <node concept="3PKj8D" id="7XjY3bkmRu" role="3PKjn_">
+          <property role="3PKj8l" value="FA1111" />
+        </node>
+        <node concept="3PKj8D" id="7XjY3bkmRW" role="3PKjnB">
+          <property role="3PKj8l" value="101010" />
+        </node>
+      </node>
+      <node concept="1irPie" id="7XjY3bkmSu" role="1irR9h">
+        <property role="1irPi9" value="H" />
+        <node concept="3PKj8D" id="7XjY3bkmT1" role="3PKjny">
+          <property role="3PKj8l" value="0A1A3F" />
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1TIwiD" id="2RDssu5ViL1">
     <property role="TrG5h" value="IsDirectionExpression" />
@@ -112,10 +140,8 @@
     <property role="34LRSv" value="isDirection" />
     <property role="EcuMT" value="3308300503039683649" />
     <ref role="1TJDcQ" node="2RDssu5V9Z1" resolve="AbstractLogicalExpression" />
-    <node concept="1TJgyi" id="5ZmQMJIi0ww" role="1TKVEl">
-      <property role="IQ2nx" value="6905948060347009056" />
-      <property role="TrG5h" value="direction" />
-      <ref role="AX2Wp" node="3Ftr4R6BFMM" resolve="Direction" />
+    <node concept="PrWs8" id="74z8RZku5x$" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkswBE" resolve="IHasDirection" />
     </node>
   </node>
   <node concept="1TIwiD" id="JFO1DNuYKo">
@@ -309,7 +335,7 @@
       <property role="20kJfa" value="definition" />
       <property role="20lbJX" value="fLJekj4/1" />
       <property role="IQ2ns" value="3308300503039730636" />
-      <ref role="20lvS9" node="2RDssu5VmXT" />
+      <ref role="20lvS9" node="2RDssu5VmXT" resolve="RoutineDefinition" />
     </node>
   </node>
   <node concept="1TIwiD" id="2RDssu5VmXT">
@@ -327,6 +353,9 @@
     </node>
     <node concept="PrWs8" id="2RDssu5VmXX" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="74z8RZkrLpr" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkrLlz" resolve="ITopLevelCommandListDefinition" />
     </node>
     <node concept="1TJgyi" id="5ZmQMJIk0vy" role="1TKVEl">
       <property role="IQ2nx" value="6905948060347533282" />
@@ -398,7 +427,7 @@
     <property role="34LRSv" value="Hamster Tests" />
     <property role="3GE5qa" value="tests" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5X3Rsv9iaQ9" role="1TKVEi">
       <property role="IQ2ns" value="6864574107187981705" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -420,13 +449,16 @@
         </node>
       </node>
     </node>
+    <node concept="PrWs8" id="37zNn5LTf5g" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5X3Rsv9iaOU">
     <property role="EcuMT" value="6864574107187981626" />
     <property role="TrG5h" value="HamsterProgramTestCase" />
     <property role="34LRSv" value="test case" />
     <property role="3GE5qa" value="tests" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5X3Rsv9iaOV" role="1TKVEi">
       <property role="IQ2ns" value="6864574107187981627" />
       <property role="20kJfa" value="hamsterProgram" />
@@ -479,7 +511,7 @@
     <property role="3GE5qa" value="tests.assertions" />
     <property role="TrG5h" value="HamsterTestCaseAssertion" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="5X3Rsv9j9tH">
     <property role="EcuMT" value="6864574107188238189" />
@@ -500,7 +532,7 @@
     <property role="TrG5h" value="TerritorySetup" />
     <property role="34LRSv" value="territory" />
     <property role="3GE5qa" value="territory" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2HeY20GQZ__" role="1TKVEi">
       <property role="IQ2ns" value="3120704408889588069" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -575,7 +607,7 @@
     <property role="EcuMT" value="3120704408889587987" />
     <property role="3GE5qa" value="territory" />
     <property role="TrG5h" value="HamsterState" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2HeY20GQZ$k" role="1TKVEl">
       <property role="IQ2nx" value="3120704408889587988" />
       <property role="TrG5h" value="x" />
@@ -591,8 +623,21 @@
       <property role="TrG5h" value="grainsInMouth" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="2HeY20GWW4B" role="1TKVEl">
-      <property role="IQ2nx" value="3120704408891146535" />
+    <node concept="PrWs8" id="74z8RZku5xJ" role="PzmwI">
+      <ref role="PrY4T" node="74z8RZkswBE" resolve="IHasDirection" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="74z8RZkrLlz">
+    <property role="EcuMT" value="8152398782402598243" />
+    <property role="3GE5qa" value="command" />
+    <property role="TrG5h" value="ITopLevelCommandListDefinition" />
+  </node>
+  <node concept="PlHQZ" id="74z8RZkswBE">
+    <property role="EcuMT" value="8152398782402791914" />
+    <property role="3GE5qa" value="command.general" />
+    <property role="TrG5h" value="IHasDirection" />
+    <node concept="1TJgyi" id="74z8RZkswCm" role="1TKVEl">
+      <property role="IQ2nx" value="8152398782402791958" />
       <property role="TrG5h" value="direction" />
       <ref role="AX2Wp" node="3Ftr4R6BFMM" resolve="Direction" />
     </node>

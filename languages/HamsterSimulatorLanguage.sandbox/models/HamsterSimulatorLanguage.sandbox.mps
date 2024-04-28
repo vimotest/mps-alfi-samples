@@ -3,8 +3,13 @@
   <persistence version="9" />
   <languages>
     <use id="86004c6e-6a16-41a3-a8a8-cf6cc294dfee" name="HamsterSimulatorLanguage" version="0" />
+    <use id="d0e1230a-72e3-4b6b-88f2-98d924f7de11" name="alfi.toBaseLanguage" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="u132" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:junit.framework(JUnit/)" />
+    <import index="lodc" ref="f13dd4ca-a567-47d7-98bc-31b72d168722/java:alf.library.primitivebehaviors(alfi.StandardModelLibraryStubs/)" />
+    <import index="zrzc" ref="f13dd4ca-a567-47d7-98bc-31b72d168722/java:alf.library(alfi.StandardModelLibraryStubs/)" />
+  </imports>
   <registry>
     <language id="86004c6e-6a16-41a3-a8a8-cf6cc294dfee" name="HamsterSimulatorLanguage">
       <concept id="3210697320273763054" name="HamsterSimulatorLanguage.structure.WriteCommand" flags="nn" index="24IuFt">
@@ -37,6 +42,9 @@
         <child id="3120704408889588069" name="hamsterState" index="7_g55" />
         <child id="3120704408889588072" name="grainState" index="7_g58" />
       </concept>
+      <concept id="8152398782402791914" name="HamsterSimulatorLanguage.structure.IHasDirection" flags="ngI" index="2_kiEl">
+        <property id="8152398782402791958" name="direction" index="2_ki_D" />
+      </concept>
       <concept id="3308300503039700882" name="HamsterSimulatorLanguage.structure.RoutineCall" flags="nn" index="2C11Tl">
         <reference id="3308300503039730636" name="definition" index="2C198b" />
       </concept>
@@ -44,6 +52,7 @@
         <property id="6905948060347533282" name="isMethod" index="2LxHN9" />
         <child id="3308300503039700860" name="body" index="2C11UV" />
       </concept>
+      <concept id="3308300503039683649" name="HamsterSimulatorLanguage.structure.IsDirectionExpression" flags="ng" index="2C15Q6" />
       <concept id="3308300503039667424" name="HamsterSimulatorLanguage.structure.While" flags="nn" index="2C1pOB">
         <child id="3308300503039667427" name="body" index="2C1pO$" />
         <child id="3308300503039667426" name="condition" index="2C1pO_" />
@@ -229,6 +238,18 @@
           <property role="2C1q29" value="3" />
           <node concept="2C6hJS" id="5ZmQMJIkjpo" role="2C1q28">
             <node concept="2C1uTc" id="5ZmQMJIkjoS" role="2C6hI7" />
+            <node concept="2C1RJh" id="74z8RZkyksz" role="2C6hI7" />
+            <node concept="2C1uTT" id="74z8RZkykra" role="2C6hI7">
+              <node concept="2C15Q6" id="74z8RZkykrJ" role="2C1uS7">
+                <property role="2_ki_D" value="3Ftr4R6BFMO/north" />
+              </node>
+              <node concept="2C6hJS" id="74z8RZkykre" role="2C1uS3">
+                <node concept="24IuFt" id="74z8RZkyksI" role="2C6hI7">
+                  <property role="24IuFs" value="Looking to north!" />
+                </node>
+              </node>
+              <node concept="2C6hJS" id="74z8RZkykrg" role="2C1uS2" />
+            </node>
           </node>
         </node>
       </node>
@@ -572,6 +593,39 @@
           </node>
           <node concept="3oM_SD" id="2HeY20H3omO" role="1PaTwD">
             <property role="3oM_SC" value="empty!" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="37zNn5MwRQn" role="2m3OCk">
+          <node concept="3oM_SD" id="37zNn5MwRRa" role="1PaTwD">
+            <property role="3oM_SC" value="Looking" />
+          </node>
+          <node concept="3oM_SD" id="37zNn5MwRRb" role="1PaTwD">
+            <property role="3oM_SC" value="to" />
+          </node>
+          <node concept="3oM_SD" id="37zNn5MwRRc" role="1PaTwD">
+            <property role="3oM_SC" value="north!" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="37zNn5MwRRA" role="2m3OCk">
+          <node concept="3oM_SD" id="37zNn5MwRSx" role="1PaTwD">
+            <property role="3oM_SC" value="Looking" />
+          </node>
+          <node concept="3oM_SD" id="37zNn5MwRSy" role="1PaTwD">
+            <property role="3oM_SC" value="to" />
+          </node>
+          <node concept="3oM_SD" id="37zNn5MwRSz" role="1PaTwD">
+            <property role="3oM_SC" value="north!" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="37zNn5MwRSF" role="2m3OCk">
+          <node concept="3oM_SD" id="37zNn5MwRTI" role="1PaTwD">
+            <property role="3oM_SC" value="Looking" />
+          </node>
+          <node concept="3oM_SD" id="37zNn5MwRTJ" role="1PaTwD">
+            <property role="3oM_SC" value="to" />
+          </node>
+          <node concept="3oM_SD" id="37zNn5MwRTK" role="1PaTwD">
+            <property role="3oM_SC" value="north!" />
           </node>
         </node>
       </node>

@@ -4,18 +4,32 @@ ext.languageName = "AlfiSampleLanguage"
 ext.mpsPlugins = [  ]
 
 ext.customMpsPlugins = [
+    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.0-alpha3/alfi.zip"
 ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'
+apply from: 'gradle/alfi/run-alfi-samples.gradle'
 
 task prepareMps {
     group 'mps'
     dependsOn 'buildOsSpecificBundle'
 }
 
+task fixCopyStandardModelLibraryStubs {
+    group 'other'
+    description 'Workaround for wrong lookup of StandardModelLibraryStubs.jar'
+    doLast {
+        delete "$buildDir/mps-bundle/dependencies/dependencies/alfi/lib/"
+        copy {
+            from "$buildDir/mps-bundle/dependencies/alfi/lib/"
+            into "$buildDir/mps-bundle/dependencies/dependencies/alfi/lib/"
+        }
+    }
+}
+
 task mpsBuild {
     group 'mps'
-    dependsOn 'mpsAntGenerate', 'mpsAntBuild'
+    dependsOn 'mpsAntGenerate', 'mpsAntBuild', fixCopyStandardModelLibraryStubs
 }
 
 task mpsClean {
