@@ -2,9 +2,11 @@
 <model ref="r:10678db1-efb3-4632-8261-ee5568fb7f93(SoftwareComponentLanguage.structure)">
   <persistence version="9" />
   <languages>
+    <use id="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" name="alfi" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="28lk" ref="r:44b855ed-3db6-4327-8e8d-7c8dcf7b1b4f(alfi.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -96,6 +98,13 @@
           <property role="3PKj8l" value="ffffff" />
         </node>
       </node>
+    </node>
+    <node concept="1TJgyj" id="zd_6PSizb9" role="1TKVEi">
+      <property role="IQ2ns" value="634326320419582665" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="requiredInterfaceImplementations" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
     </node>
   </node>
   <node concept="1TIwiD" id="2Cg1yFhsbug">
@@ -325,6 +334,30 @@
       <property role="3tVfz5" value="3030929330195430081" />
       <property role="TrG5h" value="boolean" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="zd_6PSiwN2">
+    <property role="EcuMT" value="634326320419572930" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="EmbeddedAlfUnit" />
+    <ref role="1TJDcQ" to="28lk:6OepWIVJVYV" resolve="Unit" />
+    <node concept="1TJgyj" id="zd_6PSizbb" role="1TKVEi">
+      <property role="IQ2ns" value="634326320419582667" />
+      <property role="20kJfa" value="forInterface" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsQPy" resolve="ProvidedInterface" />
+    </node>
+    <node concept="1TJgyj" id="zd_6PSkqS_" role="1TKVEi">
+      <property role="IQ2ns" value="634326320420072997" />
+      <property role="20kJfa" value="innerActivity" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="zd_6PSizaP" resolve="EmbeddedAlfActivity" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="zd_6PSizaP">
+    <property role="EcuMT" value="634326320419582645" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="EmbeddedAlfActivity" />
+    <ref role="1TJDcQ" to="28lk:2SMO68r$0GL" resolve="ActivityDefinition" />
   </node>
 </model>
 
