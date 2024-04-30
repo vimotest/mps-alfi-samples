@@ -32,6 +32,9 @@
       <concept id="3328952194368015153" name="alfi.structure.ActivityDefinition" flags="ng" index="PCHHj">
         <child id="3328952194368015208" name="body" index="PCHGa" />
       </concept>
+      <concept id="3328952194368015164" name="alfi.structure.NamespaceDefinition" flags="ng" index="PCHHu">
+        <child id="3328952194368015165" name="ownedMember" index="PCHHv" />
+      </concept>
       <concept id="8550147057602730244" name="alfi.structure.NameReference" flags="ng" index="2RqM1Q">
         <reference id="8550147057602730245" name="target" index="2RqM1R" />
       </concept>
@@ -116,6 +119,15 @@
         <ref role="1KxUqA" node="2Cg1yFhCDTW" resolve="GetRandomeName" />
         <node concept="1KxUro" id="zd_6PSkXfK" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="3xR696" id="MvuXW6dH_I" role="PCHHv">
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <property role="TrG5h" value="test" />
+            <node concept="3xHE8C" id="MvuXW6dHBw" role="3xMlr6">
+              <node concept="2RqM1Q" id="MvuXW6dHBv" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
           <node concept="PCHzy" id="zd_6PSkXfL" role="PCHGa">
             <node concept="32G6VT" id="zd_6PSmo2a" role="PCHzz">
               <node concept="_iklQ" id="zd_6PSmo2d" role="2vFQ1F">
@@ -123,11 +135,11 @@
               </node>
             </node>
           </node>
-          <node concept="3xR696" id="zd_6PSmnYz" role="NkNyt">
-            <property role="3xR695" value="1KdBIfXPktx/out" />
-            <property role="TrG5h" value="Name" />
-            <node concept="3xHE8C" id="zd_6PSmnZw" role="3xMlr6">
-              <node concept="2RqM1Q" id="zd_6PSmnZu" role="_vnH8">
+          <node concept="3xR696" id="MvuXW6bFOM" role="NkNyt">
+            <property role="TrG5h" value="__return__" />
+            <property role="3xR695" value="3Ud70gdvRyt/return" />
+            <node concept="3xHE8C" id="MvuXW6bFOU" role="3xMlr6">
+              <node concept="2RqM1Q" id="MvuXW6bFOT" role="_vnH8">
                 <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
               </node>
             </node>
