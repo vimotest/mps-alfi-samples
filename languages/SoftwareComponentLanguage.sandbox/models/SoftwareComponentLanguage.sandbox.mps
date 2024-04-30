@@ -17,6 +17,9 @@
       <concept id="2674824929519052396" name="alfi.structure.StringLiteralExpression" flags="ng" index="_iklQ">
         <property id="2674824929519052397" name="value" index="_iklR" />
       </concept>
+      <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
+        <child id="2674824929519927759" name="name" index="_uYbl" />
+      </concept>
       <concept id="2674824929519835217" name="alfi.structure.QualifiedName" flags="ng" index="_vnHb">
         <child id="2674824929519835218" name="names" index="_vnH8" />
       </concept>
@@ -37,6 +40,13 @@
       </concept>
       <concept id="8550147057602730244" name="alfi.structure.NameReference" flags="ng" index="2RqM1Q">
         <reference id="8550147057602730245" name="target" index="2RqM1R" />
+      </concept>
+      <concept id="7144803224901733272" name="alfi.structure.BinaryExpression" flags="ng" index="31szGP">
+        <child id="7144803224901733273" name="operand1" index="31szGO" />
+        <child id="7144803224901733275" name="operand2" index="31szGQ" />
+      </concept>
+      <concept id="7144803224901733332" name="alfi.structure.ArithmeticExpression" flags="ng" index="31szHT">
+        <property id="7144803224901733359" name="operator" index="31szH2" />
       </concept>
       <concept id="7144803224889269844" name="alfi.structure.ReturnStatement" flags="ng" index="32G6VT">
         <child id="8875975376183143672" name="expression" index="2vFQ1F" />
@@ -114,24 +124,35 @@
           <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
         </node>
       </node>
+      <node concept="3Vob68" id="45PW2TPic9J" role="3Vq2cS" />
       <node concept="1KxTyJ" id="zd_6PSkXfJ" role="1KxUq$">
         <ref role="1KB3D8" node="zd_6PSkXfK" resolve="MyComponent_null" />
         <ref role="1KxUqA" node="2Cg1yFhCDTW" resolve="GetRandomeName" />
         <node concept="1KxUro" id="zd_6PSkXfK" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
-          <node concept="3xR696" id="MvuXW6dH_I" role="PCHHv">
-            <property role="3xR695" value="1KdBIfXPktw/in" />
-            <property role="TrG5h" value="test" />
-            <node concept="3xHE8C" id="MvuXW6dHBw" role="3xMlr6">
-              <node concept="2RqM1Q" id="MvuXW6dHBv" role="_vnH8">
-                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+          <node concept="PCHzy" id="zd_6PSkXfL" role="PCHGa">
+            <node concept="32G6VT" id="zd_6PSmo2a" role="PCHzz">
+              <node concept="31szHT" id="45PW2TPicsG" role="2vFQ1F">
+                <property role="31szH2" value="6cBsaQylkJ$/PlusOperator" />
+                <node concept="_uYbk" id="45PW2TPicsM" role="31szGO">
+                  <node concept="_vnHb" id="45PW2TPicsO" role="_uYbl">
+                    <node concept="2RqM1Q" id="45PW2TPicsQ" role="_vnH8">
+                      <ref role="2RqM1R" node="45PW2TPicmA" resolve="baseName" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="_iklQ" id="45PW2TPictJ" role="31szGQ">
+                  <property role="_iklR" value="_1" />
+                </node>
               </node>
             </node>
           </node>
-          <node concept="PCHzy" id="zd_6PSkXfL" role="PCHGa">
-            <node concept="32G6VT" id="zd_6PSmo2a" role="PCHzz">
-              <node concept="_iklQ" id="zd_6PSmo2d" role="2vFQ1F">
-                <property role="_iklR" value="test" />
+          <node concept="3xR696" id="45PW2TPicmA" role="PCHHv">
+            <property role="TrG5h" value="baseName" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="45PW2TPicmI" role="3xMlr6">
+              <node concept="2RqM1Q" id="45PW2TPicmH" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
               </node>
             </node>
           </node>
