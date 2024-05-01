@@ -26,6 +26,8 @@
       <concept id="1225194413805" name="jetbrains.mps.lang.behavior.structure.ConceptConstructorDeclaration" flags="in" index="13hLZK" />
       <concept id="1225194472830" name="jetbrains.mps.lang.behavior.structure.ConceptMethodDeclaration" flags="ng" index="13i0hz">
         <property id="5864038008284099149" name="isStatic" index="2Ki8OM" />
+        <property id="1225194472832" name="isVirtual" index="13i0it" />
+        <property id="1225194472834" name="isAbstract" index="13i0iv" />
         <reference id="1225194472831" name="overriddenMethod" index="13i0hy" />
       </concept>
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
@@ -359,6 +361,44 @@
         </node>
       </node>
     </node>
+    <node concept="13i0hz" id="1dnKNhSAc$4" role="13h7CS">
+      <property role="TrG5h" value="getSoftwareComponent" />
+      <ref role="13i0hy" node="1dnKNhSA8wN" resolve="getSoftwareComponent" />
+      <node concept="3Tm1VV" id="1dnKNhSAc$5" role="1B3o_S" />
+      <node concept="3clFbS" id="1dnKNhSAc$8" role="3clF47">
+        <node concept="3clFbF" id="1dnKNhSAcCo" role="3cqZAp">
+          <node concept="13iPFW" id="1dnKNhSAcCn" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="1dnKNhSAc$9" role="3clF45">
+        <ref role="ehGHo" to="tj5x:2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+      </node>
+    </node>
+    <node concept="13i0hz" id="5U0hG6j9GKz" role="13h7CS">
+      <property role="TrG5h" value="hasAnyProvidedInterface" />
+      <node concept="3Tm1VV" id="5U0hG6j9GK$" role="1B3o_S" />
+      <node concept="10P_77" id="5U0hG6j9GKV" role="3clF45" />
+      <node concept="3clFbS" id="5U0hG6j9GKA" role="3clF47">
+        <node concept="3clFbF" id="5U0hG6j9GLZ" role="3cqZAp">
+          <node concept="2OqwBi" id="5U0hG6j9NKf" role="3clFbG">
+            <node concept="2OqwBi" id="5U0hG6j9JJi" role="2Oq$k0">
+              <node concept="2OqwBi" id="5U0hG6j9GZY" role="2Oq$k0">
+                <node concept="13iPFW" id="5U0hG6j9GLY" role="2Oq$k0" />
+                <node concept="3Tsc0h" id="5U0hG6j9Hcf" role="2OqNvi">
+                  <ref role="3TtcxE" to="tj5x:2Cg1yFhu2ki" />
+                </node>
+              </node>
+              <node concept="v3k3i" id="5U0hG6j9N2N" role="2OqNvi">
+                <node concept="chp4Y" id="5U0hG6j9N44" role="v3oSu">
+                  <ref role="cht4Q" to="tj5x:2Cg1yFhsQPy" resolve="ProvidedInterface" />
+                </node>
+              </node>
+            </node>
+            <node concept="3GX2aA" id="5U0hG6j9Oin" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="13h7C7" id="zd_6PSk8SM">
     <property role="3GE5qa" value="component.alf" />
@@ -623,38 +663,6 @@
       </node>
     </node>
   </node>
-  <node concept="13h7C7" id="5U0hG6j9GKg">
-    <property role="3GE5qa" value="component" />
-    <ref role="13h7C2" to="tj5x:2Cg1yFhs69O" resolve="SoftwareComponent" />
-    <node concept="13i0hz" id="5U0hG6j9GKz" role="13h7CS">
-      <property role="TrG5h" value="hasAnyProvidedInterface" />
-      <node concept="3Tm1VV" id="5U0hG6j9GK$" role="1B3o_S" />
-      <node concept="10P_77" id="5U0hG6j9GKV" role="3clF45" />
-      <node concept="3clFbS" id="5U0hG6j9GKA" role="3clF47">
-        <node concept="3clFbF" id="5U0hG6j9GLZ" role="3cqZAp">
-          <node concept="2OqwBi" id="5U0hG6j9NKf" role="3clFbG">
-            <node concept="2OqwBi" id="5U0hG6j9JJi" role="2Oq$k0">
-              <node concept="2OqwBi" id="5U0hG6j9GZY" role="2Oq$k0">
-                <node concept="13iPFW" id="5U0hG6j9GLY" role="2Oq$k0" />
-                <node concept="3Tsc0h" id="5U0hG6j9Hcf" role="2OqNvi">
-                  <ref role="3TtcxE" to="tj5x:2Cg1yFhu2ki" resolve="contents" />
-                </node>
-              </node>
-              <node concept="v3k3i" id="5U0hG6j9N2N" role="2OqNvi">
-                <node concept="chp4Y" id="5U0hG6j9N44" role="v3oSu">
-                  <ref role="cht4Q" to="tj5x:2Cg1yFhsQPy" resolve="ProvidedInterface" />
-                </node>
-              </node>
-            </node>
-            <node concept="3GX2aA" id="5U0hG6j9Oin" role="2OqNvi" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="13hLZK" id="5U0hG6j9GKh" role="13h7CW">
-      <node concept="3clFbS" id="5U0hG6j9GKi" role="2VODD2" />
-    </node>
-  </node>
   <node concept="13h7C7" id="1dnKNhRXl1_">
     <property role="3GE5qa" value="component.interface" />
     <ref role="13h7C2" to="tj5x:1dnKNhRROn$" resolve="Operation" />
@@ -862,6 +870,48 @@
         </node>
       </node>
       <node concept="10P_77" id="1dnKNhSz61k" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="1dnKNhSA8ww">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="13h7C2" to="tj5x:1dnKNhSA8wv" resolve="ISoftwareComponentContext" />
+    <node concept="13i0hz" id="1dnKNhSA8wN" role="13h7CS">
+      <property role="13i0iv" value="true" />
+      <property role="13i0it" value="true" />
+      <property role="TrG5h" value="getSoftwareComponent" />
+      <node concept="3Tm1VV" id="1dnKNhSA8wO" role="1B3o_S" />
+      <node concept="3Tqbb2" id="1dnKNhSA8xb" role="3clF45">
+        <ref role="ehGHo" to="tj5x:2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+      </node>
+      <node concept="3clFbS" id="1dnKNhSA8wQ" role="3clF47" />
+    </node>
+    <node concept="13hLZK" id="1dnKNhSA8wx" role="13h7CW">
+      <node concept="3clFbS" id="1dnKNhSA8wy" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="1dnKNhSAcF0">
+    <property role="3GE5qa" value="test" />
+    <ref role="13h7C2" to="tj5x:1dnKNhSA7z8" resolve="ComponentTest" />
+    <node concept="13hLZK" id="1dnKNhSAcF1" role="13h7CW">
+      <node concept="3clFbS" id="1dnKNhSAcF2" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="1dnKNhSAcFj" role="13h7CS">
+      <property role="TrG5h" value="getSoftwareComponent" />
+      <ref role="13i0hy" node="1dnKNhSA8wN" resolve="getSoftwareComponent" />
+      <node concept="3Tm1VV" id="1dnKNhSAcFk" role="1B3o_S" />
+      <node concept="3clFbS" id="1dnKNhSAcFn" role="3clF47">
+        <node concept="3clFbF" id="1dnKNhSAcFI" role="3cqZAp">
+          <node concept="2OqwBi" id="1dnKNhSAcRT" role="3clFbG">
+            <node concept="13iPFW" id="1dnKNhSAcFH" role="2Oq$k0" />
+            <node concept="3TrEf2" id="1dnKNhSAd1b" role="2OqNvi">
+              <ref role="3Tt5mk" to="tj5x:1dnKNhSA7z9" resolve="targetComponent" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="1dnKNhSAcFo" role="3clF45">
+        <ref role="ehGHo" to="tj5x:2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+      </node>
     </node>
   </node>
 </model>

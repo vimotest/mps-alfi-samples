@@ -24,7 +24,9 @@
       <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
         <child id="2674824929519927759" name="name" index="_uYbl" />
       </concept>
-      <concept id="2674824929519838362" name="alfi.structure.PositionalTuple" flags="ng" index="_vku0" />
+      <concept id="2674824929519838362" name="alfi.structure.PositionalTuple" flags="ng" index="_vku0">
+        <child id="2674824929519838363" name="expression" index="_vku1" />
+      </concept>
       <concept id="2674824929519838360" name="alfi.structure.InvocationExpression" flags="ng" index="_vku2">
         <child id="2674824929519882447" name="tuple" index="_uFfl" />
       </concept>
@@ -117,6 +119,10 @@
         <reference id="1393797239812200308" name="forOperation" index="1$IHh0" />
         <reference id="634326320419582667" name="forInterface" index="1KxUqA" />
       </concept>
+      <concept id="1393797239823431880" name="SoftwareComponentLanguage.structure.ComponentTest" flags="ng" index="1FNVJW">
+        <reference id="1393797239823431881" name="targetComponent" index="1FNVJX" />
+        <child id="1393797239823431983" name="operationInvocations" index="1FNVCr" />
+      </concept>
       <concept id="1393797239822639159" name="SoftwareComponentLanguage.structure.InterfaceOperationInvocationExpression" flags="ng" index="1FQUc3">
         <reference id="1393797239822639160" name="forInterface" index="1FQUcc" />
         <reference id="1393797239822639161" name="forOperation" index="1FQUcd" />
@@ -127,7 +133,7 @@
       <concept id="634326320419582645" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivity" flags="ng" index="1KxUro" />
       <concept id="3030929330192540276" name="SoftwareComponentLanguage.structure.SoftwareComponent" flags="ng" index="3Vo6hu">
         <child id="1393797239818361014" name="state" index="1F7dI2" />
-        <child id="634326320419582665" name="requiredInterfaceImplementations" index="1KxUq$" />
+        <child id="634326320419582665" name="providedInterfaceImplementations" index="1KxUq$" />
       </concept>
       <concept id="3030929330192562082" name="SoftwareComponentLanguage.structure.EmptyLine" flags="ng" index="3Vob68">
         <property id="6809520433795733982" name="drawLine" index="3dEdWv" />
@@ -136,14 +142,15 @@
         <property id="1393797239816660162" name="notes" index="1FpIvQ" />
         <child id="3030929330192562096" name="contents" index="3Vob6q" />
       </concept>
-      <concept id="3030929330192562069" name="SoftwareComponentLanguage.structure.SoftwareComponentComposite" flags="ng" index="3Vob6Z" />
+      <concept id="3030929330192562069" name="SoftwareComponentLanguage.structure.SoftwareComponentComposite" flags="ng" index="3Vob6Z">
+        <child id="1393797239824465066" name="providedInterfaceDelegates" index="1FZZYu" />
+      </concept>
       <concept id="3030929330192739682" name="SoftwareComponentLanguage.structure.ProvidedInterface" flags="ng" index="3VoQH8" />
       <concept id="3030929330192747144" name="SoftwareComponentLanguage.structure.ComponentInterfaceBase" flags="ng" index="3VoSMy">
         <reference id="1393797239811302085" name="type" index="1$ya7L" />
       </concept>
       <concept id="3030929330192747142" name="SoftwareComponentLanguage.structure.RequiredInterface" flags="ng" index="3VoSMG" />
       <concept id="3030929330192917155" name="SoftwareComponentLanguage.structure.InterfaceConnection" flags="ng" index="3Vpyi9">
-        <property id="1393797239816538303" name="flip" index="1Fu8Ib" />
         <reference id="3030929330192918006" name="required" index="3Vpyfs" />
         <reference id="3030929330192918004" name="provided" index="3Vpyfu" />
       </concept>
@@ -347,7 +354,7 @@
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCEt" role="3Vob6q" />
     <node concept="3Vob6Z" id="2Cg1yFhuCEI" role="3Vob6q">
-      <property role="TrG5h" value="OnlineStore" />
+      <property role="TrG5h" value="MyComposite" />
       <node concept="3Vq3Vf" id="2Cg1yFhuUep" role="3Vq2cS">
         <ref role="3Vq3Vc" node="2Cg1yFhuCDX" resolve="MyComponent" />
       </node>
@@ -375,6 +382,12 @@
     <property role="1FpIvQ" value="Inspired by: https://www.uml-diagrams.org/examples/online-shopping-uml-component-diagram-example.html?context=cmp-examples" />
     <node concept="3Vob6Z" id="5U0hG6ja9tJ" role="3Vob6q">
       <property role="TrG5h" value="Webstore" />
+      <node concept="1Fcd7X" id="1dnKNhSEWIN" role="1FZZYu">
+        <ref role="1KxUqA" node="1dnKNhSbOyx" resolve="ProductSearch" />
+        <ref role="1$IHh0" node="1dnKNhScFcb" resolve="searchProduct" />
+        <ref role="1Fcd0O" node="5U0hG6ja_Y9" resolve="SearchProducts" />
+        <ref role="1Fcd0P" node="1dnKNhScFcb" resolve="searchProduct" />
+      </node>
       <node concept="3Vq3Vf" id="5U0hG6ja9tY" role="3Vq2cS">
         <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="SearchProducts" />
       </node>
@@ -396,21 +409,7 @@
         <property role="TrG5h" value="OnlineShopping" />
         <ref role="1$ya7L" node="1dnKNhRZUjE" resolve="ShoppingInterface" />
       </node>
-      <node concept="3Vob68" id="1dnKNhScFcX" role="3Vq2cS" />
-      <node concept="3VoSMG" id="1dnKNhSciiM" role="3Vq2cS">
-        <property role="TrG5h" value="InventorySearch" />
-        <ref role="1$ya7L" node="1dnKNhScFca" resolve="SearchInterface" />
-      </node>
-      <node concept="3VoSMG" id="1dnKNhScFdi" role="3Vq2cS">
-        <property role="TrG5h" value="OrderManagement" />
-        <ref role="1$ya7L" node="1dnKNhScFdC" resolve="OrderManagementInterface" />
-      </node>
       <node concept="3Vob68" id="1dnKNhSbOyB" role="3Vq2cS" />
-      <node concept="3Vpyi9" id="1dnKNhSbOyO" role="3Vq2cS">
-        <property role="1Fu8Ib" value="true" />
-        <ref role="3Vpyfu" node="1dnKNhSbOyx" resolve="ProductSearch" />
-        <ref role="3Vpyfs" node="1dnKNhSciiM" resolve="InventorySearch" />
-      </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6j8oBb" role="3Vob6q">
       <property role="TrG5h" value="ShoppingCart" />
@@ -537,6 +536,18 @@
         <property role="TrG5h" value="removeProduct" />
         <node concept="3Vz7Ms" id="1dnKNhSeaJU" role="3Vz7OC">
           <property role="TrG5h" value="productId" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1FNVJW" id="1dnKNhSB$li">
+    <ref role="1FNVJX" node="5U0hG6ja9tJ" resolve="Webstore" />
+    <node concept="1FQUc3" id="1dnKNhSBYM8" role="1FNVCr">
+      <ref role="1FQUcc" node="1dnKNhScFc1" resolve="OnlineShopping" />
+      <ref role="1FQUcd" node="1dnKNhS8R6y" resolve="addProduct" />
+      <node concept="_vku0" id="1dnKNhSBYM9" role="_uFfl">
+        <node concept="32T38h" id="1dnKNhSFnVQ" role="_vku1">
+          <property role="32T38g" value="1" />
         </node>
       </node>
     </node>

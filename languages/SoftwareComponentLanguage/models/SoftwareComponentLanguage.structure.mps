@@ -9,6 +9,7 @@
   <imports>
     <import index="28lk" ref="r:44b855ed-3db6-4327-8e8d-7c8dcf7b1b4f(alfi.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
@@ -103,7 +104,7 @@
     <node concept="1TJgyj" id="zd_6PSizb9" role="1TKVEi">
       <property role="IQ2ns" value="634326320419582665" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="requiredInterfaceImplementations" />
+      <property role="20kJfa" value="providedInterfaceImplementations" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="1dnKNhSpcrQ" resolve="IInterfaceOperationBehavior" />
     </node>
@@ -167,6 +168,13 @@
     <property role="TrG5h" value="SoftwareComponentComposite" />
     <property role="34LRSv" value="composite" />
     <ref role="1TJDcQ" node="2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+    <node concept="1TJgyj" id="1dnKNhSE3ME" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239824465066" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="providedInterfaceDelegates" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1dnKNhSpLb9" resolve="InterfaceOperationDelegate" />
+    </node>
     <node concept="1irR5M" id="2Cg1yFhsozy" role="rwd14">
       <property role="2$rrk2" value="3" />
       <node concept="1irR9n" id="2Cg1yFhsN5g" role="1irR9h">
@@ -275,6 +283,9 @@
     </node>
     <node concept="PrWs8" id="2Cg1yFhu2kg" role="PzmwI">
       <ref role="PrY4T" node="2Cg1yFhsbuj" resolve="IPackageContent" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhSAcja" role="PzmwI">
+      <ref role="PrY4T" node="1dnKNhSA8wv" resolve="ISoftwareComponentContext" />
     </node>
     <node concept="1TJgyj" id="2Cg1yFhu2ki" role="1TKVEi">
       <property role="IQ2ns" value="3030929330193048850" />
@@ -489,7 +500,7 @@
       <property role="IQ2ns" value="1393797239820194560" />
       <property role="20kJfa" value="toInterface" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2Cg1yFhsSE6" resolve="RequiredInterface" />
+      <ref role="20lvS9" node="2Cg1yFhsSE8" resolve="ComponentInterfaceBase" />
     </node>
     <node concept="1TJgyj" id="1dnKNhSpLc1" role="1TKVEi">
       <property role="IQ2ns" value="1393797239820194561" />
@@ -519,6 +530,41 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="1dnKNhSA7z8">
+    <property role="EcuMT" value="1393797239823431880" />
+    <property role="TrG5h" value="ComponentTest" />
+    <property role="34LRSv" value="component test" />
+    <property role="3GE5qa" value="test" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="1dnKNhSA7z9" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239823431881" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20kJfa" value="targetComponent" />
+      <ref role="20lvS9" node="2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+    </node>
+    <node concept="1TJgyj" id="1dnKNhSA7$J" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239823431983" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="operationInvocations" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1dnKNhSz60R" resolve="InterfaceOperationInvocationExpression" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhSAcEY" role="PzmwI">
+      <ref role="PrY4T" node="1dnKNhSA8wv" resolve="ISoftwareComponentContext" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhSB2L7" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhSB2Lb" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="1dnKNhSA8wv">
+    <property role="EcuMT" value="1393797239823435807" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="ISoftwareComponentContext" />
   </node>
 </model>
 
