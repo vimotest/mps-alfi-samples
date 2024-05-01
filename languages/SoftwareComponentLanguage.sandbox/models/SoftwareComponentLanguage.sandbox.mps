@@ -71,7 +71,9 @@
       <concept id="3030929330192540276" name="SoftwareComponentLanguage.structure.SoftwareComponent" flags="ng" index="3Vo6hu">
         <child id="634326320419582665" name="requiredInterfaceImplementations" index="1KxUq$" />
       </concept>
-      <concept id="3030929330192562082" name="SoftwareComponentLanguage.structure.EmptyLine" flags="ng" index="3Vob68" />
+      <concept id="3030929330192562082" name="SoftwareComponentLanguage.structure.EmptyLine" flags="ng" index="3Vob68">
+        <property id="6809520433795733982" name="drawLine" index="3dEdWv" />
+      </concept>
       <concept id="3030929330192562064" name="SoftwareComponentLanguage.structure.Package" flags="ng" index="3Vob6U">
         <child id="3030929330192562096" name="contents" index="3Vob6q" />
       </concept>
@@ -100,7 +102,7 @@
   <node concept="3Vob6U" id="2Cg1yFhsolx">
     <property role="TrG5h" value="MyPackage" />
     <node concept="3Vo6hu" id="2Cg1yFhuCDX" role="3Vob6q">
-      <property role="TrG5h" value="MyComponent" />
+      <property role="TrG5h" value="Order" />
       <node concept="3VoQH8" id="2Cg1yFhuCE0" role="3Vq2cS">
         <property role="TrG5h" value="SupportInteger" />
         <node concept="3Vz7Ms" id="2Cg1yFhCDTM" role="3VzjDz">
@@ -114,7 +116,7 @@
         </node>
       </node>
       <node concept="3VoQH8" id="2Cg1yFhCDTW" role="3Vq2cS">
-        <property role="TrG5h" value="GetRandomeName" />
+        <property role="TrG5h" value="GetRandomName" />
         <node concept="3Vz7Ms" id="2Cg1yFhCDU3" role="3Vz7OC">
           <property role="TrG5h" value="baseName" />
           <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
@@ -180,7 +182,7 @@
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCEt" role="3Vob6q" />
     <node concept="3Vob6Z" id="2Cg1yFhuCEI" role="3Vob6q">
-      <property role="TrG5h" value="System" />
+      <property role="TrG5h" value="OnlineStore" />
       <node concept="3Vq3Vf" id="2Cg1yFhuUep" role="3Vq2cS">
         <ref role="3Vq3Vc" node="2Cg1yFhuCDX" resolve="MyComponent" />
       </node>
@@ -188,9 +190,82 @@
         <ref role="3Vq3Vc" node="2Cg1yFhuCEk" resolve="RandomNumberComponent" />
       </node>
       <node concept="3Vob68" id="2Cg1yFhxrO7" role="3Vq2cS" />
+      <node concept="3VoQH8" id="5U0hG6j8oy4" role="3Vq2cS">
+        <property role="TrG5h" value="Main" />
+      </node>
+      <node concept="3Vob68" id="5U0hG6j8oxX" role="3Vq2cS" />
       <node concept="3Vpyi9" id="2Cg1yFhuCES" role="3Vq2cS">
         <ref role="3Vpyfs" node="2Cg1yFhuCE5" resolve="GetRandomNumber" />
         <ref role="3Vpyfu" node="2Cg1yFhuCEr" resolve="ProvideRandomNumber" />
+      </node>
+    </node>
+  </node>
+  <node concept="3Vob6U" id="5U0hG6j8oBa">
+    <property role="TrG5h" value="Order" />
+    <node concept="3Vob6Z" id="5U0hG6ja9tJ" role="3Vob6q">
+      <property role="TrG5h" value="Webstore" />
+      <node concept="3Vq3Vf" id="5U0hG6ja9tT" role="3Vq2cS">
+        <ref role="3Vq3Vc" node="5U0hG6j8oBb" resolve="ShoppingCart" />
+      </node>
+      <node concept="3Vq3Vf" id="5U0hG6ja9tY" role="3Vq2cS">
+        <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="SearchProducts" />
+      </node>
+    </node>
+    <node concept="3Vo6hu" id="5U0hG6j8oBb" role="3Vob6q">
+      <property role="TrG5h" value="ShoppingCart" />
+    </node>
+    <node concept="3Vo6hu" id="5U0hG6ja9tt" role="3Vob6q">
+      <property role="TrG5h" value="SearchProducts" />
+    </node>
+    <node concept="3Vob68" id="5U0hG6ja9te" role="3Vob6q">
+      <property role="3dEdWv" value="true" />
+    </node>
+    <node concept="3Vob68" id="5U0hG6ja_V6" role="3Vob6q" />
+    <node concept="3Vob6Z" id="5U0hG6ja_Vv" role="3Vob6q">
+      <property role="TrG5h" value="Warehouse" />
+      <node concept="3Vq3Vf" id="5U0hG6ja_Xc" role="3Vq2cS">
+        <ref role="3Vq3Vc" node="5U0hG6ja_WU" resolve="Inventory" />
+      </node>
+    </node>
+    <node concept="3Vo6hu" id="5U0hG6ja_WU" role="3Vob6q">
+      <property role="TrG5h" value="Inventory" />
+      <node concept="3VoQH8" id="5U0hG6ja_XP" role="3Vq2cS">
+        <property role="TrG5h" value="ManageInventory" />
+      </node>
+      <node concept="3VoQH8" id="5U0hG6ja_Y9" role="3Vq2cS">
+        <property role="TrG5h" value="SearchProducts" />
+      </node>
+    </node>
+    <node concept="3Vob68" id="5U0hG6ja_Wa" role="3Vob6q">
+      <property role="3dEdWv" value="true" />
+    </node>
+    <node concept="3Vob68" id="5U0hG6ja_Wp" role="3Vob6q" />
+    <node concept="3Vob6Z" id="5U0hG6ja_VV" role="3Vob6q">
+      <property role="TrG5h" value="Accounting" />
+    </node>
+    <node concept="3Vo6hu" id="5U0hG6j9sbi" role="3Vob6q">
+      <property role="TrG5h" value="Ordering" />
+      <node concept="3VoQH8" id="5U0hG6ja9rD" role="3Vq2cS">
+        <property role="TrG5h" value="ManageOrders" />
+      </node>
+      <node concept="3Vob68" id="5U0hG6ja_XY" role="3Vq2cS" />
+      <node concept="3VoSMG" id="5U0hG6ja_XU" role="3Vq2cS">
+        <property role="TrG5h" value="ManageInventory" />
+      </node>
+      <node concept="3VoSMG" id="5U0hG6ja_Y2" role="3Vq2cS">
+        <property role="TrG5h" value="ManageCustomers" />
+      </node>
+    </node>
+    <node concept="3Vo6hu" id="5U0hG6ja9rL" role="3Vob6q">
+      <property role="TrG5h" value="Customers" />
+      <node concept="3VoQH8" id="5U0hG6ja9rT" role="3Vq2cS">
+        <property role="TrG5h" value="Person" />
+      </node>
+    </node>
+    <node concept="3Vo6hu" id="5U0hG6ja_Xx" role="3Vob6q">
+      <property role="TrG5h" value="Accounts" />
+      <node concept="3VoQH8" id="5U0hG6ja_Y7" role="3Vq2cS">
+        <property role="TrG5h" value="ManageAccounts" />
       </node>
     </node>
   </node>

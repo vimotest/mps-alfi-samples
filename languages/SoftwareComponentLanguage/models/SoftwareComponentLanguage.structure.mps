@@ -179,7 +179,13 @@
   <node concept="1TIwiD" id="2Cg1yFhsbuy">
     <property role="EcuMT" value="3030929330192562082" />
     <property role="TrG5h" value="EmptyLine" />
+    <property role="3GE5qa" value="util" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="5U0hG6ja9Bu" role="1TKVEl">
+      <property role="IQ2nx" value="6809520433795733982" />
+      <property role="TrG5h" value="drawLine" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="PrWs8" id="2Cg1yFhsbuz" role="PzmwI">
       <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
     </node>
