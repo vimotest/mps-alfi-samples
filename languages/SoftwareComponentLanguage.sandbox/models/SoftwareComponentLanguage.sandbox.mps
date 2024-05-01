@@ -14,9 +14,6 @@
       </concept>
     </language>
     <language id="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" name="alfi">
-      <concept id="2674824929519052396" name="alfi.structure.StringLiteralExpression" flags="ng" index="_iklQ">
-        <property id="2674824929519052397" name="value" index="_iklR" />
-      </concept>
       <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
         <child id="2674824929519927759" name="name" index="_uYbl" />
       </concept>
@@ -51,6 +48,9 @@
       <concept id="7144803224889269844" name="alfi.structure.ReturnStatement" flags="ng" index="32G6VT">
         <child id="8875975376183143672" name="expression" index="2vFQ1F" />
       </concept>
+      <concept id="7144803224892162748" name="alfi.structure.DecimalLiteralExpression" flags="ng" index="32T38h">
+        <property id="7144803224892162749" name="valueText" index="32T38g" />
+      </concept>
       <concept id="7858332524534022075" name="alfi.structure.Unit" flags="ng" index="3mGtxK">
         <child id="7858332524534022078" name="namespaceDefinition" index="3mGtxP" />
       </concept>
@@ -63,7 +63,15 @@
       </concept>
     </language>
     <language id="90dba4c7-2c2e-4bec-a587-6476e412e28c" name="SoftwareComponentLanguage">
+      <concept id="1393797239811294692" name="SoftwareComponentLanguage.structure.Operation" flags="ng" index="1$y8rg">
+        <child id="3030929330195430146" name="parameters" index="3Vz7OC" />
+        <child id="3030929330195479625" name="returns" index="3VzjDz" />
+      </concept>
+      <concept id="1393797239811294693" name="SoftwareComponentLanguage.structure.InterfaceDeclaration" flags="ng" index="1$y8rh">
+        <child id="1393797239811294694" name="operations" index="1$y8ri" />
+      </concept>
       <concept id="634326320419572930" name="SoftwareComponentLanguage.structure.EmbeddedAlfUnit" flags="ng" index="1KxTyJ">
+        <reference id="1393797239812200308" name="forOperation" index="1$IHh0" />
         <reference id="634326320419582667" name="forInterface" index="1KxUqA" />
         <reference id="634326320420072997" name="innerActivity" index="1KB3D8" />
       </concept>
@@ -80,8 +88,7 @@
       <concept id="3030929330192562069" name="SoftwareComponentLanguage.structure.SoftwareComponentComposite" flags="ng" index="3Vob6Z" />
       <concept id="3030929330192739682" name="SoftwareComponentLanguage.structure.ProvidedInterface" flags="ng" index="3VoQH8" />
       <concept id="3030929330192747144" name="SoftwareComponentLanguage.structure.ComponentInterfaceBase" flags="ng" index="3VoSMy">
-        <child id="3030929330195430146" name="parameters" index="3Vz7OC" />
-        <child id="3030929330195479625" name="returns" index="3VzjDz" />
+        <reference id="1393797239811302085" name="type" index="1$ya7L" />
       </concept>
       <concept id="3030929330192747142" name="SoftwareComponentLanguage.structure.RequiredInterface" flags="ng" index="3VoSMG" />
       <concept id="3030929330192917155" name="SoftwareComponentLanguage.structure.InterfaceConnection" flags="ng" index="3Vpyi9">
@@ -94,76 +101,68 @@
       <concept id="3030929330193053925" name="SoftwareComponentLanguage.structure.ComponentReference" flags="ng" index="3Vq3Vf">
         <reference id="3030929330193053926" name="componentRef" index="3Vq3Vc" />
       </concept>
-      <concept id="3030929330195430070" name="SoftwareComponentLanguage.structure.Parameter" flags="ng" index="3Vz7Ms">
-        <property id="3030929330195430088" name="type" index="3Vz7Ny" />
-      </concept>
+      <concept id="3030929330195430070" name="SoftwareComponentLanguage.structure.Parameter" flags="ng" index="3Vz7Ms" />
     </language>
   </registry>
   <node concept="3Vob6U" id="2Cg1yFhsolx">
     <property role="TrG5h" value="MyPackage" />
     <node concept="3Vo6hu" id="2Cg1yFhuCDX" role="3Vob6q">
-      <property role="TrG5h" value="Order" />
-      <node concept="3VoQH8" id="2Cg1yFhuCE0" role="3Vq2cS">
-        <property role="TrG5h" value="SupportInteger" />
-        <node concept="3Vz7Ms" id="2Cg1yFhCDTM" role="3VzjDz">
-          <property role="TrG5h" value="Integer" />
+      <property role="TrG5h" value="NumberComponent" />
+      <node concept="3VoQH8" id="1dnKNhRTA2V" role="3Vq2cS">
+        <property role="TrG5h" value="SupportInt" />
+        <ref role="1$ya7L" node="1dnKNhRSI66" resolve="MyInterface" />
+      </node>
+      <node concept="3Vob68" id="1dnKNhRUDaT" role="3Vq2cS" />
+      <node concept="1$y8rh" id="1dnKNhRSI66" role="3Vq2cS">
+        <property role="TrG5h" value="MyInterface" />
+        <node concept="1$y8rg" id="1dnKNhRSI6g" role="1$y8ri">
+          <property role="TrG5h" value="Foo" />
+          <node concept="3Vz7Ms" id="1dnKNhRUDaM" role="3Vz7OC">
+            <property role="TrG5h" value="offset" />
+          </node>
+          <node concept="3Vz7Ms" id="1dnKNhRTA37" role="3VzjDz">
+            <property role="TrG5h" value="__return__" />
+          </node>
         </node>
       </node>
-      <node concept="3VoSMG" id="2Cg1yFhuCE5" role="3Vq2cS">
-        <property role="TrG5h" value="GetRandomNumber" />
-        <node concept="3Vz7Ms" id="2Cg1yFhCDTK" role="3VzjDz">
-          <property role="TrG5h" value="RandomNumber" />
-        </node>
-      </node>
-      <node concept="3VoQH8" id="2Cg1yFhCDTW" role="3Vq2cS">
-        <property role="TrG5h" value="GetRandomName" />
-        <node concept="3Vz7Ms" id="2Cg1yFhCDU3" role="3Vz7OC">
-          <property role="TrG5h" value="baseName" />
-          <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
-        </node>
-        <node concept="3Vz7Ms" id="2Cg1yFhCDU5" role="3VzjDz">
-          <property role="TrG5h" value="Name" />
-          <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
-        </node>
-      </node>
-      <node concept="3Vob68" id="45PW2TPic9J" role="3Vq2cS" />
-      <node concept="1KxTyJ" id="zd_6PSkXfJ" role="1KxUq$">
-        <ref role="1KB3D8" node="zd_6PSkXfK" resolve="MyComponent_null" />
-        <ref role="1KxUqA" node="2Cg1yFhCDTW" resolve="GetRandomeName" />
-        <node concept="1KxUro" id="zd_6PSkXfK" role="3mGtxP">
+      <node concept="1KxTyJ" id="1dnKNhRVhtH" role="1KxUq$">
+        <ref role="1KB3D8" node="1dnKNhRVhtI" resolve="NumberComponent_null" />
+        <ref role="1KxUqA" node="1dnKNhRTA2V" resolve="SupportInt" />
+        <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="Foo" />
+        <node concept="1KxUro" id="1dnKNhRVhtI" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
-          <node concept="PCHzy" id="zd_6PSkXfL" role="PCHGa">
-            <node concept="32G6VT" id="zd_6PSmo2a" role="PCHzz">
-              <node concept="31szHT" id="45PW2TPicsG" role="2vFQ1F">
+          <node concept="PCHzy" id="1dnKNhRVhtJ" role="PCHGa">
+            <node concept="32G6VT" id="1dnKNhRWQHB" role="PCHzz">
+              <node concept="31szHT" id="1dnKNhRWQHX" role="2vFQ1F">
                 <property role="31szH2" value="6cBsaQylkJ$/PlusOperator" />
-                <node concept="_uYbk" id="45PW2TPicsM" role="31szGO">
-                  <node concept="_vnHb" id="45PW2TPicsO" role="_uYbl">
-                    <node concept="2RqM1Q" id="45PW2TPicsQ" role="_vnH8">
-                      <ref role="2RqM1R" node="45PW2TPicmA" resolve="baseName" />
+                <node concept="32T38h" id="1dnKNhRWQJ0" role="31szGO">
+                  <property role="32T38g" value="42" />
+                </node>
+                <node concept="_uYbk" id="1dnKNhRWQI3" role="31szGQ">
+                  <node concept="_vnHb" id="1dnKNhRWQI5" role="_uYbl">
+                    <node concept="2RqM1Q" id="1dnKNhRWQI7" role="_vnH8">
+                      <ref role="2RqM1R" node="1dnKNhRWQ_5" resolve="offset" />
                     </node>
                   </node>
                 </node>
-                <node concept="_iklQ" id="45PW2TPictJ" role="31szGQ">
-                  <property role="_iklR" value="_1" />
-                </node>
               </node>
             </node>
           </node>
-          <node concept="3xR696" id="45PW2TPicmA" role="PCHHv">
-            <property role="TrG5h" value="baseName" />
+          <node concept="3xR696" id="1dnKNhRWQ_5" role="PCHHv">
+            <property role="TrG5h" value="offset" />
             <property role="3xR695" value="1KdBIfXPktw/in" />
-            <node concept="3xHE8C" id="45PW2TPicmI" role="3xMlr6">
-              <node concept="2RqM1Q" id="45PW2TPicmH" role="_vnH8">
-                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
+            <node concept="3xHE8C" id="1dnKNhRWQ_d" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhRWQ_c" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
               </node>
             </node>
           </node>
-          <node concept="3xR696" id="MvuXW6bFOM" role="NkNyt">
+          <node concept="3xR696" id="1dnKNhRWQ_e" role="NkNyt">
             <property role="TrG5h" value="__return__" />
             <property role="3xR695" value="3Ud70gdvRyt/return" />
-            <node concept="3xHE8C" id="MvuXW6bFOU" role="3xMlr6">
-              <node concept="2RqM1Q" id="MvuXW6bFOT" role="_vnH8">
-                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
+            <node concept="3xHE8C" id="1dnKNhRWQ_m" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhRWQ_l" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
               </node>
             </node>
           </node>
@@ -172,12 +171,13 @@
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCE9" role="3Vob6q" />
     <node concept="3Vo6hu" id="2Cg1yFhuCEk" role="3Vob6q">
-      <property role="TrG5h" value="RandomNumberComponent" />
-      <node concept="3VoQH8" id="2Cg1yFhuCEr" role="3Vq2cS">
+      <property role="TrG5h" value="RandomProvider" />
+      <node concept="3VoQH8" id="1dnKNhRUDb0" role="3Vq2cS">
         <property role="TrG5h" value="ProvideRandomNumber" />
-        <node concept="3Vz7Ms" id="2Cg1yFhBvMI" role="3VzjDz">
-          <property role="TrG5h" value="RandomNumber" />
-        </node>
+      </node>
+      <node concept="3VoSMG" id="1dnKNhRUDb5" role="3Vq2cS">
+        <property role="TrG5h" value="GetNumber" />
+        <ref role="1$ya7L" node="1dnKNhRSI66" resolve="MyInterface" />
       </node>
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCEt" role="3Vob6q" />
@@ -191,12 +191,17 @@
       </node>
       <node concept="3Vob68" id="2Cg1yFhxrO7" role="3Vq2cS" />
       <node concept="3VoQH8" id="5U0hG6j8oy4" role="3Vq2cS">
-        <property role="TrG5h" value="Main" />
+        <property role="TrG5h" value="RandomNumber" />
+        <ref role="1$ya7L" node="1dnKNhRSI66" resolve="MyInterface" />
       </node>
       <node concept="3Vob68" id="5U0hG6j8oxX" role="3Vq2cS" />
       <node concept="3Vpyi9" id="2Cg1yFhuCES" role="3Vq2cS">
-        <ref role="3Vpyfs" node="2Cg1yFhuCE5" resolve="GetRandomNumber" />
-        <ref role="3Vpyfu" node="2Cg1yFhuCEr" resolve="ProvideRandomNumber" />
+        <ref role="3Vpyfs" node="1dnKNhRUDb5" resolve="MyInterface" />
+        <ref role="3Vpyfu" node="1dnKNhRTA2V" resolve="SupportInt" />
+      </node>
+      <node concept="3Vpyi9" id="1dnKNhRUDbh" role="3Vq2cS">
+        <ref role="3Vpyfs" node="1dnKNhRUDb5" resolve="GetNumber" />
+        <ref role="3Vpyfu" node="5U0hG6j8oy4" resolve="RandomNumber" />
       </node>
     </node>
   </node>

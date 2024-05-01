@@ -219,18 +219,10 @@
     <node concept="PrWs8" id="2Cg1yFhsSEb" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyj" id="2Cg1yFhB7G2" role="1TKVEi">
-      <property role="IQ2ns" value="3030929330195430146" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="parameters" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="2Cg1yFhB7EQ" resolve="Parameter" />
-    </node>
-    <node concept="1TJgyj" id="2Cg1yFhBjL9" role="1TKVEi">
-      <property role="IQ2ns" value="3030929330195479625" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="returns" />
-      <ref role="20lvS9" node="2Cg1yFhB7EQ" resolve="Parameter" />
+    <node concept="1TJgyj" id="1dnKNhRRQb5" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239811302085" />
+      <property role="20kJfa" value="type" />
+      <ref role="20lvS9" node="1dnKNhRROn_" resolve="InterfaceDeclaration" />
     </node>
   </node>
   <node concept="1TIwiD" id="2Cg1yFhtyaz">
@@ -352,6 +344,12 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="2Cg1yFhsQPy" resolve="ProvidedInterface" />
     </node>
+    <node concept="1TJgyj" id="1dnKNhRVhtO" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239812200308" />
+      <property role="20kJfa" value="forOperation" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
+    </node>
     <node concept="1TJgyj" id="zd_6PSkqS_" role="1TKVEi">
       <property role="IQ2ns" value="634326320420072997" />
       <property role="20kJfa" value="innerActivity" />
@@ -364,6 +362,52 @@
     <property role="3GE5qa" value="component.alf" />
     <property role="TrG5h" value="EmbeddedAlfActivity" />
     <ref role="1TJDcQ" to="28lk:2SMO68r$0GL" resolve="ActivityDefinition" />
+  </node>
+  <node concept="1TIwiD" id="1dnKNhRROn$">
+    <property role="EcuMT" value="1393797239811294692" />
+    <property role="3GE5qa" value="component.interface" />
+    <property role="TrG5h" value="Operation" />
+    <property role="34LRSv" value="operation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2Cg1yFhB7G2" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330195430146" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="parameters" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2Cg1yFhB7EQ" resolve="Parameter" />
+    </node>
+    <node concept="1TJgyj" id="2Cg1yFhBjL9" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330195479625" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="returns" />
+      <ref role="20lvS9" node="2Cg1yFhB7EQ" resolve="Parameter" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhRRPdH" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1dnKNhRROn_">
+    <property role="EcuMT" value="1393797239811294693" />
+    <property role="3GE5qa" value="component.interface" />
+    <property role="TrG5h" value="InterfaceDeclaration" />
+    <property role="34LRSv" value="interface" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1dnKNhRRPPH" role="PzmwI">
+      <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhRSGj$" role="PzmwI">
+      <ref role="PrY4T" node="2Cg1yFhsbuj" resolve="IPackageContent" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhRRPPI" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="1dnKNhRROnA" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239811294694" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="operations" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
+    </node>
   </node>
 </model>
 
