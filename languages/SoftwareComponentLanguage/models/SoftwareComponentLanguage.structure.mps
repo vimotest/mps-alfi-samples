@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" name="alfi" version="0" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
@@ -104,7 +105,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="requiredInterfaceImplementations" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
+      <ref role="20lvS9" node="1dnKNhSpcrQ" resolve="IInterfaceOperationBehavior" />
     </node>
     <node concept="1TJgyj" id="1dnKNhSiLyQ" role="1TKVEi">
       <property role="IQ2ns" value="1393797239818361014" />
@@ -358,24 +359,16 @@
     <property role="EcuMT" value="634326320419572930" />
     <property role="3GE5qa" value="component.alf" />
     <property role="TrG5h" value="EmbeddedAlfActivityUnit" />
+    <property role="34LRSv" value="activity" />
     <ref role="1TJDcQ" to="28lk:6OepWIVJVYV" resolve="Unit" />
-    <node concept="1TJgyj" id="zd_6PSizbb" role="1TKVEi">
-      <property role="IQ2ns" value="634326320419582667" />
-      <property role="20kJfa" value="forInterface" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2Cg1yFhsQPy" resolve="ProvidedInterface" />
-    </node>
-    <node concept="1TJgyj" id="1dnKNhRVhtO" role="1TKVEi">
-      <property role="IQ2ns" value="1393797239812200308" />
-      <property role="20kJfa" value="forOperation" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
-    </node>
     <node concept="1TJgyj" id="zd_6PSkqS_" role="1TKVEi">
       <property role="IQ2ns" value="634326320420072997" />
       <property role="20kJfa" value="innerActivity" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="zd_6PSizaP" resolve="EmbeddedAlfActivity" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhSpcrR" role="PzmwI">
+      <ref role="PrY4T" node="1dnKNhSpcrQ" resolve="IInterfaceOperationBehavior" />
     </node>
   </node>
   <node concept="1TIwiD" id="zd_6PSizaP">
@@ -468,6 +461,45 @@
     <property role="TrG5h" value="ComponentStateExpression" />
     <property role="34LRSv" value="state" />
     <ref role="1TJDcQ" to="28lk:2kuSLC0lpD9" resolve="ThisExpression" />
+  </node>
+  <node concept="PlHQZ" id="1dnKNhSpcrQ">
+    <property role="TrG5h" value="IInterfaceOperationBehavior" />
+    <property role="3GE5qa" value="component.interface" />
+    <property role="EcuMT" value="1393797239820044021" />
+    <node concept="1TJgyj" id="zd_6PSizbb" role="1TKVEi">
+      <property role="IQ2ns" value="634326320419582667" />
+      <property role="20kJfa" value="forInterface" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsQPy" resolve="ProvidedInterface" />
+    </node>
+    <node concept="1TJgyj" id="1dnKNhRVhtO" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239812200308" />
+      <property role="20kJfa" value="forOperation" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1dnKNhSpLb9">
+    <property role="EcuMT" value="1393797239820194505" />
+    <property role="3GE5qa" value="component.interface" />
+    <property role="TrG5h" value="InterfaceOperationDelegate" />
+    <property role="34LRSv" value="delegate" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="1dnKNhSpLc0" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239820194560" />
+      <property role="20kJfa" value="toInterface" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsSE6" resolve="RequiredInterface" />
+    </node>
+    <node concept="1TJgyj" id="1dnKNhSpLc1" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239820194561" />
+      <property role="20kJfa" value="toOperation" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
+    </node>
+    <node concept="PrWs8" id="1dnKNhSpLba" role="PzmwI">
+      <ref role="PrY4T" node="1dnKNhSpcrQ" resolve="IInterfaceOperationBehavior" />
+    </node>
   </node>
 </model>
 

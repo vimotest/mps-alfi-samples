@@ -17,6 +17,7 @@
       <concept id="3120704408893642668" name="alfi.structure.AttributeDefinition" flags="ng" index="6lMYc">
         <child id="3120704408893959337" name="initializerExpression" index="6k5i9" />
       </concept>
+      <concept id="6254876434755085380" name="alfi.structure.SequenceFlag" flags="ng" index="hh2MY" />
       <concept id="2674824929518763027" name="alfi.structure.ExpressionStatement" flags="ng" index="_jtW9">
         <child id="2674824929518763028" name="expression" index="_jtWe" />
       </concept>
@@ -64,6 +65,7 @@
       <concept id="7144803224889269844" name="alfi.structure.ReturnStatement" flags="ng" index="32G6VT">
         <child id="8875975376183143672" name="expression" index="2vFQ1F" />
       </concept>
+      <concept id="7144803224894301410" name="alfi.structure.UnboundedValueLiteralExpression" flags="ng" index="32L9hf" />
       <concept id="7144803224895060397" name="alfi.structure.PropertyAccessExpression" flags="ng" index="32M0$0">
         <child id="7144803224895280402" name="featureReference" index="32PqmZ" />
       </concept>
@@ -79,7 +81,12 @@
       </concept>
       <concept id="2021446509810891979" name="alfi.structure.QualifiedTypeName" flags="ng" index="3xHE8C" />
       <concept id="2021446509811517476" name="alfi.structure.TypedElementDefinition" flags="ng" index="3xMlr7">
+        <child id="6254876434755083966" name="_orderingAndUniqueness" index="hh1p4" />
+        <child id="2021446509811779615" name="_multiplicityRange" index="3xLlrW" />
         <child id="2021446509811517477" name="typeName" index="3xMlr6" />
+      </concept>
+      <concept id="2021446509811531205" name="alfi.structure.OnesidedMultiplicityRange" flags="ng" index="3xMmcA">
+        <child id="2021446509811532623" name="upperBound" index="3xM9QG" />
       </concept>
       <concept id="2021446509812382885" name="alfi.structure.FormalParameter" flags="ng" index="3xR696">
         <property id="2021446509812382886" name="direction" index="3xR695" />
@@ -98,9 +105,15 @@
         <reference id="1393797239818145197" name="innerClass" index="1F40Up" />
       </concept>
       <concept id="1393797239818145231" name="SoftwareComponentLanguage.structure.EmbeddedAlfClass" flags="ng" index="1F40VV" />
-      <concept id="634326320419572930" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivityUnit" flags="ng" index="1KxTyJ">
+      <concept id="1393797239820194505" name="SoftwareComponentLanguage.structure.InterfaceOperationDelegate" flags="ng" index="1Fcd7X">
+        <reference id="1393797239820194560" name="toInterface" index="1Fcd0O" />
+        <reference id="1393797239820194561" name="toOperation" index="1Fcd0P" />
+      </concept>
+      <concept id="1393797239820044021" name="SoftwareComponentLanguage.structure.IInterfaceOperationBehavior" flags="ngI" index="1FcKn1">
         <reference id="1393797239812200308" name="forOperation" index="1$IHh0" />
         <reference id="634326320419582667" name="forInterface" index="1KxUqA" />
+      </concept>
+      <concept id="634326320419572930" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivityUnit" flags="ng" index="1KxTyJ">
         <reference id="634326320420072997" name="innerActivity" index="1KB3D8" />
       </concept>
       <concept id="634326320419582645" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivity" flags="ng" index="1KxUro" />
@@ -161,8 +174,8 @@
       </node>
       <node concept="1KxTyJ" id="1dnKNhRVhtH" role="1KxUq$">
         <ref role="1KB3D8" node="1dnKNhRVhtI" resolve="NumberComponent_null" />
-        <ref role="1KxUqA" node="1dnKNhRTA2V" resolve="SupportInt" />
         <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="Foo" />
+        <ref role="1KxUqA" node="1dnKNhRTA2V" resolve="SupportInt" />
         <node concept="1KxUro" id="1dnKNhRVhtI" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
           <node concept="PCHzy" id="1dnKNhRVhtJ" role="PCHGa">
@@ -217,27 +230,27 @@
                 <node concept="_uYbk" id="1dnKNhRWQI3" role="31szGQ">
                   <node concept="_vnHb" id="1dnKNhRWQI5" role="_uYbl">
                     <node concept="2RqM1Q" id="1dnKNhRWQI7" role="_vnH8">
-                      <ref role="2RqM1R" node="1dnKNhRWQ_5" resolve="offset" />
+                      <ref role="2RqM1R" node="1dnKNhSrZMQ" resolve="offset" />
                     </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="3xR696" id="1dnKNhRWQ_5" role="PCHHv">
+          <node concept="3xR696" id="1dnKNhSrZMQ" role="PCHHv">
             <property role="TrG5h" value="offset" />
             <property role="3xR695" value="1KdBIfXPktw/in" />
-            <node concept="3xHE8C" id="1dnKNhRWQ_d" role="3xMlr6">
-              <node concept="2RqM1Q" id="1dnKNhRWQ_c" role="_vnH8">
+            <node concept="3xHE8C" id="1dnKNhSrZMY" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhSrZMX" role="_vnH8">
                 <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
               </node>
             </node>
           </node>
-          <node concept="3xR696" id="1dnKNhRWQ_e" role="NkNyt">
+          <node concept="3xR696" id="1dnKNhSrZMZ" role="NkNyt">
             <property role="TrG5h" value="__return__" />
             <property role="3xR695" value="3Ud70gdvRyt/return" />
-            <node concept="3xHE8C" id="1dnKNhRWQ_m" role="3xMlr6">
-              <node concept="2RqM1Q" id="1dnKNhRWQ_l" role="_vnH8">
+            <node concept="3xHE8C" id="1dnKNhSrZN7" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhSrZN6" role="_vnH8">
                 <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
               </node>
             </node>
@@ -279,10 +292,17 @@
       <property role="TrG5h" value="RandomProvider" />
       <node concept="3VoQH8" id="1dnKNhRUDb0" role="3Vq2cS">
         <property role="TrG5h" value="ProvideRandomNumber" />
+        <ref role="1$ya7L" node="1dnKNhRSI66" resolve="MyInterface" />
       </node>
       <node concept="3VoSMG" id="1dnKNhRUDb5" role="3Vq2cS">
         <property role="TrG5h" value="GetNumber" />
         <ref role="1$ya7L" node="1dnKNhRSI66" resolve="MyInterface" />
+      </node>
+      <node concept="1Fcd7X" id="1dnKNhSrZXv" role="1KxUq$">
+        <ref role="1KxUqA" node="1dnKNhRUDb0" resolve="ProvideRandomNumber" />
+        <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="Foo" />
+        <ref role="1Fcd0O" node="1dnKNhRUDb5" resolve="GetNumber" />
+        <ref role="1Fcd0P" node="1dnKNhRSI6g" resolve="Foo" />
       </node>
     </node>
     <node concept="3Vob68" id="2Cg1yFhuCEt" role="3Vob6q" />
@@ -357,6 +377,35 @@
       <node concept="3VoQH8" id="1dnKNhRZUjd" role="3Vq2cS">
         <property role="TrG5h" value="Shopping" />
         <ref role="1$ya7L" node="1dnKNhRZUjE" resolve="ShoppingInterface" />
+      </node>
+      <node concept="3VoSMG" id="1dnKNhSpcqX" role="3Vq2cS">
+        <property role="TrG5h" value="OrderManagement" />
+        <ref role="1$ya7L" node="1dnKNhScFdC" resolve="OrderManagementInterface" />
+      </node>
+      <node concept="1F40Uu" id="1dnKNhSoKF0" role="1F7dI2">
+        <ref role="1F40Up" node="1dnKNhSoKF1" resolve="ShoppingCart_State" />
+        <node concept="1F40VV" id="1dnKNhSoKF1" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="6lMYc" id="1dnKNhSoKFh" role="PCHHv">
+            <property role="PCHHn" value="6OepWIVA92M/private" />
+            <property role="TrG5h" value="products" />
+            <node concept="3xHE8C" id="1dnKNhSoKGm" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhSoKGk" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+            <node concept="3xMmcA" id="1dnKNhSoKH9" role="3xLlrW">
+              <node concept="32L9hf" id="1dnKNhSoKHI" role="3xM9QG" />
+            </node>
+            <node concept="hh2MY" id="1dnKNhSoKI3" role="hh1p4" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Fcd7X" id="1dnKNhSqFtZ" role="1KxUq$">
+        <ref role="1KxUqA" node="1dnKNhRZUjd" resolve="Shopping" />
+        <ref role="1$IHh0" node="1dnKNhS8R6y" resolve="addProduct" />
+        <ref role="1Fcd0O" node="1dnKNhSpcqX" resolve="OrderManagement" />
+        <ref role="1Fcd0P" node="1dnKNhScFdD" resolve="addOrder" />
       </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6ja9tt" role="3Vob6q">
