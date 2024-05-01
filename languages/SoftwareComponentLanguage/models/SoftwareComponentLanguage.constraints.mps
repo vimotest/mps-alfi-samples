@@ -1014,5 +1014,101 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1dnKNhSzNGg">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="1M2myG" to="tj5x:1dnKNhSz60R" resolve="InterfaceOperationInvocationExpression" />
+    <node concept="1N5Pfh" id="1dnKNhSzNGh" role="1Mr941">
+      <ref role="1N5Vy1" to="tj5x:1dnKNhSz60S" />
+      <node concept="3dgokm" id="1dnKNhSzNHX" role="1N6uqs">
+        <node concept="3clFbS" id="1dnKNhSzNHY" role="2VODD2">
+          <node concept="3cpWs8" id="1dnKNhSzS7k" role="3cqZAp">
+            <node concept="3cpWsn" id="1dnKNhSzS7l" role="3cpWs9">
+              <property role="TrG5h" value="interfaces" />
+              <node concept="A3Dl8" id="1dnKNhSzS6B" role="1tU5fm">
+                <node concept="3Tqbb2" id="1dnKNhSzS6E" role="A3Ik2">
+                  <ref role="ehGHo" to="tj5x:2Cg1yFhsSE8" resolve="ComponentInterfaceBase" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="1dnKNhSzS7m" role="33vP2m">
+                <node concept="2OqwBi" id="1dnKNhSzS7n" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1dnKNhSzS7o" role="2Oq$k0">
+                    <node concept="2rP1CM" id="1dnKNhSzS7p" role="2Oq$k0" />
+                    <node concept="2Xjw5R" id="1dnKNhSzS7q" role="2OqNvi">
+                      <node concept="1xMEDy" id="1dnKNhSzS7r" role="1xVPHs">
+                        <node concept="chp4Y" id="1dnKNhSzS7s" role="ri$Ld">
+                          <ref role="cht4Q" to="tj5x:2Cg1yFhu2ke" resolve="SoftwareComponentBase" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="32TBzR" id="1dnKNhSzS7t" role="2OqNvi" />
+                </node>
+                <node concept="v3k3i" id="1dnKNhSzS7u" role="2OqNvi">
+                  <node concept="chp4Y" id="1dnKNhSzS7v" role="v3oSu">
+                    <ref role="cht4Q" to="tj5x:2Cg1yFhsSE8" resolve="ComponentInterfaceBase" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="1dnKNhSzSdF" role="3cqZAp">
+            <node concept="2YIFZM" id="1dnKNhSzSh5" role="3clFbG">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="37vLTw" id="1dnKNhSzSj$" role="37wK5m">
+                <ref role="3cqZAo" node="1dnKNhSzS7l" resolve="interfaces" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1N5Pfh" id="1dnKNhSzSuq" role="1Mr941">
+      <ref role="1N5Vy1" to="tj5x:1dnKNhSz60T" />
+      <node concept="3dgokm" id="1dnKNhSzSxR" role="1N6uqs">
+        <node concept="3clFbS" id="1dnKNhSzSxS" role="2VODD2">
+          <node concept="3cpWs8" id="1dnKNhSzSVQ" role="3cqZAp">
+            <node concept="3cpWsn" id="1dnKNhSzSVR" role="3cpWs9">
+              <property role="TrG5h" value="expression" />
+              <node concept="3Tqbb2" id="1dnKNhSzSVu" role="1tU5fm">
+                <ref role="ehGHo" to="tj5x:1dnKNhSz60R" resolve="InterfaceOperationInvocationExpression" />
+              </node>
+              <node concept="1PxgMI" id="1dnKNhSzSVS" role="33vP2m">
+                <property role="1BlNFB" value="true" />
+                <node concept="chp4Y" id="1dnKNhSzSVT" role="3oSUPX">
+                  <ref role="cht4Q" to="tj5x:1dnKNhSz60R" resolve="InterfaceOperationInvocationExpression" />
+                </node>
+                <node concept="2rP1CM" id="1dnKNhSzSVU" role="1m5AlR" />
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="1dnKNhSzSZG" role="3cqZAp">
+            <node concept="2YIFZM" id="1dnKNhSzT5J" role="3clFbG">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="2OqwBi" id="1dnKNhSzUxx" role="37wK5m">
+                <node concept="2OqwBi" id="1dnKNhSzTYZ" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1dnKNhSzTqn" role="2Oq$k0">
+                    <node concept="37vLTw" id="1dnKNhSzT96" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1dnKNhSzSVR" resolve="expression" />
+                    </node>
+                    <node concept="3TrEf2" id="1dnKNhSzTHn" role="2OqNvi">
+                      <ref role="3Tt5mk" to="tj5x:1dnKNhSz60S" resolve="forInterface" />
+                    </node>
+                  </node>
+                  <node concept="3TrEf2" id="1dnKNhSzUf7" role="2OqNvi">
+                    <ref role="3Tt5mk" to="tj5x:1dnKNhRRQb5" resolve="type" />
+                  </node>
+                </node>
+                <node concept="3Tsc0h" id="1dnKNhSzUN_" role="2OqNvi">
+                  <ref role="3TtcxE" to="tj5x:1dnKNhRROnA" resolve="operations" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

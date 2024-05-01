@@ -24,6 +24,10 @@
       <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
         <child id="2674824929519927759" name="name" index="_uYbl" />
       </concept>
+      <concept id="2674824929519838362" name="alfi.structure.PositionalTuple" flags="ng" index="_vku0" />
+      <concept id="2674824929519838360" name="alfi.structure.InvocationExpression" flags="ng" index="_vku2">
+        <child id="2674824929519882447" name="tuple" index="_uFfl" />
+      </concept>
       <concept id="2674824929519835217" name="alfi.structure.QualifiedName" flags="ng" index="_vnHb">
         <child id="2674824929519835218" name="names" index="_vnH8" />
       </concept>
@@ -113,6 +117,10 @@
         <reference id="1393797239812200308" name="forOperation" index="1$IHh0" />
         <reference id="634326320419582667" name="forInterface" index="1KxUqA" />
       </concept>
+      <concept id="1393797239822639159" name="SoftwareComponentLanguage.structure.InterfaceOperationInvocationExpression" flags="ng" index="1FQUc3">
+        <reference id="1393797239822639160" name="forInterface" index="1FQUcc" />
+        <reference id="1393797239822639161" name="forOperation" index="1FQUcd" />
+      </concept>
       <concept id="634326320419572930" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivityUnit" flags="ng" index="1KxTyJ">
         <reference id="634326320420072997" name="innerActivity" index="1KB3D8" />
       </concept>
@@ -163,11 +171,17 @@
       <node concept="1$y8rh" id="1dnKNhRSI66" role="3Vq2cS">
         <property role="TrG5h" value="MyInterface" />
         <node concept="1$y8rg" id="1dnKNhRSI6g" role="1$y8ri">
-          <property role="TrG5h" value="Foo" />
+          <property role="TrG5h" value="GenerateInt" />
           <node concept="3Vz7Ms" id="1dnKNhRUDaM" role="3Vz7OC">
             <property role="TrG5h" value="offset" />
           </node>
           <node concept="3Vz7Ms" id="1dnKNhRTA37" role="3VzjDz">
+            <property role="TrG5h" value="__return__" />
+          </node>
+        </node>
+        <node concept="1$y8rg" id="1dnKNhSz5YD" role="1$y8ri">
+          <property role="TrG5h" value="MyFactor" />
+          <node concept="3Vz7Ms" id="1dnKNhSz60P" role="3VzjDz">
             <property role="TrG5h" value="__return__" />
           </node>
         </node>
@@ -201,8 +215,10 @@
                         </node>
                       </node>
                     </node>
-                    <node concept="32T38h" id="1dnKNhSkIv1" role="31szGQ">
-                      <property role="32T38g" value="42" />
+                    <node concept="1FQUc3" id="1dnKNhS_fs5" role="31szGQ">
+                      <ref role="1FQUcc" node="1dnKNhRTA2V" resolve="SupportInt" />
+                      <ref role="1FQUcd" node="1dnKNhSz5YD" resolve="MyFactor" />
+                      <node concept="_vku0" id="1dnKNhS_fs7" role="_uFfl" />
                     </node>
                   </node>
                 </node>
@@ -251,6 +267,30 @@
             <property role="3xR695" value="3Ud70gdvRyt/return" />
             <node concept="3xHE8C" id="1dnKNhSrZN7" role="3xMlr6">
               <node concept="2RqM1Q" id="1dnKNhSrZN6" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="1dnKNhS_hWX" role="1KxUq$">
+        <ref role="1KB3D8" node="1dnKNhS_hWY" resolve="NumberComponent_null" />
+        <ref role="1KxUqA" node="1dnKNhRTA2V" resolve="SupportInt" />
+        <ref role="1$IHh0" node="1dnKNhSz5YD" resolve="MyFactor" />
+        <node concept="1KxUro" id="1dnKNhS_hWY" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="1dnKNhS_hWZ" role="PCHGa">
+            <node concept="32G6VT" id="1dnKNhS_i9j" role="PCHzz">
+              <node concept="32T38h" id="1dnKNhS_i9m" role="2vFQ1F">
+                <property role="32T38g" value="42" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="1dnKNhS_i8o" role="NkNyt">
+            <property role="TrG5h" value="__return__" />
+            <property role="3xR695" value="3Ud70gdvRyt/return" />
+            <node concept="3xHE8C" id="1dnKNhS_i8w" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhS_i8v" role="_vnH8">
                 <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
               </node>
             </node>

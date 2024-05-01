@@ -26,6 +26,7 @@
       <concept id="1225194413805" name="jetbrains.mps.lang.behavior.structure.ConceptConstructorDeclaration" flags="in" index="13hLZK" />
       <concept id="1225194472830" name="jetbrains.mps.lang.behavior.structure.ConceptMethodDeclaration" flags="ng" index="13i0hz">
         <property id="5864038008284099149" name="isStatic" index="2Ki8OM" />
+        <reference id="1225194472831" name="overriddenMethod" index="13i0hy" />
       </concept>
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
     </language>
@@ -843,6 +844,24 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="1dnKNhSz60W">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="13h7C2" to="tj5x:1dnKNhSz60R" resolve="InterfaceOperationInvocationExpression" />
+    <node concept="13hLZK" id="1dnKNhSz60X" role="13h7CW">
+      <node concept="3clFbS" id="1dnKNhSz60Y" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="1dnKNhSz61f" role="13h7CS">
+      <property role="TrG5h" value="isConstructorInvocation" />
+      <ref role="13i0hy" to="bqjt:5hkZeVaJyM3" resolve="isConstructorInvocation" />
+      <node concept="3Tm1VV" id="1dnKNhSz61g" role="1B3o_S" />
+      <node concept="3clFbS" id="1dnKNhSz61j" role="3clF47">
+        <node concept="3clFbF" id="1dnKNhSz61m" role="3cqZAp">
+          <node concept="3clFbT" id="1dnKNhSz61l" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="10P_77" id="1dnKNhSz61k" role="3clF45" />
     </node>
   </node>
 </model>

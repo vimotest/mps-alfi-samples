@@ -359,7 +359,7 @@
     <property role="EcuMT" value="634326320419572930" />
     <property role="3GE5qa" value="component.alf" />
     <property role="TrG5h" value="EmbeddedAlfActivityUnit" />
-    <property role="34LRSv" value="activity" />
+    <property role="34LRSv" value="behavior for operation" />
     <ref role="1TJDcQ" to="28lk:6OepWIVJVYV" resolve="Unit" />
     <node concept="1TJgyj" id="zd_6PSkqS_" role="1TKVEi">
       <property role="IQ2ns" value="634326320420072997" />
@@ -499,6 +499,25 @@
     </node>
     <node concept="PrWs8" id="1dnKNhSpLba" role="PzmwI">
       <ref role="PrY4T" node="1dnKNhSpcrQ" resolve="IInterfaceOperationBehavior" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1dnKNhSz60R">
+    <property role="EcuMT" value="1393797239822639159" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="InterfaceOperationInvocationExpression" />
+    <property role="34LRSv" value="call interface operation" />
+    <ref role="1TJDcQ" to="28lk:2kuSLC0oUio" resolve="InvocationExpression" />
+    <node concept="1TJgyj" id="1dnKNhSz60S" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239822639160" />
+      <property role="20kJfa" value="forInterface" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsSE8" resolve="ComponentInterfaceBase" />
+    </node>
+    <node concept="1TJgyj" id="1dnKNhSz60T" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239822639161" />
+      <property role="20kJfa" value="forOperation" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
     </node>
   </node>
 </model>

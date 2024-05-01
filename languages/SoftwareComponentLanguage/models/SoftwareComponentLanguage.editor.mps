@@ -86,7 +86,9 @@
         <child id="5692353713941573325" name="textFunction" index="1hCUd6" />
       </concept>
       <concept id="8449131619432941427" name="jetbrains.mps.lang.editor.structure.TransformationMenuPart_Super" flags="ng" index="L$LW2" />
-      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW" />
+      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW">
+        <child id="7033942394258392116" name="overridenEditorComponent" index="1PM95z" />
+      </concept>
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
@@ -175,6 +177,9 @@
       <concept id="5624877018226900666" name="jetbrains.mps.lang.editor.structure.TransformationMenu" flags="ng" index="3ICUPy" />
       <concept id="5624877018228267058" name="jetbrains.mps.lang.editor.structure.ITransformationMenu" flags="ngI" index="3INCJE">
         <child id="1638911550608572412" name="sections" index="IW6Ez" />
+      </concept>
+      <concept id="7033942394256351208" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclarationReference" flags="ng" index="1PE4EZ">
+        <reference id="7033942394256351817" name="editorComponent" index="1PE7su" />
       </concept>
       <concept id="1088612959204" name="jetbrains.mps.lang.editor.structure.CellModel_Alternation" flags="sg" stub="8104358048506729361" index="1QoScp">
         <property id="1088613081987" name="vertical" index="1QpmdY" />
@@ -1817,6 +1822,48 @@
       </node>
     </node>
     <node concept="3VyMlK" id="1dnKNhSxJFx" role="3ft7WO" />
+  </node>
+  <node concept="PKFIW" id="1dnKNhSz6gc">
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="InterfaceOperationInvocationExpression_InvocationTarget_EC" />
+    <ref role="1XX52x" to="tj5x:1dnKNhSz60R" resolve="InterfaceOperationInvocationExpression" />
+    <node concept="3EZMnI" id="1dnKNhSz6ge" role="2wV5jI">
+      <node concept="PMmxH" id="1dnKNhSz6gl" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+      </node>
+      <node concept="1iCGBv" id="1dnKNhSz6gq" role="3EZMnx">
+        <ref role="1NtTu8" to="tj5x:1dnKNhSz60S" resolve="forInterface" />
+        <node concept="1sVBvm" id="1dnKNhSz6gs" role="1sWHZn">
+          <node concept="3F0A7n" id="1dnKNhSz6g$" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1dnKNhSz6gH" role="3EZMnx">
+        <property role="3F0ifm" value="::" />
+        <node concept="11L4FC" id="1dnKNhSz6hc" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="1dnKNhSz6hh" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="1iCGBv" id="1dnKNhSz6gV" role="3EZMnx">
+        <ref role="1NtTu8" to="tj5x:1dnKNhSz60T" resolve="forOperation" />
+        <node concept="1sVBvm" id="1dnKNhSz6gX" role="1sWHZn">
+          <node concept="3F0A7n" id="1dnKNhSz6h9" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="2iRfu4" id="1dnKNhSz6gh" role="2iSdaV" />
+    </node>
+    <node concept="1PE4EZ" id="1dnKNhS$3Yc" role="1PM95z">
+      <ref role="1PE7su" to="chuo:2kuSLC0p53o" resolve="InvoationExpression_InvocationTarget_EC" />
+    </node>
   </node>
 </model>
 
