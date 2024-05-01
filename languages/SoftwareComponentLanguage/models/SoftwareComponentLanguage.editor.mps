@@ -649,7 +649,7 @@
   </node>
   <node concept="24kQdi" id="zd_6PSizaS">
     <property role="3GE5qa" value="component.alf" />
-    <ref role="1XX52x" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+    <ref role="1XX52x" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
     <node concept="3EZMnI" id="zd_6PSizaU" role="2wV5jI">
       <node concept="3F0ifn" id="zd_6PSizbk" role="3EZMnx">
         <property role="3F0ifm" value="behavior for" />
@@ -843,6 +843,55 @@
                 <node concept="2OqwBi" id="5U0hG6j9ORN" role="3clFbG">
                   <node concept="pncrf" id="5U0hG6j9ORO" role="2Oq$k0" />
                   <node concept="2qgKlT" id="5U0hG6j9ORP" role="2OqNvi">
+                    <ref role="37wK5l" to="lhhq:5U0hG6j9GKz" resolve="hasAnyProvidedInterface" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3F0ifn" id="1dnKNhSjfO8" role="3EZMnx">
+          <property role="3F0ifm" value="internal state" />
+          <node concept="pVoyu" id="1dnKNhSjfO9" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="1dnKNhSjfOa" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="VSNWy" id="1dnKNhSjfOb" role="3F10Kt">
+            <property role="1lJzqX" value="8" />
+          </node>
+          <node concept="Vb9p2" id="1dnKNhSjfOc" role="3F10Kt" />
+          <node concept="VechU" id="1dnKNhSjfOd" role="3F10Kt">
+            <property role="Vb096" value="fLJRk5_/gray" />
+          </node>
+          <node concept="pkWqt" id="1dnKNhSjfOe" role="pqm2j">
+            <node concept="3clFbS" id="1dnKNhSjfOf" role="2VODD2">
+              <node concept="3clFbF" id="1dnKNhSjfOg" role="3cqZAp">
+                <node concept="2OqwBi" id="1dnKNhSjfOh" role="3clFbG">
+                  <node concept="pncrf" id="1dnKNhSjfOi" role="2Oq$k0" />
+                  <node concept="2qgKlT" id="1dnKNhSjfOj" role="2OqNvi">
+                    <ref role="37wK5l" to="lhhq:5U0hG6j9GKz" resolve="hasAnyProvidedInterface" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3F1sOY" id="1dnKNhSiM3z" role="3EZMnx">
+          <ref role="1NtTu8" to="tj5x:1dnKNhSiLyQ" resolve="state" />
+          <node concept="pVoyu" id="1dnKNhSiM6x" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="1dnKNhSiM6z" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="pkWqt" id="1dnKNhSiMwP" role="pqm2j">
+            <node concept="3clFbS" id="1dnKNhSiMwQ" role="2VODD2">
+              <node concept="3clFbF" id="1dnKNhSiMwU" role="3cqZAp">
+                <node concept="2OqwBi" id="1dnKNhSiMwV" role="3clFbG">
+                  <node concept="pncrf" id="1dnKNhSiMwW" role="2Oq$k0" />
+                  <node concept="2qgKlT" id="1dnKNhSiMwX" role="2OqNvi">
                     <ref role="37wK5l" to="lhhq:5U0hG6j9GKz" resolve="hasAnyProvidedInterface" />
                   </node>
                 </node>
@@ -1377,6 +1426,40 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1dnKNhSi1hS">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="1XX52x" to="tj5x:1dnKNhShWRf" resolve="EmbeddedAlfClass" />
+    <node concept="3F2HdR" id="1dnKNhSi1i1" role="2wV5jI">
+      <ref role="1NtTu8" to="28lk:2SMO68r$0GX" />
+      <node concept="2iRkQZ" id="1dnKNhSi1ia" role="2czzBx" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1dnKNhSi48u">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="1XX52x" to="tj5x:1dnKNhShWQE" resolve="EmbeddedAlfClassUnit" />
+    <node concept="3EZMnI" id="1dnKNhSi48w" role="2wV5jI">
+      <node concept="3F0ifn" id="1dnKNhSi48x" role="3EZMnx">
+        <property role="3F0ifm" value="state" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+      </node>
+      <node concept="1iCGBv" id="1dnKNhSi48L" role="3EZMnx">
+        <ref role="1NtTu8" to="tj5x:1dnKNhShWQH" />
+        <node concept="1sVBvm" id="1dnKNhSi48M" role="1sWHZn">
+          <node concept="3F2HdR" id="1dnKNhSi49w" role="2wV5jI">
+            <ref role="1NtTu8" to="28lk:2SMO68r$0GX" resolve="ownedMember" />
+            <node concept="2iRkQZ" id="1dnKNhSkiBm" role="2czzBx" />
+          </node>
+        </node>
+        <node concept="pVoyu" id="1dnKNhSi48O" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="1dnKNhSi48P" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1dnKNhSi48Q" role="2iSdaV" />
     </node>
   </node>
 </model>

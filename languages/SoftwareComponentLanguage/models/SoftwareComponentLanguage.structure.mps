@@ -104,7 +104,13 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="requiredInterfaceImplementations" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+      <ref role="20lvS9" node="zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
+    </node>
+    <node concept="1TJgyj" id="1dnKNhSiLyQ" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239818361014" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="state" />
+      <ref role="20lvS9" node="1dnKNhShWQE" resolve="EmbeddedAlfClassUnit" />
     </node>
   </node>
   <node concept="1TIwiD" id="2Cg1yFhsbug">
@@ -351,7 +357,7 @@
   <node concept="1TIwiD" id="zd_6PSiwN2">
     <property role="EcuMT" value="634326320419572930" />
     <property role="3GE5qa" value="component.alf" />
-    <property role="TrG5h" value="EmbeddedAlfUnit" />
+    <property role="TrG5h" value="EmbeddedAlfActivityUnit" />
     <ref role="1TJDcQ" to="28lk:6OepWIVJVYV" resolve="Unit" />
     <node concept="1TJgyj" id="zd_6PSizbb" role="1TKVEi">
       <property role="IQ2ns" value="634326320419582667" />
@@ -437,6 +443,31 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="1TIwiD" id="1dnKNhShWQE">
+    <property role="EcuMT" value="1393797239818145194" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="EmbeddedAlfClassUnit" />
+    <ref role="1TJDcQ" to="28lk:6OepWIVJVYV" resolve="Unit" />
+    <node concept="1TJgyj" id="1dnKNhShWQH" role="1TKVEi">
+      <property role="IQ2ns" value="1393797239818145197" />
+      <property role="20kJfa" value="innerClass" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1dnKNhShWRf" resolve="EmbeddedAlfClass" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1dnKNhShWRf">
+    <property role="EcuMT" value="1393797239818145231" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="EmbeddedAlfClass" />
+    <ref role="1TJDcQ" to="28lk:2HeY20H4nQy" resolve="ClassDefinition" />
+  </node>
+  <node concept="1TIwiD" id="1dnKNhSk1GD">
+    <property role="EcuMT" value="1393797239818689321" />
+    <property role="3GE5qa" value="component.alf" />
+    <property role="TrG5h" value="ComponentStateExpression" />
+    <property role="34LRSv" value="state" />
+    <ref role="1TJDcQ" to="28lk:2kuSLC0lpD9" resolve="ThisExpression" />
   </node>
 </model>
 

@@ -68,6 +68,9 @@
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
+        <child id="1081516765348" name="expression" index="3fr31v" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ngI" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -79,8 +82,11 @@
     </language>
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
       <concept id="6702802731807351367" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAChild" flags="in" index="9S07l" />
+      <concept id="6702802731807420587" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAParent" flags="ig" index="9SLcT" />
+      <concept id="6702802731807424858" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAnAncestor" flags="in" index="9SQb8" />
       <concept id="1202989658459" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_parentNode" flags="nn" index="nLn13" />
       <concept id="8966504967485224688" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_contextNode" flags="nn" index="2rP1CM" />
+      <concept id="4303308395523096213" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_childConcept" flags="ng" index="2DD5aU" />
       <concept id="1147467115080" name="jetbrains.mps.lang.constraints.structure.NodePropertyConstraint" flags="ng" index="EnEH3">
         <reference id="1147467295099" name="applicableProperty" index="EomxK" />
         <child id="1147468630220" name="propertyGetter" index="EtsB7" />
@@ -90,6 +96,8 @@
       <concept id="5564765827938091039" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ig" index="3dgokm" />
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
+        <child id="6702802731807532730" name="canBeAncestor" index="9SGkC" />
+        <child id="6702802731807532712" name="canBeParent" index="9SGkU" />
         <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
         <child id="1213098023997" name="property" index="1MhHOB" />
         <child id="1213100494875" name="referent" index="1Mr941" />
@@ -143,6 +151,9 @@
       <concept id="1144100932627" name="jetbrains.mps.lang.smodel.structure.OperationParm_Inclusion" flags="ng" index="1xIGOp" />
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
+      </concept>
+      <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
+        <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
       </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
         <property id="1238684351431" name="asCast" index="1BlNFB" />
@@ -589,7 +600,7 @@
                   <node concept="1PxgMI" id="zd_6PSjEMN" role="2Oq$k0">
                     <property role="1BlNFB" value="true" />
                     <node concept="chp4Y" id="zd_6PSjEOk" role="3oSUPX">
-                      <ref role="cht4Q" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+                      <ref role="cht4Q" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
                     </node>
                     <node concept="2OqwBi" id="zd_6PSjDCq" role="1m5AlR">
                       <node concept="EsrRn" id="zd_6PSjDos" role="2Oq$k0" />
@@ -646,10 +657,26 @@
         </node>
       </node>
     </node>
+    <node concept="9SQb8" id="1dnKNhSlS5R" role="9SGkC">
+      <node concept="3clFbS" id="1dnKNhSlS5S" role="2VODD2">
+        <node concept="3clFbF" id="1dnKNhSm18H" role="3cqZAp">
+          <node concept="3fqX7Q" id="1dnKNhSm18F" role="3clFbG">
+            <node concept="2OqwBi" id="1dnKNhSm2iy" role="3fr31v">
+              <node concept="2DD5aU" id="1dnKNhSm1mB" role="2Oq$k0" />
+              <node concept="3O6GUB" id="1dnKNhSm2Ls" role="2OqNvi">
+                <node concept="chp4Y" id="1dnKNhSm2T2" role="3QVz_e">
+                  <ref role="cht4Q" to="28lk:2kuSLC0lpD9" resolve="ThisExpression" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1M2fIO" id="1dnKNhRVhvi">
     <property role="3GE5qa" value="component.alf" />
-    <ref role="1M2myG" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+    <ref role="1M2myG" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
     <node concept="1N5Pfh" id="1dnKNhRVhvj" role="1Mr941">
       <ref role="1N5Vy1" to="tj5x:zd_6PSizbb" />
       <node concept="3dgokm" id="1dnKNhRVhxE" role="1N6uqs">
@@ -704,13 +731,13 @@
             <node concept="3cpWsn" id="1dnKNhRVPZa" role="3cpWs9">
               <property role="TrG5h" value="unit" />
               <node concept="3Tqbb2" id="1dnKNhRVPZb" role="1tU5fm">
-                <ref role="ehGHo" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+                <ref role="ehGHo" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
               </node>
               <node concept="1PxgMI" id="1dnKNhRVPZc" role="33vP2m">
                 <property role="1BlNFB" value="true" />
                 <node concept="2rP1CM" id="1dnKNhRVPZf" role="1m5AlR" />
                 <node concept="chp4Y" id="1dnKNhRVQhZ" role="3oSUPX">
-                  <ref role="cht4Q" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+                  <ref role="cht4Q" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
                 </node>
               </node>
             </node>
@@ -783,6 +810,77 @@
               <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
               <node concept="37vLTw" id="1dnKNhSecHX" role="37wK5m">
                 <ref role="3cqZAo" node="1dnKNhSec$N" resolve="interfaces" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1dnKNhShZlq">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="1M2myG" to="tj5x:1dnKNhShWRf" resolve="EmbeddedAlfClass" />
+    <node concept="EnEH3" id="1dnKNhSjPKM" role="1MhHOB">
+      <ref role="EomxK" to="tpck:h0TrG11" resolve="name" />
+      <node concept="Eqf_E" id="1dnKNhSjPLD" role="EtsB7">
+        <node concept="3clFbS" id="1dnKNhSjPLE" role="2VODD2">
+          <node concept="3clFbF" id="1dnKNhSjRr2" role="3cqZAp">
+            <node concept="3cpWs3" id="1dnKNhSjRre" role="3clFbG">
+              <node concept="2OqwBi" id="1dnKNhSjRrf" role="3uHU7B">
+                <node concept="2OqwBi" id="1dnKNhSjRrg" role="2Oq$k0">
+                  <node concept="EsrRn" id="1dnKNhSjRrh" role="2Oq$k0" />
+                  <node concept="2Xjw5R" id="1dnKNhSjRri" role="2OqNvi">
+                    <node concept="1xMEDy" id="1dnKNhSjRrj" role="1xVPHs">
+                      <node concept="chp4Y" id="1dnKNhSjRrk" role="ri$Ld">
+                        <ref role="cht4Q" to="tj5x:2Cg1yFhs69O" resolve="SoftwareComponent" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="1dnKNhSjRrl" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+              <node concept="Xl_RD" id="1dnKNhSjRrm" role="3uHU7w">
+                <property role="Xl_RC" value="_State" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9S07l" id="1dnKNhShZlr" role="9Vyp8">
+      <node concept="3clFbS" id="1dnKNhShZls" role="2VODD2">
+        <node concept="3clFbF" id="1dnKNhSjH2j" role="3cqZAp">
+          <node concept="2OqwBi" id="1dnKNhSjHdb" role="3clFbG">
+            <node concept="nLn13" id="1dnKNhSjH2i" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="1dnKNhSjHyj" role="2OqNvi">
+              <node concept="chp4Y" id="1dnKNhSjH$P" role="cj9EA">
+                <ref role="cht4Q" to="tj5x:1dnKNhShWQE" resolve="EmbeddedAlfClassUnit" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9SLcT" id="1dnKNhSjGZ9" role="9SGkU">
+      <node concept="3clFbS" id="1dnKNhSjGZa" role="2VODD2">
+        <node concept="3clFbF" id="1dnKNhSjGZC" role="3cqZAp">
+          <node concept="22lmx$" id="1dnKNhSjGZE" role="3clFbG">
+            <node concept="2OqwBi" id="1dnKNhSjGZF" role="3uHU7w">
+              <node concept="2DD5aU" id="1dnKNhSjGZG" role="2Oq$k0" />
+              <node concept="3O6GUB" id="1dnKNhSjGZH" role="2OqNvi">
+                <node concept="chp4Y" id="1dnKNhSjGZI" role="3QVz_e">
+                  <ref role="cht4Q" to="28lk:31Th1WS4yT2" resolve="EmptyLineNamespaceMember" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="1dnKNhSjGZJ" role="3uHU7B">
+              <node concept="2DD5aU" id="1dnKNhSjGZK" role="2Oq$k0" />
+              <node concept="3O6GUB" id="1dnKNhSjGZL" role="2OqNvi">
+                <node concept="chp4Y" id="1dnKNhSjGZM" role="3QVz_e">
+                  <ref role="cht4Q" to="28lk:2HeY20H6tuG" resolve="AttributeDefinition" />
+                </node>
               </node>
             </node>
           </node>

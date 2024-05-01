@@ -805,5 +805,45 @@
       <node concept="3clFbS" id="1dnKNhRXl1B" role="2VODD2" />
     </node>
   </node>
+  <node concept="13h7C7" id="1dnKNhShWQW">
+    <property role="3GE5qa" value="component.alf" />
+    <ref role="13h7C2" to="tj5x:1dnKNhShWQE" resolve="EmbeddedAlfClassUnit" />
+    <node concept="13hLZK" id="1dnKNhShWQX" role="13h7CW">
+      <node concept="3clFbS" id="1dnKNhShWQY" role="2VODD2">
+        <node concept="3cpWs8" id="1dnKNhShYJ1" role="3cqZAp">
+          <node concept="3cpWsn" id="1dnKNhShYJ2" role="3cpWs9">
+            <property role="TrG5h" value="embeddedAlfClass" />
+            <node concept="3Tqbb2" id="1dnKNhShYJ3" role="1tU5fm">
+              <ref role="ehGHo" to="tj5x:1dnKNhShWRf" resolve="EmbeddedAlfClass" />
+            </node>
+            <node concept="2OqwBi" id="1dnKNhShYJ4" role="33vP2m">
+              <node concept="2OqwBi" id="1dnKNhShYJ5" role="2Oq$k0">
+                <node concept="13iPFW" id="1dnKNhShYJ6" role="2Oq$k0" />
+                <node concept="3TrEf2" id="1dnKNhShYJ7" role="2OqNvi">
+                  <ref role="3Tt5mk" to="28lk:6OepWIVJVYY" />
+                </node>
+              </node>
+              <node concept="2DeJnY" id="1dnKNhShYJ8" role="2OqNvi">
+                <ref role="1A9B2P" to="tj5x:1dnKNhShWRf" resolve="EmbeddedAlfClass" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="1dnKNhShYJ9" role="3cqZAp">
+          <node concept="37vLTI" id="1dnKNhShYJa" role="3clFbG">
+            <node concept="37vLTw" id="1dnKNhShYJb" role="37vLTx">
+              <ref role="3cqZAo" node="1dnKNhShYJ2" resolve="embeddedAlfActivity" />
+            </node>
+            <node concept="2OqwBi" id="1dnKNhShYJc" role="37vLTJ">
+              <node concept="13iPFW" id="1dnKNhShYJd" role="2Oq$k0" />
+              <node concept="3TrEf2" id="1dnKNhShZfC" role="2OqNvi">
+                <ref role="3Tt5mk" to="tj5x:1dnKNhShWQH" resolve="innerClass" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

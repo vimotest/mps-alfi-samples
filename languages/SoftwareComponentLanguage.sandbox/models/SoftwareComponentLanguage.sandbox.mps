@@ -14,11 +14,20 @@
       </concept>
     </language>
     <language id="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" name="alfi">
+      <concept id="3120704408893642668" name="alfi.structure.AttributeDefinition" flags="ng" index="6lMYc">
+        <child id="3120704408893959337" name="initializerExpression" index="6k5i9" />
+      </concept>
+      <concept id="2674824929518763027" name="alfi.structure.ExpressionStatement" flags="ng" index="_jtW9">
+        <child id="2674824929518763028" name="expression" index="_jtWe" />
+      </concept>
       <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
         <child id="2674824929519927759" name="name" index="_uYbl" />
       </concept>
       <concept id="2674824929519835217" name="alfi.structure.QualifiedName" flags="ng" index="_vnHb">
         <child id="2674824929519835218" name="names" index="_vnH8" />
+      </concept>
+      <concept id="2674824929519835220" name="alfi.structure.NameBinding" flags="ng" index="_vnHe">
+        <reference id="3855977438835276054" name="nameRef" index="3acloq" />
       </concept>
       <concept id="8164141882417537798" name="alfi.structure.IHasReturnParameter" flags="ngI" index="Gbzzf">
         <child id="4507289605805843609" name="returnParameter" index="NkNyt" />
@@ -38,6 +47,13 @@
       <concept id="8550147057602730244" name="alfi.structure.NameReference" flags="ng" index="2RqM1Q">
         <reference id="8550147057602730245" name="target" index="2RqM1R" />
       </concept>
+      <concept id="7144803224899245198" name="alfi.structure.AssignmentExpression" flags="ng" index="3122gz">
+        <child id="7144803224899369512" name="rightHandSide" index="315$E5" />
+        <child id="7144803224899369510" name="leftHandSide" index="315$Eb" />
+      </concept>
+      <concept id="7144803224899245663" name="alfi.structure.Assignment_FeatureLeftHandSide" flags="ng" index="3122rM">
+        <child id="7144803224899245664" name="feature" index="3122rd" />
+      </concept>
       <concept id="7144803224901733272" name="alfi.structure.BinaryExpression" flags="ng" index="31szGP">
         <child id="7144803224901733273" name="operand1" index="31szGO" />
         <child id="7144803224901733275" name="operand2" index="31szGQ" />
@@ -47,6 +63,13 @@
       </concept>
       <concept id="7144803224889269844" name="alfi.structure.ReturnStatement" flags="ng" index="32G6VT">
         <child id="8875975376183143672" name="expression" index="2vFQ1F" />
+      </concept>
+      <concept id="7144803224895060397" name="alfi.structure.PropertyAccessExpression" flags="ng" index="32M0$0">
+        <child id="7144803224895280402" name="featureReference" index="32PqmZ" />
+      </concept>
+      <concept id="7144803224895280376" name="alfi.structure.FeatureReference" flags="ng" index="32Pqhl">
+        <child id="7144803224895067500" name="nameBinding" index="32Men1" />
+        <child id="7144803224895067498" name="expression" index="32Men7" />
       </concept>
       <concept id="7144803224892162748" name="alfi.structure.DecimalLiteralExpression" flags="ng" index="32T38h">
         <property id="7144803224892162749" name="valueText" index="32T38g" />
@@ -70,13 +93,19 @@
       <concept id="1393797239811294693" name="SoftwareComponentLanguage.structure.InterfaceDeclaration" flags="ng" index="1$y8rh">
         <child id="1393797239811294694" name="operations" index="1$y8ri" />
       </concept>
-      <concept id="634326320419572930" name="SoftwareComponentLanguage.structure.EmbeddedAlfUnit" flags="ng" index="1KxTyJ">
+      <concept id="1393797239818689321" name="SoftwareComponentLanguage.structure.ComponentStateExpression" flags="ng" index="1F1Xwt" />
+      <concept id="1393797239818145194" name="SoftwareComponentLanguage.structure.EmbeddedAlfClassUnit" flags="ng" index="1F40Uu">
+        <reference id="1393797239818145197" name="innerClass" index="1F40Up" />
+      </concept>
+      <concept id="1393797239818145231" name="SoftwareComponentLanguage.structure.EmbeddedAlfClass" flags="ng" index="1F40VV" />
+      <concept id="634326320419572930" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivityUnit" flags="ng" index="1KxTyJ">
         <reference id="1393797239812200308" name="forOperation" index="1$IHh0" />
         <reference id="634326320419582667" name="forInterface" index="1KxUqA" />
         <reference id="634326320420072997" name="innerActivity" index="1KB3D8" />
       </concept>
       <concept id="634326320419582645" name="SoftwareComponentLanguage.structure.EmbeddedAlfActivity" flags="ng" index="1KxUro" />
       <concept id="3030929330192540276" name="SoftwareComponentLanguage.structure.SoftwareComponent" flags="ng" index="3Vo6hu">
+        <child id="1393797239818361014" name="state" index="1F7dI2" />
         <child id="634326320419582665" name="requiredInterfaceImplementations" index="1KxUq$" />
       </concept>
       <concept id="3030929330192562082" name="SoftwareComponentLanguage.structure.EmptyLine" flags="ng" index="3Vob68">
@@ -137,11 +166,53 @@
         <node concept="1KxUro" id="1dnKNhRVhtI" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
           <node concept="PCHzy" id="1dnKNhRVhtJ" role="PCHGa">
+            <node concept="_jtW9" id="1dnKNhSki5q" role="PCHzz">
+              <node concept="3122gz" id="1dnKNhSki5g" role="_jtWe">
+                <node concept="31szHT" id="1dnKNhSkikW" role="315$E5">
+                  <property role="31szH2" value="6cBsaQylkJm/MultiplicationOperator" />
+                  <node concept="32M0$0" id="1dnKNhSkind" role="31szGO">
+                    <node concept="32Pqhl" id="1dnKNhSkine" role="32PqmZ">
+                      <node concept="1F1Xwt" id="1dnKNhSkimZ" role="32Men7" />
+                      <node concept="_vnHe" id="1dnKNhSkipr" role="32Men1">
+                        <ref role="3acloq" node="1dnKNhSjPiG" resolve="foo" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="31szHT" id="1dnKNhSkIkW" role="31szGQ">
+                    <property role="31szH2" value="6cBsaQylkJ$/PlusOperator" />
+                    <node concept="32M0$0" id="1dnKNhSkIof" role="31szGO">
+                      <node concept="32Pqhl" id="1dnKNhSkIog" role="32PqmZ">
+                        <node concept="1F1Xwt" id="1dnKNhSkIo1" role="32Men7" />
+                        <node concept="_vnHe" id="1dnKNhSkIrv" role="32Men1">
+                          <ref role="3acloq" node="1dnKNhSkIeU" resolve="bar" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="32T38h" id="1dnKNhSkIv1" role="31szGQ">
+                      <property role="32T38g" value="42" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3122rM" id="1dnKNhSkieq" role="315$Eb">
+                  <node concept="32Pqhl" id="1dnKNhSkies" role="3122rd">
+                    <node concept="_vnHe" id="1dnKNhSkiev" role="32Men1">
+                      <ref role="3acloq" node="1dnKNhSjPiG" resolve="foo" />
+                    </node>
+                    <node concept="1F1Xwt" id="1dnKNhSkihh" role="32Men7" />
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="32G6VT" id="1dnKNhRWQHB" role="PCHzz">
               <node concept="31szHT" id="1dnKNhRWQHX" role="2vFQ1F">
                 <property role="31szH2" value="6cBsaQylkJ$/PlusOperator" />
-                <node concept="32T38h" id="1dnKNhRWQJ0" role="31szGO">
-                  <property role="32T38g" value="42" />
+                <node concept="32M0$0" id="1dnKNhSkhTt" role="31szGO">
+                  <node concept="32Pqhl" id="1dnKNhSkhTu" role="32PqmZ">
+                    <node concept="1F1Xwt" id="1dnKNhSkhT0" role="32Men7" />
+                    <node concept="_vnHe" id="1dnKNhSkhW7" role="32Men1">
+                      <ref role="3acloq" node="1dnKNhSjPiG" resolve="foo" />
+                    </node>
+                  </node>
                 </node>
                 <node concept="_uYbk" id="1dnKNhRWQI3" role="31szGQ">
                   <node concept="_vnHb" id="1dnKNhRWQI5" role="_uYbl">
@@ -169,6 +240,35 @@
               <node concept="2RqM1Q" id="1dnKNhRWQ_l" role="_vnH8">
                 <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
               </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1F40Uu" id="1dnKNhSjPhI" role="1F7dI2">
+        <ref role="1F40Up" node="1dnKNhSjPhJ" />
+        <node concept="1F40VV" id="1dnKNhSjPhJ" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="6lMYc" id="1dnKNhSjPiG" role="PCHHv">
+            <property role="TrG5h" value="foo" />
+            <node concept="3xHE8C" id="1dnKNhSjPkk" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhSjPki" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+            <node concept="32T38h" id="1dnKNhSkhLB" role="6k5i9">
+              <property role="32T38g" value="1" />
+            </node>
+          </node>
+          <node concept="6lMYc" id="1dnKNhSkIeU" role="PCHHv">
+            <property role="TrG5h" value="bar" />
+            <property role="PCHHn" value="6OepWIVA92M/private" />
+            <node concept="3xHE8C" id="1dnKNhSkIis" role="3xMlr6">
+              <node concept="2RqM1Q" id="1dnKNhSkIiq" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+            <node concept="32T38h" id="1dnKNhSkIjw" role="6k5i9">
+              <property role="32T38g" value="3" />
             </node>
           </node>
         </node>
