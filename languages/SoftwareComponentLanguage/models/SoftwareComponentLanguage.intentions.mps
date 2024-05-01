@@ -96,5 +96,41 @@
       </node>
     </node>
   </node>
+  <node concept="2S6QgY" id="1dnKNhSbOz1">
+    <property role="3GE5qa" value="component.composite" />
+    <property role="TrG5h" value="FlipConnectionIntention" />
+    <ref role="2ZfgGC" to="tj5x:2Cg1yFhtyaz" resolve="InterfaceConnection" />
+    <node concept="2S6ZIM" id="1dnKNhSbOz2" role="2ZfVej">
+      <node concept="3clFbS" id="1dnKNhSbOz3" role="2VODD2">
+        <node concept="3clFbF" id="1dnKNhSbONJ" role="3cqZAp">
+          <node concept="Xl_RD" id="1dnKNhSbONI" role="3clFbG">
+            <property role="Xl_RC" value="Flip Visualization" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="1dnKNhSbOz4" role="2ZfgGD">
+      <node concept="3clFbS" id="1dnKNhSbOz5" role="2VODD2">
+        <node concept="3clFbF" id="1dnKNhSbOPO" role="3cqZAp">
+          <node concept="37vLTI" id="1dnKNhSbREO" role="3clFbG">
+            <node concept="3fqX7Q" id="1dnKNhSbRSJ" role="37vLTx">
+              <node concept="2OqwBi" id="1dnKNhSbShc" role="3fr31v">
+                <node concept="2Sf5sV" id="1dnKNhSbS6E" role="2Oq$k0" />
+                <node concept="3TrcHB" id="1dnKNhSbSsO" role="2OqNvi">
+                  <ref role="3TsBF5" to="tj5x:1dnKNhSbOyZ" resolve="flip" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="1dnKNhSbP02" role="37vLTJ">
+              <node concept="2Sf5sV" id="1dnKNhSbOPN" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1dnKNhSbPbn" role="2OqNvi">
+                <ref role="3TsBF5" to="tj5x:1dnKNhSbOyZ" resolve="flip" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

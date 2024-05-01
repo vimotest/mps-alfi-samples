@@ -83,6 +83,7 @@
         <property id="6809520433795733982" name="drawLine" index="3dEdWv" />
       </concept>
       <concept id="3030929330192562064" name="SoftwareComponentLanguage.structure.Package" flags="ng" index="3Vob6U">
+        <property id="1393797239816660162" name="notes" index="1FpIvQ" />
         <child id="3030929330192562096" name="contents" index="3Vob6q" />
       </concept>
       <concept id="3030929330192562069" name="SoftwareComponentLanguage.structure.SoftwareComponentComposite" flags="ng" index="3Vob6Z" />
@@ -92,6 +93,7 @@
       </concept>
       <concept id="3030929330192747142" name="SoftwareComponentLanguage.structure.RequiredInterface" flags="ng" index="3VoSMG" />
       <concept id="3030929330192917155" name="SoftwareComponentLanguage.structure.InterfaceConnection" flags="ng" index="3Vpyi9">
+        <property id="1393797239816538303" name="flip" index="1Fu8Ib" />
         <reference id="3030929330192918006" name="required" index="3Vpyfs" />
         <reference id="3030929330192918004" name="provided" index="3Vpyfu" />
       </concept>
@@ -101,7 +103,10 @@
       <concept id="3030929330193053925" name="SoftwareComponentLanguage.structure.ComponentReference" flags="ng" index="3Vq3Vf">
         <reference id="3030929330193053926" name="componentRef" index="3Vq3Vc" />
       </concept>
-      <concept id="3030929330195430070" name="SoftwareComponentLanguage.structure.Parameter" flags="ng" index="3Vz7Ms" />
+      <concept id="3030929330195430070" name="SoftwareComponentLanguage.structure.Parameter" flags="ng" index="3Vz7Ms">
+        <property id="1393797239816882798" name="isMany" index="1FoO_q" />
+        <property id="3030929330195430088" name="type" index="3Vz7Ny" />
+      </concept>
     </language>
   </registry>
   <node concept="3Vob6U" id="2Cg1yFhsolx">
@@ -207,70 +212,143 @@
   </node>
   <node concept="3Vob6U" id="5U0hG6j8oBa">
     <property role="TrG5h" value="Order" />
+    <property role="1FpIvQ" value="Inspired by: https://www.uml-diagrams.org/examples/online-shopping-uml-component-diagram-example.html?context=cmp-examples" />
     <node concept="3Vob6Z" id="5U0hG6ja9tJ" role="3Vob6q">
       <property role="TrG5h" value="Webstore" />
+      <node concept="3Vq3Vf" id="5U0hG6ja9tY" role="3Vq2cS">
+        <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="SearchProducts" />
+      </node>
       <node concept="3Vq3Vf" id="5U0hG6ja9tT" role="3Vq2cS">
         <ref role="3Vq3Vc" node="5U0hG6j8oBb" resolve="ShoppingCart" />
       </node>
-      <node concept="3Vq3Vf" id="5U0hG6ja9tY" role="3Vq2cS">
-        <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="SearchProducts" />
+      <node concept="3Vq3Vf" id="1dnKNhSeaQp" role="3Vq2cS">
+        <ref role="3Vq3Vc" node="5U0hG6ja_WU" resolve="Inventory" />
+      </node>
+      <node concept="3Vq3Vf" id="1dnKNhSeaQN" role="3Vq2cS">
+        <ref role="3Vq3Vc" node="5U0hG6j9sbi" resolve="Ordering" />
+      </node>
+      <node concept="3Vob68" id="1dnKNhSbOyo" role="3Vq2cS" />
+      <node concept="3VoQH8" id="1dnKNhSbOyx" role="3Vq2cS">
+        <property role="TrG5h" value="ProductSearch" />
+        <ref role="1$ya7L" node="1dnKNhScFca" resolve="SearchInterface" />
+      </node>
+      <node concept="3VoQH8" id="1dnKNhScFc1" role="3Vq2cS">
+        <property role="TrG5h" value="OnlineShopping" />
+        <ref role="1$ya7L" node="1dnKNhRZUjE" resolve="ShoppingInterface" />
+      </node>
+      <node concept="3Vob68" id="1dnKNhScFcX" role="3Vq2cS" />
+      <node concept="3VoSMG" id="1dnKNhSciiM" role="3Vq2cS">
+        <property role="TrG5h" value="InventorySearch" />
+        <ref role="1$ya7L" node="1dnKNhScFca" resolve="SearchInterface" />
+      </node>
+      <node concept="3VoSMG" id="1dnKNhScFdi" role="3Vq2cS">
+        <property role="TrG5h" value="OrderManagement" />
+        <ref role="1$ya7L" node="1dnKNhScFdC" resolve="OrderManagementInterface" />
+      </node>
+      <node concept="3Vob68" id="1dnKNhSbOyB" role="3Vq2cS" />
+      <node concept="3Vpyi9" id="1dnKNhSbOyO" role="3Vq2cS">
+        <property role="1Fu8Ib" value="true" />
+        <ref role="3Vpyfu" node="1dnKNhSbOyx" resolve="ProductSearch" />
+        <ref role="3Vpyfs" node="1dnKNhSciiM" resolve="InventorySearch" />
       </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6j8oBb" role="3Vob6q">
       <property role="TrG5h" value="ShoppingCart" />
+      <node concept="3VoQH8" id="1dnKNhRZUjd" role="3Vq2cS">
+        <property role="TrG5h" value="Shopping" />
+        <ref role="1$ya7L" node="1dnKNhRZUjE" resolve="ShoppingInterface" />
+      </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6ja9tt" role="3Vob6q">
       <property role="TrG5h" value="SearchProducts" />
-    </node>
-    <node concept="3Vob68" id="5U0hG6ja9te" role="3Vob6q">
-      <property role="3dEdWv" value="true" />
-    </node>
-    <node concept="3Vob68" id="5U0hG6ja_V6" role="3Vob6q" />
-    <node concept="3Vob6Z" id="5U0hG6ja_Vv" role="3Vob6q">
-      <property role="TrG5h" value="Warehouse" />
-      <node concept="3Vq3Vf" id="5U0hG6ja_Xc" role="3Vq2cS">
-        <ref role="3Vq3Vc" node="5U0hG6ja_WU" resolve="Inventory" />
-      </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6ja_WU" role="3Vob6q">
       <property role="TrG5h" value="Inventory" />
       <node concept="3VoQH8" id="5U0hG6ja_XP" role="3Vq2cS">
         <property role="TrG5h" value="ManageInventory" />
+        <ref role="1$ya7L" node="1dnKNhSeaJQ" resolve="InventoryInterface" />
       </node>
       <node concept="3VoQH8" id="5U0hG6ja_Y9" role="3Vq2cS">
         <property role="TrG5h" value="SearchProducts" />
+        <ref role="1$ya7L" node="1dnKNhScFca" resolve="SearchInterface" />
       </node>
-    </node>
-    <node concept="3Vob68" id="5U0hG6ja_Wa" role="3Vob6q">
-      <property role="3dEdWv" value="true" />
-    </node>
-    <node concept="3Vob68" id="5U0hG6ja_Wp" role="3Vob6q" />
-    <node concept="3Vob6Z" id="5U0hG6ja_VV" role="3Vob6q">
-      <property role="TrG5h" value="Accounting" />
     </node>
     <node concept="3Vo6hu" id="5U0hG6j9sbi" role="3Vob6q">
       <property role="TrG5h" value="Ordering" />
       <node concept="3VoQH8" id="5U0hG6ja9rD" role="3Vq2cS">
         <property role="TrG5h" value="ManageOrders" />
+        <ref role="1$ya7L" node="1dnKNhScFdC" resolve="OrderManagementInterface" />
       </node>
-      <node concept="3Vob68" id="5U0hG6ja_XY" role="3Vq2cS" />
-      <node concept="3VoSMG" id="5U0hG6ja_XU" role="3Vq2cS">
+      <node concept="3VoSMG" id="1dnKNhSeaKI" role="3Vq2cS">
         <property role="TrG5h" value="ManageInventory" />
+        <ref role="1$ya7L" node="1dnKNhSeaJQ" resolve="InventoryInterface" />
       </node>
-      <node concept="3VoSMG" id="5U0hG6ja_Y2" role="3Vq2cS">
-        <property role="TrG5h" value="ManageCustomers" />
+      <node concept="3Vob68" id="1dnKNhSeaJN" role="3Vq2cS" />
+    </node>
+    <node concept="3Vob68" id="1dnKNhSeaPv" role="3Vob6q">
+      <property role="3dEdWv" value="true" />
+    </node>
+    <node concept="3Vob68" id="1dnKNhSeaMM" role="3Vob6q" />
+    <node concept="1$y8rh" id="1dnKNhRZUjE" role="3Vob6q">
+      <property role="TrG5h" value="ShoppingInterface" />
+      <node concept="1$y8rg" id="1dnKNhS8R6y" role="1$y8ri">
+        <property role="TrG5h" value="addProduct" />
+        <node concept="3Vz7Ms" id="1dnKNhS8R6$" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
+      </node>
+      <node concept="1$y8rg" id="1dnKNhSbtWf" role="1$y8ri">
+        <property role="TrG5h" value="removeProduct" />
+        <node concept="3Vz7Ms" id="1dnKNhSbtWg" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
+      </node>
+      <node concept="1$y8rg" id="1dnKNhScFkQ" role="1$y8ri">
+        <property role="TrG5h" value="orderProducts" />
       </node>
     </node>
-    <node concept="3Vo6hu" id="5U0hG6ja9rL" role="3Vob6q">
-      <property role="TrG5h" value="Customers" />
-      <node concept="3VoQH8" id="5U0hG6ja9rT" role="3Vq2cS">
-        <property role="TrG5h" value="Person" />
+    <node concept="1$y8rh" id="1dnKNhScFca" role="3Vob6q">
+      <property role="TrG5h" value="SearchInterface" />
+      <node concept="1$y8rg" id="1dnKNhScFcb" role="1$y8ri">
+        <property role="TrG5h" value="searchProduct" />
+        <node concept="3Vz7Ms" id="1dnKNhScFcc" role="3Vz7OC">
+          <property role="TrG5h" value="productName" />
+          <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
+        </node>
+        <node concept="3Vz7Ms" id="1dnKNhScFcS" role="3VzjDz">
+          <property role="TrG5h" value="__return__" />
+          <property role="1FoO_q" value="true" />
+        </node>
       </node>
     </node>
-    <node concept="3Vo6hu" id="5U0hG6ja_Xx" role="3Vob6q">
-      <property role="TrG5h" value="Accounts" />
-      <node concept="3VoQH8" id="5U0hG6ja_Y7" role="3Vq2cS">
-        <property role="TrG5h" value="ManageAccounts" />
+    <node concept="1$y8rh" id="1dnKNhScFdC" role="3Vob6q">
+      <property role="TrG5h" value="OrderManagementInterface" />
+      <node concept="1$y8rg" id="1dnKNhScFdD" role="1$y8ri">
+        <property role="TrG5h" value="addOrder" />
+        <node concept="3Vz7Ms" id="1dnKNhScFdE" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
+      </node>
+      <node concept="1$y8rg" id="1dnKNhScFes" role="1$y8ri">
+        <property role="TrG5h" value="removeOrder" />
+        <node concept="3Vz7Ms" id="1dnKNhScFet" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
+      </node>
+    </node>
+    <node concept="1$y8rh" id="1dnKNhSeaJQ" role="3Vob6q">
+      <property role="TrG5h" value="InventoryInterface" />
+      <node concept="1$y8rg" id="1dnKNhSeaJR" role="1$y8ri">
+        <property role="TrG5h" value="addProduct" />
+        <node concept="3Vz7Ms" id="1dnKNhSeaJS" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
+      </node>
+      <node concept="1$y8rg" id="1dnKNhSeaJT" role="1$y8ri">
+        <property role="TrG5h" value="removeProduct" />
+        <node concept="3Vz7Ms" id="1dnKNhSeaJU" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
       </node>
     </node>
   </node>

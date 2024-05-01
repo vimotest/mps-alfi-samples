@@ -122,6 +122,10 @@
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
+      <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
+        <reference id="1145383142433" name="elementConcept" index="2I9WkF" />
+      </concept>
+      <concept id="1171305280644" name="jetbrains.mps.lang.smodel.structure.Node_GetDescendantsOperation" flags="nn" index="2Rf3mk" />
       <concept id="1171323947159" name="jetbrains.mps.lang.smodel.structure.Model_NodesOperation" flags="nn" index="2SmgA7">
         <child id="1758937410080001570" name="conceptArgument" index="1dBWTz" />
       </concept>
@@ -732,6 +736,53 @@
                 <node concept="3Tsc0h" id="1dnKNhRVSU9" role="2OqNvi">
                   <ref role="3TtcxE" to="tj5x:1dnKNhRROnA" resolve="operations" />
                 </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1dnKNhSeaSt">
+    <property role="3GE5qa" value="component.interface" />
+    <ref role="1M2myG" to="tj5x:2Cg1yFhsSE8" resolve="ComponentInterfaceBase" />
+    <node concept="1N5Pfh" id="1dnKNhSeaSu" role="1Mr941">
+      <ref role="1N5Vy1" to="tj5x:1dnKNhRRQb5" />
+      <node concept="3dgokm" id="1dnKNhSeaUa" role="1N6uqs">
+        <node concept="3clFbS" id="1dnKNhSeaUb" role="2VODD2">
+          <node concept="3cpWs8" id="1dnKNhSec$M" role="3cqZAp">
+            <node concept="3cpWsn" id="1dnKNhSec$N" role="3cpWs9">
+              <property role="TrG5h" value="interfaces" />
+              <node concept="2I9FWS" id="1dnKNhSec$n" role="1tU5fm">
+                <ref role="2I9WkF" to="tj5x:1dnKNhRROn_" resolve="InterfaceDeclaration" />
+              </node>
+              <node concept="2OqwBi" id="1dnKNhSec$O" role="33vP2m">
+                <node concept="2OqwBi" id="1dnKNhSec$P" role="2Oq$k0">
+                  <node concept="2rP1CM" id="1dnKNhSec$Q" role="2Oq$k0" />
+                  <node concept="2Xjw5R" id="1dnKNhSec$R" role="2OqNvi">
+                    <node concept="1xMEDy" id="1dnKNhSec$S" role="1xVPHs">
+                      <node concept="chp4Y" id="1dnKNhSec$T" role="ri$Ld">
+                        <ref role="cht4Q" to="tj5x:2Cg1yFhsbug" resolve="Package" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="2Rf3mk" id="1dnKNhSec$U" role="2OqNvi">
+                  <node concept="1xMEDy" id="1dnKNhSec$V" role="1xVPHs">
+                    <node concept="chp4Y" id="1dnKNhSec$W" role="ri$Ld">
+                      <ref role="cht4Q" to="tj5x:1dnKNhRROn_" resolve="InterfaceDeclaration" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="1dnKNhSecC6" role="3cqZAp">
+            <node concept="2YIFZM" id="1dnKNhSecFu" role="3clFbG">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="37vLTw" id="1dnKNhSecHX" role="37wK5m">
+                <ref role="3cqZAo" node="1dnKNhSec$N" resolve="interfaces" />
               </node>
             </node>
           </node>

@@ -138,6 +138,11 @@
         </node>
       </node>
     </node>
+    <node concept="1TJgyi" id="1dnKNhScij2" role="1TKVEl">
+      <property role="IQ2nx" value="1393797239816660162" />
+      <property role="TrG5h" value="notes" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="PlHQZ" id="2Cg1yFhsbuj">
     <property role="EcuMT" value="3030929330192562067" />
@@ -231,6 +236,11 @@
     <property role="TrG5h" value="InterfaceConnection" />
     <property role="34LRSv" value="connection" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="1dnKNhSbOyZ" role="1TKVEl">
+      <property role="IQ2nx" value="1393797239816538303" />
+      <property role="TrG5h" value="flip" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="2Cg1yFhtynQ" role="1TKVEi">
       <property role="IQ2ns" value="3030929330192918006" />
       <property role="20kJfa" value="required" />
@@ -309,6 +319,11 @@
       <property role="IQ2nx" value="3030929330195430088" />
       <property role="TrG5h" value="type" />
       <ref role="AX2Wp" node="2Cg1yFhB7ES" resolve="ParameterType" />
+    </node>
+    <node concept="1TJgyi" id="1dnKNhSd8DI" role="1TKVEl">
+      <property role="IQ2nx" value="1393797239816882798" />
+      <property role="TrG5h" value="isMany" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
   <node concept="25R3W" id="2Cg1yFhB7ES">
@@ -407,6 +422,20 @@
       <property role="20kJfa" value="operations" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="1dnKNhRROn$" resolve="Operation" />
+    </node>
+    <node concept="1irR5M" id="1dnKNhRZUk8" role="rwd14">
+      <property role="2$rrk2" value="4" />
+      <node concept="1irR9n" id="1dnKNhRZUke" role="1irR9h">
+        <node concept="3PKj8D" id="1dnKNhRZUkf" role="3PKjn_">
+          <property role="3PKj8l" value="880088" />
+        </node>
+      </node>
+      <node concept="1irPie" id="1dnKNhRZUkg" role="1irR9h">
+        <property role="1irPi9" value="I" />
+        <node concept="3PKj8D" id="1dnKNhRZUkh" role="3PKjny">
+          <property role="3PKj8l" value="ffffff" />
+        </node>
+      </node>
     </node>
   </node>
 </model>
