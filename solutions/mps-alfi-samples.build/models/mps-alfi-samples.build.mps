@@ -679,11 +679,6 @@
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1YdqyHmFMmB" role="3bR37C">
-          <node concept="3bR9La" id="1YdqyHmFMmC" role="1SiIV1">
-            <ref role="3bR37D" to="mk2q:5tK9548cRi8" resolve="alfi" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="1YdqyHmFMmD" role="3bR37C">
           <node concept="3bR9La" id="1YdqyHmFMmE" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:1TaHNgiIbJt" resolve="jetbrains.mps.ide.platform" />
@@ -747,9 +742,19 @@
               </node>
             </node>
           </node>
+          <node concept="1SiIV0" id="1YdqyHmOYH$" role="3bR37C">
+            <node concept="3bR9La" id="1YdqyHmOYH_" role="1SiIV1">
+              <ref role="3bR37D" to="mk2q:5tK9548cRt6" resolve="alfi.StandardModelLibrary" />
+            </node>
+          </node>
         </node>
         <node concept="1E0d5M" id="1YdqyHmHZ0L" role="1E1XAP">
           <ref role="1E0d5P" node="1YdqyHmHYXq" resolve="SoftwareComponentLanguage.runtime" />
+        </node>
+        <node concept="1SiIV0" id="1YdqyHmOYHy" role="3bR37C">
+          <node concept="Rbm2T" id="1YdqyHmOYHz" role="1SiIV1">
+            <ref role="1E1Vl2" to="mk2q:5tK9548cRi8" resolve="alfi" />
+          </node>
         </node>
       </node>
       <node concept="1E1JtA" id="1YdqyHmHYXq" role="2G$12L">
