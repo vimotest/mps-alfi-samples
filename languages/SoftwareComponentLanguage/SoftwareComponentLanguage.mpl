@@ -126,6 +126,7 @@
   </runtime>
   <extendedLanguages>
     <extendedLanguage>bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)</extendedLanguage>
+    <extendedLanguage>4caf0310-491e-41f5-8a9b-2006b3a94898(jetbrains.mps.execution.util)</extendedLanguage>
   </extendedLanguages>
 </language>
 
