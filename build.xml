@@ -6,7 +6,7 @@
   <property name="mps_home" location="${basedir}/build/mps-bundle/mps" />
   <property name="project_home" location="" />
   <property name="dependencies_home" location="${basedir}/build/mps-bundle/dependencies" />
-  <property name="platform_lib" location="${basedir}/build/mps-bundle/mps/lib" />
+  <property name="platform_lib" location="${mps_home}/lib" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.alfi-build" location="${dependencies_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />

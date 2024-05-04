@@ -187,18 +187,10 @@
     </node>
     <node concept="398rNT" id="37zNn5LMY95" role="1l3spd">
       <property role="TrG5h" value="platform_lib" />
-      <node concept="55IIr" id="37zNn5LMY96" role="398pKh">
-        <node concept="2Ry0Ak" id="37zNn5LMY97" role="iGT6I">
-          <property role="2Ry0Am" value="build" />
-          <node concept="2Ry0Ak" id="37zNn5LMY98" role="2Ry0An">
-            <property role="2Ry0Am" value="mps-bundle" />
-            <node concept="2Ry0Ak" id="37zNn5LMYcN" role="2Ry0An">
-              <property role="2Ry0Am" value="mps" />
-              <node concept="2Ry0Ak" id="1f7pBu6Nh1o" role="2Ry0An">
-                <property role="2Ry0Am" value="lib" />
-              </node>
-            </node>
-          </node>
+      <node concept="398BVA" id="2SGDmeInqRi" role="398pKh">
+        <ref role="398BVh" node="5MJEPZbjS7T" resolve="mps_home" />
+        <node concept="2Ry0Ak" id="2SGDmeInqRl" role="iGT6I">
+          <property role="2Ry0Am" value="lib" />
         </node>
       </node>
     </node>

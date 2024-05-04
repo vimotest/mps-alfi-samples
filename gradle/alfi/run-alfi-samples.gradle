@@ -4,13 +4,12 @@ apply from: 'gradle/alfi/download-install-alf.gradle'
 apply from: 'gradle/alfi/setup-alf-workspace.gradle'
 
 def alfiSamplesArtifactsDir = "$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples"
-def mpsArtifactsDir = "$buildDir/mps-bundle/mps"
 
 def hamsterRuntimeLibraryDir = "$alfiSamplesArtifactsDir/lib"
-def mpsTestingRuntimeLibraryDir = "$buildDir/mps-bundle/mps/plugins/mps-testing/languages/junit5/lib"
+def mpsTestingRuntimeLibraryDir = "$mpsHome/plugins/mps-testing/languages/junit5/lib"
 
-def hamsterSandboxJar = "$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.sandbox.jar"
-def junit4Jar = "$mpsArtifactsDir/lib/junit4.jar"
+def hamsterSandboxJar = "$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.sandbox.jar"
+def junit4Jar = "$mpsHome/lib/junit4.jar"
 
 def runtimeLibraryJars = fileTree(hamsterRuntimeLibraryDir).include('*.jar')
 def mpsTestingRuntimeLibraryJars = fileTree(mpsTestingRuntimeLibraryDir).include('*.jar')
