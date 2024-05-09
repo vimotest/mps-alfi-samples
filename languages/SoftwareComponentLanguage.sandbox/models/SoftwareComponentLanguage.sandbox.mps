@@ -388,6 +388,24 @@
         <ref role="1Fcd0O" node="5U0hG6ja_Y9" resolve="SearchProducts" />
         <ref role="1Fcd0P" node="1dnKNhScFcb" resolve="searchProduct" />
       </node>
+      <node concept="1Fcd7X" id="4DE6ZndaOgB" role="1FZZYu">
+        <ref role="1KxUqA" node="1dnKNhScFc1" resolve="OnlineShopping" />
+        <ref role="1$IHh0" node="1dnKNhS8R6y" resolve="addProduct" />
+        <ref role="1Fcd0O" node="1dnKNhRZUjd" resolve="Shopping" />
+        <ref role="1Fcd0P" node="1dnKNhS8R6y" resolve="addProduct" />
+      </node>
+      <node concept="1Fcd7X" id="4DE6ZndfFKE" role="1FZZYu">
+        <ref role="1KxUqA" node="1dnKNhScFc1" resolve="OnlineShopping" />
+        <ref role="1$IHh0" node="1dnKNhSbtWf" resolve="removeProduct" />
+        <ref role="1Fcd0O" node="1dnKNhRZUjd" resolve="Shopping" />
+        <ref role="1Fcd0P" node="1dnKNhSbtWf" resolve="removeProduct" />
+      </node>
+      <node concept="1Fcd7X" id="4DE6ZndfFKI" role="1FZZYu">
+        <ref role="1KxUqA" node="1dnKNhScFc1" resolve="OnlineShopping" />
+        <ref role="1$IHh0" node="1dnKNhScFkQ" resolve="orderProducts" />
+        <ref role="1Fcd0O" node="1dnKNhRZUjd" resolve="Shopping" />
+        <ref role="1Fcd0P" node="1dnKNhScFkQ" resolve="orderProducts" />
+      </node>
       <node concept="3Vq3Vf" id="5U0hG6ja9tY" role="3Vq2cS">
         <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="SearchProducts" />
       </node>
@@ -448,7 +466,7 @@
       </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6ja9tt" role="3Vob6q">
-      <property role="TrG5h" value="SearchProducts" />
+      <property role="TrG5h" value="Searching" />
     </node>
     <node concept="3Vo6hu" id="5U0hG6ja_WU" role="3Vob6q">
       <property role="TrG5h" value="Inventory" />
