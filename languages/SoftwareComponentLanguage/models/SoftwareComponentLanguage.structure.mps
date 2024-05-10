@@ -417,9 +417,6 @@
     <property role="TrG5h" value="InterfaceDeclaration" />
     <property role="34LRSv" value="interface" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="1dnKNhRRPPH" role="PzmwI">
-      <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
-    </node>
     <node concept="PrWs8" id="1dnKNhRSGj$" role="PzmwI">
       <ref role="PrY4T" node="2Cg1yFhsbuj" resolve="IPackageContent" />
     </node>
