@@ -162,6 +162,8 @@
       </concept>
       <concept id="3030929330192747142" name="SoftwareComponentLanguage.structure.RequiredInterface" flags="ng" index="3VoSMG" />
       <concept id="3030929330192917155" name="SoftwareComponentLanguage.structure.InterfaceConnection" flags="ng" index="3Vpyi9">
+        <reference id="7793579733608242075" name="requiringComponent" index="3ijO3y" />
+        <reference id="7793579733608241914" name="providingComponent" index="3ijO63" />
         <reference id="3030929330192918006" name="required" index="3Vpyfs" />
         <reference id="3030929330192918004" name="provided" index="3Vpyfu" />
       </concept>
@@ -363,10 +365,13 @@
       <node concept="3Vpyi9" id="2Cg1yFhuCES" role="3Vq2cS">
         <ref role="3Vpyfs" node="1dnKNhRUDb5" resolve="MyInterface" />
         <ref role="3Vpyfu" node="1dnKNhRTA2V" resolve="SupportInt" />
+        <ref role="3ijO3y" node="2Cg1yFhv9f0" />
+        <ref role="3ijO63" node="2Cg1yFhuUep" />
       </node>
       <node concept="3Vpyi9" id="1dnKNhRUDbh" role="3Vq2cS">
         <ref role="3Vpyfs" node="1dnKNhRUDb5" resolve="GetNumber" />
         <ref role="3Vpyfu" node="5U0hG6j8oy4" resolve="RandomNumber" />
+        <ref role="3ijO3y" node="2Cg1yFhv9f0" />
       </node>
     </node>
     <node concept="1$y8rh" id="1dnKNhRSI66" role="3Vob6q">

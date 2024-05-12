@@ -256,17 +256,27 @@
       <property role="TrG5h" value="flip" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
-    <node concept="1TJgyj" id="2Cg1yFhtynQ" role="1TKVEi">
-      <property role="IQ2ns" value="3030929330192918006" />
-      <property role="20kJfa" value="required" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2Cg1yFhsSE6" resolve="RequiredInterface" />
+    <node concept="1TJgyj" id="6KCmRAYpLFU" role="1TKVEi">
+      <property role="IQ2ns" value="7793579733608241914" />
+      <property role="20kJfa" value="providingComponent" />
+      <ref role="20lvS9" node="2Cg1yFhu3z_" resolve="ComponentReference" />
     </node>
     <node concept="1TJgyj" id="2Cg1yFhtynO" role="1TKVEi">
       <property role="IQ2ns" value="3030929330192918004" />
       <property role="20kJfa" value="provided" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="2Cg1yFhsQPy" resolve="ProvidedInterface" />
+    </node>
+    <node concept="1TJgyj" id="6KCmRAYpLIr" role="1TKVEi">
+      <property role="IQ2ns" value="7793579733608242075" />
+      <property role="20kJfa" value="requiringComponent" />
+      <ref role="20lvS9" node="2Cg1yFhu3z_" resolve="ComponentReference" />
+    </node>
+    <node concept="1TJgyj" id="2Cg1yFhtynQ" role="1TKVEi">
+      <property role="IQ2ns" value="3030929330192918006" />
+      <property role="20kJfa" value="required" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2Cg1yFhsSE6" resolve="RequiredInterface" />
     </node>
     <node concept="PrWs8" id="2Cg1yFhu2ku" role="PzmwI">
       <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
@@ -323,6 +333,9 @@
     </node>
     <node concept="PrWs8" id="2Cg1yFhuCEX" role="PzmwI">
       <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
+    </node>
+    <node concept="PrWs8" id="6KCmRAYrJOU" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="2Cg1yFhB7EQ">
