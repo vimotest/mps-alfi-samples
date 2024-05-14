@@ -9,9 +9,11 @@
     <facet type="java" compile="off" classes="off" ext="no">
       <classes generated="true" />
     </facet>
+    <facet type="generator" planModel="r:a99c7530-e7d3-4301-a006-aae1df0865e8(swcMain@genplan)" />
   </facets>
   <dependencies>
     <dependency reexport="false">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
+    <dependency reexport="false">96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" version="0" />
@@ -20,6 +22,7 @@
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
   </languageVersions>
   <dependencyVersions>
+    <module reference="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="b4a24014-52d7-42db-bd13-252ce7475af2(SoftwareComponentLanguage.sandbox)" version="0" />
     <module reference="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" version="0" />

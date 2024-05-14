@@ -51,5 +51,26 @@
       </node>
     </node>
   </node>
+  <node concept="2VgMpV" id="6uQxlEewy$y">
+    <property role="TrG5h" value="SwcToAlf.genplan" />
+    <node concept="2VgMA2" id="6uQxlEewy$z" role="2VgMA7">
+      <property role="1s431M" value="true" />
+      <node concept="2Qf6Nf" id="6uQxlEewy$$" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="6uQxlEewyA3" role="2Qf6Ng">
+          <property role="2V$B1T" value="90dba4c7-2c2e-4bec-a587-6476e412e28c" />
+          <property role="2V$B1Q" value="SoftwareComponentLanguage" />
+        </node>
+      </node>
+    </node>
+    <node concept="2VgMA2" id="6uQxlEewy$A" role="2VgMA7">
+      <property role="1s431M" value="true" />
+      <node concept="2Qf6Nf" id="6uQxlEewy$B" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="6uQxlEewy$C" role="2Qf6Ng">
+          <property role="2V$B1T" value="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" />
+          <property role="2V$B1Q" value="alfi" />
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 
