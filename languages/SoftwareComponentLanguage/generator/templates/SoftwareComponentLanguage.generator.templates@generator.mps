@@ -260,6 +260,7 @@
         <child id="8164141882417526102" name="body" index="GbAUv" />
       </concept>
       <concept id="3492897886877920834" name="alfi.structure.EmptyLineNamespaceMember" flags="ng" index="8qQDt" />
+      <concept id="1820071129312113837" name="alfi.structure.CustomStereotypeName" flags="ng" index="2hPomx" />
       <concept id="1820071129312107522" name="alfi.structure.AlfSupportedStereotypeName" flags="ng" index="2hPqOe">
         <property id="1820071129312120005" name="stereotype" index="2hPvR9" />
       </concept>
@@ -1122,6 +1123,11 @@
       <node concept="15s5l7" id="1YdqyHmJCKD" role="lGtFl" />
       <node concept="2ZBi8u" id="pZehJpQmBW" role="lGtFl">
         <ref role="2rW$FS" node="pZehJpQlOT" resolve="InterfaceDeclaration_toClassDefinition" />
+      </node>
+      <node concept="3wUxaT" id="6uQxlEewKY$" role="3wUx9_">
+        <node concept="2hPomx" id="6uQxlEewL5M" role="2hPqOu">
+          <property role="TrG5h" value="interface" />
+        </node>
       </node>
     </node>
     <node concept="n94m4" id="1YdqyHmJ3Ot" role="lGtFl">
