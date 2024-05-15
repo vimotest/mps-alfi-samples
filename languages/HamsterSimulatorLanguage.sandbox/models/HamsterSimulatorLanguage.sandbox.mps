@@ -64,7 +64,6 @@
       <concept id="3308300503039654064" name="HamsterSimulatorLanguage.structure.Not" flags="ng" index="2C1s_R">
         <child id="3308300503039654067" name="original" index="2C1s_O" />
       </concept>
-      <concept id="3308300503039647788" name="HamsterSimulatorLanguage.structure.IsFrontClearExpression" flags="ng" index="2C1t7F" />
       <concept id="3308300503039647627" name="HamsterSimulatorLanguage.structure.TurnLeftCommand" flags="nn" index="2C1uTc" />
       <concept id="3308300503039647678" name="HamsterSimulatorLanguage.structure.IfStatement" flags="nn" index="2C1uTT">
         <child id="3308300503039647685" name="falseBranch" index="2C1uS2" />
@@ -191,14 +190,6 @@
             <ref role="2C198b" node="5ZmQMJIiNDT" resolve="turnRight" />
           </node>
           <node concept="1x_AGW" id="5ZmQMJIk0rv" role="2C6hI7" />
-        </node>
-      </node>
-      <node concept="2C1RJh" id="5ZmQMJIkYyO" role="2C6hI7" />
-      <node concept="2C1uTc" id="5ZmQMJIk0pq" role="2C6hI7" />
-      <node concept="2C1pOB" id="5ZmQMJIk0ug" role="2C6hI7">
-        <node concept="2C1t7F" id="5ZmQMJIk0uP" role="2C1pO_" />
-        <node concept="2C6hJS" id="5ZmQMJIk0uk" role="2C1pO$">
-          <node concept="1x_AGW" id="5ZmQMJIk0vc" role="2C6hI7" />
         </node>
       </node>
     </node>
@@ -518,19 +509,6 @@
   </node>
   <node concept="2m2SD_" id="5X3Rsv9jHoe">
     <property role="3GE5qa" value="tests" />
-    <node concept="2m2R3X" id="5X3Rsv9jPYa" role="2m2R1e">
-      <ref role="2m2R3W" node="5ZmQMJIfz$H" resolve="HelloPaule" />
-      <node concept="2m3OEE" id="5X3Rsv9ke1Y" role="2m2QOm">
-        <node concept="1PaTwC" id="5X3Rsv9ke2o" role="2m3OCk">
-          <node concept="3oM_SD" id="5X3Rsv9ke2A" role="1PaTwD">
-            <property role="3oM_SC" value="Hello" />
-          </node>
-          <node concept="3oM_SD" id="5X3Rsv9ke2C" role="1PaTwD">
-            <property role="3oM_SC" value="Paule" />
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="2m2R3X" id="2HeY20H2VhB" role="2m2R1e">
       <ref role="2m2R3W" node="5ZmQMJIhPtP" resolve="Demo" />
       <node concept="2m2QRn" id="2HeY20H3lXh" role="2m2QOm">

@@ -21,7 +21,6 @@ task setupAlfWorkspace {
             // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
             file("$targetDirectory/HamsterTestSuiteActivity.alf").text = """
             activity HamsterTestSuiteActivity() {
-                new HamsterTestSuite().HelloPaule();
                 new HamsterTestSuite().Demo();
                 WriteLine("FINISHED");
             }
