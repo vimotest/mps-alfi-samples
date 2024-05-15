@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="90dba4c7-2c2e-4bec-a587-6476e412e28c" name="SoftwareComponentLanguage" version="0" />
+    <use id="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" name="alfi" version="0" />
   </languages>
   <imports>
     <import index="gkn4" ref="r:fae4a196-11c4-4868-9ebd-1379c8e56907(alfStandardModelLibrary)" />
@@ -17,8 +18,10 @@
       <concept id="3120704408893642668" name="alfi.structure.AttributeDefinition" flags="ng" index="6lMYc">
         <child id="3120704408893959337" name="initializerExpression" index="6k5i9" />
       </concept>
+      <concept id="3120704408893095330" name="alfi.structure.ClassDefinition" flags="ng" index="6nSm2" />
       <concept id="6254876434755085380" name="alfi.structure.SequenceFlag" flags="ng" index="hh2MY" />
       <concept id="8152398782397110011" name="alfi.structure.NullExpression" flags="ng" index="2_e7m4" />
+      <concept id="2674824929519052396" name="alfi.structure.StringLiteralExpression" flags="ng" index="_iklQ" />
       <concept id="2674824929518763027" name="alfi.structure.ExpressionStatement" flags="ng" index="_jtW9">
         <child id="2674824929518763028" name="expression" index="_jtWe" />
       </concept>
@@ -94,9 +97,14 @@
         <child id="7144803224890013772" name="variableDefinitions" index="32xgzx" />
         <child id="7144803224890013774" name="body" index="32xgzz" />
       </concept>
+      <concept id="7144803224889925462" name="alfi.structure.TypedLoopVariableDefinition" flags="ng" index="32xAZV">
+        <child id="7144803224889925466" name="typeName" index="32xAZR" />
+        <child id="7144803224889925463" name="expression" index="32xAZU" />
+      </concept>
       <concept id="7144803224889269844" name="alfi.structure.ReturnStatement" flags="ng" index="32G6VT">
         <child id="8875975376183143672" name="expression" index="2vFQ1F" />
       </concept>
+      <concept id="7144803224889115542" name="alfi.structure.BreakStatement" flags="ng" index="32GVcV" />
       <concept id="7144803224894301410" name="alfi.structure.UnboundedValueLiteralExpression" flags="ng" index="32L9hf" />
       <concept id="7144803224895060397" name="alfi.structure.PropertyAccessExpression" flags="ng" index="32M0$0">
         <child id="7144803224895280402" name="featureReference" index="32PqmZ" />
@@ -647,6 +655,9 @@
                           </node>
                         </node>
                       </node>
+                      <node concept="32T38h" id="6CIUUG_t3Vh" role="_vku1">
+                        <property role="32T38g" value="1" />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -798,6 +809,660 @@
         <property role="TrG5h" value="SearchProducts" />
         <ref role="1$ya7L" node="1dnKNhScFca" resolve="SearchInterface" />
       </node>
+      <node concept="1F40Uu" id="6CIUUG_qQ_G" role="1F7dI2">
+        <ref role="1F40Up" node="6CIUUG_qQ_H" resolve="Inventory_State" />
+        <node concept="1F40VV" id="6CIUUG_qQ_H" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="6lMYc" id="6CIUUG_qQAD" role="PCHHv">
+            <property role="TrG5h" value="products" />
+            <node concept="3xHE8C" id="6CIUUG_qQU6" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_qQU4" role="_vnH8">
+                <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="Product" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_skfK" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_skfL" resolve="Inventory_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
+        <ref role="1$IHh0" node="1dnKNhSeaJR" resolve="addProduct" />
+        <node concept="1KxUro" id="6CIUUG_skfL" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_skfM" role="PCHGa">
+            <node concept="32xATA" id="6CIUUG_slhx" role="PCHzz">
+              <node concept="32xAZV" id="6CIUUG_C7Gu" role="32xgzx">
+                <property role="TrG5h" value="productStock" />
+                <node concept="3xHE8C" id="6CIUUG_C7L7" role="32xAZR">
+                  <node concept="2RqM1Q" id="6CIUUG_C7L5" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="6CIUUG_slpa" role="32xAZU">
+                  <node concept="32Pqhl" id="6CIUUG_slpb" role="32PqmZ">
+                    <node concept="1F1Xwt" id="6CIUUG_slp6" role="32Men7" />
+                    <node concept="_vnHe" id="6CIUUG_slpF" role="32Men1">
+                      <ref role="3acloq" node="6CIUUG_qQAD" resolve="products" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="PCHzy" id="6CIUUG_slhB" role="32xgzz">
+                <node concept="32prLx" id="6CIUUG_slr6" role="PCHzz">
+                  <node concept="32pbwo" id="6CIUUG_slr8" role="32oX99">
+                    <node concept="32prLw" id="6CIUUG_slra" role="32pbwr">
+                      <node concept="PCHzy" id="6CIUUG_slre" role="32prLT">
+                        <node concept="_jtW9" id="6CIUUG_t0PY" role="PCHzz">
+                          <node concept="3122gz" id="6CIUUG_t0Tn" role="_jtWe">
+                            <node concept="3122rM" id="6CIUUG_t0TU" role="315$Eb">
+                              <node concept="32Pqhl" id="6CIUUG_t0PT" role="3122rd">
+                                <node concept="_uYbk" id="6CIUUG_t0QN" role="32Men7">
+                                  <node concept="_vnHb" id="6CIUUG_t0QP" role="_uYbl">
+                                    <node concept="2RqM1Q" id="6CIUUG_t0QR" role="_vnH8">
+                                      <ref role="2RqM1R" node="6CIUUG_C7Gu" resolve="productStock" />
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="_vnHe" id="6CIUUG_t0PW" role="32Men1">
+                                  <ref role="3acloq" node="6CIUUG_skNQ" resolve="amount" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="31szHT" id="6CIUUG_t0VY" role="315$E5">
+                              <property role="31szH2" value="6cBsaQylkJ$/PlusOperator" />
+                              <node concept="32M0$0" id="6CIUUG_t0XF" role="31szGO">
+                                <node concept="32Pqhl" id="6CIUUG_t0XH" role="32PqmZ">
+                                  <node concept="_uYbk" id="6CIUUG_t0Ye" role="32Men7">
+                                    <node concept="_vnHb" id="6CIUUG_t0Yg" role="_uYbl">
+                                      <node concept="2RqM1Q" id="6CIUUG_t0Yi" role="_vnH8">
+                                        <ref role="2RqM1R" node="6CIUUG_C7Gu" resolve="productStock" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="_vnHe" id="6CIUUG_t0XK" role="32Men1">
+                                    <ref role="3acloq" node="6CIUUG_skNQ" resolve="amount" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_uYbk" id="6CIUUG_t12M" role="31szGQ">
+                                <node concept="_vnHb" id="6CIUUG_t12O" role="_uYbl">
+                                  <node concept="2RqM1Q" id="6CIUUG_t12Q" role="_vnH8">
+                                    <ref role="2RqM1R" node="6CIUUG_sklo" resolve="amount" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32GVcV" id="6CIUUG_t0Op" role="PCHzz" />
+                      </node>
+                      <node concept="31uMWx" id="6CIUUG_t0Gi" role="32prLz">
+                        <property role="31uMWw" value="6cBsaQyn5Y8/EqualTo" />
+                        <node concept="_uYbk" id="6CIUUG_t0Jx" role="31szGQ">
+                          <node concept="_vnHb" id="6CIUUG_t0Jz" role="_uYbl">
+                            <node concept="2RqM1Q" id="6CIUUG_t0J_" role="_vnH8">
+                              <ref role="2RqM1R" node="6CIUUG_sklf" resolve="productId" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32M0$0" id="6CIUUG_slwy" role="31szGO">
+                          <node concept="32Pqhl" id="6CIUUG_slw$" role="32PqmZ">
+                            <node concept="_uYbk" id="6CIUUG_slxL" role="32Men7">
+                              <node concept="_vnHb" id="6CIUUG_slxN" role="_uYbl">
+                                <node concept="2RqM1Q" id="6CIUUG_slxP" role="_vnH8">
+                                  <ref role="2RqM1R" node="6CIUUG_C7Gu" resolve="productStock" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="_vnHe" id="6CIUUG_slwB" role="32Men1">
+                              <ref role="3acloq" node="6CIUUG_qQOr" resolve="id" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_sklf" role="PCHHv">
+            <property role="TrG5h" value="productId" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_skln" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_sklm" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_sklo" role="PCHHv">
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <property role="TrG5h" value="amount" />
+            <node concept="3xHE8C" id="6CIUUG_sklw" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_sklv" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_sl1z" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_sl1$" resolve="Inventory_ManageInventory_removeProductItems" />
+        <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
+        <ref role="1$IHh0" node="1dnKNhSeaJT" resolve="removeProductItems" />
+        <node concept="1KxUro" id="6CIUUG_sl1$" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_sl1_" role="PCHGa">
+            <node concept="32xATA" id="6CIUUG_C86p" role="PCHzz">
+              <node concept="32xAZV" id="6CIUUG_C86q" role="32xgzx">
+                <property role="TrG5h" value="productStock" />
+                <node concept="3xHE8C" id="6CIUUG_C86r" role="32xAZR">
+                  <node concept="2RqM1Q" id="6CIUUG_C86s" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="6CIUUG_C86t" role="32xAZU">
+                  <node concept="32Pqhl" id="6CIUUG_C86u" role="32PqmZ">
+                    <node concept="1F1Xwt" id="6CIUUG_C86v" role="32Men7" />
+                    <node concept="_vnHe" id="6CIUUG_C86w" role="32Men1">
+                      <ref role="3acloq" node="6CIUUG_qQAD" resolve="products" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="PCHzy" id="6CIUUG_C86x" role="32xgzz">
+                <node concept="32prLx" id="6CIUUG_C86y" role="PCHzz">
+                  <node concept="32pbwo" id="6CIUUG_C86z" role="32oX99">
+                    <node concept="32prLw" id="6CIUUG_C86$" role="32pbwr">
+                      <node concept="PCHzy" id="6CIUUG_C86_" role="32prLT">
+                        <node concept="_jtW9" id="6CIUUG_C86A" role="PCHzz">
+                          <node concept="3122gz" id="6CIUUG_C86B" role="_jtWe">
+                            <node concept="3122rM" id="6CIUUG_C86C" role="315$Eb">
+                              <node concept="32Pqhl" id="6CIUUG_C86D" role="3122rd">
+                                <node concept="_uYbk" id="6CIUUG_C86E" role="32Men7">
+                                  <node concept="_vnHb" id="6CIUUG_C86F" role="_uYbl">
+                                    <node concept="2RqM1Q" id="6CIUUG_C86G" role="_vnH8">
+                                      <ref role="2RqM1R" node="6CIUUG_C86q" resolve="productStock" />
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="_vnHe" id="6CIUUG_C86H" role="32Men1">
+                                  <ref role="3acloq" node="6CIUUG_skNQ" resolve="amount" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="31szHT" id="6CIUUG_C86I" role="315$E5">
+                              <property role="31szH2" value="6cBsaQylkJD/MinusOperator" />
+                              <node concept="32M0$0" id="6CIUUG_C86J" role="31szGO">
+                                <node concept="32Pqhl" id="6CIUUG_C86K" role="32PqmZ">
+                                  <node concept="_uYbk" id="6CIUUG_C86L" role="32Men7">
+                                    <node concept="_vnHb" id="6CIUUG_C86M" role="_uYbl">
+                                      <node concept="2RqM1Q" id="6CIUUG_C86N" role="_vnH8">
+                                        <ref role="2RqM1R" node="6CIUUG_C86q" resolve="productStock" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="_vnHe" id="6CIUUG_C86O" role="32Men1">
+                                    <ref role="3acloq" node="6CIUUG_skNQ" resolve="amount" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_uYbk" id="6CIUUG_C86P" role="31szGQ">
+                                <node concept="_vnHb" id="6CIUUG_C86Q" role="_uYbl">
+                                  <node concept="2RqM1Q" id="6CIUUG_C86R" role="_vnH8">
+                                    <ref role="2RqM1R" node="6CIUUG_sl3o" resolve="amount" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32GVcV" id="6CIUUG_C86S" role="PCHzz" />
+                      </node>
+                      <node concept="31uMWx" id="6CIUUG_C86T" role="32prLz">
+                        <property role="31uMWw" value="6cBsaQyn5Y8/EqualTo" />
+                        <node concept="_uYbk" id="6CIUUG_C86U" role="31szGQ">
+                          <node concept="_vnHb" id="6CIUUG_C86V" role="_uYbl">
+                            <node concept="2RqM1Q" id="6CIUUG_C86W" role="_vnH8">
+                              <ref role="2RqM1R" node="6CIUUG_sl3f" resolve="productId" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32M0$0" id="6CIUUG_C86X" role="31szGO">
+                          <node concept="32Pqhl" id="6CIUUG_C86Y" role="32PqmZ">
+                            <node concept="_uYbk" id="6CIUUG_C86Z" role="32Men7">
+                              <node concept="_vnHb" id="6CIUUG_C870" role="_uYbl">
+                                <node concept="2RqM1Q" id="6CIUUG_C871" role="_vnH8">
+                                  <ref role="2RqM1R" node="6CIUUG_C86q" resolve="productStock" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="_vnHe" id="6CIUUG_C872" role="32Men1">
+                              <ref role="3acloq" node="6CIUUG_qQOr" resolve="id" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_sl3f" role="PCHHv">
+            <property role="TrG5h" value="productId" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_sl3n" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_sl3m" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_sl3o" role="PCHHv">
+            <property role="TrG5h" value="amount" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_sl3w" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_sl3v" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_sk_w" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_sk_x" resolve="Inventory_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
+        <ref role="1$IHh0" node="6uQxlEe_yIx" resolve="getProductIds" />
+        <node concept="1KxUro" id="6CIUUG_sk_x" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_sk_y" role="PCHGa">
+            <node concept="327OUb" id="6CIUUG_t1n7" role="PCHzz">
+              <property role="TrG5h" value="result" />
+              <property role="327w9R" value="true" />
+              <node concept="2_e7m4" id="6CIUUG_t4Iu" role="327w9Y" />
+              <node concept="3xHE8C" id="6CIUUG_t1ok" role="327w9S">
+                <node concept="2RqM1Q" id="6CIUUG_t1oi" role="_vnH8">
+                  <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+                </node>
+              </node>
+            </node>
+            <node concept="32xATA" id="6CIUUG_t1C$" role="PCHzz">
+              <node concept="32xAZV" id="6CIUUG_C8EE" role="32xgzx">
+                <property role="TrG5h" value="productStock" />
+                <node concept="3xHE8C" id="6CIUUG_C8I7" role="32xAZR">
+                  <node concept="2RqM1Q" id="6CIUUG_C8I5" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="6CIUUG_t1CA" role="32xAZU">
+                  <node concept="32Pqhl" id="6CIUUG_t1CB" role="32PqmZ">
+                    <node concept="1F1Xwt" id="6CIUUG_t1CC" role="32Men7" />
+                    <node concept="_vnHe" id="6CIUUG_t1CD" role="32Men1">
+                      <ref role="3acloq" node="6CIUUG_qQAD" resolve="products" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="PCHzy" id="6CIUUG_t1CE" role="32xgzz">
+                <node concept="_jtW9" id="6CIUUG_t1Rl" role="PCHzz">
+                  <node concept="1WUwfO" id="6CIUUG_C6KK" role="_jtWe">
+                    <node concept="_vnHb" id="6CIUUG_C6KP" role="1WUwfQ">
+                      <node concept="2RqM1Q" id="6CIUUG_C6KT" role="_vnH8">
+                        <ref role="2RqM1R" to="gkn4:2SV$eY8$yfx" resolve="add" />
+                      </node>
+                    </node>
+                    <node concept="_vku0" id="6CIUUG_C6KX" role="_uFfl">
+                      <node concept="32M0$0" id="6CIUUG_C76c" role="_vku1">
+                        <node concept="32Pqhl" id="6CIUUG_C76d" role="32PqmZ">
+                          <node concept="_uYbk" id="6CIUUG_C6OW" role="32Men7">
+                            <node concept="_vnHb" id="6CIUUG_C6OX" role="_uYbl">
+                              <node concept="2RqM1Q" id="6CIUUG_C6OY" role="_vnH8">
+                                <ref role="2RqM1R" node="6CIUUG_C8EE" resolve="productStock" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="_vnHe" id="6CIUUG_C7iM" role="32Men1">
+                            <ref role="3acloq" node="6CIUUG_qQOr" resolve="id" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="_uYbk" id="6CIUUG_t1Rf" role="1WUwdW">
+                      <node concept="_vnHb" id="6CIUUG_t1Rh" role="_uYbl">
+                        <node concept="2RqM1Q" id="6CIUUG_t1Rj" role="_vnH8">
+                          <ref role="2RqM1R" node="6CIUUG_t1n7" resolve="result" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="32G6VT" id="6CIUUG_C8Qg" role="PCHzz">
+              <node concept="_uYbk" id="6CIUUG_C8SF" role="2vFQ1F">
+                <node concept="_vnHb" id="6CIUUG_C8SG" role="_uYbl">
+                  <node concept="2RqM1Q" id="6CIUUG_C8SH" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_t1n7" resolve="result" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_skBv" role="NkNyt">
+            <property role="TrG5h" value="__return__" />
+            <property role="3xR695" value="3Ud70gdvRyt/return" />
+            <node concept="3xHE8C" id="6CIUUG_skBB" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_skBA" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+            <node concept="3xMmcA" id="6CIUUG_C8Yq" role="3xLlrW">
+              <node concept="32L9hf" id="6CIUUG_C90F" role="3xM9QG" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_skD9" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_skDa" resolve="Inventory_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
+        <ref role="1$IHh0" node="6CIUUG_skvq" resolve="getProductItemsAmount" />
+        <node concept="1KxUro" id="6CIUUG_skDa" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_skDb" role="PCHGa">
+            <node concept="32xATA" id="6CIUUG_t1Vn" role="PCHzz">
+              <node concept="32xAZV" id="6CIUUG_C94r" role="32xgzx">
+                <property role="TrG5h" value="productStock" />
+                <node concept="3xHE8C" id="6CIUUG_C98Q" role="32xAZR">
+                  <node concept="2RqM1Q" id="6CIUUG_C98O" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="6CIUUG_t1Vp" role="32xAZU">
+                  <node concept="32Pqhl" id="6CIUUG_t1Vq" role="32PqmZ">
+                    <node concept="1F1Xwt" id="6CIUUG_t1Vr" role="32Men7" />
+                    <node concept="_vnHe" id="6CIUUG_t1Vs" role="32Men1">
+                      <ref role="3acloq" node="6CIUUG_qQAD" resolve="products" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="PCHzy" id="6CIUUG_t1Vt" role="32xgzz">
+                <node concept="32prLx" id="6CIUUG_t1Vu" role="PCHzz">
+                  <node concept="32pbwo" id="6CIUUG_t1Vv" role="32oX99">
+                    <node concept="32prLw" id="6CIUUG_t1Vw" role="32pbwr">
+                      <node concept="PCHzy" id="6CIUUG_t1Vx" role="32prLT">
+                        <node concept="32G6VT" id="6CIUUG_Ca1k" role="PCHzz">
+                          <node concept="32M0$0" id="6CIUUG_Ca3B" role="2vFQ1F">
+                            <node concept="32Pqhl" id="6CIUUG_Ca3C" role="32PqmZ">
+                              <node concept="_uYbk" id="6CIUUG_Ca1W" role="32Men7">
+                                <node concept="_vnHb" id="6CIUUG_Ca1X" role="_uYbl">
+                                  <node concept="2RqM1Q" id="6CIUUG_Ca1Y" role="_vnH8">
+                                    <ref role="2RqM1R" node="6CIUUG_C94r" resolve="productStock" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_vnHe" id="6CIUUG_Ca6q" role="32Men1">
+                                <ref role="3acloq" node="6CIUUG_skNQ" resolve="amount" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="31uMWx" id="6CIUUG_t1VP" role="32prLz">
+                        <property role="31uMWw" value="6cBsaQyn5Y8/EqualTo" />
+                        <node concept="_uYbk" id="6CIUUG_t1VQ" role="31szGQ">
+                          <node concept="_vnHb" id="6CIUUG_t1VR" role="_uYbl">
+                            <node concept="2RqM1Q" id="6CIUUG_t1VS" role="_vnH8">
+                              <ref role="2RqM1R" node="6CIUUG_skEz" resolve="productId" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32M0$0" id="6CIUUG_t1VT" role="31szGO">
+                          <node concept="32Pqhl" id="6CIUUG_t1VU" role="32PqmZ">
+                            <node concept="_uYbk" id="6CIUUG_t1VV" role="32Men7">
+                              <node concept="_vnHb" id="6CIUUG_t1VW" role="_uYbl">
+                                <node concept="2RqM1Q" id="6CIUUG_t1VX" role="_vnH8">
+                                  <ref role="2RqM1R" node="6CIUUG_C94r" resolve="productStock" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="_vnHe" id="6CIUUG_t1VY" role="32Men1">
+                              <ref role="3acloq" node="6CIUUG_qQOr" resolve="id" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="32G6VT" id="6CIUUG_Ca7l" role="PCHzz">
+              <node concept="32T38h" id="6CIUUG_Ca9I" role="2vFQ1F">
+                <property role="32T38g" value="0" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_skEz" role="PCHHv">
+            <property role="TrG5h" value="productId" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_skEF" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_skEE" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_skEG" role="NkNyt">
+            <property role="TrG5h" value="__return__" />
+            <property role="3xR695" value="3Ud70gdvRyt/return" />
+            <node concept="3xHE8C" id="6CIUUG_skEO" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_skEN" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_skXA" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_skXB" resolve="Inventory_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
+        <ref role="1$IHh0" node="6uQxlEe_yMK" resolve="getProductName" />
+        <node concept="1KxUro" id="6CIUUG_skXB" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_skXC" role="PCHGa">
+            <node concept="32xATA" id="6CIUUG_Cafi" role="PCHzz">
+              <node concept="32xAZV" id="6CIUUG_Cafj" role="32xgzx">
+                <property role="TrG5h" value="productStock" />
+                <node concept="3xHE8C" id="6CIUUG_Cafk" role="32xAZR">
+                  <node concept="2RqM1Q" id="6CIUUG_Cafl" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="6CIUUG_Cafm" role="32xAZU">
+                  <node concept="32Pqhl" id="6CIUUG_Cafn" role="32PqmZ">
+                    <node concept="1F1Xwt" id="6CIUUG_Cafo" role="32Men7" />
+                    <node concept="_vnHe" id="6CIUUG_Cafp" role="32Men1">
+                      <ref role="3acloq" node="6CIUUG_qQAD" resolve="products" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="PCHzy" id="6CIUUG_Cafq" role="32xgzz">
+                <node concept="32prLx" id="6CIUUG_Cafr" role="PCHzz">
+                  <node concept="32pbwo" id="6CIUUG_Cafs" role="32oX99">
+                    <node concept="32prLw" id="6CIUUG_Caft" role="32pbwr">
+                      <node concept="PCHzy" id="6CIUUG_Cafu" role="32prLT">
+                        <node concept="32G6VT" id="6CIUUG_Cafv" role="PCHzz">
+                          <node concept="32M0$0" id="6CIUUG_Cafw" role="2vFQ1F">
+                            <node concept="32Pqhl" id="6CIUUG_Cafx" role="32PqmZ">
+                              <node concept="_uYbk" id="6CIUUG_Cafy" role="32Men7">
+                                <node concept="_vnHb" id="6CIUUG_Cafz" role="_uYbl">
+                                  <node concept="2RqM1Q" id="6CIUUG_Caf$" role="_vnH8">
+                                    <ref role="2RqM1R" node="6CIUUG_Cafj" resolve="productStock" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_vnHe" id="6CIUUG_Caf_" role="32Men1">
+                                <ref role="3acloq" node="6CIUUG_qQJq" resolve="name" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="31uMWx" id="6CIUUG_CafA" role="32prLz">
+                        <property role="31uMWw" value="6cBsaQyn5Y8/EqualTo" />
+                        <node concept="_uYbk" id="6CIUUG_CafB" role="31szGQ">
+                          <node concept="_vnHb" id="6CIUUG_CafC" role="_uYbl">
+                            <node concept="2RqM1Q" id="6CIUUG_CafD" role="_vnH8">
+                              <ref role="2RqM1R" node="6CIUUG_skZv" resolve="productId" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32M0$0" id="6CIUUG_CafE" role="31szGO">
+                          <node concept="32Pqhl" id="6CIUUG_CafF" role="32PqmZ">
+                            <node concept="_uYbk" id="6CIUUG_CafG" role="32Men7">
+                              <node concept="_vnHb" id="6CIUUG_CafH" role="_uYbl">
+                                <node concept="2RqM1Q" id="6CIUUG_CafI" role="_vnH8">
+                                  <ref role="2RqM1R" node="6CIUUG_Cafj" resolve="productStock" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="_vnHe" id="6CIUUG_CafJ" role="32Men1">
+                              <ref role="3acloq" node="6CIUUG_qQOr" resolve="id" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="32G6VT" id="6CIUUG_CafK" role="PCHzz">
+              <node concept="_iklQ" id="6CIUUG_CaES" role="2vFQ1F" />
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_skZv" role="PCHHv">
+            <property role="TrG5h" value="productId" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_skZB" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_skZA" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_skZC" role="NkNyt">
+            <property role="TrG5h" value="__return__" />
+            <property role="3xR695" value="3Ud70gdvRyt/return" />
+            <node concept="3xHE8C" id="6CIUUG_skZK" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_skZJ" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_t3oE" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_t3oF" resolve="Inventory_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja_Y9" resolve="SearchProducts" />
+        <ref role="1$IHh0" node="1dnKNhScFcb" resolve="searchProduct" />
+        <node concept="1KxUro" id="6CIUUG_t3oF" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_t3oG" role="PCHGa">
+            <node concept="32xATA" id="6CIUUG_CaJN" role="PCHzz">
+              <node concept="32xAZV" id="6CIUUG_CaJO" role="32xgzx">
+                <property role="TrG5h" value="productStock" />
+                <node concept="3xHE8C" id="6CIUUG_CaJP" role="32xAZR">
+                  <node concept="2RqM1Q" id="6CIUUG_CaJQ" role="_vnH8">
+                    <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="6CIUUG_CaJR" role="32xAZU">
+                  <node concept="32Pqhl" id="6CIUUG_CaJS" role="32PqmZ">
+                    <node concept="1F1Xwt" id="6CIUUG_CaJT" role="32Men7" />
+                    <node concept="_vnHe" id="6CIUUG_CaJU" role="32Men1">
+                      <ref role="3acloq" node="6CIUUG_qQAD" resolve="products" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="PCHzy" id="6CIUUG_CaJV" role="32xgzz">
+                <node concept="32prLx" id="6CIUUG_CaJW" role="PCHzz">
+                  <node concept="32pbwo" id="6CIUUG_CaJX" role="32oX99">
+                    <node concept="32prLw" id="6CIUUG_CaJY" role="32pbwr">
+                      <node concept="PCHzy" id="6CIUUG_CaJZ" role="32prLT">
+                        <node concept="32G6VT" id="6CIUUG_CaK0" role="PCHzz">
+                          <node concept="32M0$0" id="6CIUUG_CaK1" role="2vFQ1F">
+                            <node concept="32Pqhl" id="6CIUUG_CaK2" role="32PqmZ">
+                              <node concept="_uYbk" id="6CIUUG_CaK3" role="32Men7">
+                                <node concept="_vnHb" id="6CIUUG_CaK4" role="_uYbl">
+                                  <node concept="2RqM1Q" id="6CIUUG_CaK5" role="_vnH8">
+                                    <ref role="2RqM1R" node="6CIUUG_CaJO" resolve="productStock" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_vnHe" id="6CIUUG_CaK6" role="32Men1">
+                                <ref role="3acloq" node="6CIUUG_qQOr" resolve="id" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="31uMWx" id="6CIUUG_CaK7" role="32prLz">
+                        <property role="31uMWw" value="6cBsaQyn5Y8/EqualTo" />
+                        <node concept="_uYbk" id="6CIUUG_CaK8" role="31szGQ">
+                          <node concept="_vnHb" id="6CIUUG_CaK9" role="_uYbl">
+                            <node concept="2RqM1Q" id="6CIUUG_CaKa" role="_vnH8">
+                              <ref role="2RqM1R" node="6CIUUG_t3$d" resolve="productName" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="32M0$0" id="6CIUUG_CaKb" role="31szGO">
+                          <node concept="32Pqhl" id="6CIUUG_CaKc" role="32PqmZ">
+                            <node concept="_uYbk" id="6CIUUG_CaKd" role="32Men7">
+                              <node concept="_vnHb" id="6CIUUG_CaKe" role="_uYbl">
+                                <node concept="2RqM1Q" id="6CIUUG_CaKf" role="_vnH8">
+                                  <ref role="2RqM1R" node="6CIUUG_CaJO" resolve="productStock" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="_vnHe" id="6CIUUG_CaKg" role="32Men1">
+                              <ref role="3acloq" node="6CIUUG_qQJq" resolve="name" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="32G6VT" id="6CIUUG_CaKh" role="PCHzz">
+              <node concept="32T38h" id="6CIUUG_CbbK" role="2vFQ1F">
+                <property role="32T38g" value="0" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_t3$d" role="PCHHv">
+            <property role="TrG5h" value="productName" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_t3$l" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_t3$k" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_t3$m" role="NkNyt">
+            <property role="TrG5h" value="__return__" />
+            <property role="3xR695" value="3Ud70gdvRyt/return" />
+            <node concept="3xHE8C" id="6CIUUG_t3$u" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_t3$t" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="3Vo6hu" id="5U0hG6j9sbi" role="3Vob6q">
       <property role="TrG5h" value="Ordering" />
@@ -810,6 +1475,60 @@
         <ref role="1$ya7L" node="1dnKNhSeaJQ" resolve="InventoryInterface" />
       </node>
       <node concept="3Vob68" id="1dnKNhSeaJN" role="3Vq2cS" />
+      <node concept="1KxTyJ" id="6CIUUG_t3Bd" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_t3Be" resolve="Ordering_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja9rD" resolve="ManageOrders" />
+        <ref role="1$IHh0" node="1dnKNhScFdD" resolve="addOrder" />
+        <node concept="1KxUro" id="6CIUUG_t3Be" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_t3Bf" role="PCHGa" />
+          <node concept="3xR696" id="6CIUUG_t3DP" role="PCHHv">
+            <property role="TrG5h" value="productId" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_t3DX" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_t3DW" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+          <node concept="3xR696" id="6CIUUG_t3DY" role="PCHHv">
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <property role="TrG5h" value="amount" />
+            <node concept="3xHE8C" id="6CIUUG_t3E6" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_t3E5" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_t41k" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_t41l" resolve="Ordering_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja9rD" resolve="ManageOrders" />
+        <ref role="1$IHh0" node="1dnKNhScFes" resolve="removeOrder" />
+        <node concept="1KxUro" id="6CIUUG_t41l" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_t41m" role="PCHGa" />
+          <node concept="3xR696" id="6CIUUG_t43r" role="PCHHv">
+            <property role="TrG5h" value="productId" />
+            <property role="3xR695" value="1KdBIfXPktw/in" />
+            <node concept="3xHE8C" id="6CIUUG_t43z" role="3xMlr6">
+              <node concept="2RqM1Q" id="6CIUUG_t43y" role="_vnH8">
+                <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1KxTyJ" id="6CIUUG_t45P" role="1KxUq$">
+        <ref role="1KB3D8" node="6CIUUG_t45Q" resolve="Ordering_null_null" />
+        <ref role="1KxUqA" node="5U0hG6ja9rD" resolve="ManageOrders" />
+        <ref role="1$IHh0" node="4DE6Zndz5ef" resolve="orderProducts" />
+        <node concept="1KxUro" id="6CIUUG_t45Q" role="3mGtxP">
+          <property role="PCHHn" value="6OepWIVA92I/package" />
+          <node concept="PCHzy" id="6CIUUG_t45R" role="PCHGa" />
+        </node>
+      </node>
     </node>
     <node concept="3Vob68" id="1dnKNhSeaPv" role="3Vob6q">
       <property role="3dEdWv" value="true" />
@@ -854,6 +1573,9 @@
         <node concept="3Vz7Ms" id="1dnKNhScFdE" role="3Vz7OC">
           <property role="TrG5h" value="productId" />
         </node>
+        <node concept="3Vz7Ms" id="6CIUUG_t3DM" role="3Vz7OC">
+          <property role="TrG5h" value="amount" />
+        </node>
       </node>
       <node concept="1$y8rg" id="1dnKNhScFes" role="1$y8ri">
         <property role="TrG5h" value="removeOrder" />
@@ -868,19 +1590,25 @@
     <node concept="1$y8rh" id="1dnKNhSeaJQ" role="3Vob6q">
       <property role="TrG5h" value="InventoryInterface" />
       <node concept="1$y8rg" id="1dnKNhSeaJR" role="1$y8ri">
-        <property role="TrG5h" value="addProduct" />
+        <property role="TrG5h" value="addProductItems" />
         <node concept="3Vz7Ms" id="1dnKNhSeaJS" role="3Vz7OC">
           <property role="TrG5h" value="productId" />
         </node>
+        <node concept="3Vz7Ms" id="6CIUUG_sklc" role="3Vz7OC">
+          <property role="TrG5h" value="amount" />
+        </node>
       </node>
       <node concept="1$y8rg" id="1dnKNhSeaJT" role="1$y8ri">
-        <property role="TrG5h" value="removeProduct" />
+        <property role="TrG5h" value="removeProductItems" />
         <node concept="3Vz7Ms" id="1dnKNhSeaJU" role="3Vz7OC">
           <property role="TrG5h" value="productId" />
         </node>
+        <node concept="3Vz7Ms" id="6CIUUG_sktD" role="3Vz7OC">
+          <property role="TrG5h" value="amount" />
+        </node>
       </node>
       <node concept="1$y8rg" id="6uQxlEe_yIx" role="1$y8ri">
-        <property role="TrG5h" value="getProducts" />
+        <property role="TrG5h" value="getProductIds" />
         <node concept="3Vz7Ms" id="6uQxlEe_yJD" role="3VzjDz">
           <property role="TrG5h" value="__return__" />
           <property role="1FoO_q" value="true" />
@@ -896,6 +1624,15 @@
           <property role="3Vz7Ny" value="2Cg1yFhB7EU/string" />
         </node>
       </node>
+      <node concept="1$y8rg" id="6CIUUG_skvq" role="1$y8ri">
+        <property role="TrG5h" value="getProductItemsAmount" />
+        <node concept="3Vz7Ms" id="6CIUUG_skxl" role="3Vz7OC">
+          <property role="TrG5h" value="productId" />
+        </node>
+        <node concept="3Vz7Ms" id="6CIUUG_sky3" role="3VzjDz">
+          <property role="TrG5h" value="__return__" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="1FNVJW" id="1dnKNhSB$li">
@@ -906,6 +1643,36 @@
       <node concept="_vku0" id="1dnKNhSBYM9" role="_uFfl">
         <node concept="32T38h" id="1dnKNhSFnVQ" role="_vku1">
           <property role="32T38g" value="1" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="3mGtxK" id="6CIUUG_qQGt">
+    <node concept="6nSm2" id="6CIUUG_qQHx" role="3mGtxP">
+      <property role="PCHHn" value="6OepWIVA92I/package" />
+      <property role="TrG5h" value="ProductStock" />
+      <node concept="6lMYc" id="6CIUUG_qQJq" role="PCHHv">
+        <property role="TrG5h" value="name" />
+        <node concept="3xHE8C" id="6CIUUG_qQMr" role="3xMlr6">
+          <node concept="2RqM1Q" id="6CIUUG_qQMp" role="_vnH8">
+            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVO" resolve="String" />
+          </node>
+        </node>
+      </node>
+      <node concept="6lMYc" id="6CIUUG_qQOr" role="PCHHv">
+        <property role="TrG5h" value="id" />
+        <node concept="3xHE8C" id="6CIUUG_qQRJ" role="3xMlr6">
+          <node concept="2RqM1Q" id="6CIUUG_qQRH" role="_vnH8">
+            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+          </node>
+        </node>
+      </node>
+      <node concept="6lMYc" id="6CIUUG_skNQ" role="PCHHv">
+        <property role="TrG5h" value="amount" />
+        <node concept="3xHE8C" id="6CIUUG_skNR" role="3xMlr6">
+          <node concept="2RqM1Q" id="6CIUUG_skNS" role="_vnH8">
+            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+          </node>
         </node>
       </node>
     </node>
