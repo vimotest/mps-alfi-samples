@@ -2160,7 +2160,7 @@
   <node concept="3mGtxK" id="5aQe$98O6of">
     <node concept="6nSm2" id="5aQe$98O6og" role="3mGtxP">
       <property role="PCHHn" value="6OepWIVA92I/package" />
-      <property role="TrG5h" value="Order" />
+      <property role="TrG5h" value="OrderInfo" />
       <node concept="6lMYc" id="5aQe$98O6vO" role="PCHHv">
         <property role="TrG5h" value="productId" />
         <node concept="3xHE8C" id="5aQe$98O6vP" role="3xMlr6">
