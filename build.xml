@@ -435,6 +435,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -447,6 +448,7 @@
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
@@ -534,10 +536,12 @@
       <module namespace="SoftwareComponentLanguage.sandbox" type="solution" uuid="b4a24014-52d7-42db-bd13-252ce7475af2">
         <dependencies>
           <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
+          <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
+          <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
         </uses>
         <sources jar="SoftwareComponentLanguage.sandbox-src.jar" descriptor="SoftwareComponentLanguage.sandbox.msd" />
       </module>
@@ -1008,6 +1012,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -1020,6 +1025,7 @@
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
@@ -1107,10 +1113,12 @@
       <module namespace="SoftwareComponentLanguage.sandbox" type="solution" uuid="b4a24014-52d7-42db-bd13-252ce7475af2">
         <dependencies>
           <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
+          <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
+          <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
         </uses>
         <sources jar="SoftwareComponentLanguage.sandbox-src.jar" descriptor="SoftwareComponentLanguage.sandbox.msd" />
       </module>
@@ -1453,6 +1461,7 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
         <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
@@ -1517,6 +1526,7 @@
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
         <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
@@ -1536,6 +1546,7 @@
       <classpath>
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
         <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
@@ -1579,6 +1590,7 @@
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.toBaseLanguage.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
         <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="apiguardian-api-1.1.2.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="opentest4j-1.2.0.jar" />
@@ -1659,6 +1671,7 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
         <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
@@ -1667,7 +1680,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.SoftwareComponentLanguage.generator" depends="java.compile.SoftwareComponentLanguage, fetchDependencies">
+  <target name="java.compile.SoftwareComponentLanguage.generator" depends="java.compile.SoftwareComponentLanguage, java.compile.SoftwareComponentLanguage.runtime, fetchDependencies">
     <mkdir dir="${basedir}/languages/SoftwareComponentLanguage/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/SoftwareComponentLanguage.generator" />
     <javac destdir="${build.tmp}/java/out/SoftwareComponentLanguage.generator" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -1700,6 +1713,7 @@
         <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/SoftwareComponentLanguage" />
+        <pathelement path="${build.tmp}/java/out/SoftwareComponentLanguage.runtime" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/app-client.jar" />
@@ -1721,6 +1735,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
         <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
@@ -1750,9 +1765,9 @@
     <delete dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" />
     <delete dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
     <delete dir="${basedir}/languages/SoftwareComponentLanguage/source_gen" />
-    <delete dir="${basedir}/languages/SoftwareComponentLanguage/generator/source_gen" />
     <delete dir="${basedir}/languages/SoftwareComponentLanguage.runtime/source_gen" />
     <delete dir="${basedir}/languages/HamsterSimulatorLanguage.sandbox/source_gen" />
+    <delete dir="${basedir}/languages/SoftwareComponentLanguage/generator/source_gen" />
     <delete dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" />
   </target>
 </project>
