@@ -99,9 +99,6 @@
       <concept id="7144803224883743948" name="alfi.structure.IfStatement" flags="ng" index="32prLx">
         <child id="7144803224883864292" name="nonFinalClauses" index="32oX99" />
       </concept>
-      <concept id="7144803224889925327" name="alfi.structure.InferredTypeLoopVariableDefinition" flags="ng" index="32xATy">
-        <child id="7144803224889925328" name="expression" index="32xATX" />
-      </concept>
       <concept id="7144803224889925323" name="alfi.structure.ForStatement" flags="ng" index="32xATA">
         <child id="7144803224890013772" name="variableDefinitions" index="32xgzx" />
         <child id="7144803224890013774" name="body" index="32xgzz" />
@@ -722,9 +719,14 @@
           <property role="PCHHn" value="6OepWIVA92I/package" />
           <node concept="PCHzy" id="4DE6Zndz51C" role="PCHGa">
             <node concept="32xATA" id="4DE6Zndz58l" role="PCHzz">
-              <node concept="32xATy" id="4DE6Zndz58n" role="32xgzx">
+              <node concept="32xAZV" id="3_puicMiqS1" role="32xgzx">
                 <property role="TrG5h" value="productId" />
-                <node concept="32M0$0" id="4DE6Zndz58M" role="32xATX">
+                <node concept="3xHE8C" id="3_puicMiqWC" role="32xAZR">
+                  <node concept="2RqM1Q" id="3_puicMiqWA" role="_vnH8">
+                    <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+                  </node>
+                </node>
+                <node concept="32M0$0" id="4DE6Zndz58M" role="32xAZU">
                   <node concept="32Pqhl" id="4DE6Zndz58N" role="32PqmZ">
                     <node concept="1F1Xwt" id="4DE6Zndz58$" role="32Men7" />
                     <node concept="_vnHe" id="4DE6Zndz59B" role="32Men1">
@@ -742,7 +744,7 @@
                       <node concept="_uYbk" id="4DE6Zndz5dN" role="_vku1">
                         <node concept="_vnHb" id="4DE6Zndz5dO" role="_uYbl">
                           <node concept="2RqM1Q" id="4DE6Zndz5dP" role="_vnH8">
-                            <ref role="2RqM1R" node="4DE6Zndz58n" resolve="productId" />
+                            <ref role="2RqM1R" node="3_puicMiqS1" resolve="productId" />
                           </node>
                         </node>
                       </node>
@@ -832,9 +834,14 @@
               </node>
             </node>
             <node concept="32xATA" id="6uQxlEe_yLP" role="PCHzz">
-              <node concept="32xATy" id="6uQxlEe_yLR" role="32xgzx">
+              <node concept="32xAZV" id="3_puicMiaGv" role="32xgzx">
                 <property role="TrG5h" value="productId" />
-                <node concept="_uYbk" id="6uQxlEe_zMp" role="32xATX">
+                <node concept="3xHE8C" id="3_puicMiaIK" role="32xAZR">
+                  <node concept="2RqM1Q" id="3_puicMiaII" role="_vnH8">
+                    <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+                  </node>
+                </node>
+                <node concept="_uYbk" id="6uQxlEe_zMp" role="32xAZU">
                   <node concept="_vnHb" id="6uQxlEe_zMr" role="_uYbl">
                     <node concept="2RqM1Q" id="6uQxlEe_zMt" role="_vnH8">
                       <ref role="2RqM1R" node="6uQxlEe_ySD" resolve="productIds" />
@@ -852,7 +859,7 @@
                       <node concept="_uYbk" id="6uQxlEe_zUi" role="_vku1">
                         <node concept="_vnHb" id="6uQxlEe_zUk" role="_uYbl">
                           <node concept="2RqM1Q" id="6uQxlEe_zUm" role="_vnH8">
-                            <ref role="2RqM1R" node="6uQxlEe_yLR" resolve="product" />
+                            <ref role="2RqM1R" node="3_puicMiaGv" resolve="productId" />
                           </node>
                         </node>
                       </node>
@@ -889,7 +896,7 @@
                           <node concept="_uYbk" id="6uQxlEe_$3f" role="2vFQ1F">
                             <node concept="_vnHb" id="6uQxlEe_$3h" role="_uYbl">
                               <node concept="2RqM1Q" id="6uQxlEe_$6f" role="_vnH8">
-                                <ref role="2RqM1R" node="6uQxlEe_yLR" resolve="productId" />
+                                <ref role="2RqM1R" node="3_puicMiaGv" resolve="productId" />
                               </node>
                             </node>
                           </node>
@@ -954,6 +961,10 @@
                 <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="Product" />
               </node>
             </node>
+            <node concept="3xMmcA" id="3_puicMihpf" role="3xLlrW">
+              <node concept="32L9hf" id="3_puicMihul" role="3xM9QG" />
+            </node>
+            <node concept="hh2MY" id="3_puicMihzb" role="hh1p4" />
           </node>
         </node>
       </node>
