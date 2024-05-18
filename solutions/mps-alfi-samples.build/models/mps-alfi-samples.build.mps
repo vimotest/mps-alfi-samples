@@ -110,7 +110,6 @@
       </concept>
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
-        <property id="1500819558096356884" name="doNotCompile" index="2GAjPV" />
         <child id="5253498789149547825" name="sources" index="3bR31x" />
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
@@ -790,7 +789,6 @@
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="SoftwareComponentLanguage.sandbox" />
         <property role="3LESm3" value="b4a24014-52d7-42db-bd13-252ce7475af2" />
-        <property role="2GAjPV" value="true" />
         <node concept="55IIr" id="1YdqyHmFMh3" role="3LF7KH">
           <node concept="2Ry0Ak" id="1YdqyHmFMh4" role="iGT6I">
             <property role="2Ry0Am" value="languages" />
@@ -831,6 +829,16 @@
         <node concept="1SiIV0" id="7woNqO40Glx" role="3bR37C">
           <node concept="3bR9La" id="7woNqO40Gly" role="1SiIV1">
             <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QZKZ1n0HqI" role="3bR37C">
+          <node concept="3bR9La" id="7QZKZ1n0HqJ" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1xb0AuwN7WS" resolve="JUnit" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QZKZ1n0VXL" role="3bR37C">
+          <node concept="3bR9La" id="7QZKZ1n0VXM" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1ULLXZL0gZG" resolve="org.junit.junit5" />
           </node>
         </node>
       </node>

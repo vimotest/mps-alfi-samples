@@ -537,16 +537,22 @@
         <dependencies>
           <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
           <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
+          <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
+          <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
         </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
         <sources jar="SoftwareComponentLanguage.sandbox-src.jar" descriptor="SoftwareComponentLanguage.sandbox.msd" />
       </module>
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.sandbox.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.sandbox.jar" />
     </jar>
@@ -1114,16 +1120,22 @@
         <dependencies>
           <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
           <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
+          <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
+          <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
         </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
         <sources jar="SoftwareComponentLanguage.sandbox-src.jar" descriptor="SoftwareComponentLanguage.sandbox.msd" />
       </module>
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.sandbox.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.sandbox.jar1" />
     </jar>
@@ -1204,7 +1216,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.AlfiSamples.genplan, java.compile.HamsterSimulatorLanguage, java.compile.HamsterSimulatorLanguage.generator, java.compile.HamsterSimulatorLanguage.runtime, java.compile.HamsterSimulatorLanguage.sandbox, java.compile.SoftwareComponentLanguage, java.compile.SoftwareComponentLanguage.generator, java.compile.SoftwareComponentLanguage.runtime" />
+  <target name="compileJava" depends="java.compile.AlfiSamples.genplan, java.compile.HamsterSimulatorLanguage, java.compile.HamsterSimulatorLanguage.generator, java.compile.HamsterSimulatorLanguage.runtime, java.compile.HamsterSimulatorLanguage.sandbox, java.compile.SoftwareComponentLanguage, java.compile.SoftwareComponentLanguage.generator, java.compile.SoftwareComponentLanguage.runtime, java.compile.SoftwareComponentLanguage.sandbox" />
   
   <target name="processResources" />
   
@@ -1756,6 +1768,56 @@
     </javac>
     <copy todir="${build.tmp}/java/out/SoftwareComponentLanguage.runtime">
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.runtime/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
+  <target name="java.compile.SoftwareComponentLanguage.sandbox" depends="java.compile.AlfiSamples.genplan, java.compile.SoftwareComponentLanguage.runtime, fetchDependencies">
+    <mkdir dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox" />
+    <javac destdir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
+        <pathelement path="${build.tmp}/java/out/AlfiSamples.genplan" />
+        <pathelement path="${build.tmp}/java/out/SoftwareComponentLanguage.runtime" />
+        <fileset file="${artifacts.mps}/lib/junit4.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/util-8.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
+        <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
+        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="apiguardian-api-1.1.2.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="opentest4j-1.2.0.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-api-5.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-engine-5.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-migrationsupport-5.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-params-5.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-platform-commons-1.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-platform-engine-1.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-platform-launcher-1.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-vintage-engine-5.9.3.jar" />
+        <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-platform-reporting-1.9.3.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox">
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
