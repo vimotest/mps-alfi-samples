@@ -108,6 +108,10 @@
         <child id="7144803224889925466" name="typeName" index="32xAZR" />
         <child id="7144803224889925463" name="expression" index="32xAZU" />
       </concept>
+      <concept id="7144803224891645266" name="alfi.structure.NumericUnaryExpression_Minus" flags="ng" index="32B2RZ" />
+      <concept id="7144803224891528095" name="alfi.structure.UnaryExpression" flags="ng" index="32BIcM">
+        <child id="7144803224891528117" name="operand" index="32BIco" />
+      </concept>
       <concept id="7144803224889269844" name="alfi.structure.ReturnStatement" flags="ng" index="32G6VT">
         <child id="8875975376183143672" name="expression" index="2vFQ1F" />
       </concept>
@@ -127,10 +131,6 @@
         <child id="7858332524534022078" name="namespaceDefinition" index="3mGtxP" />
       </concept>
       <concept id="2021446509810891979" name="alfi.structure.QualifiedTypeName" flags="ng" index="3xHE8C" />
-      <concept id="2021446509811544302" name="alfi.structure.TwosidedMultiplicityRange" flags="ng" index="3xMaSd">
-        <child id="2021446509811585014" name="lowerBound" index="3xM54l" />
-        <child id="2021446509811585019" name="upperBound" index="3xM54o" />
-      </concept>
       <concept id="2021446509811517476" name="alfi.structure.TypedElementDefinition" flags="ng" index="3xMlr7">
         <child id="6254876434755083966" name="_orderingAndUniqueness" index="hh1p4" />
         <child id="2021446509811779615" name="_multiplicityRange" index="3xLlrW" />
@@ -900,7 +900,11 @@
               </node>
             </node>
             <node concept="32G6VT" id="6uQxlEe_$92" role="PCHzz">
-              <node concept="2_e7m4" id="6uQxlEe_$9Z" role="2vFQ1F" />
+              <node concept="32B2RZ" id="2XqYE65H9F0" role="2vFQ1F">
+                <node concept="32T38h" id="2XqYE65H9F6" role="32BIco">
+                  <property role="32T38g" value="1" />
+                </node>
+              </node>
             </node>
           </node>
           <node concept="3xR696" id="6uQxlEe_yEg" role="PCHHv">
@@ -918,14 +922,6 @@
             <node concept="3xHE8C" id="6uQxlEe_yEx" role="3xMlr6">
               <node concept="2RqM1Q" id="6uQxlEe_yEw" role="_vnH8">
                 <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
-              </node>
-            </node>
-            <node concept="3xMaSd" id="5aQe$98O6fQ" role="3xLlrW">
-              <node concept="32T38h" id="5aQe$98O6hu" role="3xM54l">
-                <property role="32T38g" value="0" />
-              </node>
-              <node concept="32T38h" id="5aQe$98O6j4" role="3xM54o">
-                <property role="32T38g" value="1" />
               </node>
             </node>
           </node>
