@@ -69,5 +69,42 @@
       </node>
     </node>
   </node>
+  <node concept="2VgMpV" id="6uQxlEewyAL">
+    <property role="TrG5h" value="SwcToJava.genplan" />
+    <node concept="2VgMA2" id="6uQxlEewyAM" role="2VgMA7">
+      <property role="1s431M" value="true" />
+      <node concept="2Qf6Nf" id="6uQxlEewyAN" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="6uQxlEewyCF" role="2Qf6Ng">
+          <property role="2V$B1T" value="90dba4c7-2c2e-4bec-a587-6476e412e28c" />
+          <property role="2V$B1Q" value="SoftwareComponentLanguage" />
+        </node>
+      </node>
+    </node>
+    <node concept="2VgMA2" id="6uQxlEewyAP" role="2VgMA7">
+      <property role="1s431M" value="true" />
+      <node concept="2Qf6Nf" id="6uQxlEewyAQ" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="6uQxlEewyAR" role="2Qf6Ng">
+          <property role="2V$B1T" value="d0e1230a-72e3-4b6b-88f2-98d924f7de11" />
+          <property role="2V$B1Q" value="alfi.toBaseLanguage" />
+        </node>
+      </node>
+    </node>
+    <node concept="2VgMA2" id="6uQxlEewyAS" role="2VgMA7">
+      <property role="1s431M" value="true" />
+      <node concept="2Qf6Nf" id="6uQxlEewyAT" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="6uQxlEewyAU" role="2Qf6Ng">
+          <property role="2V$B1T" value="f3061a53-9226-4cc5-a443-f952ceaf5816" />
+          <property role="2V$B1Q" value="jetbrains.mps.baseLanguage" />
+        </node>
+      </node>
+      <node concept="2Qf6Nf" id="6uQxlEewyAV" role="2Qf7GQ">
+        <property role="2Qf7GI" value="1009c2Af4wn/Extend" />
+        <node concept="2V$Bhx" id="6uQxlEewyAW" role="2Qf6Ng">
+          <property role="2V$B1T" value="f3061a53-9226-4cc5-a443-f952ceaf5816" />
+          <property role="2V$B1Q" value="jetbrains.mps.baseLanguage" />
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

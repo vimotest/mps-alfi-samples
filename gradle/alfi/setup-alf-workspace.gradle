@@ -6,23 +6,44 @@ task setupAlfWorkspace {
     doLast {
         file(targetDirectory).deleteDir()
         file(targetDirectory).mkdir()
+        file("$targetDirectory/hamster").mkdir()
+        file("$targetDirectory/swc").mkdir()
 
-        def jarWithAlfFiles = file("$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/mps-alfi-samples/HamsterSimulatorLanguage.sandbox-src.jar")
+        def jarWithHamsterAlfFiles = file("$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.sandbox-src.jar")
         copy {
-            from(zipTree(jarWithAlfFiles)){
+            from(zipTree(jarWithHamsterAlfFiles)){
                 include 'HamsterSimulatorLanguage/sandbox/**/*.alf'
             }
-            into file("$targetDirectory")
+            into file("$targetDirectory/hamster")
             eachFile { FileCopyDetails details ->
                 details.path = details.path.replaceFirst('HamsterSimulatorLanguage/sandbox/', '')
             }
             includeEmptyDirs = false
 
             // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
-            file("$targetDirectory/HamsterTestSuiteActivity.alf").text = """
+            file("$targetDirectory/hamster/HamsterTestSuiteActivity.alf").text = """
             activity HamsterTestSuiteActivity() {
-                new HamsterTestSuite().HelloPaule();
                 new HamsterTestSuite().Demo();
+                WriteLine("FINISHED");
+            }
+            """
+        }
+
+        def jarWithSwcAlfFiles = file("$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.sandbox-src.jar")
+        copy {
+            from(zipTree(jarWithSwcAlfFiles)){
+                include 'SoftwareComponentLanguage/sandbox/**/*.alf'
+            }
+            into file("$targetDirectory/swc")
+            eachFile { FileCopyDetails details ->
+                details.path = details.path.replaceFirst('SoftwareComponentLanguage/sandbox/', '')
+            }
+            includeEmptyDirs = false
+
+            // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
+            file("$targetDirectory/swc/Webstore_ComponentTestActivity.alf").text = """
+            activity Webstore_ComponentTestActivity() {
+                new Webstore_ComponentTest().testCase();
                 WriteLine("FINISHED");
             }
             """

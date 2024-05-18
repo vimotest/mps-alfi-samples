@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:a19e502a-25b4-46c4-81c6-6d4d9d74f420(main@genplan)">
+<model ref="r:a99c7530-e7d3-4301-a006-aae1df0865e8(swcMain@genplan)">
   <persistence version="9" />
   <languages>
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan" version="2" />
   </languages>
   <imports>
@@ -27,13 +26,13 @@
       </concept>
     </language>
   </registry>
-  <node concept="2VgMpV" id="37zNn5Mz2HK">
-    <property role="TrG5h" value="HamsterMain.genplan" />
-    <node concept="10T23i" id="5tK9548_hA7" role="2VgMA7">
-      <ref role="10T23l" to="6bqz:37zNn5Mz2HK" resolve="HamsterToAlf.genplan" />
+  <node concept="2VgMpV" id="6uQxlEewyzt">
+    <property role="TrG5h" value="SwcMain.genplan" />
+    <node concept="10T23i" id="6uQxlEewyzu" role="2VgMA7">
+      <ref role="10T23l" to="6bqz:6uQxlEewy$y" resolve="SwcToAlf.genplan" />
     </node>
-    <node concept="NozSJ" id="5tK9548_hAk" role="2VgMA7">
-      <ref role="NozSM" to="5ya6:74z8RZkPvD5" resolve="HamsterToJava.genplan" />
+    <node concept="NozSJ" id="6uQxlEewyzv" role="2VgMA7">
+      <ref role="NozSM" to="5ya6:6uQxlEewyAL" resolve="SwcToJava.genplan" />
     </node>
   </node>
 </model>

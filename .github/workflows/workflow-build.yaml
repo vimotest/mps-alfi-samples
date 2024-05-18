@@ -40,10 +40,14 @@ jobs:
       # Run Java Generations
       - name: Test Java Hamster Program
         run: sh ./gradlew executeJavaHamsterTests
+      - name: Test Java SWC Program
+        run: sh ./gradlew executeJavaSwcTests
 
       # Run ALF Generations
       - name: Test ALF Hamster Program
         run: sh ./gradlew executeAlfHamsterTests
+      - name: Test ALF SWC Tests
+        run: sh ./gradlew executeAlfSwcTests
 
       # Stop Xvfb
       - name: Tear down xvfb
