@@ -25,6 +25,8 @@
         <child id="8164141882417526102" name="body" index="GbAUv" />
       </concept>
       <concept id="3492897886877920834" name="alfi.structure.EmptyLineNamespaceMember" flags="ng" index="8qQDt" />
+      <concept id="4132467325163854475" name="alfi.structure.EnumerationLiteralName" flags="ng" index="b5qeC" />
+      <concept id="4132467325163832519" name="alfi.structure.EnumerationDefinition" flags="ng" index="b5vR$" />
       <concept id="6254876434755085380" name="alfi.structure.SequenceFlag" flags="ng" index="hh2MY" />
       <concept id="1820071129312107522" name="alfi.structure.AlfSupportedStereotypeName" flags="ng" index="2hPqOe">
         <property id="1820071129312120005" name="stereotype" index="2hPvR9" />
@@ -203,6 +205,10 @@
         <property role="TrG5h" value="HamsterProgramBase" />
         <property role="PCHHq" value="true" />
         <property role="PCHGy" value="true" />
+      </node>
+      <node concept="b5vR$" id="3_puicMDzo1" role="PCHHv">
+        <property role="PCHHq" value="true" />
+        <property role="TrG5h" value="Direction" />
       </node>
     </node>
   </node>
@@ -680,11 +686,13 @@
                           <node concept="_iR_j" id="74z8RZkf_gC" role="32Men7" />
                         </node>
                       </node>
-                      <node concept="32M0$0" id="37zNn5MzDaK" role="315$E5">
-                        <node concept="32Pqhl" id="37zNn5MzDaL" role="32PqmZ">
-                          <node concept="_iR_j" id="37zNn5MzDaF" role="32Men7" />
-                          <node concept="_vnHe" id="37zNn5MzDDE" role="32Men1">
-                            <ref role="3acloq" node="74z8RZkfqVt" resolve="DIRECTION_NORTH" />
+                      <node concept="_uYbk" id="3_puicMDGMB" role="315$E5">
+                        <node concept="_vnHb" id="3_puicMDGMC" role="_uYbl">
+                          <node concept="2RqM1Q" id="3_puicMDGMD" role="_vnH8">
+                            <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                          </node>
+                          <node concept="2RqM1Q" id="3_puicMDGME" role="_vnH8">
+                            <ref role="2RqM1R" node="3_puicMD$xR" resolve="NORTH" />
                           </node>
                         </node>
                       </node>
@@ -701,11 +709,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzBHV" role="31szGQ">
-                    <node concept="32Pqhl" id="37zNn5MzBHW" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5MzBfm" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5MzCcF" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqN2" resolve="DIRECTION_EAST" />
+                  <node concept="_uYbk" id="3_puicMDFRP" role="31szGQ">
+                    <node concept="_vnHb" id="3_puicMDFRQ" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDFRR" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDFRS" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzmv" resolve="EAST" />
                       </node>
                     </node>
                   </node>
@@ -725,11 +735,13 @@
                           <node concept="_iR_j" id="74z8RZkf_wc" role="32Men7" />
                         </node>
                       </node>
-                      <node concept="32M0$0" id="37zNn5MzG$s" role="315$E5">
-                        <node concept="32Pqhl" id="37zNn5MzG$t" role="32PqmZ">
-                          <node concept="_iR_j" id="37zNn5MzG$n" role="32Men7" />
-                          <node concept="_vnHe" id="37zNn5MzH3E" role="32Men1">
-                            <ref role="3acloq" node="74z8RZkfqN2" resolve="DIRECTION_EAST" />
+                      <node concept="_uYbk" id="3_puicMDGlA" role="315$E5">
+                        <node concept="_vnHb" id="3_puicMDGlB" role="_uYbl">
+                          <node concept="2RqM1Q" id="3_puicMDGlC" role="_vnH8">
+                            <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                          </node>
+                          <node concept="2RqM1Q" id="3_puicMDGlD" role="_vnH8">
+                            <ref role="2RqM1R" node="3_puicMDzmv" resolve="EAST" />
                           </node>
                         </node>
                       </node>
@@ -746,11 +758,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzF7b" role="31szGQ">
-                    <node concept="32Pqhl" id="37zNn5MzF7c" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5MzF76" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5MzFAf" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqAl" resolve="DIRECTION_SOUTH" />
+                  <node concept="_uYbk" id="3_puicMDHWb" role="31szGQ">
+                    <node concept="_vnHb" id="3_puicMDHWc" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDHWd" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDHWe" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMD$f_" resolve="SOUTH" />
                       </node>
                     </node>
                   </node>
@@ -770,11 +784,13 @@
                           <node concept="_iR_j" id="74z8RZkfAhN" role="32Men7" />
                         </node>
                       </node>
-                      <node concept="32M0$0" id="37zNn5MzJ1g" role="315$E5">
-                        <node concept="32Pqhl" id="37zNn5MzJ1h" role="32PqmZ">
-                          <node concept="_iR_j" id="37zNn5MzJ1b" role="32Men7" />
-                          <node concept="_vnHe" id="37zNn5MzJwM" role="32Men1">
-                            <ref role="3acloq" node="74z8RZkfqAl" resolve="DIRECTION_SOUTH" />
+                      <node concept="_uYbk" id="3_puicMDJ5Z" role="315$E5">
+                        <node concept="_vnHb" id="3_puicMDJ60" role="_uYbl">
+                          <node concept="2RqM1Q" id="3_puicMDJ61" role="_vnH8">
+                            <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                          </node>
+                          <node concept="2RqM1Q" id="3_puicMDJ62" role="_vnH8">
+                            <ref role="2RqM1R" node="3_puicMD$f_" resolve="SOUTH" />
                           </node>
                         </node>
                       </node>
@@ -791,11 +807,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzI2b" role="31szGQ">
-                    <node concept="32Pqhl" id="37zNn5MzI2c" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5MzI26" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5MzIxz" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqSt" resolve="DIRECTION_WEST" />
+                  <node concept="_uYbk" id="3_puicMDJxS" role="31szGQ">
+                    <node concept="_vnHb" id="3_puicMDJxT" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDJxU" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDJxV" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMD$oT" resolve="WEST" />
                       </node>
                     </node>
                   </node>
@@ -813,11 +831,13 @@
                       <node concept="_iR_j" id="74z8RZkfCO8" role="32Men7" />
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzK0D" role="315$E5">
-                    <node concept="32Pqhl" id="37zNn5MzK0E" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5MzK0$" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5MzKwl" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqSt" resolve="DIRECTION_WEST" />
+                  <node concept="_uYbk" id="3_puicMDKFC" role="315$E5">
+                    <node concept="_vnHb" id="3_puicMDKFD" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDKFE" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDKFF" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMD$oT" resolve="WEST" />
                       </node>
                     </node>
                   </node>
@@ -1092,11 +1112,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzevF" role="31szGQ">
-                    <node concept="32Pqhl" id="37zNn5MzevG" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5Mze2m" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5MzeXb" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqN2" resolve="DIRECTION_EAST" />
+                  <node concept="_uYbk" id="3_puicMDD9g" role="31szGQ">
+                    <node concept="_vnHb" id="3_puicMDD9h" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDD9i" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDD9j" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzmv" resolve="EAST" />
                       </node>
                     </node>
                   </node>
@@ -1143,11 +1165,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzfT$" role="31szGQ">
-                    <node concept="32Pqhl" id="37zNn5MzfT_" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5MzfTv" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5Mzgne" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqAl" resolve="DIRECTION_SOUTH" />
+                  <node concept="_uYbk" id="3_puicMDDB1" role="31szGQ">
+                    <node concept="_vnHb" id="3_puicMDDB2" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDDB3" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDDB4" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMD$f_" resolve="SOUTH" />
                       </node>
                     </node>
                   </node>
@@ -1194,11 +1218,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="32M0$0" id="37zNn5MzhiB" role="31szGQ">
-                    <node concept="32Pqhl" id="37zNn5MzhiC" role="32PqmZ">
-                      <node concept="_iR_j" id="37zNn5Mzhiy" role="32Men7" />
-                      <node concept="_vnHe" id="37zNn5MzhKr" role="32Men1">
-                        <ref role="3acloq" node="74z8RZkfqSt" resolve="DIRECTION_WEST" />
+                  <node concept="_uYbk" id="3_puicMDEJ1" role="31szGQ">
+                    <node concept="_vnHb" id="3_puicMDEJ2" role="_uYbl">
+                      <node concept="2RqM1Q" id="3_puicMDEJ3" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+                      </node>
+                      <node concept="2RqM1Q" id="3_puicMDEJ4" role="_vnH8">
+                        <ref role="2RqM1R" node="3_puicMD$oT" resolve="WEST" />
                       </node>
                     </node>
                   </node>
@@ -1282,63 +1308,21 @@
           </node>
         </node>
       </node>
-      <node concept="6lMYc" id="74z8RZkfqN2" role="PCHHv">
-        <property role="TrG5h" value="DIRECTION_EAST" />
-        <node concept="3xHE8C" id="74z8RZkfqN3" role="3xMlr6">
-          <node concept="2RqM1Q" id="74z8RZkfqN4" role="_vnH8">
-            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
-          </node>
-        </node>
-        <node concept="32T38h" id="74z8RZkfqN5" role="6k5i9">
-          <property role="32T38g" value="0" />
-        </node>
-      </node>
-      <node concept="6lMYc" id="74z8RZkfqAl" role="PCHHv">
-        <property role="TrG5h" value="DIRECTION_SOUTH" />
-        <node concept="3xHE8C" id="74z8RZkfqJ$" role="3xMlr6">
-          <node concept="2RqM1Q" id="74z8RZkfqJy" role="_vnH8">
-            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
-          </node>
-        </node>
-        <node concept="32T38h" id="74z8RZkfqM1" role="6k5i9">
-          <property role="32T38g" value="1" />
-        </node>
-      </node>
-      <node concept="6lMYc" id="74z8RZkfqSt" role="PCHHv">
-        <property role="TrG5h" value="DIRECTION_WEST" />
-        <node concept="3xHE8C" id="74z8RZkfqSu" role="3xMlr6">
-          <node concept="2RqM1Q" id="74z8RZkfqSv" role="_vnH8">
-            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
-          </node>
-        </node>
-        <node concept="32T38h" id="74z8RZkfqSw" role="6k5i9">
-          <property role="32T38g" value="2" />
-        </node>
-      </node>
-      <node concept="6lMYc" id="74z8RZkfqVt" role="PCHHv">
-        <property role="TrG5h" value="DIRECTION_NORTH" />
-        <node concept="3xHE8C" id="74z8RZkfqVu" role="3xMlr6">
-          <node concept="2RqM1Q" id="74z8RZkfqVv" role="_vnH8">
-            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
-          </node>
-        </node>
-        <node concept="32T38h" id="74z8RZkfqVw" role="6k5i9">
-          <property role="32T38g" value="3" />
-        </node>
-      </node>
       <node concept="8qQDt" id="74z8RZkfqbQ" role="PCHHv" />
       <node concept="6lMYc" id="74z8RZkfrnn" role="PCHHv">
         <property role="TrG5h" value="currentDirection" />
         <node concept="3xHE8C" id="74z8RZkfrno" role="3xMlr6">
           <node concept="2RqM1Q" id="74z8RZkfrnp" role="_vnH8">
-            <ref role="2RqM1R" to="gkn4:1KdBIfXrfVB" resolve="Integer" />
+            <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
           </node>
         </node>
-        <node concept="32M0$0" id="37zNn5MzbUV" role="6k5i9">
-          <node concept="32Pqhl" id="37zNn5MzbUW" role="32PqmZ">
-            <node concept="_iR_j" id="37zNn5MzbUQ" role="32Men7" />
-            <node concept="_vnHe" id="37zNn5MzcmD" role="32Men1">
-              <ref role="3acloq" node="74z8RZkfqN2" resolve="DIRECTION_EAST" />
+        <node concept="_uYbk" id="3_puicMDAXN" role="6k5i9">
+          <node concept="_vnHb" id="3_puicMDAXP" role="_uYbl">
+            <node concept="2RqM1Q" id="3_puicMDAXR" role="_vnH8">
+              <ref role="2RqM1R" node="3_puicMDzbM" resolve="Direction" />
+            </node>
+            <node concept="2RqM1Q" id="3_puicMDBPb" role="_vnH8">
+              <ref role="2RqM1R" node="3_puicMDzmv" resolve="EAST" />
             </node>
           </node>
         </node>
@@ -2167,6 +2151,32 @@
       <node concept="_vnHb" id="74z8RZkfIzN" role="$kHGj">
         <node concept="2RqM1Q" id="74z8RZkfIzO" role="_vnH8">
           <ref role="2RqM1R" node="2CGYajy$AIW" resolve="hamster" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="3mGtxK" id="3_puicMDzaC">
+    <property role="3GE5qa" value="HamsterLibrary" />
+    <node concept="b5vR$" id="3_puicMDzbM" role="3mGtxP">
+      <property role="PCHHn" value="6OepWIVA92I/package" />
+      <property role="TrG5h" value="Direction" />
+      <node concept="b5qeC" id="3_puicMDzmv" role="PCHHv">
+        <property role="TrG5h" value="EAST" />
+      </node>
+      <node concept="b5qeC" id="3_puicMD$f_" role="PCHHv">
+        <property role="TrG5h" value="SOUTH" />
+      </node>
+      <node concept="b5qeC" id="3_puicMD$oT" role="PCHHv">
+        <property role="TrG5h" value="WEST" />
+      </node>
+      <node concept="b5qeC" id="3_puicMD$xR" role="PCHHv">
+        <property role="TrG5h" value="NORTH" />
+      </node>
+    </node>
+    <node concept="3mGtyY" id="3_puicMDzgb" role="3mGtxR">
+      <node concept="_vnHb" id="3_puicMDzgc" role="$kHGj">
+        <node concept="2RqM1Q" id="3_puicMDzgd" role="_vnH8">
+          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="HamsterLibrary" />
         </node>
       </node>
     </node>
