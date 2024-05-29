@@ -4,11 +4,12 @@
   <languages>
     <use id="90dba4c7-2c2e-4bec-a587-6476e412e28c" name="SoftwareComponentLanguage" version="0" />
     <use id="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703" name="alfi" version="0" />
-    <use id="d0e1230a-72e3-4b6b-88f2-98d924f7de11" name="alfi.toBaseLanguage" version="0" />
+    <use id="d0e1230a-72e3-4b6b-88f2-98d924f7de11" name="alfi.toJavaBaseLanguage" version="0" />
   </languages>
   <imports>
     <import index="gkn4" ref="r:fae4a196-11c4-4868-9ebd-1379c8e56907(alfStandardModelLibrary)" />
     <import index="u132" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:junit.framework(JUnit/)" />
+    <import index="fmya" ref="r:27a31951-2d45-4457-8073-f28d9c4b2a79(wrappers.cppWrappers)" />
   </imports>
   <registry>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
