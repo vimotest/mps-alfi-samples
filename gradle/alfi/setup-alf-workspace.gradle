@@ -19,14 +19,11 @@ task setupAlfWorkspace {
                 details.path = details.path.replaceFirst('HamsterSimulatorLanguage/sandbox/', '')
             }
             includeEmptyDirs = false
-
-            // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
-            file("$targetDirectory/hamster/HamsterTestSuiteActivity.alf").text = """
-            activity HamsterTestSuiteActivity() {
-                new HamsterTestSuite().Demo();
-                WriteLine("FINISHED");
-            }
-            """
+        }
+        // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
+        copy {
+            from "$projectDir/scripts/hamster/alf"
+            into file("$targetDirectory/hamster")
         }
 
         def jarWithSwcAlfFiles = file("$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.sandbox-src.jar")
@@ -39,14 +36,11 @@ task setupAlfWorkspace {
                 details.path = details.path.replaceFirst('SoftwareComponentLanguage/sandbox/', '')
             }
             includeEmptyDirs = false
-
-            // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
-            file("$targetDirectory/swc/Webstore_ComponentTestActivity.alf").text = """
-            activity Webstore_ComponentTestActivity() {
-                new Webstore_ComponentTest().testCase();
-                WriteLine("FINISHED");
-            }
-            """
+        }
+        // workaround: test suite generation has to be adjusted, until so, we add a manual activity for this
+        copy {
+            from "$projectDir/scripts/swc/alf"
+            into file("$targetDirectory/swc")
         }
     }
 }

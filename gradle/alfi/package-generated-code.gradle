@@ -1,0 +1,61 @@
+ext {
+    codeGenTargetDir = "$buildDir/code-gen"
+}
+
+task packageGeneratedCode {
+    group 'alfi-samples'
+
+
+    doFirst {
+        file(codeGenTargetDir).deleteDir()
+        file(codeGenTargetDir).mkdir()
+        file("$codeGenTargetDir/hamster").mkdir()
+        file("$codeGenTargetDir/swc").mkdir()
+    }
+
+    doLast {
+        copyGeneratedCode("HamsterSimulatorLanguage", "hamster")
+        copyGeneratedCode("SoftwareComponentLanguage", "swc")
+    }
+}
+
+private def copyGeneratedCode(String languageName, String targetDirName) {
+    def sourceGenDir = "$projectDir/languages/${languageName}.sandbox/source_gen"
+    def targetDir = "$ext.codeGenTargetDir/$targetDirName"
+
+    copy {
+        from sourceGenDir
+        into "$targetDir/cpp"
+        include('**/*.cpp', '**/*.h', '**/*.hpp', '**/*.cmake')
+    }
+    copy {
+        from "$projectDir/scripts/$targetDirName/cpp"
+        into "$targetDir/cpp"
+    }
+
+    copy {
+        from sourceGenDir
+        into "$targetDir/java/src/main/java"
+        include('**/*.java')
+    }
+    copy {
+        from "$projectDir/scripts/$targetDirName/java"
+        into "$targetDir/java"
+    }
+
+    copy {
+        from "$sourceGenDir/$languageName/sandbox"
+        into "$targetDir/alf"
+        include('**/*.alf')
+    }
+    copy {
+        from "$projectDir/scripts/$targetDirName/alf"
+        into "$targetDir/alf"
+    }
+
+    fileTree(targetDir).visit { FileVisitDetails details ->
+        if (details.directory && details.file.list().length == 0) {
+            details.file.delete()
+        }
+    }
+}

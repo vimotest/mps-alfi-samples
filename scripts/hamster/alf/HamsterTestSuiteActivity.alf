@@ -1,0 +1,4 @@
+activity HamsterTestSuiteActivity() {
+    new HamsterTestSuite().Demo();
+    WriteLine("FINISHED");
+}
