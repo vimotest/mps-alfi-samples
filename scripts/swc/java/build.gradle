@@ -12,5 +12,19 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'jupiter:junit:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.7.0'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java', '../../standardModelLibrary/java/src/main/java'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
 }

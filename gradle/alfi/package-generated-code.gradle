@@ -59,6 +59,7 @@ private def copyGeneratedCode(String sourcesArtifact, String targetDirName) {
         from "$projectDir/scripts/$targetDirName/java"
         into "$targetDir/java"
     }
+    moveJavaSourcesToTestDir(targetDir)
 
     copy {
         from zipTree(sourcesArtifact)
@@ -116,5 +117,21 @@ private def squashIntermediateDirs(File baseDir, boolean root = true) {
             subDir.deleteDir()
         }
         baseDir.deleteDir()
+    }
+}
+
+private void moveJavaSourcesToTestDir(String targetDir) {
+    def javaDir = "$targetDir/java/src/main/java"
+    def testDir = "$targetDir/java/src/test/java"
+
+    file(javaDir).eachFileRecurse { file ->
+        if (file.isFile() && file.text.contains("org.junit.jupiter")) {
+            def relativePath = file.path.substring(javaDir.length() + 1)
+            def testFile = new File(testDir, relativePath)
+            testFile.parentFile.mkdirs() // Ensure the target directory exists
+            file.renameTo(testFile)
+            println "Moved $file to $testFile"
+        }
+
     }
 }
