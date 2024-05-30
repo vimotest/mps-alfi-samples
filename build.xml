@@ -254,7 +254,6 @@
       <module namespace="HamsterSimulatorLanguage.runtime" type="solution" uuid="bbe92973-a4d0-4851-93ef-b76e4564b102">
         <dependencies>
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
-          <module ref="f13dd4ca-a567-47d7-98bc-31b72d168722(alfi.StandardModelLibraryStubs)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
@@ -296,15 +295,13 @@
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3(alfi.PrimitiveMapping)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
-          <module ref="f13dd4ca-a567-47d7-98bc-31b72d168722(alfi.StandardModelLibraryStubs)" kind="cl" />
-          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toBaseLanguage)" kind="cl" />
+          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
           <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" />
-          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toBaseLanguage" />
+          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
         </uses>
-        <library jar="../../lib/StandardModelLibraryStubs.jar" />
         <classpath>
           <entry path="." />
         </classpath>
@@ -541,13 +538,13 @@
           <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="cl" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
-          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toBaseLanguage)" kind="cl" />
+          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
           <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
-          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toBaseLanguage" />
+          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
         </uses>
         <classpath>
           <entry path="." />
@@ -602,28 +599,28 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/build/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar" />
     </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models">
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models">
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/build/AlfiSamples.genplan-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen">
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/AlfiSamples.genplan/AlfiSamples.genplan.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.layout}/mps-alfi-samples/lib" />
     <copy todir="${build.layout}/mps-alfi-samples/lib">
       <fileset file="${platform_lib}/idea_rt.jar" />
     </copy>
     <copy todir="${build.layout}/mps-alfi-samples/lib">
-      <fileset file="${dependencies_home}/alfi/lib/StandardModelLibraryStubs.jar" />
+      <fileset file="${dependencies_home}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
     </copy>
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.zip" />
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples" />
@@ -841,7 +838,6 @@
       <module namespace="HamsterSimulatorLanguage.runtime" type="solution" uuid="bbe92973-a4d0-4851-93ef-b76e4564b102">
         <dependencies>
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
-          <module ref="f13dd4ca-a567-47d7-98bc-31b72d168722(alfi.StandardModelLibraryStubs)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
@@ -883,15 +879,13 @@
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3(alfi.PrimitiveMapping)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
-          <module ref="f13dd4ca-a567-47d7-98bc-31b72d168722(alfi.StandardModelLibraryStubs)" kind="cl" />
-          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toBaseLanguage)" kind="cl" />
+          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
           <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" />
-          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toBaseLanguage" />
+          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
         </uses>
-        <library jar="../../../../mps-alfi-samples/lib/StandardModelLibraryStubs.jar" />
         <classpath>
           <entry path="." />
         </classpath>
@@ -1128,13 +1122,13 @@
           <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="cl" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
-          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toBaseLanguage)" kind="cl" />
+          <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
           <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
-          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toBaseLanguage" />
+          <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
         </uses>
         <classpath>
           <entry path="." />
@@ -1189,25 +1183,25 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/build/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar1" />
     </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models1">
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models1">
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/build/AlfiSamples.genplan-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen">
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/AlfiSamples.genplan/AlfiSamples.genplan.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models1" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/mps-alfi-samples.zip">
       <zipfileset file="${platform_lib}/idea_rt.jar" prefix="mps-alfi-samples/lib" />
-      <zipfileset file="${dependencies_home}/alfi/lib/StandardModelLibraryStubs.jar" prefix="mps-alfi-samples/lib" />
+      <zipfileset file="${dependencies_home}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" prefix="mps-alfi-samples/lib" />
       <fileset dir="${build.tmp}/default/mps-alfi-samples.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
@@ -1390,12 +1384,12 @@
   <target name="makeDependents" />
   
   <target name="java.compile.AlfiSamples.genplan" depends="fetchDependencies">
-    <mkdir dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" />
+    <mkdir dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
     <mkdir dir="${build.tmp}/java/out/AlfiSamples.genplan" />
     <javac destdir="${build.tmp}/java/out/AlfiSamples.genplan" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/solutions/AlfiSamples.Genplan/source_gen" />
+        <path location="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
@@ -1417,7 +1411,7 @@
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/AlfiSamples.genplan">
-      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
@@ -1471,7 +1465,6 @@
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
@@ -1482,7 +1475,6 @@
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage">
@@ -1541,13 +1533,11 @@
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage.generator">
@@ -1565,9 +1555,7 @@
       </src>
       <classpath>
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime">
@@ -1599,7 +1587,6 @@
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/AlfiSamples.genplan" />
         <pathelement path="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
-        <fileset file="${dependencies_home}/alfi/lib/StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/lib/junit4.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/util-8.jar" />
@@ -1607,11 +1594,9 @@
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.PrimitiveMapping.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.toBaseLanguage.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.toJavaBaseLanguage.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="apiguardian-api-1.1.2.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="opentest4j-1.2.0.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-api-5.9.3.jar" />
@@ -1679,7 +1664,6 @@
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
@@ -1692,7 +1676,6 @@
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/SoftwareComponentLanguage">
@@ -1751,12 +1734,10 @@
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/SoftwareComponentLanguage.generator">
@@ -1809,11 +1790,9 @@
         <fileset file="${artifacts.mps}/lib/util_rt.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibraryStubs.jar" />
-        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.toBaseLanguage.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.toJavaBaseLanguage.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.alfi-build}/tests/idea_rt.jar" />
-        <fileset file="${artifacts.alfi-build}/dependencies/alfi/lib/StandardModelLibraryStubs.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="apiguardian-api-1.1.2.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="opentest4j-1.2.0.jar" />
         <fileset dir="${artifacts.mps}/plugins/mps-testing/languages/junit5/lib" includes="junit-jupiter-api-5.9.3.jar" />
@@ -1833,7 +1812,7 @@
   </target>
   
   <target name="cleanSources">
-    <delete dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" />
+    <delete dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
     <delete dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" />
     <delete dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" />
     <delete dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
