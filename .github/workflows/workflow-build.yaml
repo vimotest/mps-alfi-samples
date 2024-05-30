@@ -60,3 +60,13 @@ jobs:
           name: build-artifacts
           path: |
             build/artifacts/${{ env.PROJECT_NAME }}/${{ env.ARCHIVE_NAME }}.zip
+
+      # Archive Code
+      - name: Package Code
+        run: sh ./gradlew packageGeneratedCode
+      - name: Archive Code
+        uses: actions/upload-artifact@v3
+        with:
+          name: alfi-samples-code
+          path: |
+            build/code-gen

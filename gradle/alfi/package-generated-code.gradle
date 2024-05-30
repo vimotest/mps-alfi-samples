@@ -11,20 +11,37 @@ task packageGeneratedCode {
         file(codeGenTargetDir).mkdir()
         file("$codeGenTargetDir/hamster").mkdir()
         file("$codeGenTargetDir/swc").mkdir()
+        file("$codeGenTargetDir/standardModelLibrary").mkdir()
     }
 
     doLast {
-        copyGeneratedCode("HamsterSimulatorLanguage", "hamster")
-        copyGeneratedCode("SoftwareComponentLanguage", "swc")
+        def samplesArtifacts = "$buildDir/artifacts/mps-alfi-samples/mps-alfi-samples/languages"
+        def alfiArtifacts = "$buildDir/mps-bundle/dependencies/alfi/languages/alfi-modules"
+
+        copyGeneratedCode("$samplesArtifacts/hamster-simulator-language/HamsterSimulatorLanguage.sandbox-src.jar", "hamster")
+        copyGeneratedCode("$samplesArtifacts/software-component-language/SoftwareComponentLanguage.sandbox-src.jar", "swc")
+
+        copyGeneratedCode("$alfiArtifacts/alfi.StandardModelLibrary-src.jar", "standardModelLibrary")
+        ["hamster", "swc"].each { dirName ->
+            copy {
+                from "$codeGenTargetDir/standardModelLibrary/alf/testing"
+                into "$codeGenTargetDir/$dirName/alf"
+                // postprocess the files
+                eachFile { details ->
+                    def content = details.file.text.replaceAll('@primitive', '')
+                    details.file.text = content
+                }
+            }
+        }
+        file("$codeGenTargetDir/standardModelLibrary/alf").deleteDir()
     }
 }
 
-private def copyGeneratedCode(String languageName, String targetDirName) {
-    def sourceGenDir = "$projectDir/languages/${languageName}.sandbox/source_gen"
+private def copyGeneratedCode(String sourcesArtifact, String targetDirName) {
     def targetDir = "$ext.codeGenTargetDir/$targetDirName"
 
     copy {
-        from sourceGenDir
+        from zipTree(sourcesArtifact)
         into "$targetDir/cpp"
         include('**/*.cpp', '**/*.h', '**/*.hpp', '**/*.cmake')
     }
@@ -34,7 +51,7 @@ private def copyGeneratedCode(String languageName, String targetDirName) {
     }
 
     copy {
-        from sourceGenDir
+        from zipTree(sourcesArtifact)
         into "$targetDir/java/src/main/java"
         include('**/*.java')
     }
@@ -44,7 +61,7 @@ private def copyGeneratedCode(String languageName, String targetDirName) {
     }
 
     copy {
-        from "$sourceGenDir/$languageName/sandbox"
+        from zipTree(sourcesArtifact)
         into "$targetDir/alf"
         include('**/*.alf')
     }
@@ -52,10 +69,52 @@ private def copyGeneratedCode(String languageName, String targetDirName) {
         from "$projectDir/scripts/$targetDirName/alf"
         into "$targetDir/alf"
     }
+    squashIntermediateDirs(new File("$targetDir/alf"))
 
-    fileTree(targetDir).visit { FileVisitDetails details ->
-        if (details.directory && details.file.list().length == 0) {
-            details.file.delete()
+    def dirsToDelete = []
+    file(targetDir).eachFileRecurse { if (onlyContainsEmptyDirs(it) && !onlyContainsEmptyDirs(it.parentFile)) { dirsToDelete.add(it) } }
+    dirsToDelete.each { it.deleteDir() }
+}
+
+private static boolean onlyContainsEmptyDirs(File dir) {
+    if (!dir.isDirectory()) {
+        return false
+    }
+
+    def subFiles = dir.listFiles()
+    if (subFiles.length == 0) {
+        return true
+    }
+
+    return subFiles.every {
+        it.isDirectory() && onlyContainsEmptyDirs(it)
+    }
+}
+
+private def squashIntermediateDirs(File baseDir, boolean root = true) {
+    if (!baseDir.isDirectory()) {
+        return
+    }
+
+    baseDir.eachFile { file ->
+        if (file.isDirectory()) {
+            squashIntermediateDirs(file, false)
         }
+    }
+
+    if (root) {
+        return
+    }
+
+    def subFiles = baseDir.listFiles()
+
+    if (subFiles.every { it.isDirectory() }) {
+        subFiles.each { subDir ->
+            subDir.eachFile { subFile ->
+                subFile.renameTo(new File(baseDir.parentFile, subFile.name))
+            }
+            subDir.deleteDir()
+        }
+        baseDir.deleteDir()
     }
 }
