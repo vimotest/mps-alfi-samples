@@ -3,4 +3,4 @@ ext {
 }
 apply from: 'gradle/alfi/run-alfi-samples-alf.gradle'
 apply from: 'gradle/alfi/run-alfi-samples-java.gradle'
-//apply from: 'gradle/alfi/run-alfi-samples-cpp.gradle'
+apply from: 'gradle/alfi/run-alfi-samples-cpp.gradle'

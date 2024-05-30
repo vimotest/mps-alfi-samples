@@ -1,0 +1,56 @@
+def hamsterCppProjectDir = "$project.samplesCodeGenDir/hamster/cpp"
+def swcCppProjectDir = "$project.samplesCodeGenDir/swc/cpp"
+def standardModelLibraryCppDir = "$project.samplesCodeGenDir/standardModelLibrary/cpp"
+
+def cmakePath = System.getenv('CMAKE_PATH') ?: 'cmake'
+def ctestPath = System.getenv('CTEST_PATH') ?: 'ctest'
+
+task configureCppHamsterProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Configure C++ Hamster Programs'
+
+    commandLine cmakePath, '-S', hamsterCppProjectDir, '-B', "$hamsterCppProjectDir/build", "-DALFI_CPP_STANDARDMODELLIBRARY=$standardModelLibraryCppDir"
+    workingDir hamsterCppProjectDir
+}
+
+task buildCppHamsterProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Build C++ Hamster Programs'
+    dependsOn configureCppHamsterProject
+
+    commandLine cmakePath, "--build", "$hamsterCppProjectDir/build"
+    workingDir hamsterCppProjectDir
+}
+
+task executeCppHamsterTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Run C++ Hamster Tests'
+
+    commandLine ctestPath, '-C', 'Debug', '--extra-verbose'
+    workingDir "$hamsterCppProjectDir/build"
+}
+
+task configureCppSoftwareComponentProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Configure C++ Software Component Programs'
+
+    commandLine cmakePath, '-S', swcCppProjectDir, '-B', "$swcCppProjectDir/build", "-DALFI_CPP_STANDARDMODELLIBRARY=$standardModelLibraryCppDir"
+    workingDir swcCppProjectDir
+}
+
+task buildCppSoftwareComponentProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Build C++ Software Component Programs'
+    dependsOn configureCppSoftwareComponentProject
+
+    commandLine cmakePath, "--build", "$swcCppProjectDir/build"
+    workingDir swcCppProjectDir
+}
+
+task executeCppSoftwareComponentTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Run C++ Software Component Tests'
+
+    commandLine ctestPath, '-C', 'Debug', '--extra-verbose'
+    workingDir "$swcCppProjectDir/build"
+}

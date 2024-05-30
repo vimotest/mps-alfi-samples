@@ -7,10 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(source_gen)
 
-# TODO fix this path later by a Gradle preparation task
-include_directories(../../../mps-alfi/solutions/alfi.StandardModelLibrary/source_gen/wrappers/cppWrappers)
+message(STATUS "ALFI_CPP_STANDARDMODELLIBRARY: ${ALFI_CPP_STANDARDMODELLIBRARY}")
+include_directories(${ALFI_CPP_STANDARDMODELLIBRARY}/wrappers/cppWrappers)
 
-include(${CMAKE_SOURCE_DIR}/source_gen/HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.cmake)
+include(${CMAKE_SOURCE_DIR}/HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.cmake)
 
 # Add GoogleTest
 include(FetchContent)
@@ -27,16 +27,9 @@ enable_testing()
 
 add_executable(
         hamster_simulator_tests
-        ${CMAKE_SOURCE_DIR}/source_gen/HamsterSimulatorLanguage/sandbox/HamsterTestSuite.cpp
+        ${CMAKE_SOURCE_DIR}/HamsterSimulatorLanguage/sandbox/HamsterTestSuite.cpp
         ${GENERATED_SOURCES}
 )
+target_link_libraries(hamster_simulator_tests gtest_main)
 
-target_link_libraries(
-        hamster_simulator_tests
-        gtest_main
-)
-
-add_test(
-        NAME hamster_simulator_test
-        COMMAND hamster_simulator_tests
-)
+add_test(NAME hamster_simulator_tests COMMAND hamster_simulator_tests)

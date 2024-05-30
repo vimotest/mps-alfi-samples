@@ -7,10 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(source_gen)
 
-# TODO fix this path later by a Gradle preparation task
-include_directories(../../../mps-alfi/solutions/alfi.StandardModelLibrary/source_gen/wrappers/cppWrappers)
+message(STATUS "ALFI_CPP_STANDARDMODELLIBRARY: ${ALFI_CPP_STANDARDMODELLIBRARY}")
+include_directories(${ALFI_CPP_STANDARDMODELLIBRARY}/wrappers/cppWrappers)
 
-include(${CMAKE_SOURCE_DIR}/source_gen/SoftwareComponentLanguage/sandbox/SoftwareComponentLanguage.sandbox.cmake)
+include(${CMAKE_SOURCE_DIR}/SoftwareComponentLanguage/sandbox/SoftwareComponentLanguage.sandbox.cmake)
 
 # Add GoogleTest
 include(FetchContent)
@@ -27,7 +27,7 @@ enable_testing()
 
 add_executable(
         software_component_tests
-        ${CMAKE_SOURCE_DIR}/source_gen/SoftwareComponentLanguage/sandbox/Webstore_ComponentTest.cpp
+        ${CMAKE_SOURCE_DIR}/SoftwareComponentLanguage/sandbox/Webstore_ComponentTest.cpp
         ${GENERATED_SOURCES}
 )
 
@@ -37,6 +37,6 @@ target_link_libraries(
 )
 
 add_test(
-        NAME hamster_simulator_test
-        COMMAND hamster_simulator_tests
+        NAME software_component_tests
+        COMMAND software_component_tests
 )
