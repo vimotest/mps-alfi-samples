@@ -9,6 +9,7 @@
   <property name="platform_lib" location="${mps_home}/lib" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.alfi-build" location="${dependencies_home}" />
+  <property name="artifacts.CppBaseLanguage" location="${dependencies_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
   <property name="mps.date" value="${import.mps.mps.date}" />
@@ -1232,6 +1233,7 @@
     <echo message="generating" />
     <generate fork="true" logLevel="${mps.ant.log}">      
       <settings refid="m2m-defaults" />
+      <plugin path="${artifacts.CppBaseLanguage}/CppBaseLanguage" id="CppBaseLanguage" />
       <plugin path="${artifacts.alfi-build}/alfi" id="alfi" />
       <plugin path="${artifacts.mps}/plugins/mps-build" id="jetbrains.mps.build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" id="jetbrains.mps.core" />
