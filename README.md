@@ -2,6 +2,8 @@
 
 [![Integration Build](https://github.com/vimotest/mps-alfi-samples/actions/workflows/github-actions-integration.yaml/badge.svg)](https://github.com/vimotest/mps-alfi-samples/actions/workflows/github-actions-integration.yaml)
 
+[![DOI](https://zenodo.org/badge/782383157.svg)](https://zenodo.org/doi/10.5281/zenodo.11401862)
+
 This repository contains samples for the MPS ALFI approach: https://github.com/vimotest/mps-alfi
 
 ![ALFI Samples Process](documentation/figures/mps_alfi_process.png)
