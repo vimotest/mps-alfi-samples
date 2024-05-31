@@ -4,7 +4,7 @@ ext.languageName = "AlfiSampleLanguage"
 ext.mpsPlugins = [  ]
 
 ext.customMpsPlugins = [
-    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.0-alpha8/alfi.zip",
+    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.0/alfi.zip",
     "CppBaseLanguage": "https://github.com/Fumapps/CppBaseLanguage/releases/download/2023.3-beta8/CppBaseLanguage.zip"
 ]
 
