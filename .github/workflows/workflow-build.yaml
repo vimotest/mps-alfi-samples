@@ -152,7 +152,7 @@ jobs:
 
       # Build C++ Programs
       - name: Build C++ Hamster Program
-        run: sh ./gradlew buildCppHamsterProject --debug
+        run: sh ./gradlew buildCppHamsterProject
       - name: Build C++ SWC Program
         run: sh ./gradlew buildCppSoftwareComponentProject
 
