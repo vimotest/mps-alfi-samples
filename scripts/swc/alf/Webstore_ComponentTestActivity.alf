@@ -1,0 +1,4 @@
+activity Webstore_ComponentTestActivity() {
+    new Webstore_ComponentTest().testCase();
+    WriteLine("FINISHED");
+}

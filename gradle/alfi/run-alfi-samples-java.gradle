@@ -1,0 +1,37 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+def hamsterJavaProjectDir = "$project.samplesCodeGenDir/hamster/java"
+def swcJavaProjectDir = "$project.samplesCodeGenDir/swc/java"
+def gradleCommand = Os.isFamily(Os.FAMILY_WINDOWS) ? 'gradlew.bat' : './gradlew'
+
+task buildJavaHamsterProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Build Java Hamster Programs'
+
+    commandLine gradleCommand, '-p', hamsterJavaProjectDir, 'assemble'
+    workingDir projectDir
+}
+
+task executeJavaHamsterTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Run Java Hamster Tests'
+
+    commandLine gradleCommand, '-p', hamsterJavaProjectDir, 'check'
+    workingDir projectDir
+}
+
+task buildJavaSoftwareComponentProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Build Java Software Component Programs'
+
+    commandLine gradleCommand, '-p', swcJavaProjectDir, 'assemble'
+    workingDir projectDir
+}
+
+task executeJavaSoftwareComponentTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Run Java Software Component Tests'
+
+    commandLine gradleCommand, '-p', swcJavaProjectDir, 'check'
+    workingDir projectDir
+}

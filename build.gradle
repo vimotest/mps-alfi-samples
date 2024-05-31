@@ -4,26 +4,23 @@ ext.languageName = "AlfiSampleLanguage"
 ext.mpsPlugins = [  ]
 
 ext.customMpsPlugins = [
-    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.0-alpha7/alfi.zip"
+    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.0-alpha8/alfi.zip",
+    "CppBaseLanguage": "https://github.com/Fumapps/CppBaseLanguage/releases/download/2023.3-beta8/CppBaseLanguage.zip"
 ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'
 apply from: 'gradle/alfi/run-alfi-samples.gradle'
+apply from: 'gradle/alfi/package-generated-code.gradle'
 
 task prepareMps {
     group 'mps'
     dependsOn 'buildOsSpecificBundle'
 }
 
-task fixCopyStandardModelLibraryStubs {
+task fixCopyAlfiRuntimeJarPaths {
     group 'other'
-    description 'Workaround for wrong lookup of StandardModelLibraryStubs.jar'
+    description 'Workaround for wrong lookup of idea_rt.jar'
     doLast {
-        delete "$buildDir/mps-bundle/dependencies/dependencies/alfi"
-        copy {
-            from "$buildDir/mps-bundle/dependencies/alfi/lib/"
-            into "$buildDir/mps-bundle/dependencies/dependencies/alfi/lib/"
-        }
         delete "$buildDir/mps-bundle/dependencies/tests"
         copy {
             from "$mpsHome/lib/idea_rt.jar"
@@ -34,7 +31,7 @@ task fixCopyStandardModelLibraryStubs {
 
 task mpsBuild {
     group 'mps'
-    dependsOn 'mpsAntGenerate', 'mpsAntBuild', fixCopyStandardModelLibraryStubs
+    dependsOn 'mpsAntGenerate', 'mpsAntBuild', fixCopyAlfiRuntimeJarPaths
 }
 
 task mpsClean {

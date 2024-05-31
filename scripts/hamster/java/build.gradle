@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'alfi.samples.hamstersimulator'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.7.0'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java', '../../standardModelLibrary/java/src/main/java'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
