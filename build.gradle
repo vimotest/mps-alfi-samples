@@ -4,8 +4,8 @@ ext.languageName = "AlfiSampleLanguage"
 ext.mpsPlugins = [  ]
 
 ext.customMpsPlugins = [
-    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.0/alfi.zip",
-    "CppBaseLanguage": "https://github.com/Fumapps/CppBaseLanguage/releases/download/2023.3-beta8/CppBaseLanguage.zip"
+    "alfi": "https://github.com/vimotest/mps-alfi/releases/download/1.0.1/alfi.zip",
+    "CppBaseLanguage": "https://github.com/Fumapps/CppBaseLanguage/releases/download/2023.3-beta9/CppBaseLanguage.zip"
 ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'
