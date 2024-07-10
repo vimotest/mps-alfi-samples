@@ -5,7 +5,7 @@ project(alfi-samples.SoftwareComponentLanguage VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-include_directories(source_gen)
+include_directories(SoftwareComponentLanguage/sandbox)
 
 message(STATUS "ALFI_CPP_STANDARDMODELLIBRARY: ${ALFI_CPP_STANDARDMODELLIBRARY}")
 include_directories(${ALFI_CPP_STANDARDMODELLIBRARY}/wrappers/cppWrappers)
