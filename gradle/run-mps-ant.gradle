@@ -1,3 +1,5 @@
+/* This file is downloaded from https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/run-mps-ant.gradle */
+
 /*
   Several Gradle tasks which make calls to ANT.
 
@@ -46,7 +48,9 @@ task parseTestReportAfterAntCheck {
     }
     doLast {
         def anyTaskFailed = false
-        fileTree(dir: projectDir, includes: ["TEST-jetbrains.mps.testbench.junit.*.xml"]).each {
+        def mpsMajorVersion = mpsVersion.takeBefore(".")
+        def testFilePattern = mpsMajorVersion.toInteger() >= 2023 ? "TEST-junit-*.xml" : "TEST-jetbrains.mps.testbench.junit.*.xml"
+        fileTree(dir: projectDir, includes: [testFilePattern]).each {
             def testsuite = new XmlSlurper().parse(it)
             testsuite.testcase.each { testcase ->
                 def message = ""
