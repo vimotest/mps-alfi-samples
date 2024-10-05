@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="0" />
-    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="7" />
+    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="8" />
     <use id="3600cb0a-44dd-4a5b-9968-22924406419e" name="jetbrains.mps.build.mps.tests" version="1" />
   </languages>
   <imports>
@@ -213,7 +213,7 @@
     </node>
     <node concept="1l3spV" id="5ZmQMJIlskB" role="1l3spN">
       <node concept="m$_wl" id="5tK9548_kmd" role="39821P">
-        <ref role="m_rDy" node="5ZmQMJIlskq" />
+        <ref role="m_rDy" node="5ZmQMJIlskq" resolve="alfiSamples" />
         <node concept="398223" id="5tK9548_kmX" role="39821P">
           <node concept="3_J27D" id="5tK9548_kmZ" role="Nbhlr">
             <node concept="3Mxwew" id="5tK9548_knb" role="3MwsjC">
@@ -311,7 +311,7 @@
         <ref role="m$f5T" node="1YdqyHmFM9z" resolve="software-component-language" />
       </node>
       <node concept="m$f5U" id="5ZmQMJIlskv" role="m$_yh">
-        <ref role="m$f5T" node="5ZmQMJIlskp" resolve="mps-alfi-samples" />
+        <ref role="m$f5T" node="5ZmQMJIlskp" resolve="build" />
       </node>
       <node concept="m$_yC" id="5ZmQMJIlskw" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
@@ -320,7 +320,7 @@
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
       <node concept="m$_yC" id="7hCFpLRlydO" role="m$_yJ">
-        <ref role="m$_y1" to="mk2q:5tK9548cRhB" />
+        <ref role="m$_y1" to="mk2q:5tK9548cRhB" resolve="alfi" />
       </node>
       <node concept="3_J27D" id="5ZmQMJIlskx" role="m_cZH">
         <node concept="3Mxwew" id="5ZmQMJIlsky" role="3MwsjC">

@@ -228,8 +228,8 @@
       </node>
       <node concept="3Vob68" id="1dnKNhRUDaT" role="3Vq2cS" />
       <node concept="1KxTyJ" id="1dnKNhRVhtH" role="1KxUq$">
-        <ref role="1KB3D8" node="1dnKNhRVhtI" resolve="NumberComponent_null" />
-        <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="Foo" />
+        <ref role="1KB3D8" node="1dnKNhRVhtI" resolve="NumberComponent_SupportInt_GenerateInt" />
+        <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="GenerateInt" />
         <ref role="1KxUqA" node="1dnKNhRTA2V" resolve="SupportInt" />
         <node concept="1KxUro" id="1dnKNhRVhtI" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
@@ -315,7 +315,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="1dnKNhS_hWX" role="1KxUq$">
-        <ref role="1KB3D8" node="1dnKNhS_hWY" resolve="NumberComponent_null" />
+        <ref role="1KB3D8" node="1dnKNhS_hWY" resolve="NumberComponent_SupportInt_MyFactor" />
         <ref role="1KxUqA" node="1dnKNhRTA2V" resolve="SupportInt" />
         <ref role="1$IHh0" node="1dnKNhSz5YD" resolve="MyFactor" />
         <node concept="1KxUro" id="1dnKNhS_hWY" role="3mGtxP">
@@ -339,7 +339,7 @@
         </node>
       </node>
       <node concept="1F40Uu" id="1dnKNhSjPhI" role="1F7dI2">
-        <ref role="1F40Up" node="1dnKNhSjPhJ" />
+        <ref role="1F40Up" node="1dnKNhSjPhJ" resolve="NumberComponent_State" />
         <node concept="1F40VV" id="1dnKNhSjPhJ" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
           <node concept="6lMYc" id="1dnKNhSjPiG" role="PCHHv">
@@ -381,9 +381,9 @@
       </node>
       <node concept="1Fcd7X" id="1dnKNhSrZXv" role="1KxUq$">
         <ref role="1KxUqA" node="1dnKNhRUDb0" resolve="ProvideRandomNumber" />
-        <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="Foo" />
+        <ref role="1$IHh0" node="1dnKNhRSI6g" resolve="GenerateInt" />
         <ref role="1Fcd0O" node="1dnKNhRUDb5" resolve="GetNumber" />
-        <ref role="1Fcd0P" node="1dnKNhRSI6g" resolve="Foo" />
+        <ref role="1Fcd0P" node="1dnKNhRSI6g" resolve="GenerateInt" />
       </node>
       <node concept="1Fcd7X" id="6uQxlEeyKDn" role="1KxUq$">
         <ref role="1KxUqA" node="1dnKNhRUDb0" resolve="ProvideRandomNumber" />
@@ -408,10 +408,10 @@
         <ref role="1Fcd0P" node="1dnKNhSz5YD" resolve="MyFactor" />
       </node>
       <node concept="3Vq3Vf" id="2Cg1yFhuUep" role="3Vq2cS">
-        <ref role="3Vq3Vc" node="2Cg1yFhuCDX" resolve="MyComponent" />
+        <ref role="3Vq3Vc" node="2Cg1yFhuCDX" resolve="NumberComponent" />
       </node>
       <node concept="3Vq3Vf" id="2Cg1yFhv9f0" role="3Vq2cS">
-        <ref role="3Vq3Vc" node="2Cg1yFhuCEk" resolve="RandomNumberComponent" />
+        <ref role="3Vq3Vc" node="2Cg1yFhuCEk" resolve="RandomProvider" />
       </node>
       <node concept="3Vob68" id="2Cg1yFhxrO7" role="3Vq2cS" />
       <node concept="3VoQH8" id="5U0hG6j8oy4" role="3Vq2cS">
@@ -420,10 +420,10 @@
       </node>
       <node concept="3Vob68" id="5U0hG6j8oxX" role="3Vq2cS" />
       <node concept="3Vpyi9" id="2Cg1yFhuCES" role="3Vq2cS">
-        <ref role="3Vpyfs" node="1dnKNhRUDb5" resolve="MyInterface" />
+        <ref role="3Vpyfs" node="1dnKNhRUDb5" resolve="GetNumber" />
         <ref role="3Vpyfu" node="1dnKNhRTA2V" resolve="SupportInt" />
-        <ref role="3ijO3y" node="2Cg1yFhv9f0" />
-        <ref role="3ijO63" node="2Cg1yFhuUep" />
+        <ref role="3ijO3y" node="2Cg1yFhv9f0" resolve="RandomProvider" />
+        <ref role="3ijO63" node="2Cg1yFhuUep" resolve="NumberComponent" />
       </node>
     </node>
     <node concept="1$y8rh" id="1dnKNhRSI66" role="3Vob6q">
@@ -475,7 +475,7 @@
         <ref role="1Fcd0P" node="1dnKNhScFkQ" resolve="orderProducts" />
       </node>
       <node concept="3Vq3Vf" id="5U0hG6ja9tY" role="3Vq2cS">
-        <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="SearchProducts" />
+        <ref role="3Vq3Vc" node="5U0hG6ja9tt" resolve="Searching" />
       </node>
       <node concept="3Vq3Vf" id="5U0hG6ja9tT" role="3Vq2cS">
         <ref role="3Vq3Vc" node="5U0hG6j8oBb" resolve="ShoppingCart" />
@@ -497,21 +497,21 @@
       </node>
       <node concept="3Vob68" id="6uQxlEe_yeA" role="3Vq2cS" />
       <node concept="3Vpyi9" id="6uQxlEe_yfB" role="3Vq2cS">
-        <ref role="3ijO3y" node="5U0hG6ja9tT" />
+        <ref role="3ijO3y" node="5U0hG6ja9tT" resolve="ShoppingCart" />
         <ref role="3Vpyfs" node="1dnKNhSpcqX" resolve="OrderManagement" />
-        <ref role="3ijO63" node="1dnKNhSeaQN" />
+        <ref role="3ijO63" node="1dnKNhSeaQN" resolve="Ordering" />
         <ref role="3Vpyfu" node="5U0hG6ja9rD" resolve="ManageOrders" />
       </node>
       <node concept="3Vpyi9" id="6uQxlEe_yrF" role="3Vq2cS">
-        <ref role="3ijO3y" node="5U0hG6ja9tY" />
+        <ref role="3ijO3y" node="5U0hG6ja9tY" resolve="Searching" />
         <ref role="3Vpyfs" node="6uQxlEe_yvk" resolve="SearchInventory" />
-        <ref role="3ijO63" node="1dnKNhSeaQp" />
+        <ref role="3ijO63" node="1dnKNhSeaQp" resolve="Inventory" />
         <ref role="3Vpyfu" node="5U0hG6ja_XP" resolve="ManageInventory" />
       </node>
       <node concept="3Vpyi9" id="6uQxlEe_$en" role="3Vq2cS">
-        <ref role="3ijO3y" node="1dnKNhSeaQN" />
+        <ref role="3ijO3y" node="1dnKNhSeaQN" resolve="Ordering" />
         <ref role="3Vpyfs" node="1dnKNhSeaKI" resolve="ManageInventory" />
-        <ref role="3ijO63" node="1dnKNhSeaQp" />
+        <ref role="3ijO63" node="1dnKNhSeaQp" resolve="Inventory" />
         <ref role="3Vpyfu" node="5U0hG6ja_XP" resolve="ManageInventory" />
       </node>
       <node concept="3Vob68" id="1dnKNhSbOyB" role="3Vq2cS" />
@@ -546,7 +546,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="4DE6Zndz42U" role="1KxUq$">
-        <ref role="1KB3D8" node="4DE6Zndz42V" resolve="ShoppingCart_null" />
+        <ref role="1KB3D8" node="4DE6Zndz42V" resolve="ShoppingCart_Shopping_addProduct" />
         <ref role="1KxUqA" node="1dnKNhRZUjd" resolve="Shopping" />
         <ref role="1$IHh0" node="1dnKNhS8R6y" resolve="addProduct" />
         <node concept="1KxUro" id="4DE6Zndz42V" role="3mGtxP">
@@ -627,7 +627,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="4DE6Zndz4Do" role="1KxUq$">
-        <ref role="1KB3D8" node="4DE6Zndz4Dp" resolve="ShoppingCart_null" />
+        <ref role="1KB3D8" node="4DE6Zndz4Dp" resolve="ShoppingCart_Shopping_removeProduct" />
         <ref role="1KxUqA" node="1dnKNhRZUjd" resolve="Shopping" />
         <ref role="1$IHh0" node="1dnKNhSbtWf" resolve="removeProduct" />
         <node concept="1KxUro" id="4DE6Zndz4Dp" role="3mGtxP">
@@ -708,7 +708,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="4DE6Zndz51A" role="1KxUq$">
-        <ref role="1KB3D8" node="4DE6Zndz51B" resolve="ShoppingCart_null" />
+        <ref role="1KB3D8" node="4DE6Zndz51B" resolve="ShoppingCart_Shopping_orderProducts" />
         <ref role="1KxUqA" node="1dnKNhRZUjd" resolve="Shopping" />
         <ref role="1$IHh0" node="1dnKNhScFkQ" resolve="orderProducts" />
         <node concept="1KxUro" id="4DE6Zndz51B" role="3mGtxP">
@@ -806,7 +806,7 @@
         <ref role="1$ya7L" node="1dnKNhScFca" resolve="SearchInterface" />
       </node>
       <node concept="1KxTyJ" id="6uQxlEe_yDt" role="1KxUq$">
-        <ref role="1KB3D8" node="6uQxlEe_yDu" resolve="Searching_null_null" />
+        <ref role="1KB3D8" node="6uQxlEe_yDu" resolve="Searching_Search_searchProduct" />
         <ref role="1KxUqA" node="6uQxlEe_yyv" resolve="Search" />
         <ref role="1$IHh0" node="1dnKNhScFcb" resolve="searchProduct" />
         <node concept="1KxUro" id="6uQxlEe_yDu" role="3mGtxP">
@@ -817,7 +817,7 @@
               <property role="327w9R" value="true" />
               <node concept="1FQUc3" id="6uQxlEe_zuN" role="327w9Y">
                 <ref role="1FQUcc" node="6uQxlEe_yvk" resolve="SearchInventory" />
-                <ref role="1FQUcd" node="6uQxlEe_yIx" resolve="getProducts" />
+                <ref role="1FQUcd" node="6uQxlEe_yIx" resolve="getProductIds" />
                 <node concept="_vku0" id="6uQxlEe_zuP" role="_uFfl" />
               </node>
               <node concept="3xHE8C" id="6uQxlEe_yUy" role="327w9S">
@@ -947,7 +947,7 @@
             <property role="TrG5h" value="products" />
             <node concept="3xHE8C" id="6CIUUG_qQU6" role="3xMlr6">
               <node concept="2RqM1Q" id="6CIUUG_qQU4" role="_vnH8">
-                <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="Product" />
+                <ref role="2RqM1R" node="6CIUUG_qQHx" resolve="ProductStock" />
               </node>
             </node>
             <node concept="3xMmcA" id="3_puicMihpf" role="3xLlrW">
@@ -958,9 +958,9 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_skfK" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_skfL" resolve="Inventory_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_skfL" resolve="Inventory_ManageInventory_addProductItems" />
         <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
-        <ref role="1$IHh0" node="1dnKNhSeaJR" resolve="addProduct" />
+        <ref role="1$IHh0" node="1dnKNhSeaJR" resolve="addProductItems" />
         <node concept="1KxUro" id="6CIUUG_skfL" role="3mGtxP">
           <property role="PCHHn" value="6OepWIVA92I/package" />
           <node concept="PCHzy" id="6CIUUG_skfM" role="PCHGa">
@@ -1204,7 +1204,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_sk_w" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_sk_x" resolve="Inventory_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_sk_x" resolve="Inventory_ManageInventory_getProductIds" />
         <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
         <ref role="1$IHh0" node="6uQxlEe_yIx" resolve="getProductIds" />
         <node concept="1KxUro" id="6CIUUG_sk_x" role="3mGtxP">
@@ -1297,7 +1297,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_skD9" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_skDa" resolve="Inventory_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_skDa" resolve="Inventory_ManageInventory_getProductItemsAmount" />
         <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
         <ref role="1$IHh0" node="6CIUUG_skvq" resolve="getProductItemsAmount" />
         <node concept="1KxUro" id="6CIUUG_skDa" role="3mGtxP">
@@ -1398,7 +1398,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_skXA" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_skXB" resolve="Inventory_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_skXB" resolve="Inventory_ManageInventory_getProductName" />
         <ref role="1KxUqA" node="5U0hG6ja_XP" resolve="ManageInventory" />
         <ref role="1$IHh0" node="6uQxlEe_yMK" resolve="getProductName" />
         <node concept="1KxUro" id="6CIUUG_skXB" role="3mGtxP">
@@ -1497,7 +1497,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_t3oE" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_t3oF" resolve="Inventory_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_t3oF" resolve="Inventory_SearchProducts_searchProduct" />
         <ref role="1KxUqA" node="5U0hG6ja_Y9" resolve="SearchProducts" />
         <ref role="1$IHh0" node="1dnKNhScFcb" resolve="searchProduct" />
         <node concept="1KxUro" id="6CIUUG_t3oF" role="3mGtxP">
@@ -1610,7 +1610,7 @@
       </node>
       <node concept="3Vob68" id="1dnKNhSeaJN" role="3Vq2cS" />
       <node concept="1KxTyJ" id="6CIUUG_t3Bd" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_t3Be" resolve="Ordering_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_t3Be" resolve="Ordering_ManageOrders_addOrder" />
         <ref role="1KxUqA" node="5U0hG6ja9rD" resolve="ManageOrders" />
         <ref role="1$IHh0" node="1dnKNhScFdD" resolve="addOrder" />
         <node concept="1KxUro" id="6CIUUG_t3Be" role="3mGtxP">
@@ -1621,14 +1621,14 @@
               <node concept="31diN3" id="5aQe$98OM$q" role="327w9Y">
                 <node concept="_vnHb" id="5aQe$98OM$s" role="31diN2">
                   <node concept="2RqM1Q" id="5aQe$98OM$u" role="_vnH8">
-                    <ref role="2RqM1R" node="5aQe$98O6og" resolve="Order" />
+                    <ref role="2RqM1R" node="5aQe$98O6og" resolve="OrderInfo" />
                   </node>
                 </node>
                 <node concept="_vku0" id="5aQe$98OM$w" role="_uFfl" />
               </node>
               <node concept="3xHE8C" id="5aQe$98OMyw" role="327w9S">
                 <node concept="2RqM1Q" id="5aQe$98OMyu" role="_vnH8">
-                  <ref role="2RqM1R" node="5aQe$98O6og" resolve="Order" />
+                  <ref role="2RqM1R" node="5aQe$98O6og" resolve="OrderInfo" />
                 </node>
               </node>
             </node>
@@ -1730,7 +1730,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_t41k" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_t41l" resolve="Ordering_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_t41l" resolve="Ordering_ManageOrders_removeOrder" />
         <ref role="1KxUqA" node="5U0hG6ja9rD" resolve="ManageOrders" />
         <ref role="1$IHh0" node="1dnKNhScFes" resolve="removeOrder" />
         <node concept="1KxUro" id="6CIUUG_t41l" role="3mGtxP">
@@ -1741,7 +1741,7 @@
                 <property role="TrG5h" value="order" />
                 <node concept="3xHE8C" id="5aQe$98OPqO" role="32xAZR">
                   <node concept="2RqM1Q" id="5aQe$98OPqM" role="_vnH8">
-                    <ref role="2RqM1R" node="5aQe$98O6og" resolve="Order" />
+                    <ref role="2RqM1R" node="5aQe$98O6og" resolve="OrderInfo" />
                   </node>
                 </node>
                 <node concept="32M0$0" id="5aQe$98OPvS" role="32xAZU">
@@ -1828,7 +1828,7 @@
         </node>
       </node>
       <node concept="1KxTyJ" id="6CIUUG_t45P" role="1KxUq$">
-        <ref role="1KB3D8" node="6CIUUG_t45Q" resolve="Ordering_null_null" />
+        <ref role="1KB3D8" node="6CIUUG_t45Q" resolve="Ordering_ManageOrders_orderProducts" />
         <ref role="1KxUqA" node="5U0hG6ja9rD" resolve="ManageOrders" />
         <ref role="1$IHh0" node="4DE6Zndz5ef" resolve="orderProducts" />
         <node concept="1KxUro" id="6CIUUG_t45Q" role="3mGtxP">
@@ -1839,7 +1839,7 @@
                 <property role="TrG5h" value="order" />
                 <node concept="3xHE8C" id="5aQe$98OUvV" role="32xAZR">
                   <node concept="2RqM1Q" id="5aQe$98OUvW" role="_vnH8">
-                    <ref role="2RqM1R" node="5aQe$98O6og" resolve="Order" />
+                    <ref role="2RqM1R" node="5aQe$98O6og" resolve="OrderInfo" />
                   </node>
                 </node>
                 <node concept="32M0$0" id="5aQe$98OUvX" role="32xAZU">
@@ -2006,7 +2006,7 @@
             <property role="TrG5h" value="orders" />
             <node concept="3xHE8C" id="5aQe$98O6MD" role="3xMlr6">
               <node concept="2RqM1Q" id="5aQe$98O6MB" role="_vnH8">
-                <ref role="2RqM1R" node="5aQe$98O6og" resolve="Order" />
+                <ref role="2RqM1R" node="5aQe$98O6og" resolve="OrderInfo" />
               </node>
             </node>
             <node concept="hh2MY" id="5aQe$98OKPJ" role="hh1p4" />

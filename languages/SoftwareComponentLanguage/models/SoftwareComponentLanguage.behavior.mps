@@ -499,7 +499,7 @@
               <node concept="2OqwBi" id="5U0hG6j9GZY" role="2Oq$k0">
                 <node concept="13iPFW" id="5U0hG6j9GLY" role="2Oq$k0" />
                 <node concept="3Tsc0h" id="5U0hG6j9Hcf" role="2OqNvi">
-                  <ref role="3TtcxE" to="tj5x:2Cg1yFhu2ki" />
+                  <ref role="3TtcxE" to="tj5x:2Cg1yFhu2ki" resolve="contents" />
                 </node>
               </node>
               <node concept="v3k3i" id="5U0hG6j9N2N" role="2OqNvi">
@@ -516,7 +516,7 @@
   </node>
   <node concept="13h7C7" id="zd_6PSk8SM">
     <property role="3GE5qa" value="component.alf" />
-    <ref role="13h7C2" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfUnit" />
+    <ref role="13h7C2" to="tj5x:zd_6PSiwN2" resolve="EmbeddedAlfActivityUnit" />
     <node concept="13hLZK" id="zd_6PSk8SN" role="13h7CW">
       <node concept="3clFbS" id="zd_6PSk8SO" role="2VODD2">
         <node concept="3cpWs8" id="zd_6PSkr0b" role="3cqZAp">
@@ -802,7 +802,7 @@
               <node concept="2OqwBi" id="1dnKNhRXl24" role="2Oq$k0">
                 <node concept="13iPFW" id="1dnKNhRXl25" role="2Oq$k0" />
                 <node concept="3Tsc0h" id="1dnKNhRXl26" role="2OqNvi">
-                  <ref role="3TtcxE" to="tj5x:2Cg1yFhB7G2" />
+                  <ref role="3TtcxE" to="tj5x:2Cg1yFhB7G2" resolve="parameters" />
                 </node>
               </node>
               <node concept="34oBXx" id="1dnKNhRXl27" role="2OqNvi" />
@@ -820,7 +820,7 @@
               <node concept="2OqwBi" id="1dnKNhRXl2e" role="2Oq$k0">
                 <node concept="13iPFW" id="1dnKNhRXl2f" role="2Oq$k0" />
                 <node concept="3Tsc0h" id="1dnKNhRXl2g" role="2OqNvi">
-                  <ref role="3TtcxE" to="tj5x:2Cg1yFhB7G2" />
+                  <ref role="3TtcxE" to="tj5x:2Cg1yFhB7G2" resolve="parameters" />
                 </node>
               </node>
               <node concept="2HxqBE" id="1dnKNhRXl2h" role="2OqNvi">
@@ -828,7 +828,7 @@
                   <node concept="3clFbS" id="1dnKNhRXl2j" role="1bW5cS">
                     <node concept="3clFbF" id="1dnKNhRXl2k" role="3cqZAp">
                       <node concept="BsUDl" id="1dnKNhRXl2l" role="3clFbG">
-                        <ref role="37wK5l" node="1dnKNhRXl2D" />
+                        <ref role="37wK5l" node="1dnKNhRXl2D" resolve="isParameterCompatible" />
                         <node concept="37vLTw" id="1dnKNhRXl2m" role="37wK5m">
                           <ref role="3cqZAo" node="1dnKNhRXl2u" resolve="it" />
                         </node>
@@ -859,11 +859,11 @@
               </node>
             </node>
             <node concept="BsUDl" id="1dnKNhRXl2w" role="3uHU7B">
-              <ref role="37wK5l" node="1dnKNhRXl2D" />
+              <ref role="37wK5l" node="1dnKNhRXl2D" resolve="isParameterCompatible" />
               <node concept="2OqwBi" id="1dnKNhRXl2x" role="37wK5m">
                 <node concept="13iPFW" id="1dnKNhRXl2y" role="2Oq$k0" />
                 <node concept="3TrEf2" id="1dnKNhRXl2z" role="2OqNvi">
-                  <ref role="3Tt5mk" to="tj5x:2Cg1yFhBjL9" />
+                  <ref role="3Tt5mk" to="tj5x:2Cg1yFhBjL9" resolve="returns" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1dnKNhRXl2$" role="37wK5m">
@@ -980,7 +980,7 @@
               <node concept="2OqwBi" id="1dnKNhShYJ5" role="2Oq$k0">
                 <node concept="13iPFW" id="1dnKNhShYJ6" role="2Oq$k0" />
                 <node concept="3TrEf2" id="1dnKNhShYJ7" role="2OqNvi">
-                  <ref role="3Tt5mk" to="28lk:6OepWIVJVYY" />
+                  <ref role="3Tt5mk" to="28lk:6OepWIVJVYY" resolve="namespaceDefinition" />
                 </node>
               </node>
               <node concept="2DeJnY" id="1dnKNhShYJ8" role="2OqNvi">
@@ -992,7 +992,7 @@
         <node concept="3clFbF" id="1dnKNhShYJ9" role="3cqZAp">
           <node concept="37vLTI" id="1dnKNhShYJa" role="3clFbG">
             <node concept="37vLTw" id="1dnKNhShYJb" role="37vLTx">
-              <ref role="3cqZAo" node="1dnKNhShYJ2" resolve="embeddedAlfActivity" />
+              <ref role="3cqZAo" node="1dnKNhShYJ2" resolve="embeddedAlfClass" />
             </node>
             <node concept="2OqwBi" id="1dnKNhShYJc" role="37vLTJ">
               <node concept="13iPFW" id="1dnKNhShYJd" role="2Oq$k0" />

@@ -121,7 +121,7 @@
     <property role="34LRSv" value="package" />
     <property role="3GE5qa" value="package" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2Cg1yFhsbuh" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -200,7 +200,7 @@
     <property role="EcuMT" value="3030929330192562082" />
     <property role="TrG5h" value="EmptyLine" />
     <property role="3GE5qa" value="util" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="5U0hG6ja9Bu" role="1TKVEl">
       <property role="IQ2nx" value="6809520433795733982" />
       <property role="TrG5h" value="drawLine" />
@@ -232,7 +232,7 @@
     <property role="3GE5qa" value="component.interface" />
     <property role="TrG5h" value="ComponentInterfaceBase" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2Cg1yFhsSE9" role="PzmwI">
       <ref role="PrY4T" node="2Cg1yFhsbuk" resolve="IComponentContent" />
     </node>
@@ -250,7 +250,7 @@
     <property role="3GE5qa" value="component.composite" />
     <property role="TrG5h" value="InterfaceConnection" />
     <property role="34LRSv" value="connection" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="1dnKNhSbOyZ" role="1TKVEl">
       <property role="IQ2nx" value="1393797239816538303" />
       <property role="TrG5h" value="flip" />
@@ -287,7 +287,7 @@
     <property role="TrG5h" value="SoftwareComponentBase" />
     <property role="3GE5qa" value="component" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2Cg1yFhu2kf" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -324,7 +324,7 @@
     <property role="3GE5qa" value="component.composite" />
     <property role="TrG5h" value="ComponentReference" />
     <property role="34LRSv" value="component ref" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2Cg1yFhu3zA" role="1TKVEi">
       <property role="IQ2ns" value="3030929330193053926" />
       <property role="20kJfa" value="componentRef" />
@@ -342,7 +342,7 @@
     <property role="EcuMT" value="3030929330195430070" />
     <property role="3GE5qa" value="component.parameter" />
     <property role="TrG5h" value="Parameter" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2Cg1yFhB7F6" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -406,7 +406,7 @@
     <property role="3GE5qa" value="component.interface" />
     <property role="TrG5h" value="Operation" />
     <property role="34LRSv" value="operation" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2Cg1yFhB7G2" role="1TKVEi">
       <property role="IQ2ns" value="3030929330195430146" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -505,7 +505,7 @@
     <property role="3GE5qa" value="component.interface" />
     <property role="TrG5h" value="InterfaceOperationDelegate" />
     <property role="34LRSv" value="delegate" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1dnKNhSpLc0" role="1TKVEi">
       <property role="IQ2ns" value="1393797239820194560" />
       <property role="20kJfa" value="toInterface" />
@@ -547,7 +547,7 @@
     <property role="34LRSv" value="component test" />
     <property role="3GE5qa" value="test" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1dnKNhSA7z9" role="1TKVEi">
       <property role="IQ2ns" value="1393797239823431881" />
       <property role="20lbJX" value="fLJekj4/_1" />

@@ -1343,7 +1343,7 @@
     <node concept="3mGtyY" id="2CGYajy$AJw" role="3mGtxR">
       <node concept="_vnHb" id="2CGYajy$AJu" role="$kHGj">
         <node concept="2RqM1Q" id="2CGYajy$AJv" role="_vnH8">
-          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="hamster" />
+          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="HamsterLibrary" />
         </node>
       </node>
     </node>
@@ -1800,7 +1800,7 @@
     <node concept="3mGtyY" id="2CGYajy_ibt" role="3mGtxR">
       <node concept="_vnHb" id="2CGYajy_ibr" role="$kHGj">
         <node concept="2RqM1Q" id="2CGYajy_ibs" role="_vnH8">
-          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="hamster" />
+          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="HamsterLibrary" />
         </node>
       </node>
     </node>
@@ -1899,7 +1899,7 @@
     <node concept="3mGtyY" id="31Th1WS1uwe" role="3mGtxR">
       <node concept="_vnHb" id="31Th1WS1uwc" role="$kHGj">
         <node concept="2RqM1Q" id="31Th1WS1uwd" role="_vnH8">
-          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="hamster" />
+          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="HamsterLibrary" />
         </node>
       </node>
     </node>
@@ -2113,7 +2113,7 @@
     <node concept="3mGtyY" id="31Th1WS1uwx" role="3mGtxR">
       <node concept="_vnHb" id="31Th1WS1uwy" role="$kHGj">
         <node concept="2RqM1Q" id="31Th1WS1uwz" role="_vnH8">
-          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="hamster" />
+          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="HamsterLibrary" />
         </node>
       </node>
     </node>
@@ -2150,7 +2150,7 @@
     <node concept="3mGtyY" id="74z8RZkfIzP" role="3mGtxR">
       <node concept="_vnHb" id="74z8RZkfIzN" role="$kHGj">
         <node concept="2RqM1Q" id="74z8RZkfIzO" role="_vnH8">
-          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="hamster" />
+          <ref role="2RqM1R" node="2CGYajy$AIW" resolve="HamsterLibrary" />
         </node>
       </node>
     </node>
