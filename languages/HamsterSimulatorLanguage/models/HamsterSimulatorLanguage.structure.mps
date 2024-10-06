@@ -8,6 +8,7 @@
   <imports>
     <import index="zqge" ref="r:59e90602-6655-4552-86eb-441a42a9a0e4(jetbrains.mps.lang.text.structure)" />
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
+    <import index="tpe3" ref="r:00000000-0000-4000-0000-011c895902d7(jetbrains.mps.baseLanguage.unitTest.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -450,7 +451,7 @@
       </node>
     </node>
     <node concept="PrWs8" id="37zNn5LTf5g" role="PzmwI">
-      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+      <ref role="PrY4T" to="tpe3:hGB2rPm" resolve="ITestCase" />
     </node>
   </node>
   <node concept="1TIwiD" id="5X3Rsv9iaOU">
@@ -470,6 +471,9 @@
       <property role="20kJfa" value="assertions" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="5X3Rsv9ib1X" resolve="HamsterTestCaseAssertion" />
+    </node>
+    <node concept="PrWs8" id="7Te2TyRua7t" role="PzmwI">
+      <ref role="PrY4T" to="tpe3:hGBgSCX" resolve="ITestMethod" />
     </node>
   </node>
   <node concept="1TIwiD" id="5X3Rsv9iaU6">

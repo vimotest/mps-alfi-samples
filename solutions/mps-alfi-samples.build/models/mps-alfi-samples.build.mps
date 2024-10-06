@@ -220,14 +220,6 @@
               <property role="3MwjfP" value="lib" />
             </node>
           </node>
-          <node concept="28jJK3" id="5tK9548_kmz" role="39821P">
-            <node concept="398BVA" id="5tK9548_km$" role="28jJRO">
-              <ref role="398BVh" node="37zNn5LMY95" resolve="platform_lib" />
-              <node concept="2Ry0Ak" id="5tK9548_km_" role="iGT6I">
-                <property role="2Ry0Am" value="idea_rt.jar" />
-              </node>
-            </node>
-          </node>
           <node concept="28jJK3" id="5tK9548_kmA" role="39821P">
             <node concept="398BVA" id="5tK9548_kmB" role="28jJRO">
               <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
@@ -261,14 +253,6 @@
             <node concept="3_J27D" id="5tK9548_knG" role="Nbhlr">
               <node concept="3Mxwew" id="5tK9548_knS" role="3MwsjC">
                 <property role="3MwjfP" value="lib" />
-              </node>
-            </node>
-            <node concept="28jJK3" id="37zNn5LNbRw" role="39821P">
-              <node concept="398BVA" id="37zNn5LNbTK" role="28jJRO">
-                <ref role="398BVh" node="37zNn5LMY95" resolve="platform_lib" />
-                <node concept="2Ry0Ak" id="1f7pBu6NCYd" role="iGT6I">
-                  <property role="2Ry0Am" value="idea_rt.jar" />
-                </node>
               </node>
             </node>
             <node concept="28jJK3" id="5pGl0Zr33Js" role="39821P">
@@ -493,6 +477,11 @@
             <ref role="1E1Vl2" to="mk2q:5tK9548cRi8" resolve="alfi" />
           </node>
         </node>
+        <node concept="1SiIV0" id="7Te2TyRwXwr" role="3bR37C">
+          <node concept="3bR9La" id="7Te2TyRwXws" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:ymnOULAU0j" resolve="jetbrains.mps.baseLanguage.unitTest" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="74z8RZkvEPV" role="2G$12L">
         <property role="TrG5h" value="HamsterSimulatorLanguage.runtime" />
@@ -577,11 +566,6 @@
             <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1f7pBu6Mods" role="3bR37C">
-          <node concept="3bR9La" id="1f7pBu6Modt" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:1xb0AuwN7WS" resolve="JUnit" />
-          </node>
-        </node>
         <node concept="3rtmxn" id="7hCFpLRl9pa" role="3bR31x">
           <node concept="3LXTmp" id="7hCFpLRl9pb" role="3rtmxm">
             <node concept="55IIr" id="7hCFpLRl9pc" role="3LXTmr">
@@ -600,11 +584,6 @@
         <node concept="1SiIV0" id="7hCFpLRnequ" role="3bR37C">
           <node concept="3bR9La" id="7hCFpLRneqv" role="1SiIV1">
             <ref role="3bR37D" node="74z8RZkvEPV" resolve="HamsterSimulatorLanguage.runtime" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="7hCFpLRoj4v" role="3bR37C">
-          <node concept="3bR9La" id="7hCFpLRoj4w" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:1ULLXZL0gZG" resolve="org.junit.junit5" />
           </node>
         </node>
         <node concept="1SiIV0" id="5tK9548gI8f" role="3bR37C">
@@ -815,16 +794,6 @@
         <node concept="1SiIV0" id="7woNqO40Glx" role="3bR37C">
           <node concept="3bR9La" id="7woNqO40Gly" role="1SiIV1">
             <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="7QZKZ1n0HqI" role="3bR37C">
-          <node concept="3bR9La" id="7QZKZ1n0HqJ" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:1xb0AuwN7WS" resolve="JUnit" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="7QZKZ1n0VXL" role="3bR37C">
-          <node concept="3bR9La" id="7QZKZ1n0VXM" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:1ULLXZL0gZG" resolve="org.junit.junit5" />
           </node>
         </node>
         <node concept="1SiIV0" id="2XqYE65D5ko" role="3bR37C">

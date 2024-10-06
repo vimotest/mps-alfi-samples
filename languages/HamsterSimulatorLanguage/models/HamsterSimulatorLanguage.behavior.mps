@@ -13,6 +13,8 @@
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="nlf1" ref="r:7f489494-339f-481c-be61-2af4deb51551(jetbrains.mps.execution.util.behavior)" implicit="true" />
+    <import index="tpe5" ref="r:00000000-0000-4000-0000-011c895902d1(jetbrains.mps.baseLanguage.unitTest.behavior)" implicit="true" />
+    <import index="tpe3" ref="r:00000000-0000-4000-0000-011c895902d7(jetbrains.mps.baseLanguage.unitTest.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -107,6 +109,9 @@
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
+      <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
+        <reference id="1145383142433" name="elementConcept" index="2I9WkF" />
+      </concept>
       <concept id="1212008292747" name="jetbrains.mps.lang.smodel.structure.Model_GetLongNameOperation" flags="nn" index="LkI2h" />
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1240170042401" name="jetbrains.mps.lang.smodel.structure.SEnumerationMemberType" flags="in" index="2ZThk1">
@@ -124,6 +129,9 @@
       </concept>
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
+      </concept>
+      <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
+        <reference id="1138056546658" name="link" index="3TtcxE" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -519,6 +527,120 @@
         </node>
       </node>
       <node concept="10P_77" id="1z1MMtqIrtC" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="7Te2TyRua7Y">
+    <property role="3GE5qa" value="tests" />
+    <ref role="13h7C2" to="fyu6:5X3Rsv9iaOU" resolve="HamsterProgramTestCase" />
+    <node concept="13hLZK" id="7Te2TyRua7Z" role="13h7CW">
+      <node concept="3clFbS" id="7Te2TyRua80" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="7Te2TyRua8L" role="13h7CS">
+      <property role="TrG5h" value="getTestCase" />
+      <ref role="13i0hy" to="tpe5:hGBgWVd" resolve="getTestCase" />
+      <node concept="3Tm1VV" id="7Te2TyRua8O" role="1B3o_S" />
+      <node concept="3clFbS" id="7Te2TyRua8P" role="3clF47">
+        <node concept="3clFbF" id="7Te2TyRuc$T" role="3cqZAp">
+          <node concept="2OqwBi" id="7Te2TyRucMc" role="3clFbG">
+            <node concept="13iPFW" id="7Te2TyRuc$S" role="2Oq$k0" />
+            <node concept="2Xjw5R" id="7Te2TyRucWT" role="2OqNvi">
+              <node concept="1xMEDy" id="7Te2TyRucWV" role="1xVPHs">
+                <node concept="chp4Y" id="7Te2TyRucZU" role="ri$Ld">
+                  <ref role="cht4Q" to="fyu6:5X3Rsv9i5uy" resolve="HamsterProgramTestSuite" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="7Te2TyRua8Q" role="3clF45">
+        <ref role="ehGHo" to="tpe3:hGB2rPm" resolve="ITestCase" />
+      </node>
+    </node>
+    <node concept="13i0hz" id="7Te2TyRua8R" role="13h7CS">
+      <property role="TrG5h" value="getTestName" />
+      <ref role="13i0hy" to="tpe5:hGBohAB" resolve="getTestName" />
+      <node concept="3Tm1VV" id="7Te2TyRua8U" role="1B3o_S" />
+      <node concept="3clFbS" id="7Te2TyRua8V" role="3clF47">
+        <node concept="3clFbF" id="7Te2TyRua8Y" role="3cqZAp">
+          <node concept="3cpWs3" id="7Te2TyRubqr" role="3clFbG">
+            <node concept="2OqwBi" id="7Te2TyRubNE" role="3uHU7w">
+              <node concept="13iPFW" id="7Te2TyRubqP" role="2Oq$k0" />
+              <node concept="2qgKlT" id="7Te2TyRubYG" role="2OqNvi">
+                <ref role="37wK5l" to="tpe5:hGBohAB" resolve="getTestName" />
+              </node>
+            </node>
+            <node concept="Xl_RD" id="7Te2TyRua8X" role="3uHU7B">
+              <property role="Xl_RC" value="test_" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="7Te2TyRua8W" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="7Te2TyRudaB">
+    <property role="3GE5qa" value="tests" />
+    <ref role="13h7C2" to="fyu6:5X3Rsv9i5uy" resolve="HamsterProgramTestSuite" />
+    <node concept="13hLZK" id="7Te2TyRudaC" role="13h7CW">
+      <node concept="3clFbS" id="7Te2TyRudaD" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="7Te2TyRudbq" role="13h7CS">
+      <property role="TrG5h" value="getTestSet" />
+      <ref role="13i0hy" to="tpe5:hGB2z8L" resolve="getTestSet" />
+      <node concept="3Tm1VV" id="7Te2TyRudbt" role="1B3o_S" />
+      <node concept="3clFbS" id="7Te2TyRudbx" role="3clF47">
+        <node concept="3clFbF" id="7Te2TyRudck" role="3cqZAp">
+          <node concept="2OqwBi" id="7Te2TyRudrb" role="3clFbG">
+            <node concept="13iPFW" id="7Te2TyRudcj" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="7Te2TyRudCS" role="2OqNvi">
+              <ref role="3TtcxE" to="fyu6:5X3Rsv9iaQ9" resolve="testCases" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2I9FWS" id="7Te2TyRudby" role="3clF45">
+        <ref role="2I9WkF" to="tpe3:hGBgSCX" resolve="ITestMethod" />
+      </node>
+    </node>
+    <node concept="13i0hz" id="7Te2TyRuMby" role="13h7CS">
+      <property role="TrG5h" value="getTestMethods" />
+      <ref role="13i0hy" to="tpe5:1RfJDyhAUar" resolve="getTestMethods" />
+      <node concept="3clFbS" id="7Te2TyRuMb$" role="3clF47">
+        <node concept="3clFbF" id="7Te2TyRuMb_" role="3cqZAp">
+          <node concept="2OqwBi" id="7Te2TyRuMbA" role="3clFbG">
+            <node concept="13iPFW" id="7Te2TyRuMbB" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="7Te2TyRuMbC" role="2OqNvi">
+              <ref role="3TtcxE" to="fyu6:5X3Rsv9iaQ9" resolve="testCases" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2I9FWS" id="7Te2TyRuMdk" role="3clF45">
+        <ref role="2I9WkF" to="tpe3:hGBgSCX" resolve="ITestMethod" />
+      </node>
+      <node concept="3Tm1VV" id="7Te2TyRuMdl" role="1B3o_S" />
+    </node>
+    <node concept="13i0hz" id="7Te2TyRufPz" role="13h7CS">
+      <property role="TrG5h" value="getSimpleClassName" />
+      <ref role="13i0hy" to="tpe5:hSQIE8p" resolve="getSimpleClassName" />
+      <node concept="3Tm1VV" id="7Te2TyRufPH" role="1B3o_S" />
+      <node concept="3clFbS" id="7Te2TyRufPI" role="3clF47">
+        <node concept="3clFbF" id="7Te2TyRufWR" role="3cqZAp">
+          <node concept="3cpWs3" id="7Te2TyRufXE" role="3clFbG">
+            <node concept="2OqwBi" id="7Te2TyRugcC" role="3uHU7B">
+              <node concept="13iPFW" id="7Te2TyRufXH" role="2Oq$k0" />
+              <node concept="3TrcHB" id="7Te2TyRugqq" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="Xl_RD" id="7Te2TyRufWQ" role="3uHU7w">
+              <property role="Xl_RC" value="_Test" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="7Te2TyRufPJ" role="3clF45" />
     </node>
   </node>
 </model>
