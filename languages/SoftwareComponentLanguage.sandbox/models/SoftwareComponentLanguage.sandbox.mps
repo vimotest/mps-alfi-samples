@@ -86,7 +86,6 @@
         <property id="7144803224902197133" name="operator" index="31uMWw" />
       </concept>
       <concept id="7144803224883052070" name="alfi.structure.LocalNameDeclarationStatement" flags="ng" index="327OUb">
-        <property id="7144803224883131098" name="hasMultiplicity" index="327w9R" />
         <child id="7144803224883131093" name="typeName" index="327w9S" />
         <child id="7144803224883131091" name="expression" index="327w9Y" />
       </concept>
@@ -141,6 +140,9 @@
       </concept>
       <concept id="2021446509812382885" name="alfi.structure.FormalParameter" flags="ng" index="3xR696">
         <property id="2021446509812382886" name="direction" index="3xR695" />
+      </concept>
+      <concept id="6112733486551694701" name="alfi.structure.IHasMultiplicity" flags="ngI" index="1Wmbvl">
+        <property id="7144803224883131098" name="hasMultiplicity" index="327w9R" />
       </concept>
       <concept id="7439839726096719140" name="alfi.structure.SequenceOperationExpression" flags="ng" index="1WUwfO">
         <child id="7439839726096719276" name="primary" index="1WUwdW" />

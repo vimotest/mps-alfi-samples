@@ -581,21 +581,21 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/build/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar" />
     </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models">
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models">
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/build/AlfiSamples.genplan-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen">
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/AlfiSamples.genplan/AlfiSamples.genplan.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.layout}/mps-alfi-samples/lib" />
     <copy todir="${build.layout}/mps-alfi-samples/lib">
@@ -1142,21 +1142,21 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/build/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar1" />
     </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models1">
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models1">
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/build/AlfiSamples.genplan-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen">
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/AlfiSamples.genplan/AlfiSamples.genplan.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.genplan-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-AlfiSamples.Genplan-models1" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/mps-alfi-samples.zip">
       <zipfileset file="${dependencies_home}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" prefix="mps-alfi-samples/lib" />
@@ -1224,12 +1224,12 @@
   <target name="makeDependents" />
   
   <target name="java.compile.AlfiSamples.genplan" depends="fetchDependencies">
-    <mkdir dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
+    <mkdir dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" />
     <mkdir dir="${build.tmp}/java/out/AlfiSamples.genplan" />
     <javac destdir="${build.tmp}/java/out/AlfiSamples.genplan" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
+        <path location="${basedir}/solutions/AlfiSamples.Genplan/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
@@ -1251,7 +1251,7 @@
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/AlfiSamples.genplan">
-      <fileset dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" excludes="**/*.java" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
@@ -1655,7 +1655,7 @@
   </target>
   
   <target name="cleanSources">
-    <delete dir="${basedir}/solutions/AlfiSamples.genplan/source_gen" />
+    <delete dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" />
     <delete dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" />
     <delete dir="${basedir}/languages/HamsterSimulatorLanguage/generator/source_gen" />
     <delete dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" />
