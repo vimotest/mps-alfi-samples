@@ -49,7 +49,7 @@
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>alfiSamples</id>
         <name>mps-alfi-samples</name>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.testing</depends>
@@ -158,6 +158,7 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.jar" />
     </jar>
@@ -253,6 +254,7 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
+      <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.runtime.jar" />
     </jar>
@@ -404,6 +406,7 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage" />
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.jar" />
     </jar>
@@ -495,6 +498,7 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage.runtime" />
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage.runtime" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.runtime.jar" />
     </jar>
@@ -536,6 +540,7 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox" />
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.sandbox.jar" />
     </jar>
@@ -581,6 +586,7 @@
     </echoxml>
     <jar destfile="${build.layout}/mps-alfi-samples/languages/build/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar" />
     </jar>
@@ -610,7 +616,7 @@
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>alfiSamples</id>
         <name>mps-alfi-samples</name>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.testing</depends>
@@ -719,6 +725,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage" />
+      <fileset dir="${basedir}/languages/HamsterSimulatorLanguage" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/HamsterSimulatorLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.jar1" />
     </jar>
@@ -814,6 +821,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
+      <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/solutions/HamsterSimulatorLanguage.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.runtime.jar1" />
     </jar>
@@ -965,6 +973,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage" />
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.jar1" />
     </jar>
@@ -1056,6 +1065,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage.runtime" />
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage.runtime" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.runtime/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.runtime.jar1" />
     </jar>
@@ -1097,6 +1107,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SoftwareComponentLanguage.sandbox" />
+      <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/SoftwareComponentLanguage.sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.sandbox.jar1" />
     </jar>
@@ -1142,6 +1153,7 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/build/AlfiSamples.genplan.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/AlfiSamples.genplan" />
+      <fileset dir="${basedir}/solutions/AlfiSamples.genplan" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/solutions/AlfiSamples.Genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/AlfiSamples.genplan.jar1" />
     </jar>
