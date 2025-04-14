@@ -43,7 +43,7 @@ jobs:
 
       # Archive Artifacts
       - name: Archive artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
           path: |
@@ -53,7 +53,7 @@ jobs:
       - name: Package Code
         run: sh ./gradlew packageGeneratedCode
       - name: Archive Code
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: alfi-samples-code
           path: build/code-gen
@@ -72,7 +72,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download Code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: alfi-samples-code
           path: build/code-gen
@@ -100,7 +100,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download Code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: alfi-samples-code
           path: build/code-gen
@@ -134,7 +134,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download Code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: alfi-samples-code
           path: build/code-gen
