@@ -285,7 +285,7 @@
       </node>
       <node concept="3_J27D" id="5ZmQMJIlskt" role="m$_w8">
         <node concept="3Mxwew" id="5ZmQMJIlsku" role="3MwsjC">
-          <property role="3MwjfP" value="1.0.3" />
+          <property role="3MwjfP" value="1.0.4" />
         </node>
       </node>
       <node concept="m$f5U" id="1YdqyHmFMjT" role="m$_yh">
