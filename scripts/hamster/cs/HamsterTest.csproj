@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Alfi.Hamster</RootNamespace>
+  </PropertyGroup>
+  <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.props" />
+
+  <ItemGroup>
+    <Compile Include="HamsterSimulatorLanguage/sandbox/ActivityHelloPauleMain.cs" />
+  </ItemGroup>
+</Project>
