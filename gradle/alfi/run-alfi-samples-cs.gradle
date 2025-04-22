@@ -7,7 +7,7 @@ task buildCsHamsterProject(type: Exec) {
     group 'alfi-samples'
     description 'Build C# Hamster Programs'
 
-    commandLine 'dotnet', 'build', '-c', 'Release', '--no-restore', '--no-incremental', '--no-restore', '--no-dependencies', '--output', "$hamsterCsProjectDir/bin/Release/net9.0", "$hamsterCsProjectDir"
+    commandLine 'dotnet', 'build', "$hamsterCsProjectDir/Hamster.sln"
     workingDir projectDir
 }
 
@@ -15,7 +15,7 @@ task executeCsHamsterTests(type: Exec) {
     group 'alfi-samples'
     description 'Run C# Hamster Tests'
 
-    commandLine 'dotnet', 'test', '--no-build', '--no-restore', '--no-incremental', '--no-restore', '--no-dependencies', '--output', "$hamsterCsProjectDir/bin/Release/net9.0", "$hamsterCsProjectDir"
+    commandLine 'dotnet', 'test', "$hamsterCsProjectDir/HamsterTest.csproj"
     workingDir projectDir
 }
 
@@ -23,7 +23,7 @@ task buildCsSoftwareComponentProject(type: Exec) {
     group 'alfi-samples'
     description 'Build Cs Software Component Programs'
 
-    commandLine gradleCommand, '-p', swcCsProjectDir, 'assemble'
+    commandLine 'dotnet', 'build', "$swcCsProjectDir/SoftwareComponents.sln"
     workingDir projectDir
 }
 
@@ -31,6 +31,6 @@ task executeCsSoftwareComponentTests(type: Exec) {
     group 'alfi-samples'
     description 'Run Cs Software Component Tests'
 
-    commandLine gradleCommand, '-p', swcCsProjectDir, 'check'
+    commandLine 'dotnet', 'test', "$swcCsProjectDir/SoftwareComponentsTest.csproj"
     workingDir projectDir
 }
