@@ -1,21 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>Alfi.Hamster</RootNamespace>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.props" />
 
   <ItemGroup>
-    <Compile Include="HamsterSimulatorLanguage/sandbox/HamsterTestSuite.cs" />
+    <Compile Include="HamsterSimulatorLanguage/sandbox/ActivityDemoMain.cs" />
     <Compile Include="../../standardModelLibrary/**/*.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.2.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.2.0" />
   </ItemGroup>
 </Project>
