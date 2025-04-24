@@ -7,6 +7,7 @@ task buildCsHamsterProject(type: Exec) {
     group 'alfi-samples'
     description 'Build C# Hamster Programs'
 
+    commandLine 'dotnet', 'restore', "$hamsterCsProjectDir/Hamster.sln"
     commandLine 'dotnet', 'build', "$hamsterCsProjectDir/Hamster.sln"
     workingDir projectDir
 }
@@ -23,6 +24,7 @@ task buildCsSoftwareComponentProject(type: Exec) {
     group 'alfi-samples'
     description 'Build Cs Software Component Programs'
 
+    commandLine 'dotnet', 'restore', "$swcCsProjectDir/SoftwareComponents.sln"
     commandLine 'dotnet', 'build', "$swcCsProjectDir/SoftwareComponents.sln"
     workingDir projectDir
 }
