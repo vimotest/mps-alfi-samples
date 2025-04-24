@@ -50,7 +50,7 @@
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>alfiSamples</id>
         <name>mps-alfi-samples</name>
-        <version>1.0.4</version>
+        <version>2024.3.0</version>
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.testing</depends>
@@ -617,7 +617,7 @@
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>alfiSamples</id>
         <name>mps-alfi-samples</name>
-        <version>1.0.4</version>
+        <version>2024.3.0</version>
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.testing</depends>
@@ -1532,6 +1532,7 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
     </javac>
