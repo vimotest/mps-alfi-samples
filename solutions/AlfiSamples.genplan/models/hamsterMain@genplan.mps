@@ -9,6 +9,7 @@
     <import index="6bqz" ref="r:75caa73f-e0c5-471b-ac24-6a78e8dcbea7(toAlf@genplan)" />
     <import index="5ya6" ref="r:f7aff45d-10c8-40bc-9edb-f306b1fca829(toJava@genplan)" />
     <import index="zbbw" ref="r:326713b7-0933-4cae-9a98-945b7d8d355e(toCpp@genplan)" />
+    <import index="vw7t" ref="r:202331c0-2819-41a9-9114-c202e59403b2(toCs@genplan)" />
   </imports>
   <registry>
     <language id="7ab1a6fa-0a11-4b95-9e48-75f363d6cb00" name="jetbrains.mps.lang.generator.plan">
@@ -35,6 +36,9 @@
     </node>
     <node concept="10T23i" id="1CWniaWhh9A" role="2VgMA7">
       <ref role="10T23l" to="zbbw:74z8RZkPvD5" resolve="HamsterToCpp.genplan" />
+    </node>
+    <node concept="10T23i" id="6RhH0UX$Qmd" role="2VgMA7">
+      <ref role="10T23l" to="vw7t:74z8RZkPvD5" resolve="HamsterToCs.genplan" />
     </node>
     <node concept="NozSJ" id="5tK9548_hAk" role="2VgMA7">
       <ref role="NozSM" to="5ya6:74z8RZkPvD5" resolve="HamsterToJava.genplan" />

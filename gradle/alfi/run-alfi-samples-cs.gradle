@@ -1,0 +1,36 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+def hamsterCsProjectDir = "$project.samplesCodeGenDir/hamster/cs"
+def swcCsProjectDir = "$project.samplesCodeGenDir/swc/cs"
+
+task buildCsHamsterProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Build C# Hamster Programs'
+
+    commandLine 'dotnet', 'build', "$hamsterCsProjectDir/Hamster.sln"
+    workingDir projectDir
+}
+
+task executeCsHamsterTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Run C# Hamster Tests'
+
+    commandLine 'dotnet', 'test', "$hamsterCsProjectDir/HamsterTest.csproj"
+    workingDir projectDir
+}
+
+task buildCsSoftwareComponentProject(type: Exec) {
+    group 'alfi-samples'
+    description 'Build Cs Software Component Programs'
+
+    commandLine 'dotnet', 'build', "$swcCsProjectDir/SoftwareComponents.sln"
+    workingDir projectDir
+}
+
+task executeCsSoftwareComponentTests(type: Exec) {
+    group 'alfi-samples'
+    description 'Run Cs Software Component Tests'
+
+    commandLine 'dotnet', 'test', "$swcCsProjectDir/SoftwareComponentsTest.csproj"
+    workingDir projectDir
+}

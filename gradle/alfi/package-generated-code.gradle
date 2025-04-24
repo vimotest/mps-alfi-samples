@@ -72,6 +72,16 @@ private def copyGeneratedCode(String sourcesArtifact, String targetDirName) {
     }
     squashIntermediateDirs(new File("$targetDir/alf"))
 
+    copy {
+        from zipTree(sourcesArtifact)
+        into "$targetDir/cs"
+        include('**/*.cs', '**/*.props')
+    }
+    copy {
+        from "$projectDir/scripts/$targetDirName/cs"
+        into "$targetDir/cs"
+    }
+
     def dirsToDelete = []
     file(targetDir).eachFileRecurse { if (onlyContainsEmptyDirs(it) && !onlyContainsEmptyDirs(it.parentFile)) { dirsToDelete.add(it) } }
     dirsToDelete.each { it.deleteDir() }

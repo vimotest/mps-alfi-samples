@@ -11,6 +11,7 @@
     <import index="gkn4" ref="r:fae4a196-11c4-4868-9ebd-1379c8e56907(alfStandardModelLibrary)" />
     <import index="mk2q" ref="r:394bda66-ac7c-48d2-8b30-5ebcc56c2d2a(alfi.build)" />
     <import index="gwjr" ref="r:9d11b55c-368f-4d5a-8409-18718d1d42b0(CppBaseLanguage.build)" />
+    <import index="jn6j" ref="r:ded66146-2842-4fe9-8436-576d58b859d9(CsBaseLanguage.build)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -208,6 +209,12 @@
     <node concept="2sgV4H" id="5pGl0ZriJ3J" role="1l3spa">
       <ref role="1l3spb" to="gwjr:4h_5oU0U7hs" resolve="CppBaseLanguage" />
       <node concept="398BVA" id="5pGl0ZriJ3Q" role="2JcizS">
+        <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="6RhH0UX$B$x" role="1l3spa">
+      <ref role="1l3spb" to="jn6j:4xDflt7HBlw" resolve="CsBaseLanguage" />
+      <node concept="398BVA" id="6RhH0UX$B$y" role="2JcizS">
         <ref role="398BVh" node="5MJEPZbjS9E" resolve="dependencies_home" />
       </node>
     </node>
