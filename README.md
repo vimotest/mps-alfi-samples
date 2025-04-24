@@ -17,7 +17,7 @@ For every artifact in the ALFI transformation chain, we dumped a PDF file (using
 ## Execute Generated Code
 
 Download the built artifact `alfi-samples-code.zip` from the [latest release](https://github.com/vimotest/mps-alfi-samples/releases/latest).
-This archive contains fully executable projects for the two examples "Hamster Simulator" and "Software Component", for all three target languages Java, C++, and ALF.
+This archive contains fully executable projects for the two examples "Hamster Simulator" and "Software Component", for all three target languages Java, C++, C#, and ALF.
 
 Note: on each pushed commit, `mps-alfi-samples` runs a GitHub Actions workflow (see badge above) that builds the MPS models, transforms them to ALFI, and generates the target code.
 You can also refer to this pipeline for the exact way to build and execute the samples.
@@ -40,7 +40,7 @@ Preparation:
 ### Java
 
 Preparation:
-* install Java JDK 17 or higher.
+* install Java JDK 21 or higher.
 * install Gradle version 8.2.1.
 * unzip the `alfi-samples-code.zip` to a local directory.
 
@@ -79,6 +79,26 @@ Preparation:
 * build the project: `cmmake --build .`
 * run the tests: `ctest`
 
+### C#
+
+Preparation:
+* install dotnet 9.0 or higher.
+* unzip the `alfi-samples-code.zip` to a local directory.
+
+**Hamster Simulator**
+
+* `cd <alfi-samples-code>/hamster/cs`
+* restore dependencies: `dotnet restore Hamster.sln`
+* build the project: `dotnet build Hamster.sln`
+* run the tests: `dotnet test Hamster.sln`
+
+**Software Component**
+
+* `cd <alfi-samples-code>/swc/cs`
+* restore dependencies: `dotnet restore SoftwareComponents.sln`
+* build the project: `dotnet build SoftwareComponents.sln`
+* run the tests: `dotnet test SoftwareComponents.sln`
+
 ### Execute and Test with Gradle Tasks
 
 For more simple execution and testing, we provide Gradle tasks for each example and target language.
@@ -95,6 +115,9 @@ Or, checkout this repository and zip the `alfi-samples-code.zip` to the `build/c
 
 * **Hamster Simulator C++**: `gradlew buildCppHamsterProject` and `gradlew executeCppHamsterTests`
 * **Software Component C++**: `gradlew buildCppSoftwareComponentProject` and `gradlew executeCppSoftwareComponentTests`
+
+* **Hamster Simulator C#**: `gradlew buildCsHamsterProject` and `gradlew executeCsHamsterTests`
+* **Software Component C#**: `gradlew buildCsSoftwareComponentProject` and `gradlew executeCsSoftwareComponentTests`
 
 ## Hamster and SWC DSL Examples
 
