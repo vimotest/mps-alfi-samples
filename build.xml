@@ -32,9 +32,7 @@
   
   <path id="path.mps.ant.path">
     <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
-    <fileset dir="${artifacts.mps}/lib">
-      <include name="util-8.jar" />
-    </fileset>
+    <pathelement location="${artifacts.mps}/lib/util-8.jar" />
   </path>
   
   <taskdef resource="jetbrains/mps/build/ant/antlib.xml" classpathref="path.mps.ant.path" />
@@ -47,11 +45,11 @@
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.jar" />
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.jar/META-INF" />
     <echoxml file="${build.tmp}/default/mps-alfi-samples.jar/META-INF/plugin.xml">
-      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+      <idea-plugin>
         <id>alfiSamples</id>
         <name>mps-alfi-samples</name>
-        <version>2024.3.0</version>
-        <depends>com.intellij.modules.platform</depends>
+        <version>2025.2.0</version>
+        <depends>com.intellij.modules.mps</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.testing</depends>
         <depends>alfi</depends>
@@ -614,11 +612,11 @@
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.jar1" />
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.jar1/META-INF" />
     <echoxml file="${build.tmp}/default/mps-alfi-samples.jar1/META-INF/plugin.xml">
-      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+      <idea-plugin>
         <id>alfiSamples</id>
         <name>mps-alfi-samples</name>
-        <version>2024.3.0</version>
-        <depends>com.intellij.modules.platform</depends>
+        <version>2025.2.0</version>
+        <depends>com.intellij.modules.mps</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.testing</depends>
         <depends>alfi</depends>
@@ -1206,6 +1204,7 @@
       <plugin path="${artifacts.CppBaseLanguage}/CppBaseLanguage" id="CppBaseLanguage" />
       <plugin path="${artifacts.CsBaseLanguage}/CsBaseLanguage" id="CsBaseLanguage" />
       <plugin path="${artifacts.alfi-build}/alfi" id="alfi" />
+      <plugin path="${artifacts.mps}/lib/mps-workbench.jar" id="com.intellij.modules.mps" />
       <plugin path="${artifacts.mps}/plugins/mps-build" id="jetbrains.mps.build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" id="jetbrains.mps.core" />
       <plugin path="${artifacts.mps}/plugins/mps-junit5" id="jetbrains.mps.junit5" />
@@ -1260,8 +1259,6 @@
         <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/util-8.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/AlfiSamples.genplan">
@@ -1317,7 +1314,6 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
@@ -1389,7 +1385,6 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
@@ -1446,8 +1441,6 @@
         <pathelement path="${build.tmp}/java/out/HamsterSimulatorLanguage.runtime" />
         <fileset file="${artifacts.mps}/lib/junit4.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/util-8.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformations/alfi.PrimitiveMapping.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
@@ -1519,7 +1512,6 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
@@ -1532,7 +1524,6 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
     </javac>
@@ -1590,7 +1581,6 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
@@ -1644,8 +1634,6 @@
         <pathelement path="${build.tmp}/java/out/SoftwareComponentLanguage.runtime" />
         <fileset file="${artifacts.mps}/lib/junit4.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/util-8.jar" />
-        <fileset file="${artifacts.mps}/lib/trove.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformation-java/alfi.toJavaBaseLanguage.jar" />
