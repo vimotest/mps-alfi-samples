@@ -9,7 +9,7 @@
     <facet type="java" compile="mps" classes="mps" ext="no" languageLevel="JAVA_10">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
-    <facet type="generator" planModel="r:a19e502a-25b4-46c4-81c6-6d4d9d74f420(main@genplan)" />
+    <facet type="generator" planModel="r:a19e502a-25b4-46c4-81c6-6d4d9d74f420(hamsterMain@genplan)" />
   </facets>
   <dependencies>
     <dependency reexport="false">e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)</dependency>
