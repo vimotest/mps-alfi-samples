@@ -5,10 +5,10 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-  <Import Project="SoftwareComponentLanguage/sandbox/SoftwareComponentLanguage.sandbox.props" />
+  <Import Project="SoftwareComponentLanguage/sandbox/SoftwareComponentLanguage.sandbox.sources.props" />
+  <Import Project="SoftwareComponentLanguage/sandbox/SoftwareComponentLanguage.sandbox.tests.props" />
 
   <ItemGroup>
-    <Compile Include="SoftwareComponentLanguage/sandbox/Webstore_ComponentTest.cs" />
     <Compile Include="../../standardModelLibrary/**/*.cs" />
   </ItemGroup>
 

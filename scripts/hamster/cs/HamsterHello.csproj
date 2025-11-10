@@ -5,7 +5,7 @@
     <RootNamespace>Alfi.Hamster</RootNamespace>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
-  <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.props" />
+  <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.sources.props" />
 
   <ItemGroup>
     <Compile Include="HamsterSimulatorLanguage/sandbox/ActivityHelloPauleMain.cs" />

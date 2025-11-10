@@ -5,10 +5,10 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-  <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.props" />
+  <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.sources.props" />
+  <Import Project="HamsterSimulatorLanguage/sandbox/HamsterSimulatorLanguage.sandbox.tests.props" />
 
   <ItemGroup>
-    <Compile Include="HamsterSimulatorLanguage/sandbox/HamsterTestSuite.cs" />
     <Compile Include="../../standardModelLibrary/**/*.cs" />
   </ItemGroup>
 
