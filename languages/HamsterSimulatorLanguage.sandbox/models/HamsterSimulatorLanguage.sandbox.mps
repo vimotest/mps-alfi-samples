@@ -2,8 +2,7 @@
 <model ref="r:30c6efc5-9dd6-4755-8f16-8badea8fb235(HamsterSimulatorLanguage.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="86004c6e-6a16-41a3-a8a8-cf6cc294dfee" name="HamsterSimulatorLanguage" version="0" />
-    <use id="d0e1230a-72e3-4b6b-88f2-98d924f7de11" name="alfi.toJavaBaseLanguage" version="0" />
+    <devkit ref="1abe74be-41b9-4f57-81f1-e6c5b29ea9f1(HamsterSimulatorLanguage.devkit)" />
   </languages>
   <imports>
     <import index="fmya" ref="r:27a31951-2d45-4457-8073-f28d9c4b2a79(wrappers.cppWrappers)" />

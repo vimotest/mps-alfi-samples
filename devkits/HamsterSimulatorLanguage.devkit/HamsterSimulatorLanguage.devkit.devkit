@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="HamsterSimulatorLanguage.devkit" uuid="1abe74be-41b9-4f57-81f1-e6c5b29ea9f1">
+  <exported-language name="86004c6e-6a16-41a3-a8a8-cf6cc294dfee(HamsterSimulatorLanguage)" />
+  <extendedDevKits>
+    <extendedDevKit>3480a401-485a-4fe3-84d3-7880843682ac(alfi.all.devkit)</extendedDevKit>
+  </extendedDevKits>
+  <exported-solutions>
+    <exported-solution>96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</exported-solution>
+  </exported-solutions>
+  <generation-plan model="r:a19e502a-25b4-46c4-81c6-6d4d9d74f420(hamsterMain@genplan)" />
+</dev-kit>
+

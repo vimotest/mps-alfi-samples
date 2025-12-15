@@ -2,12 +2,14 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/devkits/HamsterSimulatorLanguage.devkit/HamsterSimulatorLanguage.devkit.devkit" folder="hamstersimulator" />
+      <modulePath path="$PROJECT_DIR$/devkits/SoftwareComponentLanguage.devkit/SoftwareComponentLanguage.devkit.devkit" folder="softwarecomponents" />
       <modulePath path="$PROJECT_DIR$/languages/HamsterSimulatorLanguage.sandbox/HamsterSimulatorLanguage.sandbox.msd" folder="hamstersimulator" />
       <modulePath path="$PROJECT_DIR$/languages/HamsterSimulatorLanguage/HamsterSimulatorLanguage.mpl" folder="hamstersimulator" />
       <modulePath path="$PROJECT_DIR$/languages/SoftwareComponentLanguage.runtime/SoftwareComponentLanguage.runtime.msd" folder="softwarecomponents" />
       <modulePath path="$PROJECT_DIR$/languages/SoftwareComponentLanguage.sandbox/SoftwareComponentLanguage.sandbox.msd" folder="softwarecomponents" />
       <modulePath path="$PROJECT_DIR$/languages/SoftwareComponentLanguage/SoftwareComponentLanguage.mpl" folder="softwarecomponents" />
-      <modulePath path="$PROJECT_DIR$/solutions/AlfiSamples.genplan/AlfiSamples.genplan.msd" folder="build" />
+      <modulePath path="$PROJECT_DIR$/solutions/AlfiSamples.Genplan/AlfiSamples.genplan.msd" folder="build" />
       <modulePath path="$PROJECT_DIR$/solutions/HamsterSimulatorLanguage.runtime/HamsterSimulatorLanguage.runtime.msd" folder="hamstersimulator" />
       <modulePath path="$PROJECT_DIR$/solutions/mps-alfi-samples.build/mps-alfi-samples.build.msd" folder="build" />
     </projectModules>

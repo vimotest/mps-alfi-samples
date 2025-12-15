@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="SoftwareComponentLanguage.devkit" uuid="4b1b8f22-22c7-406d-b32a-208d120c740d">
+  <exported-language name="90dba4c7-2c2e-4bec-a587-6476e412e28c(SoftwareComponentLanguage)" />
+  <extendedDevKits>
+    <extendedDevKit>3480a401-485a-4fe3-84d3-7880843682ac(alfi.all.devkit)</extendedDevKit>
+  </extendedDevKits>
+  <exported-solutions>
+    <exported-solution>96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</exported-solution>
+  </exported-solutions>
+  <generation-plan model="r:a99c7530-e7d3-4301-a006-aae1df0865e8(swcMain@genplan)" />
+</dev-kit>
+

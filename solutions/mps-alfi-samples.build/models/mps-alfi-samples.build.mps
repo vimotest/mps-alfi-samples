@@ -613,11 +613,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1z1MMtqEvj1" role="3bR37C">
-          <node concept="3bR9La" id="1z1MMtqEvj2" role="1SiIV1">
-            <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
-          </node>
-        </node>
         <node concept="3rtmxn" id="7hCFpLRl9pa" role="3bR31x">
           <node concept="3LXTmp" id="7hCFpLRl9pb" role="3rtmxm">
             <node concept="55IIr" id="7hCFpLRl9pc" role="3LXTmr">
@@ -871,11 +866,6 @@
             <node concept="3qWCbU" id="1YdqyHmHYZL" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="7woNqO40Glx" role="3bR37C">
-          <node concept="3bR9La" id="7woNqO40Gly" role="1SiIV1">
-            <ref role="3bR37D" node="1z1MMtqEvgH" resolve="AlfiSamples.genplan" />
           </node>
         </node>
         <node concept="1SiIV0" id="2XqYE65D5ko" role="3bR37C">
