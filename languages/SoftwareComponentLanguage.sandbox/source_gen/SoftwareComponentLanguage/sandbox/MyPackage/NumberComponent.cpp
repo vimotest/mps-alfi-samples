@@ -1,5 +1,4 @@
 #include "NumberComponent.h"
-#include "NumberComponent.h"
 #include "IMyInterface.h"
 
 namespace MyPackage

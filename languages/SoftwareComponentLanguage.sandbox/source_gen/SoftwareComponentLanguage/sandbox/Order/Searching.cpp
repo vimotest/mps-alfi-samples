@@ -1,5 +1,4 @@
 #include "Searching.h"
-#include "Searching.h"
 #include "IInventoryInterface.h"
 #include <vector>
 #include <string>

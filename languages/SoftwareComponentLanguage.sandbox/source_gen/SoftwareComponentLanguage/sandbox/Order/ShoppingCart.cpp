@@ -1,5 +1,4 @@
 #include "ShoppingCart.h"
-#include "ShoppingCart.h"
 #include <vector>
 #include <alf/library/BasicInputOutput.hpp>
 #include <string>

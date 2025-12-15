@@ -1,5 +1,4 @@
 #include "Hamster.h"
-#include "Hamster.h"
 #include <optional>
 #include <memory>
 #include <alf/library/BasicInputOutput.hpp>

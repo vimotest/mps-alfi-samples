@@ -1,5 +1,4 @@
 #include "MyComposite.h"
-#include "MyComposite.h"
 #include <memory>
 #include "RandomProvider.h"
 #include "IMyInterface.h"

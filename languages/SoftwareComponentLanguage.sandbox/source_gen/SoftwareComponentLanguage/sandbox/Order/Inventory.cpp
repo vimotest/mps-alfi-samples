@@ -1,5 +1,4 @@
 #include "Inventory.h"
-#include "Inventory.h"
 #include "ProductStock.h"
 #include <vector>
 #include <string>

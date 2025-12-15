@@ -7,7 +7,6 @@
 #include "HamsterLibrary/Hamster.h"
 #include "HamsterLibrary/Direction.h"
 #include <string>
-#include "HelloPauleHamsterProgram.h"
 
 HelloPauleHamsterProgram::HelloPauleHamsterProgram()
 {

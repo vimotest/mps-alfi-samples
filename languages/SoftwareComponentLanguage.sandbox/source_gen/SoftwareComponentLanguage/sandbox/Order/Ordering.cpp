@@ -1,7 +1,6 @@
 #include "Ordering.h"
 #include <memory>
 #include "OrderInfo.h"
-#include "Ordering.h"
 #include <vector>
 #include <alf/library/collectionfunctions/CollectionFunctions.hpp>
 #include "IInventoryInterface.h"

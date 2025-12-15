@@ -6,7 +6,6 @@
 #include "HamsterLibrary/Cell.h"
 #include "HamsterLibrary/Hamster.h"
 #include "HamsterLibrary/Direction.h"
-#include "DemoHamsterProgram.h"
 #include <string>
 
 DemoHamsterProgram::DemoHamsterProgram()

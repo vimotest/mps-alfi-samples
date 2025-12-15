@@ -1,6 +1,5 @@
 #include "Territory.h"
 #include <memory>
-#include "Territory.h"
 #include <vector>
 #include <alf/library/collectionfunctions/CollectionFunctions.hpp>
 #include <optional>

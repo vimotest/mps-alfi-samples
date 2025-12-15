@@ -1,5 +1,4 @@
 #include "RandomProvider.h"
-#include "RandomProvider.h"
 #include "IMyInterface.h"
 
 namespace MyPackage

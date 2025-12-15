@@ -6,6 +6,7 @@
   </extendedDevKits>
   <exported-solutions>
     <exported-solution>96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</exported-solution>
+    <exported-solution>103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)</exported-solution>
   </exported-solutions>
   <generation-plan model="r:a99c7530-e7d3-4301-a006-aae1df0865e8(swcMain@genplan)" />
 </dev-kit>

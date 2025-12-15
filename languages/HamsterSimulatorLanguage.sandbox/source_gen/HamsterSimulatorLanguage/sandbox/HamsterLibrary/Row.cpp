@@ -1,6 +1,5 @@
 #include "Row.h"
 #include <memory>
-#include "Row.h"
 #include <alf/library/collectionfunctions/CollectionFunctions.hpp>
 #include "Cell.h"
 #include <optional>

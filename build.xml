@@ -276,8 +276,12 @@
       <module namespace="HamsterSimulatorLanguage.sandbox" type="solution" uuid="28b05bc5-0f5e-4372-9f1c-df8ff09a66b6">
         <dependencies>
           <module ref="bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)" kind="rt" />
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="rt" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="rt" />
-          <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="6ef0db41-d3b2-47fe-82ac-d55a42cb6b13(jetbrains.mps.baseLanguage.unitTest.runtime)" kind="rt" />
+          <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="rt" />
           <module ref="bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)" kind="cl" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3(alfi.PrimitiveMapping)" kind="cl" />
@@ -285,8 +289,17 @@
           <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:caee2629-07dd-4ee1-aceb-6d1e4dce0f12:CppBaseLanguage" />
+          <language id="l:d74e25c9-4d91-43b6-bad7-d18af7bf6674:CsBaseLanguage" />
           <language id="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" />
+          <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
+          <language id="l:05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3:alfi.PrimitiveMapping" />
+          <language id="l:ded42a5f-0d92-4cc2-b9ff-116aae7175a9:alfi.simplifyAlfiLanguage" />
+          <language id="l:e745d4a0-ccf7-4cb3-8db8-0f77222a00bf:alfi.toCppBaseLanguage" />
+          <language id="l:0f0152f2-19d3-46ec-9e98-47a1e2ed7e0b:alfi.toCsBaseLanguage" />
           <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:f61473f9-130f-42f6-b98d-6c438812c2f6:jetbrains.mps.baseLanguage.unitTest" />
         </uses>
         <classpath>
           <entry path="." />
@@ -312,6 +325,19 @@
       </fileset>
       <zipfileset file="${basedir}/languages/HamsterSimulatorLanguage.sandbox/HamsterSimulatorLanguage.sandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-HamsterSimulatorLanguage.sandbox-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar" />
+    <mkdir dir="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar/META-INF/module.xml">
+      <module namespace="HamsterSimulatorLanguage.devkit" type="devkit" uuid="1abe74be-41b9-4f57-81f1-e6c5b29ea9f1">
+        <dependencies />
+        <uses />
+        <sources jar="." descriptor="HamsterSimulatorLanguage.devkit.devkit" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.devkit.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/devkits/HamsterSimulatorLanguage.devkit/HamsterSimulatorLanguage.devkit.devkit" prefix="module" />
+      <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar" />
     </jar>
     <mkdir dir="${build.layout}/mps-alfi-samples/languages" />
     <mkdir dir="${build.layout}/mps-alfi-samples/languages/software-component-language" />
@@ -519,17 +545,29 @@
     <echoxml file="${build.tmp}/default/SoftwareComponentLanguage.sandbox.jar/META-INF/module.xml">
       <module namespace="SoftwareComponentLanguage.sandbox" type="solution" uuid="b4a24014-52d7-42db-bd13-252ce7475af2">
         <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="rt" />
           <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="rt" />
-          <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="6ef0db41-d3b2-47fe-82ac-d55a42cb6b13(jetbrains.mps.baseLanguage.unitTest.runtime)" kind="rt" />
+          <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="rt" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
           <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:caee2629-07dd-4ee1-aceb-6d1e4dce0f12:CppBaseLanguage" />
+          <language id="l:d74e25c9-4d91-43b6-bad7-d18af7bf6674:CsBaseLanguage" />
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
+          <language id="l:05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3:alfi.PrimitiveMapping" />
+          <language id="l:ded42a5f-0d92-4cc2-b9ff-116aae7175a9:alfi.simplifyAlfiLanguage" />
+          <language id="l:e745d4a0-ccf7-4cb3-8db8-0f77222a00bf:alfi.toCppBaseLanguage" />
+          <language id="l:0f0152f2-19d3-46ec-9e98-47a1e2ed7e0b:alfi.toCsBaseLanguage" />
           <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:f61473f9-130f-42f6-b98d-6c438812c2f6:jetbrains.mps.baseLanguage.unitTest" />
         </uses>
         <classpath>
           <entry path="." />
@@ -555,6 +593,19 @@
       </fileset>
       <zipfileset file="${basedir}/languages/SoftwareComponentLanguage.sandbox/SoftwareComponentLanguage.sandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-SoftwareComponentLanguage.sandbox-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar" />
+    <mkdir dir="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar/META-INF/module.xml">
+      <module namespace="SoftwareComponentLanguage.devkit" type="devkit" uuid="4b1b8f22-22c7-406d-b32a-208d120c740d">
+        <dependencies />
+        <uses />
+        <sources jar="." descriptor="SoftwareComponentLanguage.devkit.devkit" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.devkit.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/devkits/SoftwareComponentLanguage.devkit/SoftwareComponentLanguage.devkit.devkit" prefix="module" />
+      <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar" />
     </jar>
     <mkdir dir="${build.layout}/mps-alfi-samples/languages" />
     <mkdir dir="${build.layout}/mps-alfi-samples/languages/build" />
@@ -843,8 +894,12 @@
       <module namespace="HamsterSimulatorLanguage.sandbox" type="solution" uuid="28b05bc5-0f5e-4372-9f1c-df8ff09a66b6">
         <dependencies>
           <module ref="bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)" kind="rt" />
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="rt" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="rt" />
-          <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="6ef0db41-d3b2-47fe-82ac-d55a42cb6b13(jetbrains.mps.baseLanguage.unitTest.runtime)" kind="rt" />
+          <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="rt" />
           <module ref="bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)" kind="cl" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3(alfi.PrimitiveMapping)" kind="cl" />
@@ -852,8 +907,17 @@
           <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:caee2629-07dd-4ee1-aceb-6d1e4dce0f12:CppBaseLanguage" />
+          <language id="l:d74e25c9-4d91-43b6-bad7-d18af7bf6674:CsBaseLanguage" />
           <language id="l:86004c6e-6a16-41a3-a8a8-cf6cc294dfee:HamsterSimulatorLanguage" />
+          <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
+          <language id="l:05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3:alfi.PrimitiveMapping" />
+          <language id="l:ded42a5f-0d92-4cc2-b9ff-116aae7175a9:alfi.simplifyAlfiLanguage" />
+          <language id="l:e745d4a0-ccf7-4cb3-8db8-0f77222a00bf:alfi.toCppBaseLanguage" />
+          <language id="l:0f0152f2-19d3-46ec-9e98-47a1e2ed7e0b:alfi.toCsBaseLanguage" />
           <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:f61473f9-130f-42f6-b98d-6c438812c2f6:jetbrains.mps.baseLanguage.unitTest" />
         </uses>
         <classpath>
           <entry path="." />
@@ -879,6 +943,19 @@
       </fileset>
       <zipfileset file="${basedir}/languages/HamsterSimulatorLanguage.sandbox/HamsterSimulatorLanguage.sandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-HamsterSimulatorLanguage.sandbox-models1" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar1" />
+    <mkdir dir="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar1/META-INF/module.xml">
+      <module namespace="HamsterSimulatorLanguage.devkit" type="devkit" uuid="1abe74be-41b9-4f57-81f1-e6c5b29ea9f1">
+        <dependencies />
+        <uses />
+        <sources jar="." descriptor="HamsterSimulatorLanguage.devkit.devkit" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/hamster-simulator-language/HamsterSimulatorLanguage.devkit.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/devkits/HamsterSimulatorLanguage.devkit/HamsterSimulatorLanguage.devkit.devkit" prefix="module" />
+      <fileset dir="${build.tmp}/default/HamsterSimulatorLanguage.devkit.jar1" />
     </jar>
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages" />
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/software-component-language" />
@@ -1086,17 +1163,29 @@
     <echoxml file="${build.tmp}/default/SoftwareComponentLanguage.sandbox.jar1/META-INF/module.xml">
       <module namespace="SoftwareComponentLanguage.sandbox" type="solution" uuid="b4a24014-52d7-42db-bd13-252ce7475af2">
         <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="49808fad-9d41-4b96-83fa-9231640f6b2b(JUnit)" kind="rt" />
           <module ref="103422e1-9f03-485c-abe2-b87ca54f94a9(SoftwareComponentLanguage.runtime)" kind="rt" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="rt" />
-          <module ref="96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)" kind="cl" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="6ef0db41-d3b2-47fe-82ac-d55a42cb6b13(jetbrains.mps.baseLanguage.unitTest.runtime)" kind="rt" />
+          <module ref="63b449db-0918-4a4a-a891-2c430ab133e4(org.junit.junit5)" kind="rt" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
           <module ref="d0e1230a-72e3-4b6b-88f2-98d924f7de11(alfi.toJavaBaseLanguage)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:caee2629-07dd-4ee1-aceb-6d1e4dce0f12:CppBaseLanguage" />
+          <language id="l:d74e25c9-4d91-43b6-bad7-d18af7bf6674:CsBaseLanguage" />
           <language id="l:90dba4c7-2c2e-4bec-a587-6476e412e28c:SoftwareComponentLanguage" />
           <language id="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" />
+          <language id="l:05b98dee-d1dd-4a0e-90e8-7aa649a2d7e3:alfi.PrimitiveMapping" />
+          <language id="l:ded42a5f-0d92-4cc2-b9ff-116aae7175a9:alfi.simplifyAlfiLanguage" />
+          <language id="l:e745d4a0-ccf7-4cb3-8db8-0f77222a00bf:alfi.toCppBaseLanguage" />
+          <language id="l:0f0152f2-19d3-46ec-9e98-47a1e2ed7e0b:alfi.toCsBaseLanguage" />
           <language id="l:d0e1230a-72e3-4b6b-88f2-98d924f7de11:alfi.toJavaBaseLanguage" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:f61473f9-130f-42f6-b98d-6c438812c2f6:jetbrains.mps.baseLanguage.unitTest" />
         </uses>
         <classpath>
           <entry path="." />
@@ -1122,6 +1211,19 @@
       </fileset>
       <zipfileset file="${basedir}/languages/SoftwareComponentLanguage.sandbox/SoftwareComponentLanguage.sandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-SoftwareComponentLanguage.sandbox-models1" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar1" />
+    <mkdir dir="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar1/META-INF/module.xml">
+      <module namespace="SoftwareComponentLanguage.devkit" type="devkit" uuid="4b1b8f22-22c7-406d-b32a-208d120c740d">
+        <dependencies />
+        <uses />
+        <sources jar="." descriptor="SoftwareComponentLanguage.devkit.devkit" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/software-component-language/SoftwareComponentLanguage.devkit.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/devkits/SoftwareComponentLanguage.devkit/SoftwareComponentLanguage.devkit.devkit" prefix="module" />
+      <fileset dir="${build.tmp}/default/SoftwareComponentLanguage.devkit.jar1" />
     </jar>
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages" />
     <mkdir dir="${build.tmp}/default/mps-alfi-samples.zip/mps-alfi-samples/languages/build" />
@@ -1212,8 +1314,10 @@
       <chunk>
         <module file="${basedir}/solutions/AlfiSamples.genplan/AlfiSamples.genplan.msd" />
         <module file="${basedir}/languages/HamsterSimulatorLanguage/HamsterSimulatorLanguage.mpl" />
+        <module file="${basedir}/devkits/HamsterSimulatorLanguage.devkit/HamsterSimulatorLanguage.devkit.devkit" />
         <module file="${basedir}/solutions/HamsterSimulatorLanguage.runtime/HamsterSimulatorLanguage.runtime.msd" />
         <module file="${basedir}/languages/SoftwareComponentLanguage/SoftwareComponentLanguage.mpl" />
+        <module file="${basedir}/devkits/SoftwareComponentLanguage.devkit/SoftwareComponentLanguage.devkit.devkit" />
         <module file="${basedir}/languages/SoftwareComponentLanguage.runtime/SoftwareComponentLanguage.runtime.msd" />
       </chunk>
       <chunk>
@@ -1444,6 +1548,7 @@
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformations/alfi.PrimitiveMapping.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformations/alfi.genplan.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformation-java/alfi.toJavaBaseLanguage.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.runtime.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />
@@ -1636,6 +1741,7 @@
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-modules/alfi.StandardModelLibrary.jar" />
+        <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformations/alfi.genplan.jar" />
         <fileset file="${artifacts.alfi-build}/alfi/languages/alfi-transformation-java/alfi.toJavaBaseLanguage.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.runtime.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.execution.util.jar" />

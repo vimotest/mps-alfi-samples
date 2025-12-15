@@ -6,6 +6,7 @@
   </extendedDevKits>
   <exported-solutions>
     <exported-solution>96bc4b20-de7f-4b1c-9959-6c6f1e9b78cf(AlfiSamples.genplan)</exported-solution>
+    <exported-solution>bbe92973-a4d0-4851-93ef-b76e4564b102(HamsterSimulatorLanguage.runtime)</exported-solution>
   </exported-solutions>
   <generation-plan model="r:a19e502a-25b4-46c4-81c6-6d4d9d74f420(hamsterMain@genplan)" />
 </dev-kit>
