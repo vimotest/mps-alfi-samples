@@ -1,0 +1,51 @@
+namespace Order ;
+
+public import Order:: IOrderManagementInterface ;
+
+class Ordering specializes IOrderManagementInterface {
+  @Create
+  public Ordering (  ) {    
+  }
+  
+  public addOrder (   in productId: Integer ,   in amount: Integer  ) {
+    let order: OrderInfo = new OrderInfo (  );
+
+    order.productId = productId;
+
+    order.amount = amount;
+
+    this.orders->add ( order );
+
+  }
+  
+  public removeOrder (   in productId: Integer  ) {
+    for ( OrderInfo order : this.orders ) {
+      if ( order.productId == productId ) {
+        this.orders->remove ( order );
+
+        break;
+
+      } 
+
+    } 
+
+  }
+  
+  public orderProducts (  ) {
+    for ( OrderInfo order : this.orders ) {
+      this.dependency_ManageInventory.removeProductItems ( order.productId, order.amount );
+
+      let productName: String = this.dependency_ManageInventory.getProductName ( order.amount );
+
+      WriteLine ( "Finish ordering " + IntegerFunctions:: ToString ( order.amount ) + "x " + productName );
+
+    } 
+
+    this.orders->clear (  );
+
+  }
+  
+  public orders : OrderInfo [ * ]sequence ;
+  
+  public dependency_ManageInventory : IInventoryInterface  ;
+}

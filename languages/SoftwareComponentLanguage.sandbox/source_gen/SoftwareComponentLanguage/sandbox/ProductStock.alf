@@ -1,0 +1,12 @@
+
+
+
+
+class ProductStock {
+  
+  public name : String  ;
+  
+  public id : Integer  ;
+  
+  public amount : Integer  ;
+}

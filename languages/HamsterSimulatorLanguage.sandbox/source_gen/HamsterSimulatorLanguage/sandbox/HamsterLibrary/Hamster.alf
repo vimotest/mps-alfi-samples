@@ -1,0 +1,149 @@
+namespace HamsterLibrary ;
+
+
+
+class Hamster {
+  @Create
+  public Hamster (   in cell: Cell [ 0 .. 1 ]  ) {
+    this.currentCell = cell ?? new Cell (  );
+
+  }
+  
+  
+  public pickGrain (  ) {
+    if ( this.currentCell.grainCount > 0 ) {
+      WriteLine ( "Picking grain!" );
+
+      this.grainInMouth = this.grainInMouth + 1;
+
+      this.currentCell.grainCount = this.currentCell.grainCount - 1;
+
+    } else {
+      WriteLine ( "Failed to pick grain" );
+
+    } 
+
+  }
+  
+  public putGrain (  ) {
+    if ( this.grainInMouth > 0 ) {
+      WriteLine ( "Putting grain!" );
+
+      this.grainInMouth = this.grainInMouth - 1;
+
+      this.currentCell.grainCount = this.currentCell.grainCount + 1;
+
+    } else {
+      WriteLine ( "Failed to put grain" );
+
+    } 
+
+  }
+  
+  public move (  ) {
+    let frontCell: Cell = this.getFrontCell (  );
+
+    if ( frontCell != null ) {
+      if ( frontCell.isWall ) {
+        WriteLine ( "Failed to move, front is wall" );
+
+      } else {
+        WriteLine ( "Moving!" );
+
+        this.currentCell = frontCell;
+
+      } 
+
+    } else {
+      WriteLine ( "Failed to move, front is out of territory" );
+
+    } 
+
+  }
+  
+  public turnLeft (  ) {
+    WriteLine ( "Turning left!" );
+
+    if ( this.currentDirection == Direction:: EAST ) {
+      this.currentDirection = Direction:: NORTH;
+
+    } else if ( this.currentDirection == Direction:: SOUTH ) {
+      this.currentDirection = Direction:: EAST;
+
+    } else if ( this.currentDirection == Direction:: WEST ) {
+      this.currentDirection = Direction:: SOUTH;
+
+    } else {
+      this.currentDirection = Direction:: WEST;
+
+    } 
+
+  }
+  
+  public write (   in text: String  ) {
+    WriteLine ( text );
+
+    this.writtenMessages->add ( text );
+
+  }
+  
+  public isFrontClear (  ) : Boolean  {
+    let frontCell: Cell = this.getFrontCell (  );
+
+    if ( frontCell != null ) {
+      if ( frontCell.isWall ) {
+        return false;
+
+      } 
+
+    } else {
+      return false;
+
+    } 
+
+    return true;
+
+  }
+  
+  public isGrainAvailable (  ) : Boolean  {
+    return this.currentCell.grainCount > 0;
+
+  }
+  
+  public isMouthEmpty (  ) : Boolean  {
+    return this.grainInMouth == 0;
+
+  }
+  
+  
+  private getFrontCell (  ) : Cell [ 0 .. 1 ]  {
+    let frontCell: Cell = null;
+
+    if ( this.currentDirection == Direction:: EAST ) {
+      frontCell = this.currentCell.east;
+
+    } else if ( this.currentDirection == Direction:: SOUTH ) {
+      frontCell = this.currentCell.south;
+
+    } else if ( this.currentDirection == Direction:: WEST ) {
+      frontCell = this.currentCell.west;
+
+    } else {
+      frontCell = this.currentCell.north;
+
+    } 
+
+    return frontCell;
+
+  }
+  
+  
+  public grainInMouth : Integer = 0;
+  
+  public currentCell : Cell  ;
+  
+  
+  public currentDirection : Direction = Direction:: EAST;
+  
+  public writtenMessages : String [ * ]sequence ;
+}

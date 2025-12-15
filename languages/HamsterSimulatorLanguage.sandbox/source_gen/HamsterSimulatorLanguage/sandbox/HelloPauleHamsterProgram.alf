@@ -1,0 +1,29 @@
+
+
+public import HamsterLibrary :: * ;
+
+class HelloPauleHamsterProgram specializes HamsterProgramBase {
+  @Create
+  public HelloPauleHamsterProgram (  ) {
+    this.territory = new Territory ( 2, 2 );
+
+
+    this.territory.getCellAt ( 0, 0 ).isWall = true;
+
+
+    let hamsterCell: Cell = this.territory.getCellAt ( 0, 0 );
+
+    this.hamster = new Hamster ( hamsterCell );
+
+    this.hamster.grainInMouth = 0;
+
+    this.hamster.currentDirection = Direction:: EAST;
+
+  }
+  
+  
+  public execute (  ) {
+    this.hamster.write ( "Hello Paule" );
+
+  }
+}

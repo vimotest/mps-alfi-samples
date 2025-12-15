@@ -1,0 +1,16 @@
+
+
+
+
+package MyPackage {
+  
+  public class NumberComponent specializes IMyInterface  ;
+  
+  
+  public class RandomProvider specializes IMyInterface  ;
+  
+  
+  public class MyComposite specializes IMyInterface  ;
+  
+  public abstract class IMyInterface  ;
+}

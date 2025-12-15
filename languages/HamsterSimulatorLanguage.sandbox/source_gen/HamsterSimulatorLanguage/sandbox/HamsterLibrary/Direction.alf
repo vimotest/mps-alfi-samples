@@ -1,0 +1,7 @@
+namespace HamsterLibrary ;
+
+
+
+enum Direction {
+  EAST, SOUTH, WEST, NORTH
+}

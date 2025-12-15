@@ -1,0 +1,13 @@
+
+
+public import Order:: Webstore ;
+
+class Webstore_ComponentTest {
+  
+  public testCase (  ) {
+    let sut: Webstore = new Webstore (  );
+
+    sut.addProduct ( 1 );
+
+  }
+}

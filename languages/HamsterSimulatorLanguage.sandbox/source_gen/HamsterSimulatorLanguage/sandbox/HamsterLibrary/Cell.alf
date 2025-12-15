@@ -1,0 +1,19 @@
+namespace HamsterLibrary ;
+
+
+
+class Cell {
+  
+  public north : Cell [ 0 .. 1 ]  ;
+  
+  public south : Cell [ 0 .. 1 ]  ;
+  
+  public east : Cell [ 0 .. 1 ]  ;
+  
+  public west : Cell [ 0 .. 1 ]  ;
+  
+  
+  public isWall : Boolean = false;
+  
+  public grainCount : Integer = 0;
+}

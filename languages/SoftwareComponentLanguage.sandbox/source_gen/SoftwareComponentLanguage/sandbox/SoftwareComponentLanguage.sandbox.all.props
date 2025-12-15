@@ -1,0 +1,20 @@
+<Project>  
+  <ItemGroup>    
+    <Compile Include="$(MSBuildThisFileDirectory)ProductStock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OrderInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyPackage/NumberComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyPackage/RandomProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/ShoppingCart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/Searching.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/Inventory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/Ordering.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyPackage/MyComposite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/Webstore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyPackage/IMyInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/IShoppingInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/ISearchInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/IOrderManagementInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Order/IInventoryInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Webstore_ComponentTest.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+
+
+
+
+package Order {
+  
+  public class Webstore specializes ISearchInterface, IShoppingInterface  ;
+  
+  public class ShoppingCart specializes IShoppingInterface  ;
+  
+  public class Searching specializes ISearchInterface  ;
+  
+  public class Inventory specializes IInventoryInterface, ISearchInterface  ;
+  
+  public class Ordering specializes IOrderManagementInterface  ;
+  
+  
+  
+  public abstract class IShoppingInterface  ;
+  
+  public abstract class ISearchInterface  ;
+  
+  public abstract class IOrderManagementInterface  ;
+  
+  public abstract class IInventoryInterface  ;
+}

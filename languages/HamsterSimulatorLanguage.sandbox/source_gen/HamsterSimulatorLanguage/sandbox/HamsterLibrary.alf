@@ -1,0 +1,18 @@
+
+
+
+
+package HamsterLibrary {
+  
+  public class Hamster  ;
+  
+  public class Territory  ;
+  
+  public class Cell  ;
+  
+  public class Row  ;
+  
+  public abstract class HamsterProgramBase  ;
+  
+  public enum Direction  ;
+}

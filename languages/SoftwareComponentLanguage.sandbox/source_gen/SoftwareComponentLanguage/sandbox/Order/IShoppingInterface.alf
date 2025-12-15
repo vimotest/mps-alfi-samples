@@ -1,0 +1,12 @@
+namespace Order ;
+
+
+
+abstract class IShoppingInterface {
+  
+  public abstract addProduct (   in productId: Integer  ) ;
+  
+  public abstract removeProduct (   in productId: Integer  ) ;
+  
+  public abstract orderProducts (  ) ;
+}

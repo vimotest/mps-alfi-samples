@@ -1,0 +1,13 @@
+namespace HamsterLibrary ;
+
+
+
+abstract class HamsterProgramBase {
+  
+  public abstract execute (  ) ;
+  
+  
+  public territory : Territory  ;
+  
+  public hamster : Hamster  ;
+}

@@ -1,0 +1,8 @@
+
+
+
+
+activity DemoMain (  ) {
+  new DemoHamsterProgram (  ).execute (  );
+
+}

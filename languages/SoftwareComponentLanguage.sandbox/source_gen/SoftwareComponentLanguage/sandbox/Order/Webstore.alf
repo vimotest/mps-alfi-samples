@@ -1,0 +1,56 @@
+namespace Order ;
+
+public import Order:: ISearchInterface ;
+public import Order:: IShoppingInterface ;
+public import Order:: Searching ;
+public import Order:: ShoppingCart ;
+public import Order:: Inventory ;
+public import Order:: Ordering ;
+
+class Webstore specializes ISearchInterface, IShoppingInterface {
+  @Create
+  public Webstore (  ) {
+    this.searching = new Searching (  );
+
+    this.shoppingCart = new ShoppingCart (  );
+
+    this.inventory = new Inventory (  );
+
+    this.ordering = new Ordering (  );
+
+    this.shoppingCart.dependency_OrderManagement = this.ordering;
+
+    this.searching.dependency_SearchInventory = this.inventory;
+
+    this.ordering.dependency_ManageInventory = this.inventory;
+
+  }
+  
+  public searchProduct (   in productName: String  ) : Integer  {
+    return this.inventory.searchProduct ( productName );
+
+  }
+  
+  public addProduct (   in productId: Integer  ) {
+    this.shoppingCart.addProduct ( productId );
+
+  }
+  
+  public removeProduct (   in productId: Integer  ) {
+    this.shoppingCart.removeProduct ( productId );
+
+  }
+  
+  public orderProducts (  ) {
+    this.shoppingCart.orderProducts (  );
+
+  }
+  
+  public searching : Searching  ;
+  
+  public shoppingCart : ShoppingCart  ;
+  
+  public inventory : Inventory  ;
+  
+  public ordering : Ordering  ;
+}

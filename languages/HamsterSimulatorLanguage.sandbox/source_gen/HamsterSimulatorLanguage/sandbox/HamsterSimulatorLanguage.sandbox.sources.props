@@ -1,0 +1,12 @@
+<Project>  
+  <ItemGroup>    
+    <Compile Include="$(MSBuildThisFileDirectory)HelloPauleHamsterProgram.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DemoHamsterProgram.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/Hamster.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/Territory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/Cell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/Row.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/HamsterProgramBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/Direction.cs" />
+  </ItemGroup>
+</Project>

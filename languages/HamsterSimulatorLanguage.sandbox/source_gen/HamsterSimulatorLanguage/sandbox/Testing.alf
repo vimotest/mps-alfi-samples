@@ -1,0 +1,47 @@
+
+
+
+
+/** 
+Base definitions for test suites. The ALF to GPL (e.g., Java) generator uses it for custom generation into supported testing frameworks.
+Supported Annotations:
+* Testsuite should carry the annotation @TestSuite (supported for ClassDefinition)
+* Testcases should carry the annotation @TestCase (supported for OperationDefinition or ActivityDefinition)
+* Setup functions should define @BeforeTest
+* Teardown functions should define @AfterTest */
+package Testing {
+  
+  public activity AssertEqual (   in expected: any [ 0 .. 1 ] ,   in actual: any [ 0 .. 1 ]  ) {
+    if ( expected != actual ) {
+      WriteLine ( "FAILED: not equal " );
+
+      let actualAsString: String = ( String )actual;
+
+      if ( actualAsString != null ) {
+        WriteLine ( "\"" + actualAsString + "\"" );
+
+      } else {
+        WriteLine ( "null" );
+
+      } 
+
+    } 
+
+  }
+  
+  public activity AssertTrue (   in expected: any [ 0 .. 1 ]  ) {
+    if ( expected != true ) {
+      WriteLine ( "FAILED: condition is not true" );
+
+    } 
+
+  }
+  
+  public activity AssertFalse (   in expected: any [ 0 .. 1 ]  ) {
+    if ( expected != false ) {
+      WriteLine ( "FAILED: condition is not false" );
+
+    } 
+
+  }
+}

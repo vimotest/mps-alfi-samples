@@ -1,0 +1,28 @@
+namespace Order ;
+
+public import Order:: ISearchInterface ;
+
+class Searching specializes ISearchInterface {
+  @Create
+  public Searching (  ) {    
+  }
+  
+  public searchProduct (   in productName: String  ) : Integer  {
+    let productIds: Integer [] = this.dependency_SearchInventory.getProductIds (  );
+
+    for ( Integer productId : productIds ) {
+      let name: String = this.dependency_SearchInventory.getProductName ( productId );
+
+      if ( name == productName ) {
+        return productId;
+
+      } 
+
+    } 
+
+    return -1;
+
+  }
+  
+  public dependency_SearchInventory : IInventoryInterface  ;
+}

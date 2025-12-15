@@ -1,0 +1,8 @@
+
+
+
+
+activity HelloPauleMain (  ) {
+  new HelloPauleHamsterProgram (  ).execute (  );
+
+}

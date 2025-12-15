@@ -1,0 +1,21 @@
+namespace MyPackage ;
+
+public import MyPackage:: IMyInterface ;
+
+class RandomProvider specializes IMyInterface {
+  @Create
+  public RandomProvider (  ) {    
+  }
+  
+  public GenerateInt (   in offset: Integer  ) : Integer  {
+    return this.dependency_GetNumber.GenerateInt ( offset );
+
+  }
+  
+  public MyFactor (  ) : Integer  {
+    return this.dependency_GetNumber.MyFactor (  );
+
+  }
+  
+  public dependency_GetNumber : IMyInterface  ;
+}

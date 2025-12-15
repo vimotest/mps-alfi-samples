@@ -1,0 +1,10 @@
+namespace MyPackage ;
+
+
+
+abstract class IMyInterface {
+  
+  public abstract GenerateInt (   in offset: Integer  ) : Integer  ;
+  
+  public abstract MyFactor (  ) : Integer  ;
+}

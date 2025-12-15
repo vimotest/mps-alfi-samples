@@ -1,0 +1,8 @@
+namespace Order ;
+
+
+
+abstract class ISearchInterface {
+  
+  public abstract searchProduct (   in productName: String  ) : Integer  ;
+}

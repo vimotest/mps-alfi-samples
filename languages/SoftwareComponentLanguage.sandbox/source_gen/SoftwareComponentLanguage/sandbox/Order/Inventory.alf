@@ -1,0 +1,89 @@
+namespace Order ;
+
+public import Order:: IInventoryInterface ;
+public import Order:: ISearchInterface ;
+
+class Inventory specializes IInventoryInterface, ISearchInterface {
+  @Create
+  public Inventory (  ) {    
+  }
+  
+  public addProductItems (   in productId: Integer ,   in amount: Integer  ) {
+    for ( ProductStock productStock : this.products ) {
+      if ( productStock.id == productId ) {
+        productStock.amount = productStock.amount + amount;
+
+        break;
+
+      } 
+
+    } 
+
+  }
+  
+  public removeProductItems (   in productId: Integer ,   in amount: Integer  ) {
+    for ( ProductStock productStock : this.products ) {
+      if ( productStock.id == productId ) {
+        productStock.amount = productStock.amount - amount;
+
+        break;
+
+      } 
+
+    } 
+
+  }
+  
+  public getProductIds (  ) : Integer [ * ]  {
+    let result: Integer [] = null;
+
+    for ( ProductStock productStock : this.products ) {
+      result->add ( productStock.id );
+
+    } 
+
+    return result;
+
+  }
+  
+  public getProductItemsAmount (   in productId: Integer  ) : Integer  {
+    for ( ProductStock productStock : this.products ) {
+      if ( productStock.id == productId ) {
+        return productStock.amount;
+
+      } 
+
+    } 
+
+    return 0;
+
+  }
+  
+  public getProductName (   in productId: Integer  ) : String  {
+    for ( ProductStock productStock : this.products ) {
+      if ( productStock.id == productId ) {
+        return productStock.name;
+
+      } 
+
+    } 
+
+    return "";
+
+  }
+  
+  public searchProduct (   in productName: String  ) : Integer  {
+    for ( ProductStock productStock : this.products ) {
+      if ( productStock.name == productName ) {
+        return productStock.id;
+
+      } 
+
+    } 
+
+    return 0;
+
+  }
+  
+  public products : ProductStock [ * ]sequence ;
+}

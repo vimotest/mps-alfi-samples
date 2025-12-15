@@ -1,0 +1,33 @@
+
+
+public import Testing :: * ;
+
+class HamsterTestSuite {
+  
+  public Demo (  ) {
+    let sut: DemoHamsterProgram = new DemoHamsterProgram (  );
+
+    sut.execute (  );
+
+    AssertEqual ( 0, sut.hamster.grainInMouth );
+
+    AssertEqual ( 0, sut.territory.getCellAt ( 1, 5 ).grainCount );
+
+    AssertEqual ( 7, sut.hamster.writtenMessages->size (  ) );
+
+    AssertEqual ( "mouth is empty!", sut.hamster.writtenMessages->at ( 1 ) );
+
+    AssertEqual ( "paule got a grain", sut.hamster.writtenMessages->at ( 2 ) );
+
+    AssertEqual ( "paule put the grain back", sut.hamster.writtenMessages->at ( 3 ) );
+
+    AssertEqual ( "mouth is empty!", sut.hamster.writtenMessages->at ( 4 ) );
+
+    AssertEqual ( "Looking to north!", sut.hamster.writtenMessages->at ( 5 ) );
+
+    AssertEqual ( "Looking to north!", sut.hamster.writtenMessages->at ( 6 ) );
+
+    AssertEqual ( "Looking to north!", sut.hamster.writtenMessages->at ( 7 ) );
+
+  }
+}

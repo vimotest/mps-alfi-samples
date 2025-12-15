@@ -1,0 +1,12 @@
+namespace Order ;
+
+
+
+abstract class IOrderManagementInterface {
+  
+  public abstract addOrder (   in productId: Integer ,   in amount: Integer  ) ;
+  
+  public abstract removeOrder (   in productId: Integer  ) ;
+  
+  public abstract orderProducts (  ) ;
+}

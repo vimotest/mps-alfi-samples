@@ -1,0 +1,25 @@
+namespace MyPackage ;
+
+public import MyPackage:: IMyInterface ;
+
+class NumberComponent specializes IMyInterface {
+  @Create
+  public NumberComponent (  ) {    
+  }
+  
+  public GenerateInt (   in offset: Integer  ) : Integer  {
+    this.foo = this.foo * this.bar + this.MyFactor (  );
+
+    return this.foo + offset;
+
+  }
+  
+  public MyFactor (  ) : Integer  {
+    return 42;
+
+  }
+  
+  public foo : Integer = 1;
+  
+  private bar : Integer = 3;
+}

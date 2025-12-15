@@ -1,0 +1,10 @@
+
+
+
+
+class OrderInfo {
+  
+  public productId : Integer  ;
+  
+  public amount : Integer  ;
+}

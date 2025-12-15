@@ -1,0 +1,41 @@
+namespace Order ;
+
+public import Order:: IShoppingInterface ;
+
+class ShoppingCart specializes IShoppingInterface {
+  @Create
+  public ShoppingCart (  ) {    
+  }
+  
+  public addProduct (   in productId: Integer  ) {
+    this.products->add ( productId );
+
+    WriteLine ( "Added product " + IntegerFunctions:: ToString ( productId ) );
+
+  }
+  
+  public removeProduct (   in productId: Integer  ) {
+    this.products->remove ( productId );
+
+    WriteLine ( "Removed product " + IntegerFunctions:: ToString ( productId ) );
+
+  }
+  
+  public orderProducts (  ) {
+    for ( Integer productId : this.products ) {
+      this.dependency_OrderManagement.addOrder ( productId, 1 );
+
+    } 
+
+    this.dependency_OrderManagement.orderProducts (  );
+
+    this.products->clear (  );
+
+    WriteLine ( "Ordered products" );
+
+  }
+  
+  private products : Integer [ * ]sequence ;
+  
+  public dependency_OrderManagement : IOrderManagementInterface  ;
+}

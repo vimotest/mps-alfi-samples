@@ -1,0 +1,28 @@
+namespace HamsterLibrary ;
+
+
+
+class Row {
+  @Create
+  public Row (   in columns: Integer  ) {
+    for ( columnIndex in 1 .. columns ) {
+      let cell: Cell = new Cell (  );
+
+      if ( columnIndex > 1 ) {
+        let leftCell: Cell = this.cells->at ( columnIndex - 1 );
+
+        cell.west = leftCell;
+
+        leftCell.east = cell;
+
+      } 
+
+      this.cells->add ( cell );
+
+    } 
+
+  }
+  
+  
+  public cells : Cell [ * ]sequence ;
+}

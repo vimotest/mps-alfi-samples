@@ -1,0 +1,46 @@
+namespace HamsterLibrary ;
+
+
+
+class Territory {
+  @Create
+  public Territory (   in rows: Integer ,   in columns: Integer  ) {
+    for ( rowIndex in 1 .. rows ) {
+      let row: Row = new Row ( columns );
+
+      this.rows->add ( row );
+
+
+      if ( rowIndex > 1 ) {
+        let upperRow: Row = this.rows->at ( rowIndex - 1 );
+
+        for ( columnIndex in 1 .. columns ) {
+          let upperRowCell: Cell = upperRow.cells->at ( columnIndex );
+
+          let currentRowCell: Cell = row.cells->at ( columnIndex );
+
+          currentRowCell.north = upperRowCell;
+
+          upperRowCell.south = currentRowCell;
+
+        } 
+
+      } 
+
+
+    } 
+
+  }
+  
+  public getCellAt (   in x: Integer ,   in y: Integer  ) : Cell [ 0 .. 1 ]  {
+    let row: Row = this.rows->at ( y + 1 );
+
+    let cell: Cell = row.cells->at ( x + 1 );
+
+    return cell;
+
+  }
+  
+  
+  public rows : Row [ * ]sequence ;
+}

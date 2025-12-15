@@ -1,0 +1,31 @@
+namespace MyPackage ;
+
+public import MyPackage:: IMyInterface ;
+public import MyPackage:: NumberComponent ;
+public import MyPackage:: RandomProvider ;
+
+class MyComposite specializes IMyInterface {
+  @Create
+  public MyComposite (  ) {
+    this.numberComponent = new NumberComponent (  );
+
+    this.randomProvider = new RandomProvider (  );
+
+    this.randomProvider.dependency_GetNumber = this.numberComponent;
+
+  }
+  
+  public GenerateInt (   in offset: Integer  ) : Integer  {
+    return this.randomProvider.GenerateInt ( offset );
+
+  }
+  
+  public MyFactor (  ) : Integer  {
+    return this.numberComponent.MyFactor (  );
+
+  }
+  
+  public numberComponent : NumberComponent  ;
+  
+  public randomProvider : RandomProvider  ;
+}

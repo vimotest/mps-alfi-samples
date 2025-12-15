@@ -1,0 +1,16 @@
+namespace Order ;
+
+
+
+abstract class IInventoryInterface {
+  
+  public abstract addProductItems (   in productId: Integer ,   in amount: Integer  ) ;
+  
+  public abstract removeProductItems (   in productId: Integer ,   in amount: Integer  ) ;
+  
+  public abstract getProductIds (  ) : Integer [ * ]  ;
+  
+  public abstract getProductName (   in productId: Integer  ) : String  ;
+  
+  public abstract getProductItemsAmount (   in productId: Integer  ) : Integer  ;
+}
