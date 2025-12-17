@@ -7,7 +7,15 @@ task buildCsHamsterProject(type: Exec) {
     group 'alfi-samples'
     description 'Build C# Hamster Programs'
 
-    commandLine 'dotnet', 'build', "$hamsterCsProjectDir/Hamster.sln", '--configuration', 'Debug'
+    // Restore each project individually to avoid dotnet restore skipping projects
+    // when multiple .csproj files share the same directory
+    doFirst {
+        exec { commandLine 'dotnet', 'restore', "$hamsterCsProjectDir/HamsterHello.csproj", '--force' }
+        exec { commandLine 'dotnet', 'restore', "$hamsterCsProjectDir/HamsterDemo.csproj", '--force' }
+        exec { commandLine 'dotnet', 'restore', "$hamsterCsProjectDir/HamsterTest.csproj", '--force' }
+    }
+
+    commandLine 'dotnet', 'build', "$hamsterCsProjectDir/Hamster.sln", '--configuration', 'Debug', '--no-restore'
     workingDir projectDir
 }
 
@@ -15,7 +23,7 @@ task executeCsHamsterTests(type: Exec) {
     group 'alfi-samples'
     description 'Run C# Hamster Tests'
 
-    commandLine 'dotnet', 'test', "$hamsterCsProjectDir/HamsterTest.csproj"
+    commandLine 'dotnet', 'test', "$hamsterCsProjectDir/HamsterTest.csproj", '--configuration', 'Debug'
     workingDir projectDir
 }
 
@@ -23,14 +31,18 @@ task buildCsSoftwareComponentProject(type: Exec) {
     group 'alfi-samples'
     description 'Build Cs Software Component Programs'
 
-    commandLine 'dotnet', 'restore', "$swcCsProjectDir/SoftwareComponents.sln"
-    commandLine 'dotnet', 'build', "$swcCsProjectDir/SoftwareComponents.sln", '--configuration', 'Debug'
+    doFirst {
+        exec { commandLine 'dotnet', 'restore', "$swcCsProjectDir/SoftwareComponentsTest.csproj", '--force' }
+    }
+
+    commandLine 'dotnet', 'build', "$swcCsProjectDir/SoftwareComponents.sln", '--configuration', 'Debug', '--no-restore'
+    workingDir projectDir
 }
 
 task executeCsSoftwareComponentTests(type: Exec) {
     group 'alfi-samples'
     description 'Run Cs Software Component Tests'
 
-    commandLine 'dotnet', 'test', "$swcCsProjectDir/SoftwareComponentsTest.csproj"
+    commandLine 'dotnet', 'test', "$swcCsProjectDir/SoftwareComponentsTest.csproj", '--configuration', 'Debug'
     workingDir projectDir
 }
