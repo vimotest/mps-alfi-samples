@@ -4,7 +4,7 @@ package HamsterSimulatorLanguage.sandbox.HamsterLibrary;
 
 
 /**
- * 
+ * foo
  */
 public enum Direction {
   EAST(),

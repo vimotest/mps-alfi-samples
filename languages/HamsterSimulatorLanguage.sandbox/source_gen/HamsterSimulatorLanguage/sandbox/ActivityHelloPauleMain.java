@@ -4,7 +4,7 @@ package HamsterSimulatorLanguage.sandbox;
 
 
 /**
- * 
+ * foo
  */
 public class ActivityHelloPauleMain {
   public static void HelloPauleMain() {
