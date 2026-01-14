@@ -9,7 +9,7 @@ class HamsterTestSuite {
 
     sut.execute (  );
 
-    AssertEqual ( 0, sut.hamster.grainInMouth );
+    AssertEqualWithMessage ( 0, sut.hamster.grainInMouth, "Expected $grains grains, but hamster has " + IntegerFunctions:: ToString ( sut.hamster.grainInMouth ) );
 
     AssertEqual ( 0, sut.territory.getCellAt ( 1, 5 ).grainCount );
 

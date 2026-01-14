@@ -4,13 +4,14 @@ package HamsterSimulatorLanguage.sandbox;
 
 import org.junit.jupiter.api.Test;
 import org.junit.Assert;
+import wrappers.javaWrappers.IntegerFunctions;
 
 public class HamsterTestSuite_Test {
   @Test
   public void test_Demo() throws Exception {
     DemoHamsterProgram sut = new DemoHamsterProgram();
     sut.execute();
-    Assert.assertEquals(Integer.valueOf(sut.hamster.grainInMouth), sut.hamster.grainInMouth);
+    Assert.assertEquals("Expected $grains grains, but hamster has " + IntegerFunctions.ToString(sut.hamster.grainInMouth), Integer.valueOf(sut.hamster.grainInMouth), sut.hamster.grainInMouth);
     Assert.assertEquals(Integer.valueOf(sut.territory.getCellAt(1, 5).grainCount), sut.territory.getCellAt(1, 5).grainCount);
     Assert.assertEquals(Integer.valueOf(7), Integer.valueOf(sut.hamster.writtenMessages.size()));
     Assert.assertEquals("mouth is empty!", sut.hamster.writtenMessages.get(1 - 1));

@@ -22,6 +22,7 @@
     <import index="s21g" ref="r:c93e1ab4-093b-4ac4-8fb0-7f6d0d413a49(HamsterSimulatorLanguage.behavior)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
     <import index="lui2" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.module(MPS.OpenAPI/)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="vdrq" ref="r:85354f47-14fd-40e6-a7cc-2d1aa842c4cd(jetbrains.mps.lang.text.behavior)" implicit="true" />
     <import index="bqjt" ref="r:ec1f09af-a5e9-4755-932d-7ccae7bdd219(alfi.behavior)" implicit="true" />
   </imports>
@@ -186,6 +187,7 @@
         <child id="982871510068000158" name="sourceNodeQuery" index="1sPUBK" />
       </concept>
       <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
+      <concept id="1167756221419" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_templatePropertyValue" flags="nn" index="3zGtF$" />
       <concept id="1167770111131" name="jetbrains.mps.lang.generator.structure.ReferenceMacro_GetReferent" flags="in" index="3$xsQk" />
       <concept id="1167945743726" name="jetbrains.mps.lang.generator.structure.IfMacro_Condition" flags="in" index="3IZrLx" />
       <concept id="1167951910403" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodesQuery" flags="in" index="3JmXsc" />
@@ -404,6 +406,9 @@
       <concept id="7144803224901733272" name="alfi.structure.BinaryExpression" flags="ng" index="31szGP">
         <child id="7144803224901733273" name="operand1" index="31szGO" />
         <child id="7144803224901733275" name="operand2" index="31szGQ" />
+      </concept>
+      <concept id="7144803224901733332" name="alfi.structure.ArithmeticExpression" flags="ng" index="31szHT">
+        <property id="7144803224901733359" name="operator" index="31szH2" />
       </concept>
       <concept id="7144803224902197132" name="alfi.structure.EqualityExpression" flags="ng" index="31uMWx">
         <property id="7144803224902197133" name="operator" index="31uMWw" />
@@ -3308,7 +3313,7 @@
                 <node concept="_uF8j" id="37zNn5LQ8jh" role="_jtWe">
                   <node concept="_vnHb" id="37zNn5LQ8jj" role="_uF8g">
                     <node concept="_vnHe" id="37zNn5LQ8jl" role="35HzJw">
-                      <ref role="3acloq" to="hsxa:37zNn5KVoOI" resolve="AssertEqual" />
+                      <ref role="3acloq" to="hsxa:7NQ16AKJOZm" resolve="AssertEqualWithMessage" />
                     </node>
                   </node>
                   <node concept="_vku0" id="37zNn5LQ8jn" role="_uFfl">
@@ -3383,6 +3388,101 @@
                         </node>
                       </node>
                     </node>
+                    <node concept="31szHT" id="5LuND8XXqSU" role="_vku1">
+                      <property role="31szH2" value="6cBsaQylkJ$/PlusOperator" />
+                      <node concept="_iklQ" id="5LuND8XXxWC" role="31szGO">
+                        <property role="_iklR" value="Expected $grains grains, but hamster has " />
+                        <node concept="17Uvod" id="5LuND8XXy3J" role="lGtFl">
+                          <property role="2qtEX9" value="value" />
+                          <property role="P4ACc" value="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703/2674824929519052396/2674824929519052397" />
+                          <node concept="3zFVjK" id="5LuND8XXy3K" role="3zH0cK">
+                            <node concept="3clFbS" id="5LuND8XXy3L" role="2VODD2">
+                              <node concept="3clFbF" id="5LuND8XXyaD" role="3cqZAp">
+                                <node concept="2OqwBi" id="5LuND8XXyIU" role="3clFbG">
+                                  <node concept="3zGtF$" id="5LuND8XXyaC" role="2Oq$k0" />
+                                  <node concept="liA8E" id="5LuND8XXz92" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+                                    <node concept="Xl_RD" id="5LuND8XXz95" role="37wK5m">
+                                      <property role="Xl_RC" value="$grains" />
+                                    </node>
+                                    <node concept="3cpWs3" id="5LuND8XX_dJ" role="37wK5m">
+                                      <node concept="Xl_RD" id="5LuND8XX_fi" role="3uHU7w">
+                                        <property role="Xl_RC" value="" />
+                                      </node>
+                                      <node concept="2OqwBi" id="5LuND8XXzP0" role="3uHU7B">
+                                        <node concept="30H73N" id="5LuND8XXzuv" role="2Oq$k0" />
+                                        <node concept="3TrcHB" id="5LuND8XXzZq" role="2OqNvi">
+                                          <ref role="3TsBF5" to="fyu6:5X3Rsv9ib0j" resolve="expectedGrains" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="_uF8j" id="5LuND8XWUdm" role="31szGQ">
+                        <node concept="_vnHb" id="5LuND8XWUdg" role="_uF8g">
+                          <node concept="_vnHe" id="5LuND8XWUdk" role="35HzJw">
+                            <ref role="3acloq" to="gkn4:7GHN9f$Q481" resolve="IntegerFunctions" />
+                          </node>
+                          <node concept="_vnHe" id="5LuND8XWUdl" role="35HzJw">
+                            <ref role="3acloq" to="gkn4:7GHN9f$Q4ae" resolve="ToString" />
+                          </node>
+                        </node>
+                        <node concept="_vku0" id="5LuND8XWUdn" role="_uFfl">
+                          <node concept="32M0$0" id="5LuND8XWUdo" role="_vku1">
+                            <node concept="32Pqhl" id="5LuND8XWUdp" role="32PqmZ">
+                              <node concept="32M0$0" id="5LuND8XWUdq" role="32Men7">
+                                <node concept="32Pqhl" id="5LuND8XWUdr" role="32PqmZ">
+                                  <node concept="_uYbk" id="5LuND8XWUds" role="32Men7">
+                                    <node concept="_vnHb" id="5LuND8XWUdt" role="_uYbl">
+                                      <node concept="_vnHe" id="5LuND8XWUdu" role="35HzJw">
+                                        <ref role="3acloq" node="37zNn5LQ387" resolve="hamsterProgram" />
+                                        <node concept="1ZhdrF" id="5LuND8XWUdv" role="lGtFl">
+                                          <property role="2qtEX8" value="nameRef" />
+                                          <property role="P3scX" value="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703/2674824929519835220/3855977438835276054" />
+                                          <node concept="3$xsQk" id="5LuND8XWUdw" role="3$ytzL">
+                                            <node concept="3clFbS" id="5LuND8XWUdx" role="2VODD2">
+                                              <node concept="3clFbF" id="5LuND8XWUdy" role="3cqZAp">
+                                                <node concept="2OqwBi" id="5LuND8XWUdz" role="3clFbG">
+                                                  <node concept="1iwH7S" id="5LuND8XWUd$" role="2Oq$k0" />
+                                                  <node concept="1iwH70" id="5LuND8XWUd_" role="2OqNvi">
+                                                    <ref role="1iwH77" node="37zNn5LPw06" resolve="testCase_toProgramVariable" />
+                                                    <node concept="2OqwBi" id="5LuND8XWUdA" role="1iwH7V">
+                                                      <node concept="30H73N" id="5LuND8XWUdB" role="2Oq$k0" />
+                                                      <node concept="2Xjw5R" id="5LuND8XWUdC" role="2OqNvi">
+                                                        <node concept="1xMEDy" id="5LuND8XWUdD" role="1xVPHs">
+                                                          <node concept="chp4Y" id="5LuND8XWUdE" role="ri$Ld">
+                                                            <ref role="cht4Q" to="fyu6:5X3Rsv9iaOU" resolve="HamsterProgramTestCase" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="_vnHe" id="5LuND8XWUdF" role="32Men1">
+                                    <ref role="3acloq" to="azo2:74z8RZkfI_8" resolve="hamster" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="_vnHe" id="5LuND8XWUdG" role="32Men1">
+                                <ref role="3acloq" to="azo2:2CGYajy_ice" resolve="grainInMouth" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                   </node>
                 </node>
                 <node concept="raruj" id="37zNn5LQbi1" role="lGtFl" />
@@ -3395,7 +3495,7 @@
                 <ref role="3acloq" to="hsxa:37zNn5KVo9F" resolve="Testing" />
               </node>
               <node concept="_vnHe" id="37zNn5LQ8pO" role="35HzJw">
-                <ref role="3acloq" to="hsxa:37zNn5KVoOI" resolve="AssertEqual" />
+                <ref role="3acloq" to="hsxa:7NQ16AKJOZm" resolve="AssertEqualWithMessage" />
               </node>
             </node>
           </node>

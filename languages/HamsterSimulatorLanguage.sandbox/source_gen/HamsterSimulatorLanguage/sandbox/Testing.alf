@@ -29,6 +29,15 @@ package Testing {
 
   }
   
+  public activity AssertEqualWithMessage (   in expected: any [ 0 .. 1 ] ,   in actual: any [ 0 .. 1 ] ,   in message: String  ) {
+    if ( expected != actual ) {
+      WriteLine ( "FAILED: " + message );
+
+    } 
+
+  }
+  
+  
   public activity AssertTrue (   in expected: any [ 0 .. 1 ]  ) {
     if ( expected != true ) {
       WriteLine ( "FAILED: condition is not true" );
@@ -37,9 +46,27 @@ package Testing {
 
   }
   
+  public activity AssertTrueWithMessage (   in expected: any [ 0 .. 1 ] ,   in message: String  ) {
+    if ( expected != true ) {
+      WriteLine ( "FAILED: " + message );
+
+    } 
+
+  }
+  
+  
   public activity AssertFalse (   in expected: any [ 0 .. 1 ]  ) {
     if ( expected != false ) {
       WriteLine ( "FAILED: condition is not false" );
+
+    } 
+
+  }
+  
+  
+  public activity AssertFalseWithMessage (   in expected: any [ 0 .. 1 ] ,   in message: String  ) {
+    if ( expected != false ) {
+      WriteLine ( "FAILED: " + message );
 
     } 
 
