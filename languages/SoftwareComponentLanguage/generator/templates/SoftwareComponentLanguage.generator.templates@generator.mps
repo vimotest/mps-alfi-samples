@@ -300,9 +300,18 @@
         <property id="1820071129312120005" name="stereotype" index="2hPvR9" />
       </concept>
       <concept id="8280419611661851712" name="alfi.structure.PackageDefinition" flags="ng" index="2qCqA3" />
+      <concept id="2674824929519052396" name="alfi.structure.StringLiteralExpression" flags="ng" index="_iklQ">
+        <property id="2674824929519052397" name="value" index="_iklR" />
+      </concept>
       <concept id="2674824929518918217" name="alfi.structure.ThisExpression" flags="ng" index="_iR_j" />
       <concept id="2674824929518763027" name="alfi.structure.ExpressionStatement" flags="ng" index="_jtW9">
         <child id="2674824929518763028" name="expression" index="_jtWe" />
+      </concept>
+      <concept id="2674824929518763012" name="alfi.structure.BooleanLiteralExpression" flags="ng" index="_jtWu">
+        <property id="2674824929518763013" name="value" index="_jtWv" />
+      </concept>
+      <concept id="2674824929519882505" name="alfi.structure.BehaviorInvocationExpression" flags="ng" index="_uF8j">
+        <child id="2674824929519882506" name="target" index="_uF8g" />
       </concept>
       <concept id="2674824929519927758" name="alfi.structure.NameExpression" flags="ng" index="_uYbk">
         <child id="2674824929519927759" name="name" index="_uYbl" />
@@ -1847,6 +1856,24 @@
                 </node>
               </node>
             </node>
+          </node>
+          <node concept="_jtW9" id="37zNn5LQ8jp" role="PCHzz">
+            <node concept="_uF8j" id="37zNn5LQ8jh" role="_jtWe">
+              <node concept="_vnHb" id="37zNn5LQ8jj" role="_uF8g">
+                <node concept="_vnHe" id="37zNn5LQ8jl" role="35HzJw">
+                  <ref role="3acloq" to="hsxa:7NQ16AKJQ8p" resolve="AssertTrueWithMessage" />
+                </node>
+              </node>
+              <node concept="_vku0" id="37zNn5LQ8jn" role="_uFfl">
+                <node concept="_jtWu" id="1UFLT2Ihsih" role="_vku1">
+                  <property role="_jtWv" value="true" />
+                </node>
+                <node concept="_iklQ" id="5LuND8XXxWC" role="_vku1">
+                  <property role="_iklR" value="Expected that method runs without exception" />
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="37zNn5LQbi1" role="lGtFl" />
           </node>
         </node>
         <node concept="3wUxaT" id="pZehJpQcYC" role="3wUx9_">

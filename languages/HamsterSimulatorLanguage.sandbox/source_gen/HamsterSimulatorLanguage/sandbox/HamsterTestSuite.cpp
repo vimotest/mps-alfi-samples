@@ -19,7 +19,7 @@ TEST_F(HamsterTestSuite, Demo)
 {
   std::shared_ptr<DemoHamsterProgram> sut = std::make_shared<DemoHamsterProgram>();
   sut->execute();
-  ASSERT_EQ(0, sut->hamster->grainInMouth) << std::string("Expected $grains grains, but hamster has ") + std::to_string(sut->hamster->grainInMouth);
+  EXPECT_EQ(0, sut->hamster->grainInMouth) << std::string("Expected $grains grains, but hamster has ") + std::to_string(sut->hamster->grainInMouth);
   std::optional<int> helperVar_6n6sy_d0a0 = sut->territory->getCellAt(1, 5).has_value() ? sut->territory->getCellAt(1, 5).value()->grainCount : std::optional<int>();
   EXPECT_EQ(0, helperVar_6n6sy_d0a0);
   EXPECT_EQ(7, sut->hamster->writtenMessages.size());

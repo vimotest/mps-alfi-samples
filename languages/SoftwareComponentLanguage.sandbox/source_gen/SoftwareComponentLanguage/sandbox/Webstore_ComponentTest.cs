@@ -12,5 +12,6 @@ public class Webstore_ComponentTest
     {
         Order.Webstore sut = new Order.Webstore();
         sut.addProduct(1);
+        Assert.IsTrue(true, "Expected that method runs without exception");
     }
 }

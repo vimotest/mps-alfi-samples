@@ -9,5 +9,7 @@ class Webstore_ComponentTest {
 
     sut.addProduct ( 1 );
 
+    AssertTrueWithMessage ( true, "Expected that method runs without exception" );
+
   }
 }

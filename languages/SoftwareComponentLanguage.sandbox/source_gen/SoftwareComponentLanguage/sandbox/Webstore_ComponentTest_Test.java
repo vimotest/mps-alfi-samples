@@ -4,11 +4,13 @@ package SoftwareComponentLanguage.sandbox;
 
 import org.junit.jupiter.api.Test;
 import SoftwareComponentLanguage.sandbox.Order.Webstore;
+import org.junit.Assert;
 
 public class Webstore_ComponentTest_Test {
   @Test
   public void test_testCase() throws Exception {
     Webstore sut = new Webstore();
     sut.addProduct(1);
+    Assert.assertTrue("Expected that method runs without exception", true);
   }
 }
