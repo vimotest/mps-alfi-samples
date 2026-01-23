@@ -3,8 +3,4 @@
 /*
 
  */
-class ActivityHelloPauleMain
-{
-public:
-  static void HelloPauleMain();
-};
+void HelloPauleMain();

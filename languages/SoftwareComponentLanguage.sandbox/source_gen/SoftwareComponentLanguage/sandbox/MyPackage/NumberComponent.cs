@@ -5,7 +5,7 @@ using MyPackage;
 
 namespace MyPackage
 {
-    internal class NumberComponent : MyPackage.IMyInterface
+    public class NumberComponent : MyPackage.IMyInterface
     {
 
         public NumberComponent()

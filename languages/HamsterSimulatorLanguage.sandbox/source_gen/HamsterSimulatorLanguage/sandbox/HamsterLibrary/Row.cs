@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace HamsterLibrary
 {
-    internal class Row
+    public class Row
     {
 
         public Row(int columns)

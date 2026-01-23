@@ -3,7 +3,7 @@
 /// </filename>
 namespace HamsterLibrary
 {
-    internal class Cell
+    public class Cell
     {
         public HamsterLibrary.Cell north;
 

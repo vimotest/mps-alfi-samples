@@ -3,7 +3,7 @@
 /// </filename>
 using HamsterLibrary;
 
-internal class DemoHamsterProgram : HamsterLibrary.HamsterProgramBase
+public class DemoHamsterProgram : HamsterLibrary.HamsterProgramBase
 {
 
     public DemoHamsterProgram()

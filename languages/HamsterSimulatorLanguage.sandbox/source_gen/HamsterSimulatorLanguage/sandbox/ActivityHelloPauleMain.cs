@@ -3,13 +3,13 @@
 /// </filename>
 public class ActivityHelloPauleMain
 {
-    public static void HelloPauleMain()
+    public static void Execute()
     {
         new HelloPauleHamsterProgram().execute();
     }
 
     public static void Main(string[] args)
     {
-        ActivityHelloPauleMain.HelloPauleMain();
+        ActivityHelloPauleMain.Execute();
     }
 }

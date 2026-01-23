@@ -1,7 +1,7 @@
 /// <filename>
 ///     OrderInfo.cs
 /// </filename>
-internal class OrderInfo
+public class OrderInfo
 {
     public int productId;
 

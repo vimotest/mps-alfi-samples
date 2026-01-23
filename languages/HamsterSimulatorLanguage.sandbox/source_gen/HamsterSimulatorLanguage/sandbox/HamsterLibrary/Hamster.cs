@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace HamsterLibrary
 {
-    internal class Hamster
+    public class Hamster
     {
 
         public Hamster(HamsterLibrary.Cell cell)

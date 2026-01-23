@@ -2,7 +2,6 @@
 
 int main()
 {
-  ActivityHelloPauleMain activity;
-  activity.HelloPauleMain();
+  HelloPauleMain();
   return 0;
 }

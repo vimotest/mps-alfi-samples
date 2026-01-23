@@ -3,7 +3,7 @@
 /// </filename>
 namespace MyPackage
 {
-    internal interface IMyInterface
+    public interface IMyInterface
     {
         int GenerateInt(int offset);
 

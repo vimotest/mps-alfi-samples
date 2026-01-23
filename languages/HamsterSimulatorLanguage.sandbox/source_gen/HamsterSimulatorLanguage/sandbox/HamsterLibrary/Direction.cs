@@ -3,7 +3,7 @@
 /// </filename>
 namespace HamsterLibrary
 {
-    internal enum Direction
+    public enum Direction
     {
         EAST /* no value */,
         SOUTH /* no value */,

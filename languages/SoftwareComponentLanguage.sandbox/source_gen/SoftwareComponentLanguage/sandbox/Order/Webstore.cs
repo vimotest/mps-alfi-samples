@@ -5,7 +5,7 @@ using Order;
 
 namespace Order
 {
-    internal class Webstore : Order.ISearchInterface, Order.IShoppingInterface
+    public class Webstore : Order.ISearchInterface, Order.IShoppingInterface
     {
 
         public Webstore()

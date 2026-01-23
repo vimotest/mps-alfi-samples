@@ -3,12 +3,12 @@
 /// </filename>
 using System.Collections.Generic;
 using Alf.Library;
-using Alf.Library.PrimitiveBehaviors;
+using System;
 using Order;
 
 namespace Order
 {
-    internal class ShoppingCart : Order.IShoppingInterface
+    public class ShoppingCart : Order.IShoppingInterface
     {
 
         public ShoppingCart()
@@ -18,13 +18,13 @@ namespace Order
         public virtual void addProduct(int productId)
         {
             this.products.Add(productId);
-            BasicInputOutput.WriteLine("Added product " + IntegerFunctions.ToString(productId));
+            BasicInputOutput.WriteLine("Added product " + Convert.ToString(productId));
         }
 
         public virtual void removeProduct(int productId)
         {
             this.products.Remove(productId);
-            BasicInputOutput.WriteLine("Removed product " + IntegerFunctions.ToString(productId));
+            BasicInputOutput.WriteLine("Removed product " + Convert.ToString(productId));
         }
 
         public virtual void orderProducts()

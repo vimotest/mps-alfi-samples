@@ -4,11 +4,11 @@
 using System.Collections.Generic;
 using Order;
 using Alf.Library;
-using Alf.Library.PrimitiveBehaviors;
+using System;
 
 namespace Order
 {
-    internal class Ordering : Order.IOrderManagementInterface
+    public class Ordering : Order.IOrderManagementInterface
     {
 
         public Ordering()
@@ -41,7 +41,7 @@ namespace Order
             {
                 this.dependency_ManageInventory.removeProductItems(order.productId, order.amount);
                 string productName = this.dependency_ManageInventory.getProductName(order.amount);
-                BasicInputOutput.WriteLine("Finish ordering " + IntegerFunctions.ToString(order.amount) + "x " + productName);
+                BasicInputOutput.WriteLine("Finish ordering " + Convert.ToString(order.amount) + "x " + productName);
             }
             this.orders.Clear();
         }

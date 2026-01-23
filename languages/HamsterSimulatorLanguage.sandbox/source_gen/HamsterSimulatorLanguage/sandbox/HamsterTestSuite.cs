@@ -3,8 +3,9 @@
 /// </filename>
 using HamsterLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Alf.Library.PrimitiveBehaviors;
+using System;
 using System.Collections.Generic;
+using Alf.Library.PrimitiveBehaviors;
 
 [Microsoft.VisualStudio.TestTools.UnitTesting.TestClass]
 public class HamsterTestSuite
@@ -14,7 +15,7 @@ public class HamsterTestSuite
     {
         DemoHamsterProgram sut = new DemoHamsterProgram();
         sut.execute();
-        Assert.AreEqual(0, sut.hamster.grainInMouth, "Expected $grains grains, but hamster has " + IntegerFunctions.ToString(sut.hamster.grainInMouth));
+        Assert.AreEqual(0, sut.hamster.grainInMouth, "Expected $grains grains, but hamster has " + Convert.ToString(sut.hamster.grainInMouth));
         int? helperVar_6n6sy_d0a0 = sut.territory.getCellAt(1, 5).grainCount;
         Assert.AreEqual(0, helperVar_6n6sy_d0a0);
         Assert.AreEqual(7, sut.hamster.writtenMessages.Count);

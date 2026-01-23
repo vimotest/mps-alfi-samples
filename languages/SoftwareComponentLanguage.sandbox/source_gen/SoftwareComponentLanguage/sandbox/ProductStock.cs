@@ -1,7 +1,7 @@
 /// <filename>
 ///     ProductStock.cs
 /// </filename>
-internal class ProductStock
+public class ProductStock
 {
     public string name;
 

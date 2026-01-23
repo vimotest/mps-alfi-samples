@@ -7,7 +7,7 @@ using HamsterLibrary;
 
 namespace HamsterLibrary
 {
-    internal class Territory
+    public class Territory
     {
 
         public Territory(int rows, int columns)

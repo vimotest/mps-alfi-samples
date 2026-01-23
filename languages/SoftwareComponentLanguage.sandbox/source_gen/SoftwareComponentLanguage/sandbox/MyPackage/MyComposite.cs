@@ -5,7 +5,7 @@ using MyPackage;
 
 namespace MyPackage
 {
-    internal class MyComposite : MyPackage.IMyInterface
+    public class MyComposite : MyPackage.IMyInterface
     {
 
         public MyComposite()

@@ -3,7 +3,7 @@
 /// </filename>
 namespace Order
 {
-    internal interface ISearchInterface
+    public interface ISearchInterface
     {
         int searchProduct(string productName);
     }

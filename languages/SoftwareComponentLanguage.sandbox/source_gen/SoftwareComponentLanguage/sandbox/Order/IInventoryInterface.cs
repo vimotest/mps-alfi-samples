@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Order
 {
-    internal interface IInventoryInterface
+    public interface IInventoryInterface
     {
         void addProductItems(int productId, int amount);
 

@@ -2,7 +2,7 @@
 #include <memory>
 #include "HelloPauleHamsterProgram.h"
 
-void ActivityHelloPauleMain::HelloPauleMain()
+void HelloPauleMain()
 {
   std::make_shared<HelloPauleHamsterProgram>()->execute();
 }

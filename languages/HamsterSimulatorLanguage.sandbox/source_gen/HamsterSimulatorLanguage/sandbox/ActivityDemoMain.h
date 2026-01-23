@@ -3,8 +3,4 @@
 /*
 
  */
-class ActivityDemoMain
-{
-public:
-  static void DemoMain();
-};
+void DemoMain();

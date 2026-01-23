@@ -5,7 +5,7 @@ using HamsterLibrary;
 
 namespace HamsterLibrary
 {
-    internal abstract class HamsterProgramBase
+    public abstract class HamsterProgramBase
     {
         public abstract void execute();
 

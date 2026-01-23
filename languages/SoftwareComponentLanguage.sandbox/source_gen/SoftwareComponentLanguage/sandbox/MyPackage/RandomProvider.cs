@@ -5,7 +5,7 @@ using MyPackage;
 
 namespace MyPackage
 {
-    internal class RandomProvider : MyPackage.IMyInterface
+    public class RandomProvider : MyPackage.IMyInterface
     {
 
         public RandomProvider()

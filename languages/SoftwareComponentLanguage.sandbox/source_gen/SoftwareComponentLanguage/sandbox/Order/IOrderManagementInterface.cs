@@ -3,7 +3,7 @@
 /// </filename>
 namespace Order
 {
-    internal interface IOrderManagementInterface
+    public interface IOrderManagementInterface
     {
         void addOrder(int productId, int amount);
 

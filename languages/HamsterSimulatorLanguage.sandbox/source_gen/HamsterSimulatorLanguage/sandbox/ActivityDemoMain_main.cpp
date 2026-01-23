@@ -2,7 +2,6 @@
 
 int main()
 {
-  ActivityDemoMain activity;
-  activity.DemoMain();
+  DemoMain();
   return 0;
 }

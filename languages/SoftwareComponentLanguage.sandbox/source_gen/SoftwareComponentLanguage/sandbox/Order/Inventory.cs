@@ -6,7 +6,7 @@ using Order;
 
 namespace Order
 {
-    internal class Inventory : Order.IInventoryInterface, Order.ISearchInterface
+    public class Inventory : Order.IInventoryInterface, Order.ISearchInterface
     {
 
         public Inventory()

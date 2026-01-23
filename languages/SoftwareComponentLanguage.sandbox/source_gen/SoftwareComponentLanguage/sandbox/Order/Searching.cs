@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Order
 {
-    internal class Searching : Order.ISearchInterface
+    public class Searching : Order.ISearchInterface
     {
 
         public Searching()
