@@ -6,6 +6,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertTrueWithMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertFalse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertFalseWithMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductStock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OrderInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MyPackage/NumberComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MyPackage/RandomProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Order/ShoppingCart.cs" />
@@ -19,7 +21,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)Order/ISearchInterface.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Order/IOrderManagementInterface.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Order/IInventoryInterface.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ProductStock.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)OrderInfo.cs" />
   </ItemGroup>
 </Project>
