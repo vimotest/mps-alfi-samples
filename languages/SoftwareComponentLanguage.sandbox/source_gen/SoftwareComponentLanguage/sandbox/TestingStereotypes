@@ -1,0 +1,5 @@
+predefined stereotypes TestingStereotypes
+  predefined stereotype: TestCase
+  predefined stereotype: TestSuite
+  predefined stereotype: BeforeTest
+  predefined stereotype: AfterTest
