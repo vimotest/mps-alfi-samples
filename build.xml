@@ -370,6 +370,7 @@
           <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="cl" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
@@ -453,6 +454,7 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="cl" />
           <module ref="90dba4c7-2c2e-4bec-a587-6476e412e28c(SoftwareComponentLanguage)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
         </dependencies>
@@ -988,6 +990,7 @@
           <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="cl" />
           <module ref="bf897046-1e4e-4c49-b9d6-a7ab6d3f8703(alfi)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
@@ -1071,6 +1074,7 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="cl" />
           <module ref="90dba4c7-2c2e-4bec-a587-6476e412e28c(SoftwareComponentLanguage)" kind="cl" />
           <module ref="e9b40a72-6930-481d-bdce-a0a866bf715e(alfi.StandardModelLibrary)" kind="cl" />
         </dependencies>
@@ -1611,8 +1615,8 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
         <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/app.jar" />
@@ -1684,8 +1688,8 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
         <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/SoftwareComponentLanguage" />
         <pathelement path="${build.tmp}/java/out/SoftwareComponentLanguage.runtime" />

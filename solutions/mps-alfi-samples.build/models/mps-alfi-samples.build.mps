@@ -812,6 +812,11 @@
               <ref role="3bR37D" to="mk2q:5tK9548cRt6" resolve="alfi.StandardModelLibrary" />
             </node>
           </node>
+          <node concept="1SiIV0" id="2go9M8ZA$Db" role="3bR37C">
+            <node concept="3bR9La" id="2go9M8ZA$Dc" role="1SiIV1">
+              <ref role="3bR37D" to="ffeo:rD7wKO6k$" resolve="MPS.Generator" />
+            </node>
+          </node>
         </node>
         <node concept="1E0d5M" id="1YdqyHmHZ0L" role="1E1XAP">
           <ref role="1E0d5P" node="1YdqyHmHYXq" resolve="SoftwareComponentLanguage.runtime" />

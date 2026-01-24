@@ -448,6 +448,7 @@
         <child id="4957535937981476792" name="namespace" index="$kHGj" />
       </concept>
       <concept id="2021446509794411996" name="alfi.structure.ImportDeclaration" flags="ng" index="3wG_GZ">
+        <property id="2021446509794422943" name="isPackageImport" index="3wGATW" />
         <child id="2021446509794422890" name="referent" index="3wGAU9" />
       </concept>
       <concept id="2021446509797018714" name="alfi.structure.StereotypeAnnotation" flags="ng" index="3wUxaT">
@@ -2013,6 +2014,14 @@
               </node>
             </node>
           </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3wG_GZ" id="37zNn5LQeZN" role="3wNBFs">
+      <property role="3wGATW" value="true" />
+      <node concept="_vnHb" id="37zNn5LQeZO" role="3wGAU9">
+        <node concept="_vnHe" id="37zNn5LQeZP" role="35HzJw">
+          <ref role="3acloq" to="hsxa:37zNn5KVo9F" resolve="Testing" />
         </node>
       </node>
     </node>

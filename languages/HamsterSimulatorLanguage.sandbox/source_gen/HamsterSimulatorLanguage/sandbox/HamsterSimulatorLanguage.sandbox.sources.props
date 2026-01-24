@@ -1,11 +1,5 @@
 <Project>  
   <ItemGroup>    
-    <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertEqual.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertEqualWithMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertTrue.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertTrueWithMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertFalse.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Testing/AssertFalseWithMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelloPauleHamsterProgram.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DemoHamsterProgram.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HamsterLibrary/Hamster.cs" />

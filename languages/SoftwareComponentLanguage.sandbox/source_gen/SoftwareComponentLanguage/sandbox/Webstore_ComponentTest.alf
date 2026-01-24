@@ -1,6 +1,7 @@
 
 
 public import Order:: Webstore ;
+public import Testing :: * ;
 
 class Webstore_ComponentTest {
   
