@@ -45,7 +45,7 @@ namespace HamsterLibrary
     if (frontCell.has_value())
     {
       std::optional<bool> helperVar_jhn7oh_a0a0b0e0 = frontCell.has_value() ? frontCell.value()->isWall : std::optional<bool>();
-      if (helperVar_jhn7oh_a0a0b0e0 == true)
+      if (helperVar_jhn7oh_a0a0b0e0.value() == true)
       {
         alf::library::BasicInputOutput::WriteLine(std::string("Failed to move, front is wall"));
       }
@@ -91,7 +91,7 @@ namespace HamsterLibrary
     if (frontCell.has_value())
     {
       std::optional<bool> helperVar_jhn7oh_a0a0b0h0 = frontCell.has_value() ? frontCell.value()->isWall : std::optional<bool>();
-      if (helperVar_jhn7oh_a0a0b0h0 == true)
+      if (helperVar_jhn7oh_a0a0b0h0.value() == true)
       {
         return false;
       }

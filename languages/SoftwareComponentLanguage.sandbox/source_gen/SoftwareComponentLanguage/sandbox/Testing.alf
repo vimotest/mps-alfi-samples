@@ -38,7 +38,7 @@ package Testing {
   }
   
   
-  public activity AssertTrue (   in expected: any [ 0 .. 1 ]  ) {
+  public activity AssertTrue (   in expected: Boolean [ 0 .. 1 ]  ) {
     if ( expected != true ) {
       WriteLine ( "FAILED: condition is not true" );
 
@@ -46,7 +46,7 @@ package Testing {
 
   }
   
-  public activity AssertTrueWithMessage (   in expected: any [ 0 .. 1 ] ,   in message: String  ) {
+  public activity AssertTrueWithMessage (   in expected: Boolean [ 0 .. 1 ] ,   in message: String  ) {
     if ( expected != true ) {
       WriteLine ( "FAILED: " + message );
 
@@ -55,7 +55,7 @@ package Testing {
   }
   
   
-  public activity AssertFalse (   in expected: any [ 0 .. 1 ]  ) {
+  public activity AssertFalse (   in expected: Boolean [ 0 .. 1 ]  ) {
     if ( expected != false ) {
       WriteLine ( "FAILED: condition is not false" );
 
@@ -64,7 +64,7 @@ package Testing {
   }
   
   
-  public activity AssertFalseWithMessage (   in expected: any [ 0 .. 1 ] ,   in message: String  ) {
+  public activity AssertFalseWithMessage (   in expected: Boolean [ 0 .. 1 ] ,   in message: String  ) {
     if ( expected != false ) {
       WriteLine ( "FAILED: " + message );
 

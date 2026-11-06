@@ -49,7 +49,7 @@ namespace HamsterLibrary
             if (frontCell != null)
             {
                 bool? helperVar_jhn7oh_a0a0b0e0_0 = frontCell.isWall;
-                if (helperVar_jhn7oh_a0a0b0e0_0 == true)
+                if (helperVar_jhn7oh_a0a0b0e0_0 ?? false == true)
                 {
                     BasicInputOutput.WriteLine("Failed to move, front is wall");
                 }
@@ -98,7 +98,7 @@ namespace HamsterLibrary
             if (frontCell != null)
             {
                 bool? helperVar_jhn7oh_a0a0b0h0_0 = frontCell.isWall;
-                if (helperVar_jhn7oh_a0a0b0h0_0 == true)
+                if (helperVar_jhn7oh_a0a0b0h0_0 ?? false == true)
                 {
                     return false;
                 }

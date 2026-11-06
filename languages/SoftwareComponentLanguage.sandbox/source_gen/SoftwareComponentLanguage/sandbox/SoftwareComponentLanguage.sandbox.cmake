@@ -12,8 +12,6 @@ set(GENERATED_SOURCES
 )
 
 set(GENERATED_HEADERS
-  ${CMAKE_CURRENT_LIST_DIR}/ProductStock.h
-  ${CMAKE_CURRENT_LIST_DIR}/OrderInfo.h
   ${CMAKE_CURRENT_LIST_DIR}/MyPackage/NumberComponent.h
   ${CMAKE_CURRENT_LIST_DIR}/MyPackage/RandomProvider.h
   ${CMAKE_CURRENT_LIST_DIR}/Order/ShoppingCart.h
@@ -27,5 +25,7 @@ set(GENERATED_HEADERS
   ${CMAKE_CURRENT_LIST_DIR}/Order/ISearchInterface.h
   ${CMAKE_CURRENT_LIST_DIR}/Order/IOrderManagementInterface.h
   ${CMAKE_CURRENT_LIST_DIR}/Order/IInventoryInterface.h
+  ${CMAKE_CURRENT_LIST_DIR}/ProductStock.h
+  ${CMAKE_CURRENT_LIST_DIR}/OrderInfo.h
 )
 

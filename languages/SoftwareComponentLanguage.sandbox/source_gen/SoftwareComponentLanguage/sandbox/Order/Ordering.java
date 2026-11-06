@@ -6,7 +6,6 @@ import SoftwareComponentLanguage.sandbox.OrderInfo;
 import java.util.Iterator;
 import java.util.Objects;
 import wrappers.javaWrappers.BasicInputOutput;
-import wrappers.javaWrappers.IntegerFunctions;
 import java.util.List;
 import java.util.LinkedList;
 
@@ -45,7 +44,7 @@ public class Ordering implements IOrderManagementInterface {
 
         this.dependency_ManageInventory.removeProductItems(order.productId, order.amount);
         String productName = this.dependency_ManageInventory.getProductName(order.amount);
-        BasicInputOutput.WriteLine("Finish ordering " + IntegerFunctions.ToString(order.amount) + "x " + productName);
+        BasicInputOutput.WriteLine("Finish ordering " + Integer.toString(order.amount) + "x " + productName);
       }
     }
     this.orders.clear();
