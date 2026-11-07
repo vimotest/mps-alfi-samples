@@ -18,6 +18,9 @@
     <import index="s21g" ref="r:c93e1ab4-093b-4ac4-8fb0-7f6d0d413a49(HamsterSimulatorLanguage.behavior)" implicit="true" />
   </imports>
   <registry>
+    <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
+      <concept id="3235159848334022093" name="jetbrains.mps.lang.behavior.structure.Node_ConceptMethodCall" flags="nn" index="3zqWPK" />
+    </language>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
       <concept id="1402906326895675325" name="jetbrains.mps.lang.editor.structure.CellActionMap_FunctionParm_selectedNode" flags="nn" index="0IXxy" />
       <concept id="5991739802479784074" name="jetbrains.mps.lang.editor.structure.MenuTypeNamed" flags="ng" index="22hDWg" />
@@ -364,7 +367,6 @@
       <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
-      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
@@ -1352,7 +1354,7 @@
                     <ref role="cht4Q" to="tpck:3W5q5oTL9mp" resolve="IGenericComment" />
                   </node>
                 </node>
-                <node concept="2qgKlT" id="gcRXCL$K0E" role="2OqNvi">
+                <node concept="3zqWPK" id="6wnRlVzhJDS" role="2OqNvi">
                   <ref role="37wK5l" to="tpcu:fB3l7ZufMD" resolve="isTODOComment" />
                 </node>
               </node>
@@ -2992,7 +2994,7 @@
                   </node>
                   <node concept="2OqwBi" id="4mY4lcArNW1" role="3uHU7B">
                     <node concept="pncrf" id="4mY4lcArNG_" role="2Oq$k0" />
-                    <node concept="2qgKlT" id="2HeY20GX0WO" role="2OqNvi">
+                    <node concept="3zqWPK" id="6wnRlVzhJDU" role="2OqNvi">
                       <ref role="37wK5l" to="s21g:2HeY20GWTPK" resolve="getPauleDirection" />
                     </node>
                   </node>
@@ -3017,7 +3019,7 @@
                   </node>
                   <node concept="2OqwBi" id="4mY4lcArPtJ" role="3uHU7B">
                     <node concept="pncrf" id="4mY4lcArPtK" role="2Oq$k0" />
-                    <node concept="2qgKlT" id="2HeY20GX2yb" role="2OqNvi">
+                    <node concept="3zqWPK" id="6wnRlVzhJDW" role="2OqNvi">
                       <ref role="37wK5l" to="s21g:2HeY20GWTPK" resolve="getPauleDirection" />
                     </node>
                   </node>
@@ -3042,7 +3044,7 @@
                   </node>
                   <node concept="2OqwBi" id="4mY4lcArPPQ" role="3uHU7B">
                     <node concept="pncrf" id="4mY4lcArPPR" role="2Oq$k0" />
-                    <node concept="2qgKlT" id="2HeY20GX2LC" role="2OqNvi">
+                    <node concept="3zqWPK" id="6wnRlVzhJDY" role="2OqNvi">
                       <ref role="37wK5l" to="s21g:2HeY20GWTPK" resolve="getPauleDirection" />
                     </node>
                   </node>
@@ -3067,7 +3069,7 @@
                   </node>
                   <node concept="2OqwBi" id="4mY4lcArQ0y" role="3uHU7B">
                     <node concept="pncrf" id="4mY4lcArQ0z" role="2Oq$k0" />
-                    <node concept="2qgKlT" id="2HeY20GX3l6" role="2OqNvi">
+                    <node concept="3zqWPK" id="6wnRlVzhJE0" role="2OqNvi">
                       <ref role="37wK5l" to="s21g:2HeY20GWTPK" resolve="getPauleDirection" />
                     </node>
                   </node>
@@ -3082,7 +3084,7 @@
             <node concept="3clFbF" id="2HeY20GX0fQ" role="3cqZAp">
               <node concept="2OqwBi" id="2HeY20GX0Cj" role="3clFbG">
                 <node concept="pncrf" id="2HeY20GX0fP" role="2Oq$k0" />
-                <node concept="2qgKlT" id="2HeY20GX0Mh" role="2OqNvi">
+                <node concept="3zqWPK" id="6wnRlVzhJE2" role="2OqNvi">
                   <ref role="37wK5l" to="s21g:2HeY20GWgw1" resolve="hasPaule" />
                 </node>
               </node>
@@ -3403,7 +3405,7 @@
               <node concept="3fqX7Q" id="2HeY20H0yiP" role="3clFbG">
                 <node concept="2OqwBi" id="2HeY20H0yiR" role="3fr31v">
                   <node concept="pncrf" id="2HeY20H0yiS" role="2Oq$k0" />
-                  <node concept="2qgKlT" id="2HeY20H0yiT" role="2OqNvi">
+                  <node concept="3zqWPK" id="6wnRlVzhJE4" role="2OqNvi">
                     <ref role="37wK5l" to="s21g:2HeY20GWgw1" resolve="hasPaule" />
                   </node>
                 </node>
@@ -3436,7 +3438,7 @@
                         </node>
                         <node concept="2OqwBi" id="5R7VPh_g0A3" role="3uHU7w">
                           <node concept="pncrf" id="5R7VPh_g0$V" role="2Oq$k0" />
-                          <node concept="2qgKlT" id="2HeY20GWF8v" role="2OqNvi">
+                          <node concept="3zqWPK" id="6wnRlVzhJE6" role="2OqNvi">
                             <ref role="37wK5l" to="s21g:2HeY20GW_BB" resolve="getX" />
                           </node>
                         </node>
@@ -3444,7 +3446,7 @@
                     </node>
                     <node concept="2OqwBi" id="5R7VPh_fZbg" role="3uHU7w">
                       <node concept="pncrf" id="5R7VPh_fYRT" role="2Oq$k0" />
-                      <node concept="2qgKlT" id="2HeY20GWFmW" role="2OqNvi">
+                      <node concept="3zqWPK" id="6wnRlVzhJE8" role="2OqNvi">
                         <ref role="37wK5l" to="s21g:2HeY20GWCN4" resolve="getY" />
                       </node>
                     </node>

@@ -21,6 +21,9 @@
     <import index="28lk" ref="r:44b855ed-3db6-4327-8e8d-7c8dcf7b1b4f(alfi.structure)" implicit="true" />
   </imports>
   <registry>
+    <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
+      <concept id="3235159848334022093" name="jetbrains.mps.lang.behavior.structure.Node_ConceptMethodCall" flags="nn" index="3zqWPK" />
+    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
@@ -129,7 +132,6 @@
       <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
-      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
       </concept>
@@ -521,9 +523,9 @@
                               <node concept="37vLTw" id="2Cg1yFhCwXU" role="2Oq$k0">
                                 <ref role="3cqZAo" node="2Cg1yFhCuX7" resolve="requiredInterface" />
                               </node>
-                              <node concept="2qgKlT" id="2Cg1yFhCxFf" role="2OqNvi">
+                              <node concept="3zqWPK" id="6wnRlVzhJCO" role="2OqNvi">
                                 <ref role="37wK5l" to="lhhq:2Cg1yFhBI8M" resolve="isCompatible" />
-                                <node concept="37vLTw" id="2Cg1yFhCxTT" role="37wK5m">
+                                <node concept="37vLTw" id="6wnRlVzhJCQ" role="37wK5m">
                                   <ref role="3cqZAo" node="2Cg1yFhCuN3" resolve="it" />
                                 </node>
                               </node>
@@ -1189,13 +1191,13 @@
                           <node concept="37vLTw" id="1dnKNhSpRti" role="2Oq$k0">
                             <ref role="3cqZAo" node="1dnKNhSpRkL" resolve="it" />
                           </node>
-                          <node concept="2qgKlT" id="1dnKNhSpS75" role="2OqNvi">
+                          <node concept="3zqWPK" id="6wnRlVzhJCR" role="2OqNvi">
                             <ref role="37wK5l" to="lhhq:1dnKNhRXl1S" resolve="isCompatible" />
-                            <node concept="2OqwBi" id="1dnKNhSpSJL" role="37wK5m">
-                              <node concept="37vLTw" id="1dnKNhSpSfV" role="2Oq$k0">
+                            <node concept="2OqwBi" id="6wnRlVzhJCT" role="37wK5m">
+                              <node concept="37vLTw" id="6wnRlVzhJCU" role="2Oq$k0">
                                 <ref role="3cqZAo" node="1dnKNhRVPZa" resolve="delegate" />
                               </node>
-                              <node concept="3TrEf2" id="1dnKNhSpTbP" role="2OqNvi">
+                              <node concept="3TrEf2" id="6wnRlVzhJCV" role="2OqNvi">
                                 <ref role="3Tt5mk" to="tj5x:1dnKNhRVhtO" resolve="forOperation" />
                               </node>
                             </node>
@@ -1240,7 +1242,7 @@
                     </node>
                   </node>
                 </node>
-                <node concept="2qgKlT" id="1dnKNhSA92M" role="2OqNvi">
+                <node concept="3zqWPK" id="6wnRlVzhJCW" role="2OqNvi">
                   <ref role="37wK5l" to="lhhq:1dnKNhSA8wN" resolve="getSoftwareComponent" />
                 </node>
               </node>

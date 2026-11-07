@@ -13,6 +13,9 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
+    <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
+      <concept id="3235159848334022093" name="jetbrains.mps.lang.behavior.structure.Node_ConceptMethodCall" flags="nn" index="3zqWPK" />
+    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
@@ -197,7 +200,6 @@
       <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
-      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
       </concept>
@@ -329,13 +331,13 @@
             <node concept="35c_gC" id="MvuXW6a$Z_" role="2Oq$k0">
               <ref role="35c_gD" to="tj5x:zd_6PSizaP" resolve="EmbeddedAlfActivity" />
             </node>
-            <node concept="2qgKlT" id="MvuXW6a$ZA" role="2OqNvi">
+            <node concept="3zqWPK" id="6wnRlVzhJDe" role="2OqNvi">
               <ref role="37wK5l" to="lhhq:MvuXW6an9J" resolve="toParameterType" />
-              <node concept="2OqwBi" id="MvuXW6a_Vo" role="37wK5m">
-                <node concept="1YBJjd" id="MvuXW6a__K" role="2Oq$k0">
+              <node concept="2OqwBi" id="6wnRlVzhJDg" role="37wK5m">
+                <node concept="1YBJjd" id="6wnRlVzhJDh" role="2Oq$k0">
                   <ref role="1YBMHb" node="zd_6PSldoq" resolve="activity" />
                 </node>
-                <node concept="3TrEf2" id="MvuXW6aAov" role="2OqNvi">
+                <node concept="3TrEf2" id="6wnRlVzhJDi" role="2OqNvi">
                   <ref role="3Tt5mk" to="28lk:3Ud70gdRyip" resolve="returnParameter" />
                 </node>
               </node>
@@ -513,14 +515,14 @@
                         <node concept="35c_gC" id="45PW2TPh2bo" role="2Oq$k0">
                           <ref role="35c_gD" to="tj5x:zd_6PSizaP" resolve="EmbeddedAlfActivity" />
                         </node>
-                        <node concept="2qgKlT" id="45PW2TPh2bp" role="2OqNvi">
+                        <node concept="3zqWPK" id="6wnRlVzhJDj" role="2OqNvi">
                           <ref role="37wK5l" to="lhhq:MvuXW6an9J" resolve="toParameterType" />
-                          <node concept="1PxgMI" id="45PW2TPh7w0" role="37wK5m">
+                          <node concept="1PxgMI" id="6wnRlVzhJDl" role="37wK5m">
                             <property role="1BlNFB" value="true" />
-                            <node concept="chp4Y" id="45PW2TPh97p" role="3oSUPX">
+                            <node concept="chp4Y" id="6wnRlVzhJDm" role="3oSUPX">
                               <ref role="cht4Q" to="28lk:1KdBIfXOvM_" resolve="FormalParameter" />
                             </node>
-                            <node concept="37vLTw" id="45PW2TPh3V7" role="1m5AlR">
+                            <node concept="37vLTw" id="6wnRlVzhJDn" role="1m5AlR">
                               <ref role="3cqZAo" node="45PW2TPh1pn" resolve="actualParameter" />
                             </node>
                           </node>
@@ -917,9 +919,9 @@
               <node concept="35c_gC" id="MvuXW6bIaV" role="2Oq$k0">
                 <ref role="35c_gD" to="tj5x:zd_6PSizaP" resolve="EmbeddedAlfActivity" />
               </node>
-              <node concept="2qgKlT" id="MvuXW6bIaW" role="2OqNvi">
+              <node concept="3zqWPK" id="6wnRlVzhJDo" role="2OqNvi">
                 <ref role="37wK5l" to="lhhq:MvuXW6an9J" resolve="toParameterType" />
-                <node concept="37vLTw" id="MvuXW6bIj_" role="37wK5m">
+                <node concept="37vLTw" id="6wnRlVzhJDq" role="37wK5m">
                   <ref role="3cqZAo" node="MvuXW6bGZB" resolve="actualParameter" />
                 </node>
               </node>
@@ -944,9 +946,9 @@
                       <node concept="35c_gC" id="MvuXW6bGxs" role="2Oq$k0">
                         <ref role="35c_gD" to="tj5x:zd_6PSizaP" resolve="EmbeddedAlfActivity" />
                       </node>
-                      <node concept="2qgKlT" id="MvuXW6bGxt" role="2OqNvi">
+                      <node concept="3zqWPK" id="6wnRlVzhJDr" role="2OqNvi">
                         <ref role="37wK5l" to="lhhq:MvuXW6aLD0" resolve="toPrimitiveAlfType" />
-                        <node concept="37vLTw" id="MvuXW6bGxu" role="37wK5m">
+                        <node concept="37vLTw" id="6wnRlVzhJDt" role="37wK5m">
                           <ref role="3cqZAo" node="MvuXW6bZba" resolve="expectedType" />
                         </node>
                       </node>
@@ -1262,7 +1264,7 @@
                           <node concept="37vLTw" id="6uQxlEezZGs" role="2Oq$k0">
                             <ref role="3cqZAo" node="6uQxlEezd1A" resolve="operation" />
                           </node>
-                          <node concept="2qgKlT" id="6uQxlEe$9_M" role="2OqNvi">
+                          <node concept="3zqWPK" id="6wnRlVzhJDu" role="2OqNvi">
                             <ref role="37wK5l" to="lhhq:6uQxlEe$3Lb" resolve="getFullName" />
                           </node>
                         </node>
@@ -1412,7 +1414,7 @@
                             <node concept="37vLTw" id="6uQxlEexxJU" role="2Oq$k0">
                               <ref role="3cqZAo" node="6uQxlEexs31" resolve="operationNotImplemented" />
                             </node>
-                            <node concept="2qgKlT" id="6uQxlEe$bqb" role="2OqNvi">
+                            <node concept="3zqWPK" id="6wnRlVzhJDw" role="2OqNvi">
                               <ref role="37wK5l" to="lhhq:6uQxlEe$3Lb" resolve="getFullName" />
                             </node>
                           </node>
