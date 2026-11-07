@@ -7,7 +7,7 @@ env:
   PROJECT_NAME: "mps-alfi-samples"
   ARCHIVE_NAME: "mps-alfi-samples"
   DOTNET_VERSION: '9.0.x'
-  JAVA_VERSION: '25'
+  JAVA_VERSION: '21'
   CMAKE_VERSION: '3.17.x'
 
 jobs:
